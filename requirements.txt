@@ -1,0 +1,3 @@
+scipy
+opencv-python
+flask-socketio
