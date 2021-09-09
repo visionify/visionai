@@ -1,3 +1,5 @@
 scipy
 opencv-python
 flask-socketio
+requests
+azure-cosmosdb-table
