@@ -3,3 +3,4 @@ opencv-python
 flask-socketio
 requests
 azure-cosmosdb-table
+colorthief

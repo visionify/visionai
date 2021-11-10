@@ -1,5 +1,7 @@
 # visionai
-VisionAI open-source library
+VisionAI Library for Computer Vision Inference. Use it in production Edge devices like NVIDIA Jetson, Raspberry Pi 4 etc. 
+
+[![Build Status](https://travis-ci.com/visionify/visionai.svg?branch=main)](https://travis-ci.com/visionify/visionai)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/visionify/visionai/blob/master/LICENSE) [![PyPI version](https://badge.fury.io/py/imageai.svg)](https://badge.fury.io/py/visionai)   [![Downloads](https://pepy.tech/badge/imageai/month)](https://pepy.tech/project/imageai) [![Downloads](https://pepy.tech/badge/imageai/week)](https://pepy.tech/project/imageai)
 
 ## Overview
 Goal of this library is to create a easy-to-use Computer Vision inference library that can be used on all platforms without compromising performance.
@@ -16,7 +18,7 @@ The end goal is to have an easy-to-use, performant edge inference library that w
 ## Example Use-cases
 ### Installing & using this library
 - Using this library should be as simple using any other Python package.
-- [This is still WIP] 
+- TODO: This is still WIP 
 ```python
 # Install visionai library
 pip install visionai
