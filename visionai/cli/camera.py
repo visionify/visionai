@@ -7,13 +7,14 @@ from uuid import uuid4
 from rich import print
 from rich.progress import track
 from pathlib import Path
+import cv2
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
-from config import CONFIG_FILE
+from config import CONFIG_FILE 
 
 camera_app = typer.Typer()
 
@@ -136,6 +137,18 @@ def camera_preview(
     View the camera feed, review FPS etc available for camera.
     '''
     print(f"TODO: Implement camera preview functionality.")
+    # with open(CONFIG_FILE, 'r') as f:
+    #     config_data = json.load(f)
+    #     # cam_uri = config_data['cameras'][0]['uri']
+    #     vid = cv2.VideoCapture(0)
+    #     while(True):
+    #         ret, frame = vid.read()
+    #         cv2.resize(frame, (240,240))
+    #         cv2.imshow('frame', frame)
+    #         if cv2.waitKey(1) & 0xFF == ord('q'):
+    #             break
+    #     vid.release()
+    #     cv2.destroyAllWindows()
 
 @camera_app.callback()
 def callback():
@@ -154,5 +167,5 @@ def callback():
 
 if __name__ == '__main__':
     # camera_app()
-
-    camera_remove('TEST-999')
+    camera_add('0', '0', 'my_webcam')
+    # camera_remove('TEST-999')

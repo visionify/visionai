@@ -1,243 +1,25 @@
 {
     "version": "0.0.3",
     "scenarios": [
+     
         {
-            "id": "73218220-69e3-455c-9594-e28a310c8282",
-            "name": "smoke-and-fire-detection",
-            "version": "0.0.4",
-            "overview": "Detect early signs of sparks, smoke or fire. Get real-time events when a smoke, fire, sparks, embers are detected. It is trained with 240032 images, out of which 183453 images were from outdoors environment, and remaining images were indoor environment. There is a good balance between day and night pictures (44-56%)",
-            "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection.md",
-            "image": "https://scenariosblob.blob.core.windows.net/scenarios-smoke-and-fire-description.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-smoke-and-fire-description-200x200.jpg",
-            "models": {
-                "latest": {
-                    "version": "0.0.4",
-                    "name": "yolov5s-smoke-and-fire",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoke-and-fire-detection/smoke-and-fire-detection-0.0.4.zip",
-                    "model_hash": "1e0585f776e1dd2a7f391107458fdd6a"
-                },
-                "other": []
-            },
-            "tags": [
-                "Smoke",
-                "Fire",
-                "Sparks",
-                "Embers",
-                "Early Fire Signature",
-                "Hazard warning"
-            ],
-            "categories": [
-                "Personnel health",
-                "Hazard warning"
-            ],
-            "events": [
-                "Smoke Detected",
-                "Fire Detected"
-            ],
-            "configuration": [
-                {
-                    "name": "focus_area",
-                    "type": "region_of_interest",
-                    "required": false,
-                    "default": [
-                        0,
-                        0,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "d2c98b1f-939b-4fe0-a4ec-5a384656a560",
-            "name": "ppe-detection",
-            "version": "0.0.4",
-            "overview": "Detect presence or absence of PPE (Personal Protective Equipments). Get real-time (configurable) events when employees are non compliant. Supports helmets, safety boots, vests, masks, and eye goggles",
-            "docs": "https://docs.visionify.ai/scenarios/ppe-detection.md",
-            "image": "https://scenariosblob.blob.core.windows.net/scenarios-ppe-detection.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-ppe-detection-200x200.jpg",
-            "models": {
-                "latest": {
-                    "version": "0.0.4",
-                    "name": "yolov5-ppe-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.0.4.zip",
-                    "model_hash": "170edc7d7f05c56031e53cbf1ac67da5"
-                },
-                "other": []
-            },
-            "tags": [
-                "Personnel Protective Equipment",
-                "Helmets",
-                "Work Boots",
-                "Goggles",
-                "Safety Vests"
-            ],
-            "categories": [
-                "Personnel health",
-                "Personnel safety",
-                "Company policies"
-            ],
-            "events": [
-                "Person Detected with No Helmet",
-                "Person Detected with No Boots",
-                "Person Detected with No Vests",
-                "Person Detected with No Goggles"
-            ],
-            "configuration": [
-                {
-                    "name": "focus_area",
-                    "type": "region_of_interest",
-                    "required": false,
-                    "default": [
-                        0,
-                        0,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "time_of_day",
-                    "type": "schedule",
-                    "required": false,
-                    "default": "always"
-                }
-            ]
-        },
-        {
-            "id": "77bf4816-393a-47cb-8dd1-9790942959c9",
-            "name": "smoking-detection",
-            "version": "0.0.2",
-            "overview": "Enforce no-smoking, no-vaping compliance policies in and around an organization. Model is trained for detecting people who are smoking or vaping.",
-            "docs": "https://docs.visionify.ai/scenarios/smoking-detection.md",
-            "image": "https://scenariosblob.blob.core.windows.net/smoking-detection.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/smoking-detection-200x200.jpg",
-            "models": {
-                "latest": {
-                    "version": "0.0.2",
-                    "name": "yolov5s-smoking-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoking-detection/smoking-detection-0.0.2.zip",
-                    "model_hash": "f1a77567bddd6c5f565a6c83ce756953"
-                },
-                "other": []
-            },
-            "tags": [
-                "Smoking Detection",
-                "No Smoking",
-                "No Vaping"
-            ],
-            "categories": [
-                "Employee health",
-                "Company policies"
-            ],
-            "events": [
-                "Person detected smoking",
-                "Person detected with vaping"
-            ],
-            "configuration": [
-                {
-                    "name": "focus_area",
-                    "type": "region_of_interest",
-                    "required": false,
-                    "default": [
-                        0,
-                        0,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "time_of_day",
-                    "type": "schedule",
-                    "required": false,
-                    "default": "always"
-                }
-            ]
-        },
-        {
-            "id": "1f14d200-e15c-4b55-ad1b-908ca81ebf08",
-            "name": "phone-detection",
-            "version": "0.0.2",
-            "overview": "Enforce compliance policies like not using phone/text next to heavy machinery. This model can also enforce other scenarios like not taking pictures of sensitive areas with mobile phone.",
-            "docs": "https://docs.visionify.ai/scenarios/phone-detection.md",
-            "image": "https://scenariosblob.blob.core.windows.net/phone-detection.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/phone-detection-200x200.jpg",
-            "models": {
-                "latest": {
-                    "version": "0.0.2",
-                    "name": "yolov5s-phone-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/phone-detection/phone-detection-0.0.2.zip",
-                    "model_hash": "2169880d951e98f54fd7772d31648db6"
-                },
-                "other": []
-            },
-            "tags": [
-                "Phone detection",
-                "No phone usage",
-                "No taking pictures",
-                "Secure area"
-            ],
-            "categories": [
-                "Security",
-                "Company policies"
-            ],
-            "events": [
-                "Person detected using phone",
-                "Person detected taking pictures"
-            ],
-            "configuration": [
-                {
-                    "name": "focus_area",
-                    "type": "region_of_interest",
-                    "required": false,
-                    "default": [
-                        0,
-                        0,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "name": "time_of_day",
-                    "type": "schedule",
-                    "required": false,
-                    "default": "always"
-                }
-            ]
-        },
-        {
-            "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
-            "name": "rust-and-corrosion-detection",
-            "version": "0.0.2",
+            "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de75354",
+            "name": "fall-nofall-detection",
+            "version": "0.0.1",
             "overview": "Preventative maintenance for equipments. Detect regions where rust, corrosion is occuring",
             "docs": "https://docs.visionify.ai/scenarios/rust-and-corrosion.md",
             "image": "https://scenariosblob.blob.core.windows.net/rust-and-corrosion.jpg",
             "thumbnail": "https://scenariosblob.blob.core.windows.net/rust-and-corrosion-200x200.jpg",
             "models": {
                 "latest": {
-                    "version": "0.0.2",
-                    "name": "yolov5s-rust-and-corrosion-detection",
+                    "version": "0.0.3",
+                    "name": "yolov5s-fall-nofall-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
                     "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/rust-and-corrosion-detection/rust-and-corrosion-detection-0.0.2.zip",
-                    "model_hash": "e51344bc586a34ad7e06f0ff9443ece7"
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/fall-nofall-detection/fall-nofall-detection-0.0.3.pt",
+                    "model_hash": "f55d4c2a61f8f6108fdf0b355c0fce26"
                 },
                 "other": []
             },

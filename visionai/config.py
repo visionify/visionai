@@ -10,8 +10,8 @@ if str(ROOT) not in sys.path:
 # Config file
 CONFIG_FILE = ROOT / 'config' / 'config.json'
 SCENARIOS_SCHEMA = ROOT / 'config' / 'scenario-schema.json'
-SCENARIOS_URL = "https://raw.githubusercontent.com/visionify/visionai-scenarios/main/scenarios.json"
-
+# SCENARIOS_URL = "https://raw.githubusercontent.com/visionify/visionai-scenarios/main/scenarios.json"
+SCENARIOS_URL = "F:\\visionify\\visionai\\visionai\\config\\scenario-schema.json"
 # Triton server
 TRITON_HTTP_URL = 'localhost:8000'
 TRITON_SERVER_DOCKER_IMAGE = 'nvcr.io/nvidia/tritonserver:22.12-py3'

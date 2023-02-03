@@ -189,8 +189,10 @@ def scenario_download(
     print(f'Downloading scenarios : {scenario}')
 
     # Get list of available scenarios.
-    res = requests.get(SCENARIOS_URL)
-    all_scenarios = res.json()['scenarios']
+    # res = requests.get(SCENARIOS_URL)
+    with open(SCENARIOS_URL, 'r') as f:
+        res = json.load(f)
+    all_scenarios = res['scenarios']
 
 
     if world == True:
@@ -285,3 +287,5 @@ if __name__ == '__main__':
     # scenario_remove('smoke-and-fire-detection', 'TEST-999')
     # scenario_add('smoke-and-fire', 'TEST-999')
     scenario_download(world=True)
+    # scenario_add('slip-and-fall', '0')
+    # scenario_list()

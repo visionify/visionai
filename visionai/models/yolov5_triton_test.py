@@ -30,8 +30,8 @@ if __name__ == '__main__':
 
     # Model
     model_smoke = yolov5_triton(url='http://0.0.0.0:8000', model_name='smoke-and-fire-detection')
-    model_ppe = yolov5_triton(url='http://0.0.0.0:8000', model_name='ppe-detection')
-    model_yolov5s = yolov5_triton(url='http://0.0.0.0:8000', model_name='yolov5s')
+    # model_ppe = yolov5_triton(url='http://0.0.0.0:8000', model_name='ppe-detection')
+    # model_yolov5s = yolov5_triton(url='http://0.0.0.0:8000', model_name='yolov5s')
 
     # or use grpc
     # model = yolov5_triton(url='grpc://0.0.0.0:8001', model='ppe-detection')
@@ -43,7 +43,7 @@ if __name__ == '__main__':
             Path('data/images/zidane.jpg'),  # Path
             'https://ultralytics.com/images/zidane.jpg',  # URI
             cv2.imread('data/images/bus.jpg')[:, :, ::-1],  # OpenCV
-            Image.open('data/images/person-helmet.jpg'),  # PIL
+            Image.open('data/images/hard_hat0.png'),  # PIL
             np.zeros((320, 640, 3))]  # numpy
 
         # Inference
@@ -52,10 +52,10 @@ if __name__ == '__main__':
             results.print()
             results.save()
 
-            results = model_ppe(img, size=640)  # batched inference
-            results.print()
-            results.save()
+            # results = model_ppe(img, size=640)  # batched inference
+            # results.print()
+            # results.save()
 
-            results = model_yolov5s(img, size=640)  # batched inference
-            results.print()
-            results.save()
+            # results = model_yolov5s(img, size=640)  # batched inference
+            # results.print()
+            # results.save()
