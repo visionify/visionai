@@ -2,6 +2,14 @@
 
 ## VisionAI Changelog
 
+### **0.1.15** <small>February 7, 2023</small>
+
+- 🐛 On linux we were using incorrect nvidia_smi package.
+- 🎨 Add support for common spelling errors during commands (like scenarios instead of scenario)
+- 🚚 Move scenario.json file to this repo - so everything is in one place.
+
+
+
 ### **0.1.14** <small>February 3, 2023</small>
 
 - ✨ Support for `visionai scenario test` command.

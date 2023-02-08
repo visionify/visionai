@@ -289,7 +289,7 @@ def gpu_mem_stats():
         return mem_free_pct
 
     else:
-        check_requirements('nvidia_smi', install=True)
+        check_requirements('nvidia-ml-py3', install=True)
         import nvidia_smi
 
         def sizeof_fmt(num, suffix="B"):

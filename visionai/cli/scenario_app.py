@@ -259,12 +259,12 @@ def callback():
 
 if __name__ == '__main__':
     # scenario_app()
-    # scenario_list()
+    scenario_list()
 
     # scenario_remove('smoke-and-fire-detection', 'TEST-999')
     # scenario_add('smoke-and-fire', 'TEST-999')
     # scenario_download(world=True)
 
-    scenario_download('all')
+    # scenario_download('all')
 
     # scenario_test(name='smoke-and-fire-detection', camera=0)
