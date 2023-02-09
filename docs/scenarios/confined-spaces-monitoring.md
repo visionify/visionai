@@ -1,4 +1,4 @@
-# Confined Spaces Monitoring
+# **Confined Spaces Monitoring**
 
 > Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.
 
@@ -20,6 +20,7 @@ It is important to note that these camera based monitoring provides should be su
 
 ### Dataset
 The datasets for this scenario is based off of people detection and tracking algorithms that are used in the industry. The dataset is a combination of images and videos from various sources. The dataset is curated to ensure that it is representative of the real world. It has equal distributions for:
+
 - Indoor vs Outdoor environments
 - Male vs Female
 - Day vs Night
@@ -34,6 +35,7 @@ The datasets for this scenario is based off of people detection and tracking alg
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset curated by our team.
 
 The model provides the following metrics:
+
 - Accuracy: 0.945
 - Precision: 0.96
 - Recall: 0.94
@@ -52,27 +54,36 @@ The business logic for this scenario is as follows:
 
 ## Try it now
 
-### Quickstart - using your local camera
+### Quick method - using your local web-cam
 
 To test this model & scenario, you can use the following steps:
 
 - Install the visionai package from PyPI
 
+<div class=termy>
 ```console
-pip install visionai
+$ pip install visionai
+---> 100%
 ```
+</div>
 
-- Download the scenario
+- Test the scenario from your local web-cam
+
+<div class=termy>
 
 ```console
-visionai scenario download confined-spaces-monitoring
-```
+$ visionai scenario test confined-spaces-monitoring
 
-- Run the scenario using your local web-cam.
+Downloading models for scenario: confied-spaces-monitoring
+Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+---> 100%
 
-```console
-visionai scenario test confined-spaces-monitoring
+Starting scenario: confined-spaces-monitoring..
+
 ```
+</div>
+
+- TODO: Add images from your local web-cam here showing people detection & dwell time tracking.
 
 - You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
 
@@ -82,51 +93,72 @@ To use this scenario in an actual confined space, you can use the following step
 
 - Install the visionai package from PyPI
 
+<div class=termy>
 ```console
-pip install visionai
+$ pip install visionai
+---> 100%
 ```
+</div>
 
 - Download the scenario
 
+<div class=termy>
+
 ```console
-visionai scenario download confined-spaces-monitoring
+$ visionai scenario download confined-spaces-monitoring
+
+Downloading models for scenario: confied-spaces-monitoring
+Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+---> 100%
 ```
+
+</div>
 
 - Add the camera feed to the scenario
 
-```console
-visionai scenario add-camera confined-spaces-monitoring --url <camera-url>
-```
-
-- Run the scenario
+<div class=termy>
 
 ```console
-visionai scenario run confined-spaces-monitoring
+$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
+$ visionai camera OFFICE-01 add-scenario confined-spaces-monitoring
+$ visionai run
+
+Starting scenario: confined-spaces-monitoring..
+
 ```
+
+</div>
 
 - You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
 
-### Through VisionAI Web-Application (for an actual confined space)
+### Through VisionAI Web-Application
 
 You can also use the VisionAI web-application to manage your cameras & scenarios. You can use the following steps:
 
 - Install the visionai package from PyPI
 
+<div class=termy>
+
 ```console
 pip install visionai
+---> 100%
 ```
 
-- Download the scenario
+</div>
 
-```console
-visionai scenario download confined-spaces-monitoring
-```
 
 - Run the VisionAI web-application
 
+<div class=termy>
+
 ```console
-visionai web start
+$ visionai web start
+
+Starting VisionAI web-application..
+
 ```
+
+</div>
 
 - This opens up a web-app that you can use to manage your cameras & scenarios. First add the camera feed to the system and check if it is working.
 
@@ -161,4 +193,4 @@ The scenario is provided as part of our GPL-v3 Open-Source package for VisionAI.
 ## Contact Us
 
 - For technical issues, you can open a Github issue [here](https://github.com/visionify/visionai).
-- For business inquiries, you can contact me through [our website](https://visionify.ai/contact).
+- For business inquiries, you can contact us through [our website](https://visionify.ai/contact).
