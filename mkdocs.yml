@@ -161,13 +161,10 @@ extra:
 extra_css:
   - css/termynal.css
   - css/custom.css
-  - css/scenario/termynalSc.css
-  - css/scenario/customSc.css
-
+ 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
   - js/termynal.js
   - js/custom.js
-  - js/scenario/termynalSc.js
-  - js/scenario/customSc.js
+  
 
