@@ -202,7 +202,7 @@ Click on apply button
 ![](../img/webapp_applyscenario.png)
 
 - You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
-TODO: Show image for starting the scenario & seeing the feed from the scenario
+
 
 ### Using Azure Managed Service App
 1. From Azure Market Place, search and select Visionai. Enter project details in the following screen. Click on Next. 

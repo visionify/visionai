@@ -73,7 +73,7 @@ nav:
     - Personnel Health:
       - PPE Detection: scenarios/ppe-detection.md
       - Working at heights: scenarios/working-at-heights.md
-      - Slip and fall: scenarios/slip-and-fall.md
+      - Slip and fall: scenarios/slip-and-fall-detection.md
       - Confined spaces: scenarios/confined-spaces-dwell-duration-monitoring.md
       - Smoke and Fire: scenarios/smoke-and-fire-detection.md
       - Ergonomics: scenarios/posture-and-ergonomics.md
