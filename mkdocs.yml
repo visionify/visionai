@@ -119,7 +119,7 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format ''
+          # format: !!python/name:pymdownx.superfences.fence_code_format ''
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -161,9 +161,13 @@ extra:
 extra_css:
   - css/termynal.css
   - css/custom.css
+  - css/scenario/termynalSc.css
+  - css/scenario/customSc.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
   - js/termynal.js
   - js/custom.js
+  - js/scenario/termynalSc.js
+  - js/scenario/customSc.js
 

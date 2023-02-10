@@ -12,24 +12,23 @@
     --color-text-subtle: #a2a2a2;
 }
 
-[data-termynal] {
+[data-termynalSc] {
     width: 750px;
     max-width: 100%;
-    background: var(--color-bg);
     color: var(--color-text);
     /* font-size: 18px; */
-    font-size: 12px;
+    font-size: 15px;
     /* font-family: 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace; */
     font-family: 'Roboto Mono', 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
     border-radius: 4px;
-    padding: 30px 45px 35px;
+    padding: 75px 45px 35px;
     position: relative;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     line-height: 1.2;
 }
 
-[data-termynal]:before {
+[data-termynalSc]:before {
     content: '';
     position: absolute;
     top: 15px;
@@ -44,49 +43,49 @@
             box-shadow: 25px 0 0 #f4c025, 50px 0 0 #3ec930;
 }
 
-[data-termynal]:after {
+[data-termynalSc]:after {
     content: 'bash';
     position: absolute;
     color: var(--color-text-subtle);
-    top: 10px;
+    top: 5px;
     left: 0;
     width: 100%;
     text-align: center;
 }
 
-a[data-terminal-control] {
+a[data-terminal-controlSc] {
     text-align: right;
     display: block;
     color: #aebbff;
 }
 
-[data-ty] {
+[data-tySc] {
     display: block;
     line-height: 2;
 }
 
-[data-ty]:before {
+[data-tySc]:before {
     /* Set up defaults and ensure empty lines are displayed. */
     content: '';
     display: inline-block;
     vertical-align: middle;
 }
 
-[data-ty="input"]:before,
-[data-ty-prompt]:before {
+[data-tySc="input"]:before,
+[data-ty-promptSc]:before {
     margin-right: 0.75em;
     color: var(--color-text-subtle);
 }
 
-[data-ty="input"]:before {
+[data-tySc="input"]:before {
     content: '$';
 }
 
-[data-ty][data-ty-prompt]:before {
+[data-tySc][data-ty-promptSc]:before {
     content: attr(data-ty-prompt);
 }
 
-[data-ty-cursor]:after {
+[data-ty-cursorSc]:after {
     content: attr(data-ty-cursor);
     font-family: monospace;
     margin-left: 0.5em;

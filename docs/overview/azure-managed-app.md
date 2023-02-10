@@ -125,10 +125,10 @@ $ python main.py
 
 Rich has many other features, as an example, you can check the docs for:
 
-* <a href="https://rich.readthedocs.io/en/stable/prompt.html" class="external-link" target="_blank">Prompt</a>
-* <a href="https://rich.readthedocs.io/en/stable/markdown.html" class="external-link" target="_blank">Markdown</a>
-* <a href="https://rich.readthedocs.io/en/stable/panel.html" class="external-link" target="_blank">Panel</a>
-* ...and more.
+- <a href="https://rich.readthedocs.io/en/stable/prompt.html" class="external-link" target="_blank">Prompt</a>
+- <a href="https://rich.readthedocs.io/en/stable/markdown.html" class="external-link" target="_blank">Markdown</a>
+- <a href="https://rich.readthedocs.io/en/stable/panel.html" class="external-link" target="_blank">Panel</a>
+- ...and more.
 
 ### Typer and Rich
 
@@ -136,7 +136,7 @@ If you are wondering what tool should be used for what, **Typer** is useful for 
 
 In general, **Typer** tends to be the entry point to your program, taking the first input from the user.
 
-**Rich** is useful for the parts that need to *display* information. Showing beautiful content on the screen.
+**Rich** is useful for the parts that need to _display_ information. Showing beautiful content on the screen.
 
 The best results for your command line application would be achieved combining both **Typer** and **Rich**.
 
@@ -157,7 +157,7 @@ And there's another "**virtual file**" called "**standard error**" that is norma
 But we can also "print" to "standard error". And both are shown on the terminal to the users.
 
 !!! info
-    If you use PowerShell it's quite possible that what you print to "standard error" won't be shown in the terminal.
+If you use PowerShell it's quite possible that what you print to "standard error" won't be shown in the terminal.
 
     In PowerShell, to see "standard error" you would have to check the variable `$Error`.
 
@@ -168,7 +168,7 @@ But we can also "print" to "standard error". And both are shown on the terminal 
 You can print to "standard error" creating a Rich `Console` with `stderr=True`.
 
 !!! tip
-    `stderr` is short for "standard error".
+`stderr` is short for "standard error".
 
 Using `stderr=True` tells **Rich** that the output should be shown in "standard error".
 
@@ -203,7 +203,7 @@ But understanding that will come handy in the future, for example for autocomple
 ## Typer Echo
 
 !!! warning
-    In most of the cases, for displaying advanced information, it is recommended to use <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a>.
+In most of the cases, for displaying advanced information, it is recommended to use <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a>.
 
     You can probably skip the rest of this section. 🎉😎
 
@@ -224,17 +224,17 @@ If you have some `bytes` objects, you would probably want to decode them intenti
 And if you want to print data with colors and other features, you are much better off with the more advanced tools in **Rich**.
 
 !!! info
-    `typer.echo()` comes directly from Click, you can read more about it in <a href="https://click.palletsprojects.com/en/7.x/quickstart/#echoing" class="external-link" target="_blank">Click's docs</a>.
+`typer.echo()` comes directly from Click, you can read more about it in <a href="https://click.palletsprojects.com/en/7.x/quickstart/#echoing" class="external-link" target="_blank">Click's docs</a>.
 
 ### Color
 
 !!! note "Technical Details"
-    The way color works in terminals is by using some codes (ANSI escape sequences) as part of the text.
+The way color works in terminals is by using some codes (ANSI escape sequences) as part of the text.
 
     So, a colored text is still just a `str`.
 
 !!! tip
-    Again, you are much better off using <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a> for this. 😎
+Again, you are much better off using <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a> for this. 😎
 
 You can create colored strings to output to the terminal with `typer.style()`, that gives you `str`s that you can then pass to `typer.echo()`:
 
@@ -243,7 +243,7 @@ You can create colored strings to output to the terminal with `typer.style()`, t
 ```
 
 !!! tip
-    The parameters `fg` and `bg` receive strings with the color names for the "**f**ore**g**round" and "**b**ack**g**round" colors. You could simply pass `fg="green"` and `bg="red"`.
+The parameters `fg` and `bg` receive strings with the color names for the "**f**ore**g**round" and "**b**ack**g**round" colors. You could simply pass `fg="green"` and `bg="red"`.
 
     But **Typer** provides them all as variables like `typer.colors.GREEN` just so you can use autocompletion while selecting them.
 
@@ -258,22 +258,22 @@ Check it:
 
 You can pass these function arguments to `typer.style()`:
 
-* `fg`: the foreground color.
-* `bg`: the background color.
-* `bold`: enable or disable bold mode.
-* `dim`: enable or disable dim mode. This is badly supported.
-* `underline`: enable or disable underline.
-* `blink`: enable or disable blinking.
-* `reverse`: enable or disable inverse rendering (foreground becomes background and the other way round).
-* `reset`: by default a reset-all code is added at the end of the string which means that styles do not carry over.  This can be disabled to compose styles.
+- `fg`: the foreground color.
+- `bg`: the background color.
+- `bold`: enable or disable bold mode.
+- `dim`: enable or disable dim mode. This is badly supported.
+- `underline`: enable or disable underline.
+- `blink`: enable or disable blinking.
+- `reverse`: enable or disable inverse rendering (foreground becomes background and the other way round).
+- `reset`: by default a reset-all code is added at the end of the string which means that styles do not carry over. This can be disabled to compose styles.
 
 !!! info
-    You can read more about it in <a href="https://click.palletsprojects.com/en/7.x/api/#click.style" class="external-link" target="_blank">Click's docs about `style()`</a>
+You can read more about it in <a href="https://click.palletsprojects.com/en/7.x/api/#click.style" class="external-link" target="_blank">Click's docs about `style()`</a>
 
 ### `typer.secho()` - style and print
 
 !!! tip
-    In case you didn't see above, you are much better off using <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a> for this. 😎
+In case you didn't see above, you are much better off using <a href="https://rich.readthedocs.io/" class="external-link" target="_blank">Rich</a> for this. 😎
 
 There's a shorter form to style and print at the same time with `typer.secho()` it's like `typer.echo()` but also adds style like `typer.style()`:
 

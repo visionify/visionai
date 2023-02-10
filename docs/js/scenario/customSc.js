@@ -1,18 +1,18 @@
-document.querySelectorAll(".use-termynal").forEach((node) => {
+document.querySelectorAll(".use-termynalSc").forEach((node) => {
   node.style.display = "block";
-  new Termynal(node, {
+  new TermynalScenario(node, {
     lineDelay: 500,
   });
 });
-const progressLiteralStart = "---> 100%";
-const promptLiteralStart = "$ ";
-const customPromptLiteralStart = "# ";
-const termynalActivateClass = "termy";
-let termynals = [];
+const progressLiteralStartSc = "---> 100%";
+const promptLiteralStartSc = "$ ";
+const customPromptLiteralStartSc = "# ";
+const termynalActivateClassSc = "termyScenario";
+let termynalsSc = [];
 
-function createTermynals() {
+function createTermynalScenario() {
   document
-    .querySelectorAll(`.${termynalActivateClass} .highlight`)
+    .querySelectorAll(`.${termynalActivateClassSc} .highlight`)
     .forEach((node) => {
       const text = node.textContent;
       const lines = text.split("\n");
@@ -42,14 +42,14 @@ function createTermynals() {
         }
       }
       for (let line of lines) {
-        if (line === progressLiteralStart) {
+        if (line === progressLiteralStartSc) {
           saveBuffer();
           useLines.push({
             type: "progress",
           });
-        } else if (line.startsWith(promptLiteralStart)) {
+        } else if (line.startsWith(promptLiteralStartSc)) {
           saveBuffer();
-          const value = line.replace(promptLiteralStart, "").trimEnd();
+          const value = line.replace(promptLiteralStartSc, "").trimEnd();
           useLines.push({
             type: "input",
             value: value,
@@ -59,19 +59,19 @@ function createTermynals() {
           const value = "💬 " + line.replace("// ", "").trimEnd();
           useLines.push({
             value: value,
-            class: "termynal-comment",
+            class: "termynal-commentSc",
             delay: 0,
           });
-        } else if (line.startsWith(customPromptLiteralStart)) {
+        } else if (line.startsWith(customPromptLiteralStartSc)) {
           saveBuffer();
-          const promptStart = line.indexOf(promptLiteralStart);
+          const promptStart = line.indexOf(promptLiteralStartSc);
           if (promptStart === -1) {
             console.error("Custom prompt found but no end delimiter", line);
           }
           const prompt = line
             .slice(0, promptStart)
-            .replace(customPromptLiteralStart, "");
-          let value = line.slice(promptStart + promptLiteralStart.length);
+            .replace(customPromptLiteralStartSc, "");
+          let value = line.slice(promptStart + promptLiteralStartSc.length);
           useLines.push({
             type: "input",
             value: value,
@@ -84,17 +84,17 @@ function createTermynals() {
       saveBuffer();
       const div = document.createElement("div");
       node.replaceWith(div);
-      const termynal = new Termynal(div, {
+      const termynal = new TermynalScenario(div, {
         lineData: useLines,
         noInit: true,
         lineDelay: 500,
       });
-      termynals.push(termynal);
+      termynalsSc.push(termynal);
     });
 }
 
 function loadVisibleTermynals() {
-  termynals = termynals.filter((termynal) => {
+  termynalsSc = termynalsSc.filter((termynal) => {
     if (termynal.container.getBoundingClientRect().top - innerHeight <= 0) {
       termynal.init();
       return false;
@@ -103,5 +103,5 @@ function loadVisibleTermynals() {
   });
 }
 window.addEventListener("scroll", loadVisibleTermynals);
-createTermynals();
+createTermynalScenario();
 loadVisibleTermynals();

@@ -1,5 +1,5 @@
 !!! warning
-    This is a more advanced topic, if you are starting with **Typer**, feel free to skip it.
+This is a more advanced topic, if you are starting with **Typer**, feel free to skip it.
 
     It will be mostly useful for people that already work with Click and have questions around it.
 
@@ -19,7 +19,7 @@ Before knowing how to combine Click and **Typer**, let's first check a little ab
 
 Any Click application has an object of class `Command`. That's, more or less, the most basic Click object.
 
-A `Command` can have its own *CLI arguments* and *CLI options*, and it has a function that it calls.
+A `Command` can have its own _CLI arguments_ and _CLI options_, and it has a function that it calls.
 
 For example, in this Click app:
 
@@ -31,9 +31,9 @@ The original `hello` variable is converted by Click from a function to a `Comman
 
 #### Click `Group`
 
-Then Click also has a `Group` class, it **inherits from `Command`**. So, a `Group` object is *also* a `Command`.
+Then Click also has a `Group` class, it **inherits from `Command`**. So, a `Group` object is _also_ a `Command`.
 
-A `Group` can also have its own *CLI arguments* and *CLI options*.
+A `Group` can also have its own _CLI arguments_ and _CLI options_.
 
 A `Group` can have subcommands of class `Command` or sub groups of class `Group` as well.
 
@@ -48,13 +48,13 @@ For example:
 The `cli` variable is converted by Click from a function to a `Group` object. And the original `cli` function is used by that `Group` internally.
 
 !!! tip
-    The original `cli` function would be the equivalent of a [Typer Callback](./commands/callback.md){.internal-link target=_blank}.
+The original `cli` function would be the equivalent of a [Typer Callback](./commands/callback.md){.internal-link target=\_blank}.
 
 Then the `cli` variable, that now is a `Group` object, is used to add sub-commands.
 
 ### How **Typer** works
 
-Typer doesn't modify the functions. You create an explicit variable of class `typer.Typer` and use it to *register* those functions.
+Typer doesn't modify the functions. You create an explicit variable of class `typer.Typer` and use it to _register_ those functions.
 
 And then, when you call the app, Typer goes and creates a Click `Command` (or `Group`), and then calls it.
 
@@ -62,12 +62,12 @@ If your app only has one command, then when you call it, **Typer** creates a sin
 
 But **Typer** creates a Click `Group` object if your app has any of:
 
-* More than one command.
-* A callback.
-* Sub-Typer apps (sub commands).
+- More than one command.
+- A callback.
+- Sub-Typer apps (sub commands).
 
 !!! tip
-    If you want to learn more about this check the section [One or Multiple Commands](./commands/one-or-multiple.md){.internal-link target=_blank}.
+If you want to learn more about this check the section [One or Multiple Commands](./commands/one-or-multiple.md){.internal-link target=\_blank}.
 
 ### Combine Click and **Typer**
 
@@ -128,7 +128,7 @@ Then we generate a Click object from our `typer.Typer` app (`typer_click_object`
 
 In this case, the original Click app includes the **Typer** app.
 
-And then we call the *original Click* app, not the Typer app.
+And then we call the _original Click_ app, not the Typer app.
 
 Check it:
 
@@ -175,6 +175,6 @@ Most of the functionality provided by decorators in Click has an alternative way
 For example, to access the context, you can just declare a function parameter of type `typer.Context`.
 
 !!! tip
-    You can read more about using the context in the docs: [Commands: Using the Context](commands/context.md){.internal-link target=_blank}
+You can read more about using the context in the docs: [Commands: Using the Context](commands/context.md){.internal-link target=\_blank}
 
 But if you need to use something based on Click decorators, you can always generate a Click object using the methods described above, and use it as you would normally use Click.
