@@ -79,6 +79,7 @@ nav:
       - Ergonomics: scenarios/posture-and-ergonomics.md
     - Compliance Policies:
       - Max Occupancy: scenarios/max-occupancy-count.md
+      - Confined Spaces Monitoring: scenarios/confined-spaces-monitoring.md
       - Shipping activity: scenarios/shipping-activity.md
       - Unauthorized entry: scenarios/unauthorized-entry.md
       - No mobile usage: scenarios/no-phone-usage.md
