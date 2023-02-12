@@ -67,6 +67,11 @@ def web_start():
         # Start web api
         if web_api_running is False:
             print(f'Starting web service API at port {WEB_API_PORT}')
+            if sys.platform == 'win32':
+                DOCKER_SOCK = '//var/run/docker.sock'
+            else:
+                DOCKER_SOCK = '/var/run/docker.sock'
+
             client = docker.from_env()
             client.containers.run(
                 WEB_API_DOCKER_IMAGE,
@@ -75,7 +80,8 @@ def web_start():
                 name=WEB_API_CONTAINER_NAME,
                 volumes=[
                     f'{WEB_API_MODELS_REPO}:/models',
-                    f'{WEB_API_CONFIG_FOLDER}:/config'],
+                    f'{WEB_API_CONFIG_FOLDER}:/config',
+                    f'{DOCKER_SOCK}:/var/run/docker.sock'],  # Docker in docker
                 command='python server.py --models-repo /models --config /config'
                 )
             print(f'API endpoint available at: http://localhost:{WEB_API_PORT}')
