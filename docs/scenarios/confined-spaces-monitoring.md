@@ -2,6 +2,8 @@
 
 > Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.
 
+
+
 ## Overview
 Confined spaces refer to areas that are partially or fully enclosed and are not designed for continuous human occupancy. Examples include tanks, silos, storage bins, manholes, and underground vaults. These spaces can be hazardous due to limited ventilation, lack of natural light, and potential for hazardous atmospheric conditions.
 
@@ -36,10 +38,11 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 
 The model provides the following metrics:
 
-- Accuracy: 0.945
-- Precision: 0.96
-- Recall: 0.94
-- mAP: 0.945
+
+|Precision|	Recall	|mAP	|
+|---------|---------|-------|
+|94.5%	  |96.4%    |94.2%  |
+
 
 The model is light-weight enough to be run on any edge devices.
 
@@ -61,6 +64,7 @@ To test this model & scenario, you can use the following steps:
 - Install the visionai package from PyPI
 
 <div class=termy>
+
 ```console
 $ pip install visionai
 ---> 100%
@@ -74,7 +78,7 @@ $ pip install visionai
 ```console
 $ visionai scenario test confined-spaces-monitoring
 
-Downloading models for scenario: confied-spaces-monitoring
+Downloading models for scenario: confined-spaces-monitoring
 Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
 ---> 100%
 
@@ -94,6 +98,7 @@ To use this scenario in an actual confined space, you can use the following step
 - Install the visionai package from PyPI
 
 <div class=termy>
+
 ```console
 $ pip install visionai
 ---> 100%
@@ -107,7 +112,7 @@ $ pip install visionai
 ```console
 $ visionai scenario download confined-spaces-monitoring
 
-Downloading models for scenario: confied-spaces-monitoring
+Downloading models for scenario: confined-spaces-monitoring
 Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
 ---> 100%
 ```
