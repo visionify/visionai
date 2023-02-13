@@ -13,8 +13,8 @@ if str(ROOT) not in sys.path:
 # Config file
 CONFIG_FOLDER = ROOT / 'config'
 CONFIG_FILE = ROOT / 'config' / 'config.json'
-SCENARIOS_SCHEMA = ROOT / 'config' / 'scenario-schema.json'
 SCENARIOS_URL = "https://raw.githubusercontent.com/visionify/visionai/main/visionai/scenarios/scenarios.json"
+SCENARIOS_OVERRIDE = ROOT / 'config' / 'scenarios-override.json'
 
 # Triton server endpoints
 TRITON_HTTP_URL = 'http://localhost:8000'
@@ -62,12 +62,6 @@ def init_config():
         with open(CONFIG_FILE, 'w') as f:
             json.dump(config_data, f, indent=4)
         print(f'init(): Created camera configuration: {CONFIG_FILE}')
-
-    if not os.path.exists(SCENARIOS_SCHEMA):
-        res = requests.get(SCENARIOS_URL)
-        with open(SCENARIOS_SCHEMA, 'w') as f:
-            json.dump(res.json(), f, indent=4)
-        print(f'init(): Created scenario schema: {SCENARIOS_SCHEMA}')
 
     if not os.path.isdir(TRITON_MODELS_REPO):
         os.makedirs(TRITON_MODELS_REPO, exist_ok=True)
