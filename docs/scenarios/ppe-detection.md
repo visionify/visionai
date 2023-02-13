@@ -179,12 +179,10 @@ Starting VisionAI web-application..
 
 ### Add camera
 
-
+Click on add camera button and fill the details.
 
 ![](../img/webapp_camerapage.png)
 
-
-Click on add camera button and fill the details.
 
 Then click on create to add new camera.
 
@@ -221,6 +219,8 @@ Click on apply button
 3. Once validation is passed, Click on create.
 
     ![](../img/azureapp_step3.png)
+
+For more details visit VisionAI web applicaion.
 
 
 ## Events Supported 
