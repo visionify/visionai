@@ -27,15 +27,15 @@ To ensure accuracy and reliability, these camera-based monitoring services shoul
 <div class="main">
 <div class="bar">
 <h4>Precision <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar" style="--value:75"></div>
+<div role="progressbar" style="--value:98"></div>
 </div>
 <div class="bar">
 <h4>Recall <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar1" style="--value:50"></div>
+<div role="progressbar1" style="--value:97"></div>
 </div>
 <div class="bar">
 <h4>mAP <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar2" style="--value:75"></div>
+<div role="progressbar2" style="--value:95"></div>
 </div>
 </div>
 
