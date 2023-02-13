@@ -6,63 +6,97 @@
 
 ## Overview
 
-Personal protective equipment, or "PPE," is the clothing worn to reduce exposure to risks that might result in significant workplace diseases and injuries. Contact with chemical, radioactive, physical, electrical, mechanical, or other job hazards may cause these wounds and illnesses. Items like gloves, safety goggles, shoes, earplugs or muffs, hard hats, respirators, coveralls, vests, and full-body suits are examples of personal protection equipment. Accidents and injuries due to employees not wearing PPE hold business owners/employers legally accountable. Apart from legal damages, accidents due to PPE negligence result in loss of time, reduced productivity, costly worker compensations, etc.  
+Personal protective equipment, or "PPE," is the clothing worn to reduce exposure to risks that might result in significant workplace diseases and injuries. Contact with chemical, radioactive, physical, electrical, mechanical, or other job hazards may cause these wounds and illnesses. Items like gloves, safety goggles, shoes, earplugs or muffs, hard hats, respirators, coveralls, vests, and full-body suits are examples of personal protection equipment. Accidents and injuries due to employees not wearing PPE hold business owners/employers legally accountable. Apart from legal damages, accidents due to PPE negligence result in loss of time, reduced productivity, costly worker compensations, etc.
 
-- Workplace Fatalities are rising, and employers cannot afford to tolerate PPE negligence. According to the Bureau of Labor Statistics, there were 5,190 fatal work injuries recorded in the United States in 2021, an 8.9-percent increase from 4,764 
+- Workplace Fatalities are rising, and employers cannot afford to tolerate PPE negligence. According to the Bureau of Labor Statistics, there were 5,190 fatal work injuries recorded in the United States in 2021, an 8.9-percent increase from 4,764
 
-- Speaking about one of the most injury-susceptible body parts - hands, OSHA reports that almost 70 percent of hand and arm injuries could be prevented with personal protective equipment, specifically safety gloves. Yet, 70 percent of workers don’t wear hand protection, and 30 percent don’t wear the right kind of glove for the task. 
+- Speaking about one of the most injury-susceptible body parts - hands, OSHA reports that almost 70 percent of hand and arm injuries could be prevented with personal protective equipment, specifically safety gloves. Yet, 70 percent of workers don’t wear hand protection, and 30 percent don’t wear the right kind of glove for the task.
 
-- If we consider one of the leading causes of workplace fatalities - Head Injuries a study by BLO found that 84% of head injuries at a worksite were due to the absence of safety helmets. A percentage which not small considering there were 68,170 head injuries in 2021 
+- If we consider one of the leading causes of workplace fatalities - Head Injuries a study by BLO found that 84% of head injuries at a worksite were due to the absence of safety helmets. A percentage which not small considering there were 68,170 head injuries in 2021
 
-Therefore, complete compliance is necessary since even a brief lapse in usage can prove fatal. To monitor PPE compliance, cameras can be used. 
+Therefore, complete compliance is necessary since even a brief lapse in usage can prove fatal. To monitor PPE compliance, cameras can be used.
 
-## Vision AI based monitoring 
+## Vision AI based monitoring
 
-Vision AI based monitors can be used to monitor PPE compliance by providing real-time video feeds of the factory unit. The cameras scan every frame to ensure there's no PPE negligence, eliminating occupational hazards and serious injuries. 
+Vision AI based monitors can be used to monitor PPE compliance by providing real-time video feeds of the factory unit. The cameras scan every frame to ensure there's no PPE negligence, eliminating occupational hazards and serious injuries.
 
-To ensure accuracy and reliability, these camera-based monitoring services should be supplemented by strong compliance processes. Furthermore, workers working in different factory units should always be made aware of PPE compliance practices. 
-
-
+To ensure accuracy and reliability, these camera-based monitoring services should be supplemented by strong compliance processes. Furthermore, workers working in different factory units should always be made aware of PPE compliance practices.
 
 ## Model Details
 
-### Dataset 
+<div class="main">
+<div class="bar">
+<h4>Precision <i class="fa fa-info-circle"></i></h4>
+<div role="progressbar" style="--value:98"></div>
+</div>
+<div class="bar">
+<h4>Recall <i class="fa fa-info-circle"></i></h4>
+<div role="progressbar1" style="--value:97"></div>
+</div>
+<div class="bar">
+<h4>mAP <i class="fa fa-info-circle"></i></h4>
+<div role="progressbar2" style="--value:95"></div>
+</div>
+</div>
 
-The dataset for this scenario is based on PPE detection algorithms that are currently in practice.  
+## Performance Matrix For PPE DETECTION
 
-The dataset is made up of images and videos gathered from various sources. The dataset has been catalogued to ensure real-world intricacies. It has an even distribution of: 
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>mAP</th>
+            <th>Data Size</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>PPE DETECTION</td>
+            <td>98%</td>
+            <td>97%</td>
+            <td>95%</td>
+            <td>12,5000 images</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
-- Different(indoor/outdoor) environments 
-- Male vs Female  
-- Variations in PPE suits 
-- Variations in gloves, helmet, goggles, safety-vest design 
-- Different light settings 
-- Variations in camera orientations  
-- Using security camera feeds 
+### Dataset
+
+The dataset for this scenario is based on PPE detection algorithms that are currently in practice.
+
+The dataset is made up of images and videos gathered from various sources. The dataset has been catalogued to ensure real-world intricacies. It has an even distribution of:
+
+- Different(indoor/outdoor) environments
+- Male vs Female
+- Variations in PPE suits
+- Variations in gloves, helmet, goggles, safety-vest design
+- Different light settings
+- Variations in camera orientations
+- Using security camera feeds
 - Total number of images used was 207,300
 
-### Model 
+### Model
 
-The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team. 
+The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.
 
-The model provides the following metrics: 
+The model provides the following metrics:
 
-|Precision|	Recall	|mAP	|
-|---------|---------|-------|
-|88.6%	  |86.4%    |91.2%  |
+| Precision | Recall | mAP   |
+| --------- | ------ | ----- |
+| 88.6%     | 86.4%  | 91.2% |
 
+The model is adaptable enough to run on any edge computing device.
 
-The model is adaptable enough to run on any edge computing device. 
+## Scenario details
 
-## Scenario details 
+The business logic for this scenario is as follows:
 
-The business logic for this scenario is as follows: 
-
-- We use existing camera feeds from the premises to monitor the compliance of PPE in the workplace. 
-- VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
-- We detect people in the camera feed and we monitor whether the person is wearing safety gloves, goggles, helmet, mask, safety-shoes and vest or not. 
+- We use existing camera feeds from the premises to monitor the compliance of PPE in the workplace.
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing.
+- We detect people in the camera feed and we monitor whether the person is wearing safety gloves, goggles, helmet, mask, safety-shoes and vest or not.
 - If the person is detected without safety gloves, goggles, helmet, mask, safety-shoes and vest, an alert is raised.
-
 
 ## Try it now
 
@@ -78,6 +112,7 @@ To test this model & scenario, you can use the following steps:
 $ pip install visionai
 ---> 100%
 ```
+
 </div>
 
 - Test the scenario from your local web-cam
@@ -94,8 +129,8 @@ Model: ppe-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-p
 Starting scenario: ppe-detection..
 
 ```
-</div>
 
+</div>
 
 - You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
 
@@ -111,6 +146,7 @@ To use this scenario in an actual environment, you can follow these steps:
 $ pip install visionai
 ---> 100%
 ```
+
 </div>
 
 - Download the scenario
@@ -147,7 +183,6 @@ Starting scenario: ppe-detection..
 
 ### Through VisionAI Web-Application
 
-
 You can also use the VisionAI web-application to manage your cameras & scenarios. You can use the following steps:
 
 - Install the visionai package from PyPI
@@ -160,7 +195,6 @@ pip install visionai
 ```
 
 </div>
-
 
 - Run the VisionAI web-application
 
@@ -196,41 +230,39 @@ PPE Detection comes as part of your search then click on "GET THIS".
 
 Now select the cameras to which you wish to apply the PPE detection.
 
-![](../img/wepapp_selectcameras.png)   
-
+![](../img/wepapp_selectcameras.png)
 
 Click on apply button
-
 
 ![](../img/webapp_applyscenario.png)
 
 - You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
 
-
 ### Using Azure Managed Service App
-1. From Azure Market Place, search and select Visionai. Enter project details in the following screen. Click on Next. 
 
-    ![](../img/azureapp_step1.png)
+1. From Azure Market Place, search and select Visionai. Enter project details in the following screen. Click on Next.
+
+   ![](../img/azureapp_step1.png)
 
 2. Verify all the settings and click on review+create.
 
-    ![](../img/azureapp_step2.png)
+   ![](../img/azureapp_step2.png)
 
 3. Once validation is passed, Click on create.
 
-    ![](../img/azureapp_step3.png)
+   ![](../img/azureapp_step3.png)
 
+## Events Supported
+=======
 For more details visit VisionAI web applicaion.
 
 
-## Events Supported 
+This scenario supports the following event:
 
-This scenario supports the following event: 
- 
-
-- **PPE detected**: This event is generated when a PPE including goggles, gloves, helmet, mask, safety-shoes, vest, etc. are detected in the camera feed. 
+- **PPE detected**: This event is generated when a PPE including goggles, gloves, helmet, mask, safety-shoes, vest, etc. are detected in the camera feed.
 
 - For example: Person Detected without Helmet
+
 ```
 {
     event_name: 'person_without_helmet',
@@ -244,10 +276,11 @@ This scenario supports the following event:
 ```
 
 - For example: Person Detected without Goggles
+
 ```
 {
     event_name: 'person_without_helmet',
-    datetime: '2023-02-07 18:34:09.430322', 
+    datetime: '2023-02-07 18:34:09.430322',
     camera: 'OFFICE-04',
     image: "https://image_without_googles539365972.blob.core.windows.net/ppe-detection-microsoft-ivs",
     detections: [
@@ -255,7 +288,6 @@ This scenario supports the following event:
     ]
 }
 ```
-
 
 ## Why PPE compliance is necessary
 
@@ -266,7 +298,6 @@ This scenario supports the following event:
 - Workplace Fatalities are on the rise and employers cannot afford to tolerate PPE negligence. According to the Bureau of Labor Statistics, there were 5,190 fatal work injuries recorded in the United States in 2021, an 8.9-percent increase from 4,764
 - Speaking about one of the most injury-susceptible body parts - hands, OSHA reports that almost 70 percent of hand and arm injuries could be prevented with personal protective equipment, specifically safety gloves. Yet, 70 percent of workers don’t wear hand protection, and of those who do, 30 percent don’t wear the right kind of glove for the task.
 - If we consider one of the leading causes for workplace fatalities - Head Injuries a study by BLO found out that 84% of head injuries at a worksite were due to absence of safety helmets. A percentage which not small considering there were 68,170 head injuries in 2021
-
 
 ## Technical challenges faced by PPE Detection systems in the market
 
@@ -285,7 +316,6 @@ Minimizing false-positives and false negatives in such systems is another challe
 ### Scalability
 
 Be it cost-effectiveness, managing occlusions/poor image quality or covering all segments of a workplace, proper scalability of a computer Vision system to detect PPE in real-time is not feasible for many solutions providers.
-
 
 ## Training with custom data
 
