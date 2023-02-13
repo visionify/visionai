@@ -1,8 +1,8 @@
-# PPE Detection
+# **PPE Detection**
 
 > Prevent Workplace Injuries and Occupational Hazards with Vision AI
 
-![](../img/ppe_collage.png)
+![PPE Detection](../img/ppe_collage.png)
 
 ## Overview
 
@@ -178,6 +178,11 @@ Starting VisionAI web-application..
 - This opens up a web-app that you can use to manage your cameras & scenarios. First add the camera feed to the system and check if it is working.
 
 ### Add camera
+
+
+
+![](../img/webapp_camerapage.png)
+
 
 Click on add camera button and fill the details.
 

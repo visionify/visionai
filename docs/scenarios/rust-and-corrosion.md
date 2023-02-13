@@ -1,10 +1,10 @@
 # **Equipment monitoring**
 
-# **Rust/Corrosion Detection** 
+## **Rust and Corrosion Detection** 
 
 > Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion. 
 
-![](../img/rustcorrosion_collage.png)
+![Rust and corrosion detection](../img/rustcorrosion_collage.jpg)
 
 ## Overview 
 
@@ -75,6 +75,57 @@ Starting scenario: rust-and-corrosion-detection..
 
 
 - You should be able to see the events generated on your console window with rust and corrosion being detected within the camera field of view.
+
+### In an actual environment
+
+To use this scenario in an actual environment, you can follow these steps:
+
+- Install the visionai package from PyPI
+
+<div class=termy>
+
+```console
+$ pip install visionai
+---> 100%
+```
+</div>
+
+- Download the scenario
+
+<div class=termy>
+
+```console
+$ visionai scenario download rust-and-corrosion-detection
+
+Downloading models for scenario: rust-and-corrosion-detection
+Model: rust-and-corrosion-detection
+https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+---> 100%
+```
+
+</div>
+
+- Add the camera feed to the scenario
+
+<div class=termy>
+
+```console
+$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
+$ visionai camera OFFICE-01 add-scenario rust-and-corrosion-detection
+$ visionai run
+
+Starting scenario: rust-and-corrosion-detection..
+
+```
+
+</div>
+
+- You should be able to see the events generated on your console window with rust and corrosion being detected within the camera field of view.
+
+
+For more details visit VisionAI web applicaion.
+
+
 
 
 
