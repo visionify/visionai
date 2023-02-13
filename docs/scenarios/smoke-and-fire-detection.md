@@ -4,7 +4,7 @@
 
 > An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities
 
-![](../img/earlyfire_collage.png)
+![](../img/smokeandfire_collage.jpg)
 
 
 ## Overview 

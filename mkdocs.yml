@@ -73,11 +73,12 @@ nav:
     - Personnel Health:
       - PPE Detection: scenarios/ppe-detection.md
       - Working at heights: scenarios/working-at-heights.md
-      - Slip and fall: scenarios/slip-and-fall-detection.md
-      - Confined spaces: scenarios/confined-spaces-dwell-duration-monitoring.md
+      - Slip and fall: scenarios/slip-and-fall-detection.md 
+      - Confined spaces: scenarios/confined-spaces-monitoring.md
       - Smoke and Fire: scenarios/smoke-and-fire-detection.md
-      - Ergonomics: scenarios/posture-and-ergonomics.md
+      - Ergonomics: scenarios/ergonomics.md
     - Compliance Policies:
+      - Equipment monitoring: scenarios/rust-and-corrosion.md
       - Max Occupancy: scenarios/max-occupancy-count.md
       - Confined Spaces Monitoring: scenarios/confined-spaces-monitoring.md
       - Shipping activity: scenarios/shipping-activity.md
@@ -168,3 +169,10 @@ extra_javascript:
   - js/termynal.js
   - js/custom.js
 
+
+
+
+plugins:
+  - mkdocs-video:
+      is_video: True
+      video_autoplay: True
