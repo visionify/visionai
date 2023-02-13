@@ -16,7 +16,7 @@ if str(ROOT) not in sys.path:
 
 MODELS_REPO = ROOT / 'models-repo'
 
-from config import CONFIG_FILE, SCENARIOS_SCHEMA, SCENARIOS_URL, TRITON_SERVER_DOCKER_IMAGE
+from config import CONFIG_FILE, SCENARIOS_URL, TRITON_SERVER_DOCKER_IMAGE
 from util.general import invoke_cmd
 from util.download_models import safe_download_to_folder
 from models.triton_client import TritonClient

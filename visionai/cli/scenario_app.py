@@ -3,6 +3,7 @@ import sys
 import typer
 import time
 import json
+from typing import List, Dict
 from uuid import uuid4
 from rich import print, prompt
 from rich.progress import track
@@ -20,7 +21,7 @@ if str(ROOT) not in sys.path:
 
 MODELS_REPO = ROOT / 'models-repo'
 
-from config import CONFIG_FILE, SCENARIOS_SCHEMA, SCENARIOS_URL, TRITON_HTTP_URL
+from config import CONFIG_FILE, SCENARIOS_URL, SCENARIOS_OVERRIDE, TRITON_HTTP_URL
 from util.download_models import safe_download_to_folder
 from models.triton_client import TritonClient
 from scenarios import load_scenario
@@ -62,6 +63,18 @@ def _scenario_pretty(scenario):
     except Exception as ex:
         return Panel(f'[red]ERR {name}[/red]')
 
+def get_scenarios() -> List[Dict]:
+    '''
+    Get all scenarios available in the system
+    '''
+    if Path(SCENARIOS_OVERRIDE).exists():
+        with open(SCENARIOS_OVERRIDE, 'r') as f:
+            scenarios = json.load(f)['scenarios']
+    else:
+        res = requests.get(SCENARIOS_URL)
+        scenarios = res.json()['scenarios']
+    return scenarios
+
 def print_scenarios(scenarios):
     console = Console()
     scen_pretty = [_scenario_pretty(scen) for scen in scenarios]
@@ -76,16 +89,10 @@ def scenario_list():
     List all scenarios available in the system. This includes scenarios
     that may or maynot be applied to any specific camera.
     '''
-    try:
-        res = requests.get(SCENARIOS_URL)
-        # with open(SCENARIOS_SCHEMA, 'w') as f:
-        #     json.dump(res.json(), f, indent=4)
 
-        scenarios = res.json()['scenarios']
-    except Exception as ex:
-        scenarios = str(ex)
-
-    print_scenarios(scenarios)
+    # Get scenarios from server. If override file exists, use that.
+    all_scenarios = get_scenarios()
+    print_scenarios(all_scenarios)
 
 @scenario_app.command('download')
 def scenario_download(
@@ -102,17 +109,8 @@ def scenario_download(
     all scenarios that have been configured.
     '''
 
-    # Get the latest scenarios file
-    # Use the local file if available.
-    local_scenario_file = ROOT / 'config' / 'scenario-schema.json'
-    if os.path.exists(local_scenario_file):
-        with open(local_scenario_file, 'r') as f:
-            all_scenarios = json.load(f)['scenarios']
-    else:
-        res = requests.get(SCENARIOS_URL)
-        all_scenarios = res.json()['scenarios']
-        with open(local_scenario_file, 'w') as f:
-            json.dump(all_scenarios, f, indent=4)
+    # Get scenarios from server. If override file exists, use that.
+    all_scenarios = get_scenarios()
 
     if name.lower() == 'world':
         print(f'Downloading all available (world) scenarios')
@@ -126,7 +124,7 @@ def scenario_download(
         else:
             raise typer.Exit()
 
-    if name.lower() == 'all':
+    elif name.lower() == 'all':
         print(f'Downloading all configured scenarios')
         model_names = set()
 
@@ -202,17 +200,8 @@ def scenario_test(
     # import TritonClient module
     from models.triton_client import TritonClient
 
-    # Get the latest scenarios file
-    # Use the local file if available.
-    local_scenario_file = ROOT / 'config' / 'scenario-schema.json'
-    if os.path.exists(local_scenario_file):
-        with open(local_scenario_file, 'r') as f:
-            all_scenarios = json.load(f)['scenarios']
-    else:
-        res = requests.get(SCENARIOS_URL)
-        all_scenarios = res.json()['scenarios']
-        with open(local_scenario_file, 'w') as f:
-            json.dump(all_scenarios, f, indent=4)
+    # Get scenarios from server. If override file exists, use that.
+    all_scenarios = get_scenarios()
 
     scenario_to_test = None
     for scen in all_scenarios:
