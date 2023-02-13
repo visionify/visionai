@@ -170,9 +170,3 @@ extra_javascript:
   - js/custom.js
 
 
-
-
-plugins:
-  - mkdocs-video:
-      is_video: True
-      video_autoplay: True
