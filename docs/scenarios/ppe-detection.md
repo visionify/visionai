@@ -1,8 +1,8 @@
-# PPE Detection
+# **PPE Detection**
 
 > Prevent Workplace Injuries and Occupational Hazards with Vision AI
 
-![](../img/ppe_collage.png)
+![PPE Detection](../img/ppe_collage.png)
 
 ## Overview
 
@@ -215,6 +215,9 @@ Starting VisionAI web-application..
 
 Click on add camera button and fill the details.
 
+![](../img/webapp_camerapage.png)
+
+
 Then click on create to add new camera.
 
 ![](../img/webapp_addcamera.png)
@@ -250,6 +253,9 @@ Click on apply button
    ![](../img/azureapp_step3.png)
 
 ## Events Supported
+=======
+For more details visit VisionAI web applicaion.
+
 
 This scenario supports the following event:
 
