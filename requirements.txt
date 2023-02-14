@@ -1,6 +1,5 @@
 requests
 typer[all]
-pytest
 coloredlogs
 torch
 torchvision

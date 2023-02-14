@@ -116,8 +116,21 @@ def docker_container_run(
         print(f'Started model server successfully: {container_type}')
         return ctainer
 
+def docker_conatiner_is_running(container_name):
+    client = docker.from_env()
+    containers = client.containers.list(all=True)
+    for container in containers:
+        if container.name == container_name:
+            return container.status == 'running'
+    return False
+
+
 if __name__ == '__main__':
     # Pull a large image
-    client = docker.from_env()
-    IMAGE_NAME = 'bitnami/pytorch'
-    docker_image_pull_with_progress(client, IMAGE_NAME)
+    # client = docker.from_env()
+    # IMAGE_NAME = 'bitnami/pytorch'
+    # docker_image_pull_with_progress(client, IMAGE_NAME)
+
+    # check if container is running
+    redis_is_running = docker_conatiner_is_running('redis')
+    print(f'redis_is_running: {redis_is_running}')
