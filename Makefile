@@ -1,9 +1,5 @@
 .DEFAULT_GOAL := help
 
-## SHORTCUTS:
-test:                               ## Run tests
-	python -m pytest src/
-
 ## WEB:
 server.install:                     ## Install server
 	docker-compose run --rm server pip install -r requirements-dev.txt --user --upgrade --no-warn-script-location
@@ -38,21 +34,20 @@ cli.stop:                           ## Stop cli container
 	docker-compose stop cli
 
 ## TEST:
-test.install:                       ## Install test server
-	docker-compose run --rm testserver pip install -r requirements-dev.txt --user --upgrade --no-warn-script-location
-
+test: test.run
 test.run:                           ## Run all test cases on test-server
-	docker-compose run --rm testserver bash -c "python -m pytest test/ -W ignore"
+	python -m pytest visionai/ -W ignore
 
-.PHONY: coverage
 test.coverage:                      ## Generate test coverage
-	docker-compose run --rm testserver bash -c "python -m pytest --cov-report term --cov-report html:coverage --cov-config setup.cfg --ignore vendor/ --cov=. test/"
+	coverage run -m pytest --cov-report html:coverage
 
+lint: test.lint
 test.lint:                          ## Lint test
-	docker-compose run --rm server bash -c "python -m flake8  ./test"
+	python -m flake8  ./visionai
 
+safety: test.safety
 test.safety:                        ## Safety check
-	docker-compose run --rm server bash -c "python vendor/bin/safety check"
+	python -m safety check
 
 ## PACKAGE:
 package.build:                      ## Build package
@@ -60,19 +55,6 @@ package.build:                      ## Build package
 
 package.test:                       ## Test package
 	docker-compose run --rm packageserver bash -c "python -m pytest"
-
-test.run:                           ## Run all test cases on test-server
-	docker-compose run --rm testserver bash -c "python -m pytest test/ -W ignore"
-
-.PHONY: coverage
-test.coverage:                      ## Generate test coverage
-	docker-compose run --rm testserver bash -c "python -m pytest --cov-report term --cov-report html:coverage --cov-config setup.cfg --ignore vendor/ --cov=. test/"
-
-test.lint:                          ## Lint test
-	docker-compose run --rm server bash -c "python -m flake8  ./test"
-
-test.safety:                        ## Safety check
-	docker-compose run --rm server bash -c "python vendor/bin/safety check"
 
 ## FORMAT:
 format.black:                       ## Run black on every file (DON'T USE)
