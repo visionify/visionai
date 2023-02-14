@@ -26,6 +26,12 @@ TRITON_SERVER_EXEC = 'tritonserver'
 TRITON_SERVER_COMMAND = 'tritonserver --model-repository=/models'
 TRITON_MODELS_REPO = ROOT / 'models-repo'
 
+# Redis server configuration
+REDIS_ENABLED = True
+REDIS_SERVER_DOCKER_IMAGE = 'redis:alpine'
+REDIS_SERVER_PORT = 6379
+REDIS_CONTAINER_NAME = 'redis'
+
 # Web application (front-end)
 WEB_APP_DOCKER_IMAGE = 'visionify/visionaiweb'
 WEB_APP_PORT = 3001

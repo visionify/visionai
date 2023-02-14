@@ -3,3 +3,4 @@ pytest-cov
 pytest-mock
 coverage
 flake8
+safety
