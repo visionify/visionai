@@ -11,7 +11,9 @@ if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
 from util import TryExcept
-from util.general import colorstr, get_system_version, LOGGER, gpu_mem_stats
+from util.general import colorstr, get_system_version, LOGGER, gpu_mem_stats, 
+from util.general import check_requirements
+check_requirements('mediapipe', install=True)
 from config import TRITON_HTTP_URL
 
 class Scenario(ABC):
