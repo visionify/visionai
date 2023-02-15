@@ -3,10 +3,6 @@ import time
 import cv2
 from PIL import Image
 import numpy as np
-import mediapipe as mp
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
-mp_pose = mp.solutions.pose
 import math
 from math import atan
 import sys
@@ -19,6 +15,15 @@ from models.plots import Annotator
 from util.general import LOGGER
 from scenarios import Scenario
 from config import TRITON_HTTP_URL
+from events.events_engine import EventsEngine
+from enum import Enum
+
+class Event(str, Enum):
+    DEBUG = 'DEBUG'
+    INFO = 'INFO'
+    WARNING = 'WARNING'
+    ERROR = 'ERROR'
+    CRITICAL = 'CRITICAL'
 
 class ErgonomicsDetection(Scenario):
     model = None
@@ -37,6 +42,13 @@ class ErgonomicsDetection(Scenario):
         self.down_count = 0
         self.up_counter = True
         self.down_counter = False
+        from util.general import check_requirements
+        check_requirements('mediapipe', install=True)
+        import mediapipe as mp
+        self.mp_drawing = mp.solutions.drawing_utils
+        self.mp_drawing_styles = mp.solutions.drawing_styles
+        self.mp_pose = mp.solutions.pose
+        self.f_event =  EventsEngine(use_redis=True)
         from models.triton_client_yolov5 import yolov5_triton
         self.model = yolov5_triton('http://localhost:8000', scenario_name)
         super().__init__(scenario_name, camera_name, events, triton_url)
@@ -157,7 +169,7 @@ class ErgonomicsDetection(Scenario):
                         person_status = "Normal"
                         crop = im0[int(xyxy[1]):int(xyxy[3]),int(xyxy[0]):int(xyxy[2])]
                         # param["person_id"].append(person_count)
-                        with mp_pose.Pose(
+                        with self.mp_pose.Pose(
                             min_detection_confidence=0.5,
                             min_tracking_confidence=0.5) as pose:
                             crop = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
@@ -184,6 +196,7 @@ class ErgonomicsDetection(Scenario):
                                             self.up_counter = False
                                             self.down_counter = True
                                     cv2.putText(crop, "BdCnt:" + str(self.down_count), (0,50) , cv2.FONT_HERSHEY_SIMPLEX, text_font, (0,0,250), text_thickness, cv2.LINE_AA)
+                                    self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'ergonomics-detection', 'BENDING_COUNT', {"Bending Count" : self.down_count})
                                     im0[int(xyxy[1]):int(xyxy[3]),int(xyxy[0]):int(xyxy[2])] = crop
                             param["pose_points"].append(land_marks)
                             param["dim"].append([int(xyxy[0]),int(xyxy[1]),int(xyxy[2]),int(xyxy[3])])
@@ -207,6 +220,11 @@ def ergonomics_detection():
     img  = snf.process_image(img)
     cv2.imwrite('sfd_res_2.jpg', img)
 
+def camera_stream():
+    snf = ErgonomicsDetection(scenario_name = 'ergonomics-detection')
+    snf.start(camera_name=0)
+
 if __name__ == '__main__':
-    ergonomics_detection()
+    # people_taking_picture_detection()
+    camera_stream()
 
