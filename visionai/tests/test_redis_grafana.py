@@ -1,0 +1,74 @@
+import os
+import sys
+from pathlib import Path
+import unittest
+import docker
+
+FILE = Path(__file__).resolve()
+ROOT = FILE.parents[1]  # visionai/visionai directory
+if str(ROOT) not in sys.path:
+    sys.path.append(str(ROOT))  # add ROOT to PATH
+
+from config import REDIS_CONTAINER_NAME, GRAFANA_CONTAINER_NAME, DOCKER_NETWORK
+from util.docker_utils import docker_container_is_running, docker_network_is_running
+from util.docker_utils import redis_container_start, redis_container_stop, redis_python_install, redis_python_package_installed
+from util.docker_utils import grafana_container_start, grafana_container_stop
+
+class TestRedis(unittest.TestCase):
+    def test_redis_grafana_functions(self):
+        # Stop any priori containers
+        redis_container_stop()
+        grafana_container_stop()
+
+        # Start containers
+        redis_container_start()
+        grafana_container_start()
+
+        # Install redis python package
+        redis_python_install()
+
+        # Validate redis python package installed
+        assert redis_python_package_installed(), 'Redis python package is not installed.'
+
+        # Check if containers is running
+        assert docker_container_is_running(container_name=REDIS_CONTAINER_NAME), 'Redis container is not running.'
+        assert docker_container_is_running(container_name=GRAFANA_CONTAINER_NAME), 'Grafana container is not running.'
+
+        # Check if network is created
+        assert docker_network_is_running(network_name=DOCKER_NETWORK), 'Docker network is not created.'
+
+
+        # Check containers are joined to that network
+        client = docker.from_env()
+        container = client.containers.get(REDIS_CONTAINER_NAME)
+        networks = container.attrs['NetworkSettings']['Networks']
+        redis_network_joined = False
+        if networks:
+            for network_name, network_config in networks.items():
+                if network_name == DOCKER_NETWORK:
+                    redis_network_joined = True
+
+        container = client.containers.get(GRAFANA_CONTAINER_NAME)
+        networks = container.attrs['NetworkSettings']['Networks']
+        grafana_network_joined = False
+        if networks:
+            for network_name, network_config in networks.items():
+                if network_name == DOCKER_NETWORK:
+                    grafana_network_joined = True
+
+        assert redis_network_joined, f'Redis container is not joined to network {DOCKER_NETWORK}'
+        assert grafana_network_joined, f'Grafana container is not joined to network {DOCKER_NETWORK}'
+
+        # # Stop the containers
+        # redis_container_stop()
+        # grafana_container_stop()
+
+        # # Ensure containers are stopped
+        # assert docker_container_is_running(container_name=REDIS_CONTAINER_NAME) == False, 'Redis container is still running.'
+        # assert docker_container_is_running(container_name=GRAFANA_CONTAINER_NAME) == False, 'Grafana container is still running.'
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
