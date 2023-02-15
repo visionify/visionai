@@ -13,7 +13,7 @@ ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
-from config import TRITON_HTTP_URL, TRITON_SERVER_DOCKER_IMAGE, TRITON_SERVER_EXEC, TRITON_SERVER_COMMAND, TRITON_MODELS_REPO
+from config import TRITON_HTTP_URL, TRITON_SERVER_DOCKER_IMAGE, TRITON_SERVER_EXEC, TRITON_SERVER_COMMAND, TRITON_MODELS_REPO, TRITON_SERVER_CONTAINER_NAME
 
 class TritonClient():
 
@@ -265,7 +265,7 @@ class TritonClient():
 
         try:
             print('Pulling docker image (this may take a while)')
-            from util.docker_utils import docker_image_pull_with_progress, docker_container_run
+            from util.docker_utils import docker_image_pull_with_progress, docker_container_run_triton
 
             # Stream progress message while pulling the docker image.
             docker_image_pull_with_progress(self.docker_client, image_name=TRITON_SERVER_DOCKER_IMAGE)
@@ -274,9 +274,10 @@ class TritonClient():
             # Try starting docker container with NVIDIA runtime,
             # If that is not available - then start the container with regular runtime
             print('Starting model server')
-            docker_container_run(
+            docker_container_run_triton(
                 client=self.docker_client,
                 image=TRITON_SERVER_DOCKER_IMAGE,   # image name
+                container_name=TRITON_SERVER_CONTAINER_NAME, # container name
                 command=TRITON_SERVER_COMMAND,      # command to run in container
                 stdout=False,                       # disable logs
                 stderr=False,                       # disable stderr logs

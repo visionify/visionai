@@ -45,7 +45,7 @@ def safe_download_to_folder(
     # url & path check
     if url is None or os.path.isdir(dirname) is False:
         LOGGER.error('URL ({}) or dirname ({}) not valid'.format(url, dirname))
-        return None
+        return False
 
     # Find the path to save the model file.
     file_name = os.path.basename(urlparse(url).path)
@@ -54,7 +54,7 @@ def safe_download_to_folder(
     # If the file exists, then skip download
     if overwrite is False and os.path.exists(file_path):
         LOGGER.info(f'{file_path} already exists, skip download.')
-        return
+        return False
 
     # Download the URL to path
     safe_download_to_file(file_path, url)
@@ -63,6 +63,8 @@ def safe_download_to_folder(
     if file_path.suffix == '.zip':
         shutil.unpack_archive(file_path, dirname) # unzip
         # os.remove(file_path)   # remove zip file
+
+    return True
 
 def download_models(
     scenarios=[],
