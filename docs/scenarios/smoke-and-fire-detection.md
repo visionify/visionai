@@ -150,7 +150,7 @@ Starting scenario: smoke-and-fire-detection..
 
 - You should be able to see the events generated on your console window with smoke and fire being detected within the camera field of view.
 
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 ## Features: 
