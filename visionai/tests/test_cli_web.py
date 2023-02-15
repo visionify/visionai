@@ -13,6 +13,10 @@ from config import VISIONAI_EXEC
 from util.general import WorkingDirectory, invoke_cmd
 
 class TestInvokeCliWeb(unittest.TestCase):
+    @WorkingDirectory(PKGDIR)
+    def setUp(self):
+        # Initialize visionai package before running tests
+        output = invoke_cmd(f'{VISIONAI_EXEC} init')
 
     @WorkingDirectory(PKGDIR)
     def test_invoke_web_help_command(self):

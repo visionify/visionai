@@ -13,9 +13,10 @@ from util.general import WorkingDirectory, invoke_cmd
 from config import VISIONAI_EXEC
 
 class TestInvokeCliMain(unittest.TestCase):
-    # def setUp(self):
-    #     # Uninstall package
-    #     output = invoke_cmd('pip uninstall -y visionai')
+    @WorkingDirectory(PKGDIR)
+    def setUp(self):
+        # Initialize visionai package before running tests
+        output = invoke_cmd(f'{VISIONAI_EXEC} init')
 
     @WorkingDirectory(PKGDIR)
     def test_invoke_main(self):

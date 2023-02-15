@@ -11,10 +11,12 @@ ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
-from config import WEB_APP_DOCKER_IMAGE, WEB_APP_PORT, WEB_APP_CONTAINER_NAME
-from config import WEB_API_DOCKER_IMAGE, WEB_API_PORT, WEB_API_MODELS_REPO, WEB_API_CONFIG_FOLDER, WEB_API_CONTAINER_NAME
-
-from util.docker_utils import docker_image_pull_with_progress
+from config import WEB_API_PORT, WEB_APP_PORT, REDIS_SERVER_PORT, GRAFANA_SERVER_PORT
+from config import REDIS_CONTAINER_NAME, GRAFANA_CONTAINER_NAME, DOCKER_NETWORK
+from config import WEB_APP_CONTAINER_NAME, WEB_API_CONTAINER_NAME
+from util.docker_utils import docker_container_is_running, docker_network_is_running, docker_container_start, docker_container_stop
+from util.docker_utils import redis_container_start, redis_container_stop, redis_python_install, redis_python_package_installed
+from util.docker_utils import grafana_container_start, grafana_container_stop
 
 err_console = Console(stderr=True)
 web_app = typer.Typer()
@@ -33,10 +35,13 @@ def web_start():
         print('- - - - - - - - - - - - - - - - - - - - - - - - - - -')
 
         # Check if already running
-        client = docker.from_env()
-        containers = client.containers.list()
         web_app_running = False
         web_api_running = False
+        redis_running = False
+        grafana_running = False
+
+        client = docker.from_env()
+        containers = client.containers.list()
         for container in containers:
             if container.name == WEB_APP_CONTAINER_NAME:
                 print(f'Web server already running at: http://localhost:{WEB_APP_PORT}')
@@ -44,70 +49,63 @@ def web_start():
             if container.name == WEB_API_CONTAINER_NAME:
                 print(f'API server already running at: http://localhost:{WEB_API_PORT}')
                 web_api_running = True
+            if container.name == REDIS_CONTAINER_NAME:
+                print(f'Redis server is at: localhost:{REDIS_SERVER_PORT}')
+                redis_running = True
+            if container.name == GRAFANA_CONTAINER_NAME:
+                print(f'Grafana server is at: http://localhost:{GRAFANA_SERVER_PORT}')
+                grafana_running = True
 
-        # If already running, return
-        if web_app_running and web_api_running:
+        # If all services are running, return
+        if web_app_running and web_api_running and redis_running and grafana_running:
             return
 
-        # If images are not pulled first, pull them first.
-        try:
-            web_app_image = client.images.get(WEB_APP_DOCKER_IMAGE)
-        except docker.errors.ImageNotFound:
-            print(f'{WEB_APP_DOCKER_IMAGE} not found locally')
-            print(f"Pulling web-app image {WEB_APP_DOCKER_IMAGE}....")
-            docker_image_pull_with_progress(client, WEB_APP_DOCKER_IMAGE)
+        if web_app_running is False:
+            print(f'Starting web app at port {WEB_APP_PORT}')
+            docker_container_start(
+                container_name=WEB_APP_CONTAINER_NAME,
+                image=WEB_APP_DOCKER_IMAGE,
+                portmap={80:WEB_APP_PORT},
+                network_name=DOCKER_NETWORK
+            )
+            print(f'Web app available at: http://localhost:{WEB_APP_PORT}')
 
-        try:
-            web_api_image = client.images.get(WEB_API_DOCKER_IMAGE)
-        except docker.errors.ImageNotFound:
-            print(f'{WEB_API_DOCKER_IMAGE} not found locally')
-            print(f"Pulling web-api image {WEB_API_DOCKER_IMAGE}....")
-            docker_image_pull_with_progress(client, WEB_API_DOCKER_IMAGE)
-
-        # Start web api
         if web_api_running is False:
             print(f'Starting web service API at port {WEB_API_PORT}')
+
             if sys.platform == 'win32':
                 DOCKER_SOCK = '//var/run/docker.sock'
             else:
                 DOCKER_SOCK = '/var/run/docker.sock'
 
-            client = docker.from_env()
-            client.containers.run(
-                WEB_API_DOCKER_IMAGE,
-                ports={3002:WEB_API_PORT},
-                detach=True,
-                name=WEB_API_CONTAINER_NAME,
-                volumes=[
+            docker_container_start(
+                container_name=WEB_API_CONTAINER_NAME,
+                image=WEB_API_DOCKER_IMAGE,
+                portmap={3002:WEB_API_PORT},
+                network_name=DOCKER_NETWORK,
+                volmap=[
                     f'{WEB_API_MODELS_REPO}:/models',
                     f'{WEB_API_CONFIG_FOLDER}:/config',
-                    f'{DOCKER_SOCK}:/var/run/docker.sock'],  # Docker in docker
+                    f'{DOCKER_SOCK}:/var/run/docker.sock'
+                ],
                 command='python server.py --models-repo /models --config /config'
-                )
-            print(f'API endpoint available at: http://localhost:{WEB_API_PORT}')
+            )
+            print(f'Web service API available at: http://localhost:{WEB_API_PORT}')
 
-        # Start web app
-        if web_app_running is False:
-            print(f'Starting web app at port {WEB_APP_PORT}')
-            client = docker.from_env()
-            client.containers.run(
-                WEB_APP_DOCKER_IMAGE,
-                ports={80:WEB_APP_PORT},
-                detach=True,
-                name=WEB_APP_CONTAINER_NAME)
-            print(f'Webapp available at: http://localhost:{WEB_APP_PORT}')
+        if redis_running is False:
+            print(f'Starting redis server at port {REDIS_SERVER_PORT}')
+            redis_container_start()
+            redis_python_install()
+            print(f'Redis server is at: redis://localhost:{REDIS_SERVER_PORT}')
 
-    except docker.errors.NotFound as e:
-        print(e)
-        message = typer.style(e, fg=typer.colors.WHITE, bg=typer.colors.RED)
-        typer.echo(message)
-    except docker.errors.ContainerError as e:
-        message = typer.style(e, fg=typer.colors.WHITE, bg=typer.colors.RED)
-        typer.echo(message)
-    except docker.errors.APIError as e:
-        message = typer.style(e, fg=typer.colors.WHITE, bg=typer.colors.RED)
-        typer.echo(message)
+        if grafana_running is False:
+            print(f'Starting grafana server at port {GRAFANA_SERVER_PORT}')
+            grafana_container_start()
+            print(f'Grafana server is at: http://localhost:{GRAFANA_SERVER_PORT}')
 
+    except Exception as e:
+        err_console.print_exception()
+        print(f'Error: {e}')
 
 @web_app.command('stop')
 def web_stop(web: str=None):
@@ -124,17 +122,35 @@ def web_stop(web: str=None):
         client = docker.from_env()
         web_service_container = client.containers.get(WEB_APP_CONTAINER_NAME)
         web_service_container.stop()
-        web_service_container.remove()
+    except docker.errors.NotFound :
+        message = typer.style(f"Web-app not running", fg=typer.colors.WHITE, bg=typer.colors.RED)
+        typer.echo(message)
 
+    try:
         print(f'Stop API service....')
         web_api_container = client.containers.get(WEB_API_CONTAINER_NAME)
         web_api_container.stop()
-        web_api_container.remove()
+    except docker.errors.NotFound :
+        message = typer.style(f"Web-API not running", fg=typer.colors.WHITE, bg=typer.colors.RED)
+        typer.echo(message)
+
+    try:
+        print(f'Stop redis server....')
+        redis_container = client.containers.get(REDIS_CONTAINER_NAME)
+        redis_container.stop()
+    except docker.errors.NotFound :
+        message = typer.style(f"Redis not running", fg=typer.colors.WHITE, bg=typer.colors.RED)
+        typer.echo(message)
+
+    try:
+        print(f'Stop grafana server....')
+        grafana_container = client.containers.get(GRAFANA_CONTAINER_NAME)
+        grafana_container.stop()
+    except docker.errors.NotFound :
+        message = typer.style(f"Grafana not running", fg=typer.colors.WHITE, bg=typer.colors.RED)
+        typer.echo(message)
 
         print(f'Done.')
-    except docker.errors.NotFound :
-        message = typer.style(f"Web-server not running", fg=typer.colors.WHITE, bg=typer.colors.RED)
-        typer.echo(message)
 
 def print_container_status(container_name, tail):
     try:
@@ -168,6 +184,8 @@ def web_status(
     '''
     print_container_status(WEB_APP_CONTAINER_NAME, tail)
     print_container_status(WEB_API_CONTAINER_NAME, tail)
+    print_container_status(REDIS_CONTAINER_NAME, tail)
+    print_container_status(GRAFANA_CONTAINER_NAME, tail)
 
 
 @web_app.callback()

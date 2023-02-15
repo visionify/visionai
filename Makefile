@@ -63,7 +63,13 @@ format.black:                       ## Run black on every file (DON'T USE)
 format.isort:                       ## Sort imports for every file (CAN USE)
 	docker-compose run --rm server bash -c "python vendor/bin/isort -rc models/ routes/ test/ util/ *.py --skip vendor/"
 
+## DOCS:
+docs:                               ## Generate docs
+	typer visionai.main utils docs --name "visionai" --output docs/reference/index.md
+
 ## HELP:
-.PHONY: help
+.PHONY: help docs
 help:                               ## Display help
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//'
+
+
