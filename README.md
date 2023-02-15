@@ -1,8 +1,32 @@
+<p align="center">
+  <a href="https://docs.visionify.ai"><img src="https://visionify.ai/wp-content/uploads/2020/04/Logo-03-e1617318295317.png" alt="VisionAI Platform"></a>
+</p>
+<p align="center">
+    <em>Ready to deploy Vision AI scenarios. Open source. Try our CLI now. </em>
+</p>
+<p align="center">
+<a href="https://github.com/visionify/visionai/actions/workflows/codeql.yml" target="_blank">
+    <img src="https://github.com/visionify/visionai/actions/workflows/codeql.yml/badge.svg" alt="CodeQL">
+</a>
+<a href="https://github.com/visionify/visionai/blob/main/.github/workflows/docs.yaml" target="_blank">
+    <img src="https://github.com/visionify/visionai/actions/workflows/docs.yaml/badge.svg" alt="Documentation">
+</a>
+<a href="https://dev.azure.com/visionify/workplace-safety/_build/latest?definitionId=5&branchName=main" target="_blank">
+    <img src="https://dev.azure.com/visionify/workplace-safety/_apis/build/status/visionify.visionai?branchName=main" alt="Build">
+<a href="https://pypi.org/project/visionai" target="_blank">
+    <img src="https://img.shields.io/pypi/v/visionai?color=%2334D058&label=pypi%20package" alt="Package version">
+</a>
+</p>
+
+---
+
+**Documentation**: <a href="https://docs.visionify.ai" target="_blank">https://docs.visionify.ai</a>
+
+**Source Code**: <a href="https://github.com/visionify/visionai" target="_blank">https://github.com/visionify/visionai</a>
+
+---
+
 # VisionAI
-
-Documentation for VisionAI toolkit.
-
-## Overview
 
 **VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind.
 

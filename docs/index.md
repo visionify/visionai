@@ -4,9 +4,17 @@ Documentation for **VisionAI** toolkit.
 
 ## Overview
 
-**VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. VisionAI focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind.
+**VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. VisionAI focuses on workplace health and safety models and the majority of the models you see here have been developed with that keeping in mind.
 
-These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of [custom scenarios](TODO/custom-scenarios.md).
+These are *production-ready* models trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for businesses. The framework also supports a whole bunch of [custom scenarios](TODO/custom-scenarios.md).
+
+
+VisionAI focuses on workplace health and safety which includes PPE detection, smoke-and-fire detection, rust-and-corrosion,smoking-and-vaping, phone detection, and slip-and-fall detection etc..,
+
+Majorly focuses on the following areas:
+
+![](img/WorkPlaceSafety_FocusAreas.png)
+
 
 ## Install **VisionAI**
 
@@ -26,6 +34,17 @@ Successfully installed visionai
 
 </div>
 
+**Requirements**
+
+You can use the following command to install the requirements:
+
+
+```console
+$ pip install -r requirements.txt
+```
+Please wait until all the requirements get installed.
+
+
 ## Deploy to **Azure**
 
 Deploy a fully configured and tested solution directly from Azure Marketplace. **VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azure.microsoft.com) (TODO). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options. Get more details [here](azure/installation.md).
@@ -38,12 +57,12 @@ Deploy a fully configured and tested solution directly from Azure Marketplace. *
 
 **VisionAI** is organized in terms of scenarios. Consider each scenario as being a business use-case, that is solved by a combination of Machine Learning models and an inference algorithm. For example *Warn me when max occupancy of this area exceeds 80 people* is a business scenario, where as the *People detection* is an ML model.
 
-**VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](contact.md) if a scenario you need is not present in our repo and we will look into it.
+**VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](company/contact.md) if a scenario you need is not present in our repo and we will look into it.
 
 <div class="termy">
 
 ```console
-$ visionai scenarios list
+$ visionai scenario list
 
 ------------------------------------------------
 Privacy Suite
@@ -83,7 +102,7 @@ temperature-monitoring
 
 ## Get details for a **Scenario**
 
-You can get details about a scenario using `visionai scenario details` command. Specify the scenario you want additional details for. The details of a scenario include the dataset size, model accuracy metrics,
+You can get details about a scenario using `visionai scenario details` command. Specify the scenario you want additional details for. The details of a scenario include the dataset size, model accuracy metrics.
 
 <div class="termy">
 
@@ -129,12 +148,14 @@ Event examples:
 
 ## Run a **Scenario**
 
-Use `visionai run` command to run a scenario. In its simplest sense, you can run a single scenario on your web-cam. In a more complex use-case, you can specify a pipeline of scenarios, configure notification logic for each scenario, timings for each scenario etc.
+Use `visionai scenario test` command to run a scenario. In its simplest sense, you can run a single scenario on your web-cam. In a more complex use-case, you can specify a pipeline of scenarios, configure notification logic for each scenario, timings for each scenario etc.
+
+![](img/Scenario_Flow.png)
 
 <div class="termy">
 
 ```console
-$ visionai run --scenario early-smoke-and-fire-detection --camera OFFICE-01
+$ visionai scenario test smoke-and-fire-detection
 
 Starting early-smoke-and-fire-detection
 ...
@@ -143,6 +164,43 @@ Starting early-smoke-and-fire-detection
 ```
 
 </div>
+
+## Set up a **Pipeline**
+
+***Pipeline creation***
+
+You can specify a single scenario or multiple scenarios along with pre-processing steps under pipeline creation.
+
+In other words, pipeline is a list of scenarios to be run for specific cameras. The flow is as follows.
+
+You can create a pipeline by using the following command:
+
+```console
+$ visionai pipeline create --name test_pipe
+```
+
+    
+Scenarios can be added as follows:
+
+For example let's add Smoke-and-Fire dection and PPE detection to our pipeline.
+
+```console
+$ visionai pipeline add-scenario --pipeline test_pipe  --name smoke-and-fire
+```
+
+```console
+$ visionai pipeline add-scenario --pipeline test_pipe  --name ppe-detection
+```
+
+
+You can get the details of the pipeline:
+
+```console
+$ visionai pipeline show --pipeline test_pipe
+```
+
+
+
 
 ## Get **help** on commands
 
@@ -184,6 +242,13 @@ $ visionai pipeline --help
 ```
 
 </div>
+
+
+## Why **VISIONAI** ?
+
+VisionAI toolkit provides solutions in the form of production-ready models for various use cases focused on  workplace health and safety.
+
+![](img/KD_WorkplaceSafety_v2.png)
 
 
 ## Next **steps**
