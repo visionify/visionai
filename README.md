@@ -39,7 +39,7 @@ Key features of **VisionAI** include:
 
 ## Scenarios
 
-We support several Workplace health and safety scenarios. These are listed below. We are continuously adding new scenarios and you can [contact us](contact.md) if you need a scenario that is not listed here.
+We support several Workplace health and safety scenarios. These are listed below. We are continuously adding new scenarios and you can [contact us](company/contact.md) if you need a scenario that is not listed here.
 
 **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md).
 
@@ -127,7 +127,7 @@ Deploy a fully configured and tested solution directly from Azure Marketplace. *
 
 **VisionAI** is organized in terms of scenarios. Consider each scenario as being a business use-case, that is solved by a combination of Machine Learning models and an inference algorithm. For example *Warn me when max occupancy of this area exceeds 80 people* is a business scenario, where as the *People detection* is an ML model.
 
-**VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](TODO/contact.md) if a scenario you need is not present in our repo and we will look into it.
+**VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](company/contact.md) if a scenario you need is not present in our repo and we will look into it.
 
 ```bash
 $ visionai scenarios list
@@ -245,4 +245,6 @@ Or you can also browse through our [scenarios](scenarios/index.md) section to un
 
 We welcome contributions to VisionAI. Please read our [contribution guidelines](CONTRIBUTING.md) to learn about how you can contribute to VisionAI.
 
+## **License**
 
+VIsionAI is licensed under the [GPLv3 License](LICENSE.md). If you need a commercial license, please [contact us](company/contact.md).
