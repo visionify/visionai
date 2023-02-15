@@ -15,7 +15,7 @@ ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
 from rich import print, print_json
 from util.general import check_requirements
-from util.redis_utils import redis_container_start, redis_python_install
+from util.docker_utils import redis_container_start, redis_python_install
 
 class Event(str, Enum):
     DEBUG = 'DEBUG'
@@ -23,7 +23,6 @@ class Event(str, Enum):
     WARNING = 'WARNING'
     ERROR = 'ERROR'
     CRITICAL = 'CRITICAL'
-
 
 class EventsEngine():
     def __init__(self, use_redis:bool=False, use_event_hub:bool=False, use_log:bool=True):
@@ -41,7 +40,7 @@ class EventsEngine():
 
             # listen to self events for validation
             self.redis_pubsub = self.redis_client.pubsub(ignore_subscribe_messages=True)
-            self.redis_pubsub.subscribe('events')
+            self.redis_pubsub.subscribe('visionai')
 
     def fire_event(
         self,
@@ -82,7 +81,7 @@ class EventsEngine():
             })
 
             # Send event to "events" channel
-            self.redis_client.publish('events', json.dumps(event_data))
+            self.redis_client.publish('visionai', json.dumps(event_data))
 
         if self.use_event_hub:
             # Send the event to Azure Event Hub

@@ -81,6 +81,7 @@ def models_stop():
     tc = TritonClient()
     tc.stop_model_server()
 
+@models_app.command('list')
 @models_app.command('status')
 def models_status():
     '''
