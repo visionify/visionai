@@ -11,12 +11,8 @@ ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
-from config import WEB_API_PORT, WEB_APP_PORT, REDIS_SERVER_PORT, GRAFANA_SERVER_PORT
-from config import REDIS_CONTAINER_NAME, GRAFANA_CONTAINER_NAME, DOCKER_NETWORK
-from config import WEB_APP_CONTAINER_NAME, WEB_API_CONTAINER_NAME
-from util.docker_utils import docker_container_is_running, docker_network_is_running, docker_container_start, docker_container_stop
-from util.docker_utils import redis_container_start, redis_container_stop, redis_python_install, redis_python_package_installed
-from util.docker_utils import grafana_container_start, grafana_container_stop
+from config import *
+from util.docker_utils import *
 
 err_console = Console(stderr=True)
 web_app = typer.Typer()
@@ -44,13 +40,13 @@ def web_start():
         containers = client.containers.list()
         for container in containers:
             if container.name == WEB_APP_CONTAINER_NAME:
-                print(f'Web server already running at: http://localhost:{WEB_APP_PORT}')
+                print(f'Web app available at: http://localhost:{WEB_APP_PORT}')
                 web_app_running = True
             if container.name == WEB_API_CONTAINER_NAME:
-                print(f'API server already running at: http://localhost:{WEB_API_PORT}')
+                print(f'Web service API available at: http://localhost:{WEB_API_PORT}')
                 web_api_running = True
             if container.name == REDIS_CONTAINER_NAME:
-                print(f'Redis server is at: localhost:{REDIS_SERVER_PORT}')
+                print(f'Redis server is at: redis://localhost:{REDIS_SERVER_PORT}')
                 redis_running = True
             if container.name == GRAFANA_CONTAINER_NAME:
                 print(f'Grafana server is at: http://localhost:{GRAFANA_SERVER_PORT}')
