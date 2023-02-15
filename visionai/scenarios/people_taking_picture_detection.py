@@ -2,10 +2,8 @@ from rich import print
 import time
 import cv2
 from PIL import Image
-import mediapipe as mp
-mp_drawing = mp.solutions.drawing_utils
-mp_drawing_styles = mp.solutions.drawing_styles
-mp_pose = mp.solutions.pose
+
+
 import math
 from math import atan
 import sys
@@ -18,6 +16,15 @@ from models.plots import Annotator
 from util.general import LOGGER
 from scenarios import Scenario
 from config import TRITON_HTTP_URL
+from events.events_engine import EventsEngine
+from enum import Enum
+
+class Event(str, Enum):
+    DEBUG = 'DEBUG'
+    INFO = 'INFO'
+    WARNING = 'WARNING'
+    ERROR = 'ERROR'
+    CRITICAL = 'CRITICAL'
 
 class PeopleTakingPictureDetection(Scenario):
     model = None
@@ -32,7 +39,13 @@ class PeopleTakingPictureDetection(Scenario):
     device='cpu'  # cuda device, i.e. 0 or 0,1,2,3 or cpu
 
     def __init__(self, scenario_name, camera_name=0, events=None, triton_url=TRITON_HTTP_URL):
-
+        from util.general import check_requirements
+        check_requirements('mediapipe', install=True)
+        import mediapipe as mp
+        self.mp_drawing = mp.solutions.drawing_utils
+        self.mp_drawing_styles = mp.solutions.drawing_styles
+        self.mp_pose = mp.solutions.pose
+        self.f_event =  EventsEngine(use_redis=True)
         from models.triton_client_yolov5 import yolov5_triton
         self.model = yolov5_triton('http://localhost:8000', scenario_name)
         super().__init__(scenario_name, camera_name, events, triton_url)
@@ -134,12 +147,17 @@ class PeopleTakingPictureDetection(Scenario):
     def start(self, camera_name=0):
         '''
         Stream processing
+
         When running a scenario - the caller can specify any specific camera.
         '''
+
         import cv2
         stream = camera_name
+        # stream = "F:\\visionify\\test-videos\\box_moving_w_halmet.MOV"
+
         print(f'Opening capture for {stream}')
         video = cv2.VideoCapture(stream)
+
         while True:
             # Do processing
             ret, image = video.read()
@@ -147,6 +165,7 @@ class PeopleTakingPictureDetection(Scenario):
                 LOGGER.error('ERROR: reading from video frame')
                 time.sleep(1)
                 continue
+            
             start_time = time.time()
             centroid = []
             top_center = []
@@ -180,7 +199,7 @@ class PeopleTakingPictureDetection(Scenario):
                         crop = im0[int(xyxy[1]):int(xyxy[3]),int(xyxy[0]):int(xyxy[2])]
                         mobile = self.mobile_check(mobile_centeroid, xyxy, im0shape)
                         param["person_id"].append(person_count)
-                        with mp_pose.Pose(
+                        with self.mp_pose.Pose(
                             min_detection_confidence=0.5,
                             min_tracking_confidence=0.5) as pose:
                             crop = cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
@@ -208,31 +227,42 @@ class PeopleTakingPictureDetection(Scenario):
                                             if mobile:
                                                 if left_angel_s_l_w > 125 and right_angel_s_l_w > 100 and mobile_to_left_hand_dist < 350 and mobile_to_right_hand_dist < 350:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                                 elif right_angel_s_l_w > 55 and mobile_to_right_hand_dist < 350:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                                 elif left_angel_s_l_w > 125 and mobile_to_left_hand_dist < 350:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                                 else:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                             else:
-                                                cv2.putText(crop, "Not taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)      
+                                                cv2.putText(crop, "Not taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA) 
+                                                self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'people-taking-picture-detection', 'NOT_TAKING_PICTURE', {})    
                                         else:
                                             if mobile:
                                                 if left_angel_s_l_w > 125 and mobile_to_left_hand_dist < 350:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                                 else:
                                                     cv2.putText(crop, "taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                             else:
                                                 cv2.putText(crop, "Not taking picture", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'people-taking-picture-detection', 'NOT_TAKING_PICTURE', {})
                                     else:
                                         if right_angel_w_s_l > 35: # checking for right hand
                                             if mobile:
                                                 if right_angel_s_l_w > 55 and mobile_to_right_hand_dist < 350:
                                                     cv2.putText(crop, "taking pictures", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                                 else:
                                                     cv2.putText(crop, "taking pictures", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                                    self.f_event.fire_event(Event.WARNING, 'OFFICE-01', 'people-taking-picture-detection', 'TAKING_PICTURE', {})
                                         else:
                                             cv2.putText(crop, "Not taking pictures", (0,20) , cv2.FONT_HERSHEY_SIMPLEX, 1, (255,0,0), 2, cv2.LINE_AA)
+                                            self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'people-taking-picture-detection', 'NOT_TAKING_PICTURE', {})
                                     im0[int(xyxy[1]):int(xyxy[3]),int(xyxy[0]):int(xyxy[2])] = crop
                             param["pose_points"].append(land_marks)
                             param["dim"].append([int(xyxy[0]),int(xyxy[1]),int(xyxy[2]),int(xyxy[3])])
@@ -245,11 +275,29 @@ class PeopleTakingPictureDetection(Scenario):
             if cv2.waitKey(5) & 0xFF == 27:
                 break
         video.release()
-        cv2.destroyAllWindows()            
+        cv2.destroyAllWindows()
+
+
+def people_taking_picture_detection():
+    snf = PeopleTakingPictureDetection(scenario_name = 'phone-detection')
+    # snf.load_model()
+    imgs = [
+    cv2.imread("visionai/models/data/images/ergo_test_1.png"),
+    cv2.imread("visionai/models/data/images/ptp7.jpg"),
+    cv2.imread("visionai/models/data/images/ptp8.jpg"),
+    cv2.imread("visionai/models/data/images/fall_1.jpg"),
+    # img = Image.open('visionai/models/data/images/no_fall.jpg')
+    # img = Path('visionai/models/data/images/no_fall.jpg')
+    ]
+    for idx, img in enumerate(imgs):
+        img  = snf.process_image(img)
+        cv2.imwrite(str(idx) +'sfd_res_2.jpg', img)
+
 
 def camera_stream():
-    snf = PeopleTakingPictureDetection(scenario_name = 'peoplae-taking-picture-detection')
+    snf = PeopleTakingPictureDetection(scenario_name = 'people-taking-picture-detection')
     snf.start(camera_name=0)
 
 if __name__ == '__main__':
+    # people_taking_picture_detection()
     camera_stream()
