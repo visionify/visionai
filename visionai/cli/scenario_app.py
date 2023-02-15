@@ -109,9 +109,13 @@ def scenario_download(
     all scenarios that have been configured.
     '''
 
+    # import TritonClient module
+    from models.triton_client import TritonClient
+
     # Get scenarios from server. If override file exists, use that.
     all_scenarios = get_scenarios()
 
+    models_changed = False
     if name.lower() == 'world':
         print(f'Downloading all available (world) scenarios')
         yN = prompt.Confirm.ask('Are you sure you want to download all scenarios? This may take a lot of space!')
@@ -120,7 +124,8 @@ def scenario_download(
             for idx, scen in enumerate(all_scenarios):
                 print(f'Downloading {idx+1}/{num_scenarios}...')
                 scen_url = scen['models']['latest']['model_url']
-                safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
+                models_changed = safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
+
         else:
             raise typer.Exit()
 
@@ -156,7 +161,7 @@ def scenario_download(
 
                 if scen_name in model_names:
                     print(f'Model: {scen_name}: {scen_url}')
-                    safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
+                    models_changed = safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
 
     else:
         print(f'Downloading models for scenario: {name}')
@@ -171,13 +176,20 @@ def scenario_download(
 
             if scen_name == name:
                 print(f'Model: {scen_name}: {scen_url}')
-                safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
+                models_changed = safe_download_to_folder(scen_url, MODELS_REPO, overwrite=False)
                 download_success = True
                 break
 
         if download_success is False:
             print(f'ERROR: Unable to find scenario: {name}')
 
+    # If any new models were downloaded, restart the model server
+    if models_changed is True:
+        print('Restarting model server...')
+        tc = TritonClient()
+        tc.stop_model_server()
+        tc.start_model_server()
+        print('Restarted model server.')
 
     # Done downloading models.
     print('Done.')
