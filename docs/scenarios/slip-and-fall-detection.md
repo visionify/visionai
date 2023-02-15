@@ -175,7 +175,8 @@ Starting scenario: slip-and-fall-detection..
 
 - You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
 
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
+
 
 ## Training with custom data
 

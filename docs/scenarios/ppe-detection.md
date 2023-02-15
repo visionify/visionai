@@ -253,10 +253,10 @@ Click on apply button
 
    ![](../img/azureapp_step3.png)
 
-## Events Supported
-=======
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
 
+
+## Events Supported
 
 This scenario supports the following event:
 
