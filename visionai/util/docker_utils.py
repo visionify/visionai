@@ -320,7 +320,7 @@ def redis_container_start():
         container_name=REDIS_CONTAINER_NAME,
         image=REDIS_SERVER_DOCKER_IMAGE,
         network_name=DOCKER_NETWORK,
-        portmap={REDIS_SERVER_PORT:REDIS_SERVER_PORT}
+        portmap={6379:REDIS_SERVER_PORT}
         )
 
 def redis_container_stop():
@@ -382,7 +382,7 @@ def grafana_container_start():
         container_name=GRAFANA_CONTAINER_NAME,
         image=GRAFANA_SERVER_DOCKER_IMAGE,
         network_name=DOCKER_NETWORK,
-        portmap={GRAFANA_SERVER_PORT:GRAFANA_SERVER_PORT},
+        portmap={3000:GRAFANA_SERVER_PORT},
         envmap=grafana_env,
         volmap=[f'{GRAFANA_DATA_DIR}:/var/lib/grafana', f'{GRAFANA_PROVISIONING_DIR}:/etc/grafana/provisioning/datasources']
         )
