@@ -18,27 +18,68 @@ init_config()
 
 # CLI modules
 from cli import scenario_app, camera_app, web_app, auth_app, device_app, pipeline_app, models_app
+from cli import stop_cmd, init_cmd, status_cmd
 
 app = typer.Typer()
-app.add_typer(auth_app, name='auth')
+app.add_typer(auth_app, name='auth', help='Authentication commands')
 
-app.add_typer(device_app, name='device')
-app.add_typer(device_app, name='devices', help='... alias for device')
+app.add_typer(device_app, name='device', help='Device commands')
+app.add_typer(device_app, name='devices', hidden=True)
 
-app.add_typer(scenario_app, name='scenario')
-app.add_typer(scenario_app, name='scenarios', help='... alias for scenario')
+app.add_typer(scenario_app, name='scenario', help='Add/remove scenarios to camera')
+app.add_typer(scenario_app, name='scenarios', hidden=True)
 
-app.add_typer(camera_app, name='camera')
-app.add_typer(camera_app, name='cameras', help='... alias for camera')
+app.add_typer(camera_app, name='camera', help='Add/remove/manage cameras')
+app.add_typer(camera_app, name='cameras', hidden=True)
 
-app.add_typer(web_app, name='ui')
-app.add_typer(web_app, name='web', help='... alias for ui')
+app.add_typer(web_app, name='web', help='Start/stop web server')
+app.add_typer(web_app, name='ui', hidden=True)
 
-app.add_typer(pipeline_app, name='pipeline')
-app.add_typer(pipeline_app, name='pipelines', help='... alias for pipeline')
+app.add_typer(pipeline_app, name='pipeline', help='Manage pipelines')
+app.add_typer(pipeline_app, name='pipelines', hidden=True)
 
-app.add_typer(models_app, name='model')
-app.add_typer(models_app, name='models', help='... alias for model')
+app.add_typer(models_app, name='model', help='Manage models')
+app.add_typer(models_app, name='models', hidden=True)
+
+@app.command('init')
+def init():
+    '''
+    Initialize VisionAI library
+
+    Initialize VisionAI library. This takes care of downloading
+    and starting all required container dependencies. This includes:
+    - Redis
+    - Grafana
+    - Triton Model Server
+    - VisionAI Web Service Application
+    - VisionAI Web API Service
+
+    '''
+    init_cmd()
+
+@app.command('stop')
+def stop():
+    '''
+    Stop all running containers.
+
+    Use this function to stop all running containers.
+    Example Usage:
+    $ visionai stop
+    $ visionai stop --help
+    '''
+    stop_cmd()
+
+@app.command('status')
+def status():
+    '''
+    Print status of all running containers.
+
+    Use this function to print status of all running containers.
+    Example Usage:
+    $ visionai status
+    $ visionai status --help
+    '''
+    status_cmd()
 
 # Single-source for version
 import pkg_resources

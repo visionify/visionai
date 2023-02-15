@@ -2,6 +2,18 @@
 
 ## VisionAI Changelog
 
+### **0.1.18** <small>💚 February 14, 2023 💚 </small>
+
+- 💚 Added support for grafana and redis servers.
+- 🎨 Added support for event engine, and publishing to redis
+- 🚚 Added commands for `visionai init|status|stop` which can install all dependencies.
+- 🔥 Removed dependency on torch and OpenCV packages. Now the package size goes down significantly.
+- 📝 Updated documentation to reflect the changes.
+- ✨ Docker networking changes - now all containers connect to bridge network.
+- 🔥 Added support for slip-and-fall detection model.
+- 🔥 Added support for phone detection and people taking pictures scenarios.
+
+
 ### **0.1.17** <small>February 9, 2023</small>
 
 - 📌 Added support for `visionai web start|stop|status` commands with API server support.
