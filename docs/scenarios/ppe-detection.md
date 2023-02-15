@@ -75,7 +75,8 @@ The dataset is made up of images and videos gathered from various sources. The d
 - Different light settings
 - Variations in camera orientations
 - Using security camera feeds
-- Total number of images used was 207,300
+
+Total number of images used was 207,300
 
 ### Model
 
