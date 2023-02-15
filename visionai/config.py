@@ -36,7 +36,7 @@ REDIS_CONTAINER_NAME = 'visionai-redis'
 # Grafana server configuration
 GRAFANA_ENABLED = True
 GRAFANA_SERVER_DOCKER_IMAGE = 'grafana/grafana'
-GRAFANA_SERVER_PORT = 3000
+GRAFANA_SERVER_PORT = 3003
 GRAFANA_CONTAINER_NAME = 'visionai-grafana'
 GRAFANA_DATA_DIR = ROOT / 'config' / 'grafana-data'
 GRAFANA_PROVISIONING_DIR = ROOT / 'config' / 'grafana-provisioning'
