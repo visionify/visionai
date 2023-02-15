@@ -38,15 +38,18 @@ $ visionai [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 ```bash
-╭─ Commands ─────────────────────────────────────────────────────────────╮
-│ auth             Authentication commands                               │
-│ camera           Add/remove/manage cameras                             │
-│ device           Device commands                                       │
-│ model            Manage models                                         │
-│ pipeline         Manage pipelines                                      │
-│ scenario         Add/remove scenarios to camera                        │
-│ web              Web UI commands                                       │
-╰────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ─────────────────────────────────────────────────────╮
+│ auth         Authentication commands                           │
+│ camera       Add/remove/manage cameras                         │
+│ device       Device commands                                   │
+│ init         Initialize VisionAI library                       │
+│ model        Manage models                                     │
+│ pipeline     Manage pipelines                                  │
+│ scenario     Add/remove scenarios to camera                    │
+│ status       Print status of all running containers.           │
+│ stop         Stop all running containers.                      │
+│ web          Start/stop web server                             │
+╰────────────────────────────────────────────────────────────────╯
 ```
 
 ## `visionai auth`
