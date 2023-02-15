@@ -3,7 +3,7 @@
 > Ensure safety and comfort of employees by monitoring ergonomics. 
 
 ## Overview 
- 
+ Ergonomics is the study of designing and arranging products, systems, and environments to fit the capabilities and limitations of people, with the goal of improving efficiency, safety, and comfort. The primary focus of ergonomics is to create environments that optimize human performance and well-being.
 ## Vision AI based monitoring 
 
 Vision AI based monitors can be used to monitor productivity and workers health by providing real-time video feeds of different areas. These cameras can be used to monitor and track number of objects moved by persons from one place to the other, as well as the bending information of workers while performing this work. 
