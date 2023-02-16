@@ -25,7 +25,11 @@ class PpeDetection(Scenario):
     def __init__(self, scenario_name, camera_name=0, events=None, triton_url=TRITON_HTTP_URL):
         self.f_event =  EventsEngine(use_redis=True)
         from models.triton_client_yolov5 import yolov5_triton
-        self.model = yolov5_triton(triton_url, scenario_name)
+        labels_file = ROOT / 'models-repo' / 'ppe-detection' / 'labels.txt'
+        with open(labels_file, 'r') as f:
+            labels = [line.strip() for line in f.readlines()]
+        self.model = yolov5_triton(triton_url, scenario_name, labels=labels)
+        self.model.conf = 0.35
         super().__init__(scenario_name, camera_name, events, triton_url)
 
 
