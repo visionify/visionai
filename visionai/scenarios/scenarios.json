@@ -281,21 +281,21 @@
         {
             "id": "50948434-913f-4a61-be18-be61d63a4193",
             "name": "slip-and-fall-detection",
-            "version": "0.0.3",
+            "version": "0.0.5",
             "overview": "Preventative maintenance. Detect person slip and fall is occuring.",
             "docs": "https://docs.visionify.ai/scenarios/slip-and-fall.md",
             "image": "https://scenariosblob.blob.core.windows.net/slip-and-fall.jpg",
             "thumbnail": "https://scenariosblob.blob.core.windows.net/slip-and-fall-200x200.jpg",
             "models": {
                 "latest": {
-                    "version": "0.0.3",
+                    "version": "0.0.5",
                     "name": "yolov5s-slip-and-fall-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
                     "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.0.3.zip",
-                    "model_hash": "0a14ea1ba79188126f93c57be5470564"
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.0.5.zip",
+                    "model_hash": "12f72472662beb9906d94841fcb01d3a"
                 },
                 "other": []
             },
@@ -378,6 +378,112 @@
                 "Privacy"
             ],
             "events": [
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "900e92f8-a724-4194-b92c-80be3c46c372",
+            "name": "people-taking-picture-detection",
+            "version": "0.0.2",
+            "overview": "Preventative maintenance. Detect person taking selfi is occuring.",
+            "docs": "https://docs.visionify.ai/scenarios/people-taking-picture.md",
+            "image": "https://scenariosblob.blob.core.windows.net/people-taking-picture.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/people-taking-picture-200x200.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.2",
+                    "name": "yolov5s-people-taking-picture-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/people-taking-picture-detection/people-taking-picture-detection-0.0.2.zip",
+                    "model_hash": "ef3c6b45fe4c9b80ca4dd99220919ffd"
+                },
+                "other": []
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Machinery maintenance"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment detected with rust and/or corrosion"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "0e9eef0d-686b-473d-b4b2-e43cc12ac6cf",
+            "name": "ergonomics-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Detect person bending is occuring.",
+            "docs": "https://docs.visionify.ai/scenarios/ergonomics.md",
+            "image": "https://scenariosblob.blob.core.windows.net/ergonomics.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/ergonomics-200x200.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-ergonomics-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/ergonomics-detection/ergonomics-detection-0.0.1.zip",
+                    "model_hash": "e8f02808d3313aae320fbe5d043edb58"
+                },
+                "other": []
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Machinery maintenance"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment detected with rust and/or corrosion"
             ],
             "configuration": [
                 {
