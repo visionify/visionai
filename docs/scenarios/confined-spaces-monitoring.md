@@ -31,7 +31,8 @@ The datasets for this scenario is based off of people detection and tracking alg
 - Various lighting conditions
 - Various camera angles and resolutions
 - Using seurity camera feeds
-- Total number of images used was 387,644
+
+Total number of images used was 387,644
 
 ### Model
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset curated by our team.
@@ -87,7 +88,7 @@ Starting scenario: confined-spaces-monitoring..
 ```
 </div>
 
-- TODO: Add images from your local web-cam here showing people detection & dwell time tracking.
+
 
 - You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
 
