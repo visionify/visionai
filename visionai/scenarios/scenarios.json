@@ -3,7 +3,7 @@
     "scenarios": [
         {
             "id": "73218220-69e3-455c-9594-e28a310c8282",
-            "name": "yolov5s-smoke-and-fire",
+            "name": "smoke-and-fire-detection",
             "version": "0.0.7",
             "overview": "Detect early signs of sparks, smoke or fire. Get real-time events when a smoke, fire, sparks, embers are detected. It is trained with 240032 images, out of which 183453 images were from outdoors environment, and remaining images were indoor environment. There is a good balance between day and night pictures (44-56%)",
             "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection.md",
@@ -12,7 +12,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.7",
-                    "name": "yolov5s-smoke-and-fire",
+                    "name": "smoke-and-fire-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
