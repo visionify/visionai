@@ -20,8 +20,8 @@ import torch
 from PIL import Image, ImageDraw, ImageFont
 
 from util import TryExcept, threaded
-from util.general import (LOGGER, check_requirements, clip_boxes, increment_path,
-                           is_ascii, xywh2xyxy, xyxy2xywh)
+from util.general import (LOGGER, check_requirements, increment_path, is_ascii)
+from util.image_utils import xywh2xyxy, xyxy2xywh, clip_boxes
 from util.metrics import fitness
 
 # Settings

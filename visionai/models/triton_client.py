@@ -1,9 +1,10 @@
 import docker
-import tritonclient.http
+from rich import print
 from rich.console import Console
 from rich.columns import Columns
 from rich.panel import Panel
 import time
+from urllib.parse import urlparse
 
 import sys
 from pathlib import Path
@@ -12,7 +13,7 @@ ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 
-from config import TRITON_HTTP_URL, TRITON_SERVER_DOCKER_IMAGE, TRITON_SERVER_EXEC, TRITON_SERVER_COMMAND, TRITON_MODELS_REPO
+from config import TRITON_HTTP_URL, TRITON_SERVER_DOCKER_IMAGE, TRITON_SERVER_EXEC, TRITON_SERVER_COMMAND, TRITON_MODELS_REPO, TRITON_SERVER_CONTAINER_NAME
 
 class TritonClient():
 
@@ -40,7 +41,9 @@ class TritonClient():
     def init_triton_client(self):
         # Triton client
         try:
-            self.triton_client = tritonclient.http.InferenceServerClient(url=TRITON_HTTP_URL)
+            import tritonclient.http
+            parsed_url = urlparse(TRITON_HTTP_URL)
+            self.triton_client = tritonclient.http.InferenceServerClient(url=parsed_url.netloc)
             self.triton_client.get_server_metadata()
         except Exception as ex:
             self.triton_client = None
@@ -233,7 +236,6 @@ class TritonClient():
         else:
             return self.triton_client.get_model_repository_index()
 
-
     def print_models_served(self):
         '''
         Print models being served by triton server
@@ -258,40 +260,81 @@ class TritonClient():
         '''
 
         if self.get_container_by_image_name(TRITON_SERVER_EXEC) is not None:
-            print('ERROR: Model server already running!')
+            print('Model server already running!')
             return
 
         try:
+            print('Pulling docker image (this may take a while)')
+            from util.docker_utils import docker_image_pull_with_progress, docker_container_run_triton
+
+            # Stream progress message while pulling the docker image.
+            docker_image_pull_with_progress(self.docker_client, image_name=TRITON_SERVER_DOCKER_IMAGE)
+            print('Done.')
+
+            # Try starting docker container with NVIDIA runtime,
+            # If that is not available - then start the container with regular runtime
             print('Starting model server')
-            self.docker_client.containers.run(
+            docker_container_run_triton(
+                client=self.docker_client,
                 image=TRITON_SERVER_DOCKER_IMAGE,   # image name
+                container_name=TRITON_SERVER_CONTAINER_NAME, # container name
                 command=TRITON_SERVER_COMMAND,      # command to run in container
                 stdout=False,                       # disable logs
                 stderr=False,                       # disable stderr logs
                 detach=True,                        # detached mode - daemon
                 remove=True,                        # remove fs after exit
                 auto_remove=True,                   # remove fs if container fails
-                runtime='nvidia',                   # Use nvidia-container-runtime
                 device_requests=[                   # similar to --gpus=all ??
                     docker.types.DeviceRequest(capabilities=[['gpu']])
                     ],
-                network_mode='host',                # --net=host
+                # network_mode='host',                # --net=host
                 volumes=                            # -v
-                    [f'{TRITON_MODELS_REPO}:/models']
+                    [f'{TRITON_MODELS_REPO}:/models'],
+                ports={
+                    '8000': 8000,
+                    '8001': 8001,
+                    '8002': 8002
+                }
             )
 
-            # sleep a bit
-            time.sleep(3)
+            init_complete = False
+            init_idx = 0
+            for init_idx in range(1,11):
+                # sleep a bit
+                time.sleep(1)
 
-            # Attach triton_client
-            self.init_triton_client()
-            if self.triton_client is None:
-                print('ERROR: Unable to connect to triton client')
+                # Attach triton_client
+                self.init_triton_client()
+                if self.triton_client is None:
+
+                    # Check if container still present:
+                    triton_container = self.get_container_by_image_name(TRITON_SERVER_EXEC)
+                    if triton_container is None:
+                        print('Container start failed.')
+                        break
+
+                    else:
+                        print(f'[{init_idx}/{10}] Triton client init.')
+                        continue
+
+                else:
+                    init_complete = True
+                    break
+
+            if init_complete is True:
+                # Everything looks good
+                print('Triton client initialized.')
+                return True
+            else:
+                print('[red]- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -[/red]')
+                print('[red]Error with starting triton container. (Likely one of the models is corrupt)[/red]')
+                print()
+                print('[magenta]Ensure the following command is successful:[/magenta]')
+                models_repo_path = ROOT / 'models-repo'
+                print(f'[magenta]docker run -it -p 8000:8000 -p 8001:8001 -p 8002:8002 -v {models_repo_path}:/models nvcr.io/nvidia/tritonserver:22.12-py3 tritonserver --model-repo /models[/magenta]')
+                print('[red]- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -[/red]')
                 return False
 
-            # Everything looks good
-            print('Done.')
-            return True
         except Exception as ex:
             print('ERROR: Trying to start model server.')
             print(f'Exception: {ex}')

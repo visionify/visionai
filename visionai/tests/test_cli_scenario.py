@@ -13,6 +13,10 @@ from config import VISIONAI_EXEC
 from util.general import WorkingDirectory, invoke_cmd
 
 class TestInvokeCliScenario(unittest.TestCase):
+    @WorkingDirectory(PKGDIR)
+    def setUp(self):
+        # Initialize visionai package before running tests
+        output = invoke_cmd(f'{VISIONAI_EXEC} init')
 
     @WorkingDirectory(PKGDIR)
     def test_invoke_scenario(self):
@@ -25,112 +29,44 @@ class TestInvokeCliScenario(unittest.TestCase):
         output = invoke_cmd(f'{VISIONAI_EXEC} scenario --help')
         assert 'Usage' in output
         assert 'Commands' in output
-        assert 'add' in output
+        assert 'download' in output
         assert 'list' in output
-        assert 'remove' in output
-
-    @WorkingDirectory(PKGDIR)
-    def test_invoke_scenario_add_help(self):
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario add --help')
-        assert 'Usage' in output
-        assert 'scenario' in output
-        assert 'add' in output
-        assert '--camera' in output
-        assert '--scenario' in output
-        assert '--help' in output
-
-    @WorkingDirectory(PKGDIR)
-    def test_invoke_scenario_remove_help(self):
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario remove --help')
-        assert 'Usage' in output
-        assert 'scenario' in output
-        assert 'remove' in output
-        assert '--scenario' in output
-        assert '--camera' in output
-        assert '--help' in output
-
-    @WorkingDirectory(PKGDIR)
-    def test_invoke_scenario_list_help(self):
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario list --help')
-        assert 'Usage' in output
-        assert 'scenario' in output
-        assert '--camera' in output
-        assert '--help' in output
-
-    @WorkingDirectory(PKGDIR)
-    def test_invoke_scenario_add_remove(self):
-        # cleanup (prior test failures)
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario remove --name TEST-999')
-
-        # add camera
-        output = invoke_cmd(f'{VISIONAI_EXEC} camera add --name TEST-999 --uri youtube.com --description "Test camera"')
-        assert 'Success' in output
-
-        # add scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario add --camera TEST-999 --scenario smoke-and-fire-detection')
-        assert 'Scenario' in output
-        assert 'smoke-and-fire-detection' in output
-        assert 'added for camera' in output
-
-        # list scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario list --camera TEST-999')
-        assert "Listing configured scenarios for" in output
-        assert 'TEST-999' in output
-        assert "'name': 'smoke-and-fire-detection'" in output
-
-        # remove scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario remove --camera TEST-999 --scenario smoke-and-fire-detection')
-        assert 'Success' in output
-
-        # list scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario list  --camera TEST-999')
-        assert "Listing configured scenarios for" in output
-        assert 'TEST-999' in output
-        assert "'name': 'smoke-and-fire-detection'" not in output
-
-        # remove camera
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario remove --name TEST-999')
+        assert 'test' in output
 
     @WorkingDirectory(PKGDIR)
     def test_list_all_scenarios(self):
         # list scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario list-all')
-        assert 'Detect early signs of' in output
-        assert 'ppe-detection' in output
-        assert 'model_url' in output
-        assert 'categories' in output
-        assert 'tags' in output
-        assert 'accuracy' in output
-        assert 'recall' in output
-        assert 'f1' in output
-        assert 'datasetSize' in output
-
-    @WorkingDirectory(PKGDIR)
-    def test_list_no_camera_list_all_scenarios(self):
-        # list scenario
         output = invoke_cmd(f'{VISIONAI_EXEC} scenario list')
-        assert 'Detect early signs of' in output
+        assert 'smoke-and-fire-detection' in output
         assert 'ppe-detection' in output
-        assert 'model_url' in output
-        assert 'categories' in output
-        assert 'tags' in output
-        assert 'accuracy' in output
-        assert 'recall' in output
-        assert 'f1' in output
-        assert 'datasetSize' in output
+        assert 'docs.visionify.ai' in output
+        assert 'Categories' in output
+        assert 'Tags' in output
+        assert 'Acc:' in output
+        assert 'Rec:' in output
+        assert 'F1:' in output
+        assert 'Size:' in output
 
     @WorkingDirectory(PKGDIR)
     def test_download_specific_scenario(self):
         # download specific scenario
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario download --scenario smoke-and-fire-detection')
+        output = invoke_cmd(f'{VISIONAI_EXEC} scenario download smoke-and-fire-detection')
         assert 'download_models' in output
         assert 'Model: smoke-and-fire-detection' in output
 
     @WorkingDirectory(PKGDIR)
     def test_download_all_scenarios(self):
         # download all scenarios
-        output = invoke_cmd(f'{VISIONAI_EXEC} scenario download')
-        assert 'Downloading scenarios : all' in output
+        output = invoke_cmd(f'{VISIONAI_EXEC} scenario download all')
+        assert 'Downloading all configured scenarios' in output
+
+    # This requires a prompt from user. Skipping it in unit-tests.
+    # @WorkingDirectory(PKGDIR)
+    # def test_download_world_scenarios(self):
+    #     # download all scenarios
+    #     output = invoke_cmd(f'{VISIONAI_EXEC} scenario download world')
+    #     assert 'Downloading all available (world) scenarios' in output
+
 
 if __name__ == '__main__':
     unittest.main()

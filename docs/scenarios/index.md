@@ -1,216 +1,157 @@
-# VisionAI
+# Overview
 
-Documentation for VisionAI toolkit.
+Workplace health and safety involves protecting employees from potential hazards and risks in the workplace. 
+VisionAI is designed to ensure that employees are safe and healthy in their work environment.
 
-## Overview
+Common workplace health and safety scenarios include hazardous materials, ergonomic hazards, workplace compliance violations, and suspicious activities. Hazardous materials may include flammable materials, biological agents, and hazardous chemicals. Employees should understand the risks associated with these materials and the need for proper handling and storage. Ergonomic hazards refer to the physical and environmental conditions of a workplace that may cause injuries or illnesses due to repetitive motions, awkward postures, or heavy lifting. Employers need to assess the environment and take steps to reduce or eliminate these hazards. Employers should create a safe and supportive environment and provide resources to help employees understrand the workplace compliances. 
 
-**VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind.
 
-These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of [custom scenarios](TODO/custom-scenarios.md).
+# VisionAI Scenarios
 
-## Install **VisionAI**
+VisionAI can help to streamline safety processes, detect hazards, monitor job site conditions, and improve communication between workers. VisionAI can help to identify risks that may have been previously overlooked and alert workers and managers to potential hazards. 
 
-Install **VisionAI** application through `PyPI`. There are other options available for install - including a Docker container option. These are detailed in [installation](TODO/install.md) section.
+Most of the VisionAI Scenarios fall under:
+- Personnel Health
+- Compliance Policies
+- Privacy Suite
 
-<div class="termy">
 
-```console
-$ pip install visionai
----> 100%
 
-Successfully installed visionai
+This section lists down all the scenarios that are supported by the VisionAI platform. There are more scenarios added daily - please [send a request](https://github.com/visionify/visionai/issues/new) to us about any additional scenarios you need.
 
-✨ You are all set to use visionai toolkit ✨
-```
 
-</div>
+## Personnel Health & Safety
+Workplace Personnel Health & Safety is important because it ensures that employees are safe and healthy in their work environment. This includes providing a safe and healthy work environment, proper safety training, and regular safety inspections. Additionally, it also includes enforcing safety policies to ensure that all employees are aware of and follow safety procedures, as well as encouraging a culture of safety within the workplace.
 
-## Deploy to **Azure**
+For Personnel health we have the following scenarios available:
+### PPE Detection
+- Ensures that employees are following safety protocols and wearing the proper PPE at all times. 
+- An alert will be sent when a person/employee detected without proper PPE and then the employeer may be required to take further steps such as putting on protective equipment.
+- Find more details about these scenarios [here](ppe-detection.md).
 
-Deploy a fully configured and tested solution directly from Azure Marketplace. **VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azure.microsoft.com) (TODO). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options. Get more details [here](azure/installation.md).
+### Working at heights
 
-![Deploy to Azure](https://aka.ms/deploytoazurebutton)
+- Working at heights, such as on a roof or in a tall building, requires specialized safety equipment and training to ensure the safety of the workers. Depending on the job, you may need to wear a safety harness or other protective gear.
+- Find more details about these scenarios [here](working-at-heights.md).
 
-- TODO: Point to ARM template that needs to be deployed (using these [instructions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-azure-button) and here is an example [JSON file](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/quickstarts/microsoft.storage/storage-account-create/azuredeploy.json)).
 
-## List available **Scenarios**
+### Slip and Fall Detection
+- Ensure the safety of employees by inspecting slip and fall instances.
+- It can help alert employees to potential hazards and help them take the necessary steps to avoid accidents.
+- Find more details about these scenarios [here](slip-and-fall-detection.md).
 
-**VisionAI** is organized in terms of scenarios. Consider each scenario as being a business use-case, that is solved by a combination of Machine Learning models and an inference algorithm. For example *Warn me when max occupancy of this area exceeds 80 people* is a business scenario, where as the *People detection* is an ML model.
+### Confined spaces
+- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand. 
+- Find more details about these scenarios [here](confined-spaces-monitoring.md).
 
-**VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](contact.md) if a scenario you need is not present in our repo and we will look into it.
 
-<div class="termy">
+### Hazard warning
+Early detection of fire signs is important in preventing major fire incidents. Our ready-to-integrate solution provides reliable detection and continuous 24/7 monitoring. As a result, you can achieve quick response time, safer workplaces, minimized costs, and successfully avoid inessential business interruptions.
+- Smoke and fire detection systems provide early warning of potential hazards, allowing people to take action and evacuate the premises before the fire can spread. 
+- Find more details about these scenarios [here]
+(smoke-and-fire-detection.md).
+      
 
-```console
-$ visionai scenarios list
+### Ergonomics
 
-------------------------------------------------
-Privacy Suite
-blur-faces
-blur-text
+- Ergonomics is important because it helps to improve productivity, reduce the risk of work-related injuries, and increase comfort and morale.
+- Find more details about these scenarios [here]
+(ergonomics.md).
 
-Fire safety
-early-smoke-and-fire-detection
-smoking-and-vaping-detection
+## Compliance Policies
+Compliance policies are important at the workplace because they set clear expectations for employee behavior and ensure that all employees understand the rules of the workplace.
 
-Personnel safety
-ppe-detection
-pfas-system-detection
-railings-detection
+They cover a wide range of issues, from data protection to health and safety, and exist to protect both the company and its workers. These policies help to ensure that the company is in compliance with all relevant regulations, as well as providing a safe and productive working environment for employees.
 
-Suspicious activity
-shipping-activity-detection
-agressive-behaivior
+Compliance policies help promote a safe and secure work environment
 
 
-Compliance Policies
-max-occupancy
 
-Equipment
-rust-and-corrosion-detection
+### Equipment monitoring
 
-IR Camera
-temperature-monitoring
-------------------------------------------------
+- Our equipment monitoring systems helps to identify areas where corrosion and erosion may have already begun, allowing for early remedial action. This can help to extend the life of the material and prevent costly repairs or replacements later on. Additionally, rust and corrosion can weaken the strength of a material, so early detection can help to avoid catastrophic failure in the event of a structural load.
+- Find more details about these scenarios [here]
+(rust-and-corrosion.md).
 
-✨ More scenarios are added regularly ✨
-```
+###  Max occupancy
 
-</div>
+- Ensures the safety and well-being of all the occupants at workplace by limiting the number of people in a particular space or area. This helps to prevent overcrowding, which can lead to accidents and fire hazards. 
+- Find more details about these scenarios [here]
+(max-occupancy-count.md).
 
 
+### Confined spaces monitoring
+- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand. 
+- Find more details about these scenarios [here](confined-spaces-monitoring.md).
 
-## Get details for a **Scenario**
+### Shipping activity
 
-You can get details about a scenario using `visionai scenario details` command. Specify the scenario you want additional details for. The details of a scenario include the dataset size, model accuracy metrics,
+- Shipping activity is  critical part of the supply chain process and keeps the flow of goods and services moving.
+- These activities help to reduce costs and improve efficiency by providing a consistent and reliable way to track and manage shipments.
+- Find more details about these scenarios [here]
+(shipping-activity.md).
 
-<div class="termy">
+### Unauthorized entry
 
-```console
-$ visionai scenario --name early-smoke-and-fire-detection details
+- With unauthorized entry detection system employers will be able to ensure the security of their premises, equipment, and personnel. 
+- Help to  ensure the safety and security of employees, visitors, and the company's assets.
+- Find more details about these scenarios [here]
+(unauthorized-entry.md).
 
-------------------------------------------------
-Category: Fire safety
-Scenario: early-smoke-and-fire-detection
-This scenario has been trained on open-source datasets consisting of 126,293 images. The datasets images are primarily outdoors (70%), but do contain a good number of indoor images (30%). There is a ~50-50% mix of day vs night images. You can find more details about this scenario at visionify.ai/early-smoke-and-fire-detection.
 
+### No mobile usage
 
-Model: smoke-and-fire-detection-1.0.1.pt
-Model size: 127MB
-Model type: Object Detection
-Framework: PyTorch
-
-Model performance:
-Dataset size: 126,293 images
-Accuracy: 94.1%
-Recall: 93%
-F1-Score: 93.5%
-
-Events:
-smoke-detected  | Immediate
-fire-detected   | Immediate
+- Mobile phone usage detection system can help to prevent and address potential problems that can arise from the improper use of mobile devices. 
+- Find more details about these scenarios [here]
+(no-phone-usage.md).
 
-Event examples:
-{
-    "scenario": "smoke-and-fire-detection",
-    "event_name": "smoke-detected",
-    "event_details": {
-        "camera": "camera-01",
-        "date": "2023-01-04 11:05:02",
-        "confidence": 0.92
-    }
-}
-------------------------------------------------
+### No visitors
 
-```
+- No visitors policy reduces the risk of potential theft or other criminal activity in the workplace. It also helps to maintain the privacy of employees and their work related information.
+- Find more details about these scenarios [here]
+(no-visitors.md).
 
-</div>
+### No pictures
 
-## Run a **Scenario**
+- Having a no pictures policy at work can help maintain a respectful, productive, and professional work environment.
+- Find more details about these scenarios [here]
+(no-taking-pictures.md).
 
-Use `visionai run` command to run a scenario. In its simplest sense, you can run a single scenario on your web-cam. In a more complex use-case, you can specify a pipeline of scenarios, configure notification logic for each scenario, timings for each scenario etc.
+### No food allowed
 
-<div class="termy">
+- No food policies help to maintain a clean and safe work environment and promote a professional work atmosphere, as food and eating can be seen as a distraction from work.
+- Find more details about these scenarios [here]
+(no-food-allowed.md).
 
-```console
-$ visionai run --scenario early-smoke-and-fire-detection --camera OFFICE-01
+### No children
 
-Starting early-smoke-and-fire-detection
-...
+- To ensure a safe and distraction-free environment for employees it is important to follow no children policy and it can also be dangerous as children may be exposed to hazardous materials or machinery. 
+- Find more details about these scenarios [here]
+(no-children.md).
 
-```
 
-</div>
+## Privacy Suite
 
-## Get **help** on commands
+We came up with these scenarios in order to protect the user's privacy. For example, it can be used to blur out faces in videos or images. AI can identify features in a video or image and then apply a blur effect to those features. This can be used to blur out faces, license plates, and other identifying features that a user may not want to be seen by others.
 
-You can get more help on any command by adding --help at the end of the command. For example, if you want to get details about pipeline commands, you can run the following commands.
+As part of VisionAI preprocessing we provide the following scenarios:
 
-<div class="termy">
+### Blur faces
+- Ensure the privacy of individuals in public spaces by blurring the faces.
+- Find more details about these scenarios [here](blur-faces.md).
 
-```console
+### Blur signs
+- Our algorithms can help to blur the signs (eg. licence plates) by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
+- Find more details about these scenarios [here](blur-licence-plates.md).
 
-$ visionai pipeline --help
 
- Usage: visionai pipeline [OPTIONS] COMMAND [ARGS]...
+### Blur documents
+- Ensure the privacy of individuals and organizations by blurring out sensitive information 
+- Find more details about these scenarios [here](blur-documents.md).
+### Blur screens
+- Identify screens in a video or image and then apply a blur effect to prevent sensitive information from being seen.
+- Find more details about these scenarios [here](blur-screens.md).
 
- Manage pipelines
- Pipeline is a sequence of preprocess routines and
- scenarios to be run on a given set of cameras. Each
- pipeline can be configured to run specific scenarios -
- each scenario with their own customizations for event
- notifications. This module provides robust methods for
- managing pipelines, showing their details, adding/remove
- cameras from pipelines and running a pipeline.
 
-╭─ Options ────────────────────────────────────────────────╮
-│ --help          Show this message and exit.              │
-╰──────────────────────────────────────────────────────────╯
-╭─ Commands ───────────────────────────────────────────────╮
-│ add-camera      Add a camera to a pipeline               │
-│ add-preprocess  Add a preprocess routine to a pipeline   │
-│ add-scenario    Add a scenario to a pipeline             │
-│ create          Create a named pipeline                  │
-│ remove-camera   Remove a camera from a pipeline          │
-│ reset           Reset the pipeline to original state.    │
-│ run             Run a pipeline of scenarios on given     │
-│                 cameras                                  │
-│ show            Show details of a pipeline               │
-╰──────────────────────────────────────────────────────────╯
 
-$ visionai pipeline add-scenario --help
-
- Usage: visionai pipeline add-scenario [OPTIONS]
-
- Add a scenario to a pipeline
- The order of the scenarios does not matter. All added
- scenarios are run in different threads. All scenarios are
- run after pre-processing stage is done.
- ``` Ex: visionai pipeline --name test_pipe add-scenario
- --name smoke-and-fire visionai pipeline --name test_pipe
- add-scenario --name ppe-detection visionai pipeline --name
- test_pipe run ```
- @arg pipeline - specify a named pipeline @arg scenario -
- specify name of the scenario to run
- @return None
-
-╭─ Options ────────────────────────────────────────────────╮
-│ *  --pipeline        TEXT  pipeline name [default: None] │
-│                            [required]                    │
-│ *  --scenario        TEXT  scenario to add               │
-│                            [default: None]               │
-│                            [required]                    │
-│    --help                  Show this message and exit.   │
-╰──────────────────────────────────────────────────────────╯
-
-```
-
-</div>
-
-
-## Next **steps**
-
-Congratulations! You have successfully run the first scenario. Now go through [Tutorials](tutorials/index.md) to learn about how to run multiple scnearios, how to configure each scenario for the events you need, how to set up the dependencies etc.
-
-Or you can also go through our [scenarios](scenarios/index.md) page to explore the different scenarios available and their model details. If you have a need for a scenario to be implemented, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues).
 

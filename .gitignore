@@ -137,9 +137,6 @@ results/
 wandb/
 *.pt
 
-# All images (including any test images)
-*.jpg
-
 
 # API
 __pycache__/
@@ -164,3 +161,7 @@ dist/
 *.zip
 *.onnx
 *.pt
+
+
+# models-repo directory
+visionai/models-repo/*

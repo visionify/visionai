@@ -1,2 +1,5 @@
 # Don't check in the actual config to repo
-config.json
+*.json
+grafana-data/
+grafana-provisioning/
+

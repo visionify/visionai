@@ -1,17 +1,5 @@
-# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
-"""
-Common modules
-"""
-
-import ast
-import contextlib
-import json
-import math
+import os
 import platform
-import warnings
-import zipfile
-from collections import OrderedDict, namedtuple
-from copy import copy
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -25,11 +13,14 @@ from PIL import Image
 from torch.cuda import amp
 import typing
 
+from config import TRITON_HTTP_URL
 from util import TryExcept
-from util.general import (LOGGER, ROOT, Profile, check_requirements, colorstr, non_max_suppression, letterbox,
-                            yaml_load, xywh2xyxy, xyxy2xywh, check_version, exif_transpose, scale_boxes,
-                            smart_inference_mode, copy_attr, increment_path, select_device)
+from util.general import (LOGGER, ROOT, Profile, check_requirements, colorstr, git_describe, file_date,
+                            yaml_load, check_version, copy_attr, increment_path)
+
+from util.image_utils import xyxy2xywh, exif_transpose, scale_boxes, letterbox, select_device, non_max_suppression, smart_inference_mode
 from models.plots import Annotator, colors, save_one_box
+
 
 class TritonRemoteModel:
     """ A wrapper over a model served by the Triton Inference Server. It can
@@ -40,7 +31,7 @@ class TritonRemoteModel:
     def __init__(self, url: str, model_name: str):
         """
         Keyword arguments:
-        url: Fully qualified address of the Triton server - for e.g. grpc://localhost:8000
+        url: Fully qualified address of the Triton server - for e.g. grpc://localhost:8001 or http://localhost:8000
         """
 
         parsed_url = urlparse(url)
@@ -125,7 +116,7 @@ class TritonRemoteModel:
 
 class Yolov5Triton(nn.Module):
     # YOLOv5 MultiBackend wrapper class
-    def __init__(self, url='url', model_name='', fp16=False, labels=[]):
+    def __init__(self, url=TRITON_HTTP_URL, model_name='', fp16=False, labels=[]):
         super().__init__()
         model_name = model_name
         fp16=fp16
@@ -133,7 +124,7 @@ class Yolov5Triton(nn.Module):
         device = select_device()
         cuda = torch.cuda.is_available() and device.type != 'cpu'  # use CUDA
 
-        LOGGER.info(f'Connecting to Triton at {url}:{model_name}')
+        LOGGER.info(f'Connecting to Triton at {url}/{model_name}')
         check_requirements('tritonclient[all]')
         model = TritonRemoteModel(url=url, model_name=model_name)
 
@@ -303,11 +294,17 @@ class Detections:
             else:
                 s += '(no detections)'
 
-            im = Image.fromarray(im.astype(np.uint8)) if isinstance(im, np.ndarray) else im  # from np
             if show:
-                im.show(self.files[i])
+                cv2.imshow('Output', im)
+                key = cv2.waitKey(5)
+                if key == 27:
+                    import sys
+                    print('Exiting.')
+                    sys.exit(0)
+
             if save:
                 f = self.files[i]
+                im = Image.fromarray(im.astype(np.uint8)) if isinstance(im, np.ndarray) else im  # from np
                 im.save(save_dir / f)  # save
                 if i == self.n - 1:
                     LOGGER.info(f"Saved {self.n} image{'s' * (self.n > 1)} to {colorstr('bold', save_dir)}")
@@ -321,7 +318,6 @@ class Detections:
                 LOGGER.info(f'Saved results to {save_dir}\n')
             return crops
 
-    @TryExcept('Showing images is not supported in this environment')
     def show(self, labels=True):
         self._run(show=True, labels=labels)  # show results
 
@@ -346,6 +342,7 @@ class Detections:
             a = [[x[:5] + [int(x[5]), self.names[int(x[5])]] for x in x.tolist()] for x in getattr(self, k)]  # update
             setattr(new, k, [pd.DataFrame(x, columns=c) for x in a])
         return new
+
 
     def tolist(self):
         # return a list of Detections objects, i.e. 'for result in results.tolist():'

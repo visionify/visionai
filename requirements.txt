@@ -1,10 +1,5 @@
 requests
 typer[all]
-pytest
 coloredlogs
-torch
-opencv-python
 pyyaml
-pandas
-seaborn
-tritonclient[all]
+docker

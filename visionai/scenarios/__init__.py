@@ -1,6 +1,4 @@
-import os
 import sys
-import json
 from urllib.parse import urlparse
 from pathlib import Path
 import importlib
@@ -14,14 +12,15 @@ if str(ROOT) not in sys.path:
 
 from util import TryExcept
 from util.general import colorstr, get_system_version, LOGGER, gpu_mem_stats
+from config import TRITON_HTTP_URL
 
 class Scenario(ABC):
-    def __init__(self, scenario_name, camera=None, events=None, triton_url='localhost:8000'):
+    def __init__(self, scenario_name, camera_name=0, events=None, triton_url=TRITON_HTTP_URL):
         '''
         Initialize scenario base object.
         '''
         self.scenario_name = scenario_name
-        self.camera = camera
+        self.camera_name = camera_name
         self.events = events
         self.triton_url = triton_url
         self.stop_evt = Event()
@@ -56,7 +55,7 @@ class Scenario(ABC):
         self.stop_evt.set()
 
 
-def load_scenario(scenario_name, camera_name=None, events=None, triton_url='localhost:8000'):
+def load_scenario(scenario_name, camera_name=None, events=None, triton_url=TRITON_HTTP_URL):
     '''
     Load the scenario inference object
 
@@ -68,8 +67,9 @@ def load_scenario(scenario_name, camera_name=None, events=None, triton_url='loca
     class name  : SmokeAndFireDetection
     '''
 
-    moduleName = 'scenarios.' + scenario_name.replace('-', '_')
+    moduleName = scenario_name.replace('-', '_')
     className  = ''.join(x.capitalize() for x in moduleName.split('_'))
+    moduleName = 'scenarios.' + moduleName
 
     my_module = importlib.import_module(moduleName)
     my_class = getattr(my_module, className)

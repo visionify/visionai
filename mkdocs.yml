@@ -73,12 +73,14 @@ nav:
     - Personnel Health:
       - PPE Detection: scenarios/ppe-detection.md
       - Working at heights: scenarios/working-at-heights.md
-      - Slip and fall: scenarios/slip-and-fall.md
-      - Confined spaces: scenarios/confined-spaces-dwell-duration-monitoring.md
+      - Slip and fall: scenarios/slip-and-fall-detection.md 
+      - Confined spaces: scenarios/confined-spaces-monitoring.md
       - Smoke and Fire: scenarios/smoke-and-fire-detection.md
-      - Ergonomics: scenarios/posture-and-ergonomics.md
+      - Ergonomics: scenarios/ergonomics.md
     - Compliance Policies:
+      - Equipment monitoring: scenarios/rust-and-corrosion.md
       - Max Occupancy: scenarios/max-occupancy-count.md
+      - Confined Spaces Monitoring: scenarios/confined-spaces-monitoring.md
       - Shipping activity: scenarios/shipping-activity.md
       - Unauthorized entry: scenarios/unauthorized-entry.md
       - No mobile usage: scenarios/no-phone-usage.md
@@ -166,4 +168,5 @@ extra_javascript:
   - https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js
   - js/termynal.js
   - js/custom.js
+
 
