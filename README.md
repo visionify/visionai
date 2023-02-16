@@ -282,3 +282,4 @@ We welcome contributions to VisionAI. Please read our [contribution guidelines](
 ## **License**
 
 VIsionAI is licensed under the [GPLv3 License](LICENSE.md). If you need a commercial license, please [contact us](company/contact.md).
+
