@@ -91,3 +91,34 @@ We thought about controlling this information through a DB/redis approach, but t
 ## Next steps
 
 - TODO: Create a scenario-browser web-app which allows you to browse & search through all scenarios.
+
+## How to add new scenario in visionai app
+
+1. Convert model.pt into  model.onnx format
+-   ```cd yolov5 folder```
+-   ```python export.py --include onnx --weights weights\model.pt --opset 13```
+2. Create a folder with subfolder name 1, and pbtxt, labels.txt files
+3. Zip this folder.
+4. Upload this to Azure blob using
+
+    ```python upload_model.py upload --file model-filename.zip --model slip-and-fall-detection --version 0.0.1```
+5. Copy the model url.
+```https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.0.x.zip```
+6. Add your scenario into the scenarios.json
+- Unique id
+- Model url
+- Model version
+- Add the hash value of the model.zip file.
+- etc
+7. Now commit the visionai repo with your individual scenario
+
+    ```Use these to commit```
+
+    ```Git status```
+
+    ```Git add scenario_name.py scenario.json```
+
+    ```Git commit -m “scenario is updated”```
+
+    ```Git push origin branch_name```
+
