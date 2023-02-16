@@ -48,15 +48,13 @@ For Personnel health we have the following scenarios available:
 ### Hazard warning
 Early detection of fire signs is important in preventing major fire incidents. Our ready-to-integrate solution provides reliable detection and continuous 24/7 monitoring. As a result, you can achieve quick response time, safer workplaces, minimized costs, and successfully avoid inessential business interruptions.
 - Smoke and fire detection systems provide early warning of potential hazards, allowing people to take action and evacuate the premises before the fire can spread. 
-- Find more details about these scenarios [here]
-(smoke-and-fire-detection.md).
+- Find more details about these scenarios [here](smoke-and-fire-detection.md).
       
 
 ### Ergonomics
 
 - Ergonomics is important because it helps to improve productivity, reduce the risk of work-related injuries, and increase comfort and morale.
-- Find more details about these scenarios [here]
-(ergonomics.md).
+- Find more details about these scenarios [here](ergonomics.md).
 
 ## Compliance Policies
 Compliance policies are important at the workplace because they set clear expectations for employee behavior and ensure that all employees understand the rules of the workplace.
@@ -70,14 +68,12 @@ Compliance policies help promote a safe and secure work environment
 ### Equipment monitoring
 
 - Our equipment monitoring systems helps to identify areas where corrosion and erosion may have already begun, allowing for early remedial action. This can help to extend the life of the material and prevent costly repairs or replacements later on. Additionally, rust and corrosion can weaken the strength of a material, so early detection can help to avoid catastrophic failure in the event of a structural load.
-- Find more details about these scenarios [here]
-(rust-and-corrosion.md).
+- Find more details about these scenarios [here](rust-and-corrosion.md).
 
 ###  Max occupancy
 
 - Ensures the safety and well-being of all the occupants at workplace by limiting the number of people in a particular space or area. This helps to prevent overcrowding, which can lead to accidents and fire hazards. 
-- Find more details about these scenarios [here]
-(max-occupancy-count.md).
+- Find more details about these scenarios [here](max-occupancy-count.md).
 
 
 ### Confined spaces monitoring
@@ -88,46 +84,39 @@ Compliance policies help promote a safe and secure work environment
 
 - Shipping activity is  critical part of the supply chain process and keeps the flow of goods and services moving.
 - These activities help to reduce costs and improve efficiency by providing a consistent and reliable way to track and manage shipments.
-- Find more details about these scenarios [here]
-(shipping-activity.md).
+- Find more details about these scenarios [here](shipping-activity.md).
 
 ### Unauthorized entry
 
 - With unauthorized entry detection system employers will be able to ensure the security of their premises, equipment, and personnel. 
 - Help to  ensure the safety and security of employees, visitors, and the company's assets.
-- Find more details about these scenarios [here]
-(unauthorized-entry.md).
+- Find more details about these scenarios [here](unauthorized-entry.md).
 
 
 ### No mobile usage
 
 - Mobile phone usage detection system can help to prevent and address potential problems that can arise from the improper use of mobile devices. 
-- Find more details about these scenarios [here]
-(no-phone-usage.md).
+- Find more details about these scenarios [here](no-phone-usage.md).
 
 ### No visitors
 
 - No visitors policy reduces the risk of potential theft or other criminal activity in the workplace. It also helps to maintain the privacy of employees and their work related information.
-- Find more details about these scenarios [here]
-(no-visitors.md).
+- Find more details about these scenarios [here](no-visitors.md).
 
 ### No pictures
 
 - Having a no pictures policy at work can help maintain a respectful, productive, and professional work environment.
-- Find more details about these scenarios [here]
-(no-taking-pictures.md).
+- Find more details about these scenarios [here](no-taking-pictures.md).
 
 ### No food allowed
 
 - No food policies help to maintain a clean and safe work environment and promote a professional work atmosphere, as food and eating can be seen as a distraction from work.
-- Find more details about these scenarios [here]
-(no-food-allowed.md).
+- Find more details about these scenarios [here](no-food-allowed.md).
 
 ### No children
 
 - To ensure a safe and distraction-free environment for employees it is important to follow no children policy and it can also be dangerous as children may be exposed to hazardous materials or machinery. 
-- Find more details about these scenarios [here]
-(no-children.md).
+- Find more details about these scenarios [here](no-children.md).
 
 
 ## Privacy Suite
@@ -148,6 +137,7 @@ As part of VisionAI preprocessing we provide the following scenarios:
 ### Blur documents
 - Ensure the privacy of individuals and organizations by blurring out sensitive information 
 - Find more details about these scenarios [here](blur-documents.md).
+
 ### Blur screens
 - Identify screens in a video or image and then apply a blur effect to prevent sensitive information from being seen.
 - Find more details about these scenarios [here](blur-screens.md).
