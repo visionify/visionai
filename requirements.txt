@@ -1,12 +1,5 @@
 requests
 typer[all]
 coloredlogs
-torch
-torchvision
-opencv-python
 pyyaml
-pandas
-seaborn
-tritonclient[all]
 docker
-paramiko

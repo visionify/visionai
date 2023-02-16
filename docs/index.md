@@ -11,6 +11,7 @@ These are *production-ready* models trained from open-source and academic datase
 
 VisionAI focuses on workplace health and safety which includes PPE detection, smoke-and-fire detection, rust-and-corrosion,smoking-and-vaping, phone usage detection, and slip-and-fall detection etc..,
 
+
 Majorly focuses on the following areas:
 
 ![](img/WorkPlaceSafety_FocusAreas.png)
@@ -34,6 +35,15 @@ Successfully installed visionai
 
 </div>
 
+**Requirements**
+
+You can use the following command to install the requirements:
+
+
+```console
+$ pip install -r requirements.txt
+```
+Please wait until all the requirements get installed.
 
 
 ## Deploy to **Azure**
@@ -155,6 +165,40 @@ Starting early-smoke-and-fire-detection
 ```
 
 </div>
+
+## Set up a **Pipeline**
+
+***Pipeline creation***
+
+You can specify a single scenario or multiple scenarios along with pre-processing steps under pipeline creation.
+
+In other words, pipeline is a list of scenarios to be run for specific cameras. The flow is as follows.
+
+You can create a pipeline by using the following command:
+
+```console
+$ visionai pipeline create --name test_pipe
+```
+
+    
+Scenarios can be added as follows:
+
+For example let's add Smoke-and-Fire dection and PPE detection to our pipeline.
+
+```console
+$ visionai pipeline add-scenario --pipeline test_pipe  --name smoke-and-fire
+```
+
+```console
+$ visionai pipeline add-scenario --pipeline test_pipe  --name ppe-detection
+```
+
+
+You can get the details of the pipeline:
+
+```console
+$ visionai pipeline show --pipeline test_pipe
+```
 
 
 
