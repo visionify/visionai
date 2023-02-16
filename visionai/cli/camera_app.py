@@ -209,6 +209,41 @@ def camera_add_scenario(
         return
 
 
+@camera_app.command('list-scenarios')
+def camera_list_scenarios(
+    camera: str = typer.Option(..., help='camera name', prompt=True)
+    ):
+    '''
+    List scenarios for a camera
+
+    List all the scenarios for a camera. Specify the
+    names for scenario and camera.
+    '''
+
+    print(f'Listing scenarios for camera: {camera}')
+    with open(CONFIG_FILE, 'r') as f:
+        config_data = json.load(f)
+
+    # find camera
+    found_camera = False
+    for cam in config_data['cameras']:
+        if cam['name'] == camera:
+            found_camera = True
+
+            if len(cam['scenarios']) > 0:
+                print(f'Available scenarios for camera {camera}:')
+                for scen in cam['scenarios']:
+                    print(f'  {scen["name"]}')
+            else:
+                print(f'No scenarios available for camera {camera}')
+
+            break
+
+    if not found_camera:
+        print(f'Error: camera {camera} not available')
+        return
+
+
 @camera_app.command('remove-scenario')
 def scenario_remove(
     camera: str=typer.Option(..., help='camera', prompt=True),

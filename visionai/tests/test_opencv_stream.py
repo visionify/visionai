@@ -1,9 +1,12 @@
-import cv2
-import time
+from util.general import check_requirements
 
 def opencv_stream():
+    check_requirements(['opencv-python', 'imutils'])
 
+    import cv2
+    import time
     from imutils.video import WebcamVideoStream
+
     rtsp_url = "rtsp://username:password@ip_address:port_number/stream_name"
     fourcc = cv2.VideoWriter_fourcc(*"H264")
 
@@ -24,5 +27,3 @@ def opencv_stream():
     out.release()
     vs.stop()
     cv2.destroyAllWindows()
-
-
