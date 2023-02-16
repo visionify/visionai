@@ -139,12 +139,17 @@ if __name__ == '__main__':
 
 
     ee = EventsEngine(use_redis=True)
-    ee.fire_event(Event.DEBUG, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
-    ee.fire_event(Event.INFO, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
-    ee.fire_event(Event.WARNING, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
-    ee.fire_event(Event.ERROR, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
-    ee.fire_event(Event.CRITICAL, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
 
-    ee.print_received_messages()
+    while True:
+        print('- - - - - - - - - - - - - - - - - - - - - - - - - - - ')
+        ee.fire_event(Event.DEBUG, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
+        ee.fire_event(Event.INFO, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
+        ee.fire_event(Event.WARNING, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
+        ee.fire_event(Event.ERROR, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
+        ee.fire_event(Event.CRITICAL, 'OFFICE-01', 'ppe-detection', 'PERSON_WITHOUT_HELMET', ev)
 
+        # ee.print_received_messages()
+        print('- - - - - - - - - - - - - - - - - - - - - - - - - - - ')
+
+        time.sleep(1)
 
