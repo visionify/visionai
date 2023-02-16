@@ -3,13 +3,13 @@ version: '3.4'
 
 services:
   redis:
-    container_name: redis-4
+    container_name: visionai-redis
     image: redis
     ports:
       - '6379:6379'
 
   grafana:
-    container_name: grafana-4
+    container_name: visionai-grafana
     image: grafana/grafana
     ports:
       - '3000:3000'

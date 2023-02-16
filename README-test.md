@@ -75,6 +75,22 @@ make safety
 - Both have a lot of errors - need to fix them
 
 
+## Generate docs
+- Install typer-cli package
+
+```bash
+pip install typer-cli
+```
+
+- Generate reference docs
+
+```bash
+make docs
+```
+
+- This would update the file at `docs/references/index.md`
+
+
 ## CI/CD Unit Test Integration
 
 - Azure CI/CD integration is already set-up for running Unit Tests.
