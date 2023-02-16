@@ -75,7 +75,8 @@ The dataset is made up of images and videos gathered from various sources. The d
 - Different light settings
 - Variations in camera orientations
 - Using security camera feeds
-- Total number of images used was 207,300
+
+Total number of images used was 207,300
 
 ### Model
 
@@ -252,10 +253,10 @@ Click on apply button
 
    ![](../img/azureapp_step3.png)
 
-## Events Supported
-=======
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
 
+
+## Events Supported
 
 This scenario supports the following event:
 

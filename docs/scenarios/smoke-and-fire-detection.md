@@ -4,7 +4,7 @@
 
 > An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities
 
-![](../img/smokeandfire_collage.jpg)
+![Smoke and fire detection](../img/smokeandfire_collage.jpg)
 
 
 ## Overview 
@@ -39,7 +39,8 @@ The dataset is made up of images and videos gathered from varied sources. The da
 - Multiple instances of fire and smoke 
 - Variations in camera orientations 
 - Classes considered for model building are smoke and fire
-- Total number of images used was 63,055
+
+Total number of images used was 63,055
 
 
 ### Model 
@@ -100,7 +101,56 @@ Starting scenario: smoke-and-fire-detection..
 </div>
 
 
-- You should be able to see the events generated on your console window with somke and fire being detected within the camera field of view.
+- You should be able to see the events generated on your console window with smoke and fire being detected within the camera field of view.
+
+
+### In an actual environment
+
+To use this scenario in an actual environment, you can follow these steps:
+
+- Install the visionai package from PyPI
+
+<div class=termy>
+
+```console
+$ pip install visionai
+---> 100%
+```
+</div>
+
+- Download the scenario
+
+<div class=termy>
+
+```console
+$ visionai scenario download smoke-and-fire-detection
+
+Downloading models for scenario: smoke-and-fire-detection
+Model: smoke-and-fire-detection
+https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+---> 100%
+```
+
+</div>
+
+- Add the camera feed to the scenario
+
+<div class=termy>
+
+```console
+$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
+$ visionai camera OFFICE-01 add-scenario smoke-and-fire-detection
+$ visionai run
+
+Starting scenario: smoke-and-fire-detection..
+
+```
+
+</div>
+
+- You should be able to see the events generated on your console window with smoke and fire being detected within the camera field of view.
+
+For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 ## Features: 
