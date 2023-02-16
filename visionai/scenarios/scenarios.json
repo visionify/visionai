@@ -56,21 +56,21 @@
         {
             "id": "38c5b702-c646-4193-b54f-064157168407",
             "name": "ppe-detection",
-            "version": "0.0.6",
+            "version": "0.0.8",
             "overview": "Detect presence or absence of PPE (Personal Protective Equipments). Get real-time (configurable) events when employees are non compliant. Supports helmets, safety boots, vests, masks, and eye goggles",
             "docs": "https://docs.visionify.ai/scenarios/ppe-detection.md",
             "image": "https://scenariosblob.blob.core.windows.net/scenarios-ppe-detection.jpg",
             "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-ppe-detection-200x200.jpg",
             "models": {
                 "latest": {
-                    "version": "0.0.6",
+                    "version": "0.0.8",
                     "name": "yolov5-ppe-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
                     "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.0.6.zip",
-                    "model_hash": "59cb43b5374d79268686867d1bce3449"
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.0.8.zip",
+                    "model_hash": "257e4f2a85defb28d5e839e7c1989c2e"
                 },
                 "other": [
                 ]
