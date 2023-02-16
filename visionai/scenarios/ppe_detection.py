@@ -7,14 +7,23 @@ FILE = Path(__file__).resolve()
 ROOT = FILE.parents[1]  # visionai/visionai directory
 if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
-
+from models.plots import Annotator
 from util.general import LOGGER
 from scenarios import Scenario
 from config import TRITON_HTTP_URL
+from events.events_engine import EventsEngine
+from enum import Enum
+
+class Event(str, Enum):
+    DEBUG = 'DEBUG'
+    INFO = 'INFO'
+    WARNING = 'WARNING'
+    ERROR = 'ERROR'
+    CRITICAL = 'CRITICAL'
 
 class PpeDetection(Scenario):
     def __init__(self, scenario_name, camera_name=0, events=None, triton_url=TRITON_HTTP_URL):
-
+        self.f_event =  EventsEngine(use_redis=True)
         from models.triton_client_yolov5 import yolov5_triton
         self.model = yolov5_triton(triton_url, scenario_name)
         super().__init__(scenario_name, camera_name, events, triton_url)
@@ -35,20 +44,64 @@ class PpeDetection(Scenario):
 
         while True:
             # Do processing
-            ret, frame = video.read()
+            ret, image = video.read()
             if ret is False:
                 LOGGER.error('ERROR: reading from video frame')
                 time.sleep(1)
                 continue
-
-            # Detect PPE
-            results = self.model(frame, size=640)  # batched inference
-            results.print()
-            results.show()
-            # if result contains people but PPE are not detected - then fire an event.
-            # For now fire-an-event == print the event details.
-
-            # if stop_evt is set, then break
+            
+            # Load model
+            pay_load = {'gloves' : 'No',
+                        'head' : 'No',
+                        'helmet' : 'No',
+                        'person' : 'No',
+                        'safety-shoes' : 'No',
+                        'vest' : 'No'}
+            results = self.model(image, size=640) #, visualize=False)
+            stride, names= self.model.stride, self.model.names
+            im0 = image
+            
+            det = results.xyxy[0]
+            # seen += 1
+            annotator = Annotator(im0, line_width=3) #, example=str(names))
+            
+            if len(det):
+                for *xyxy, conf, cls in reversed(det):
+                    c = int(cls)  # integer class
+                    label = f'{names[c]} {conf:.2f}'
+                    if 'class0' in label:
+                        pay_load['gloves'] = 'Yes'
+                        annotator.box_label(xyxy, 'gloves')
+                    elif 'class1' in label:
+                        pay_load['head'] = 'Yes'
+                        annotator.box_label(xyxy, 'head')
+                    elif 'class2' in label:
+                        pay_load['helmet'] = 'Yes'
+                        annotator.box_label(xyxy, 'helmet')
+                    elif 'class3' in label:
+                        pay_load['person'] = 'Yes'
+                        annotator.box_label(xyxy, 'person')
+                    elif 'class4' in label:
+                        pay_load['safety-shoes'] = 'Yes'
+                        annotator.box_label(xyxy, 'safty-shoes')
+                    elif 'class5' in label:
+                        pay_load['vest'] = 'Yes'
+                        annotator.box_label(xyxy, 'vest')
+                    # annotator.box_label(xyxy, label)
+                    self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'ppe-detection', 'PPE_Detection', pay_load)
+                im0 = annotator.result()
             if self.stop_evt.is_set():
+                    break
+            cv2.imshow('detection', im0)
+            if cv2.waitKey(5) & 0xFF == 27:
                 break
+        video.release()
+        cv2.destroyAllWindows()
 
+def camera_stream():
+    snf = PpeDetection(scenario_name = 'ppe-detection')
+    snf.start(camera_name=0)
+
+if __name__ == '__main__':
+    # people_taking_picture_detection()
+    camera_stream()
