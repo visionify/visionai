@@ -35,15 +35,6 @@ Successfully installed visionai
 
 </div>
 
-**Requirements**
-
-You can use the following command to install the requirements:
-
-
-```console
-$ pip install -r requirements.txt
-```
-Please wait until all the requirements get installed.
 
 
 ## Deploy to **Azure**
@@ -165,6 +156,8 @@ Starting early-smoke-and-fire-detection
 ```
 
 </div>
+
+
 
 ## Get **help** on commands
 
