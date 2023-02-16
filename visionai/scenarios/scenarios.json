@@ -64,7 +64,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.6",
-                    "name": "yolov5-ppe-detection",
+                    "name": "ppe-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
