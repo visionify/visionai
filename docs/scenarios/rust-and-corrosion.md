@@ -123,7 +123,8 @@ Starting scenario: rust-and-corrosion-detection..
 - You should be able to see the events generated on your console window with rust and corrosion being detected within the camera field of view.
 
 
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
+
 
 
 
