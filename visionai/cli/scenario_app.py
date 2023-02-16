@@ -291,10 +291,12 @@ if __name__ == '__main__':
     # scenario_remove('smoke-and-fire-detection', 'TEST-999')
     # scenario_add('smoke-and-fire', 'TEST-999')
     # scenario_download(world=True)
-    scenario_download('face-blur')
+    # scenario_download('face-blur')
 
     # scenario_download('all')
 
     # scenario_test(name='smoke-and-fire-detection', camera=0)
 
     # scenario_test(name='face-blur', camera=0)
+
+    scenario_test(name='ppe-detection', camera='0')
