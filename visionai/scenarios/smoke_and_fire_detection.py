@@ -63,7 +63,7 @@ class SmokeAndFireDetection(Scenario):
                         fire_count += 1
 
             if fire_count > 5:
-                self.f_event.fire_event(Event.CRITICAL, 'WEBCAM', '"smoke-and-fire-detection"', 'FIRE_DETECTED', {})
+                self.f_event.fire_event(Event.CRITICAL, 'WEBCAM', "smoke-and-fire-detection", 'FIRE_DETECTED', {})
 
 
             results.print()
