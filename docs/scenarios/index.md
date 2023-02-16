@@ -141,9 +141,13 @@ As part of VisionAI preprocessing we provide the following scenarios:
 - Find more details about these scenarios [here](blur-faces.md).
 
 ### Blur signs
-- Our algorithms can help to blur the signs by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
-- Find more details about these scenarios [here](blur-signs.md).
+- Our algorithms can help to blur the signs (eg. licence plates) by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
+- Find more details about these scenarios [here](blur-licence-plates.md).
 
+
+### Blur documents
+- Ensure the privacy of individuals and organizations by blurring out sensitive information 
+- Find more details about these scenarios [here](blur-documents.md).
 ### Blur screens
 - Identify screens in a video or image and then apply a blur effect to prevent sensitive information from being seen.
 - Find more details about these scenarios [here](blur-screens.md).
