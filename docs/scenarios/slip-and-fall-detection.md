@@ -1,7 +1,8 @@
 # **Slip and Fall Detection** 
+
 > Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace. 
 
-![](../img/slipandfall_collage.jpg)
+![Slip and Fall Detection](../img/slipandfall_collage.jpg)
 
 ## Overview
 
@@ -39,17 +40,8 @@ Here are some situations where a slip-fall detection system would be useful.
 
 - Airports: Workers at airports, such as ground crew and baggage handlers, are often exposed to high noise levels from aircraft engines and other airport equipment. 
 
- 
 
-Mining 
-
-Mining workers, such as those working in underground mines and drilling crews, often have to operate in noisy environments. 
-
- 
-
-Elderly care facilities and Smart Homes 
-
-Detect slip and fall hazards in elderly care facilities. Such systems can also be deployed in homes to monitor the elderly or disabled, alerting caregivers or family members. 
+- Elderly care facilities and Smart Homes: Detect slip and fall hazards in elderly care facilities. Such systems can also be deployed in homes to monitor the elderly or disabled, alerting caregivers or family members. 
 
 ## Vision AI based monitoring 
 
@@ -69,11 +61,11 @@ COCO dataset has an even distribution of:
 
 - Different(indoor/outdoor) environments 
 
--Male vs Female  
+- Male vs Female  
 
--Different light settings 
+- Different light settings 
 
--Variations in camera orientations 
+- Variations in camera orientations 
 
 - Using security camera feeds 
 
@@ -89,7 +81,6 @@ The model is built using Yolov5 pre-trained model for detecting a person followe
 
 The model is adaptable enough to run on any edge computing device. 
 
- 
 
 ### Scenario details
 
@@ -101,6 +92,7 @@ The business logic for this scenario is as follows:
 - VisionAI systemis able to run on edge devices. It uses camera feeds for processing. 
 
 - We detect human poses to identify slip and fall accidents in the camera feed.  
+- If either slip or fall is detected, an alert is raised.
 
 ## Try it now 
 
@@ -135,7 +127,7 @@ Starting scenario: slip-and-fall-detection..
 </div>
 
 
-- You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
+- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
 
 ### In an actual environment
 
@@ -181,4 +173,17 @@ Starting scenario: slip-and-fall-detection..
 
 </div>
 
-- You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
+- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
+
+For more details visit VisionAI [web application](https://visionify.ai/).
+
+
+## Training with custom data
+
+The scenario is provided as part of our GPL-v3 Open-Source package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+
+
+## Contact Us
+
+- For technical issues, you can open a Github issue [here](https://github.com/visionify/visionai).
+- For business inquiries, you can contact us through [our website](https://visionify.ai/contact).

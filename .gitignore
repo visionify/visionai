@@ -137,9 +137,6 @@ results/
 wandb/
 *.pt
 
-# All images (including any test images)
-*.jpg
-
 
 # API
 __pycache__/

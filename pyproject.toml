@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "visionai"
-version = "0.1.17"
+version = "0.1.18"
 description = "Vision AI toolkit"
 authors = ["Harsh Murari <hmurari@visionify.ai>"]
 readme = "README.md"
