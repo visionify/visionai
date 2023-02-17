@@ -43,9 +43,26 @@ The model is based on the YOLOv5 algorithm to detect licence plates. It is train
 
 The licence plate detection model based on Yolov5 recorded the following performance metrics:
 
-|Precision| Recall  |mAP    |
-|---------|---------|-------|
-|97.4%    |96.3%    |98.4%  |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>LICENSE PLATE BLUR</td>
+            <td>97.4%  </td>
+            <td>96.3%  </td>
+            <td>98.4%  </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
 
 The model is adaptable enough to run on any edge computing device.
 

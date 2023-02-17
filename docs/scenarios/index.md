@@ -11,6 +11,7 @@ Common workplace health and safety scenarios include hazardous materials, ergono
 VisionAI can help to streamline safety processes, detect hazards, monitor job site conditions, and improve communication between workers. VisionAI can help to identify risks that may have been previously overlooked and alert workers and managers to potential hazards. 
 
 Most of the VisionAI Scenarios fall under:
+
 - Personnel Health
 - Compliance Policies
 - Privacy Suite
@@ -123,7 +124,7 @@ Compliance policies help promote a safe and secure work environment
 
 We came up with these scenarios in order to protect the user's privacy. For example, it can be used to blur out faces in videos or images. AI can identify features in a video or image and then apply a blur effect to those features. This can be used to blur out faces, license plates, and other identifying features that a user may not want to be seen by others.
 
-As part of VisionAI preprocessing we provide the following scenarios:
+As part of **VisionAI preprocessing** we provide the following options:
 
 ### Blur faces
 - Ensure the privacy of individuals in public spaces by blurring the faces.

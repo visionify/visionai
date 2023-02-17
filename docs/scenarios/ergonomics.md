@@ -52,6 +52,26 @@ The DenseNet Model for Landmark detection provides the following metrics:
 |Accuracy |	Recall	|Precision	|
 |---------|---------|-------|
 |84.0%	  |72.8%    |84.9%  |
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Accuracy</th>
+            <th>Recall</th>
+            <th>Precision</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>ERGONOMICS DETECTION</td>
+            <td>84.0% </td>
+            <td>72.8% </td>
+            <td>84.9% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
  
 
 The model is lightweight enough to be run on any edge device. 
@@ -151,7 +171,8 @@ Starting scenario: ergonomics-detection..
 
 - You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
 
-For more details visit VisionAI web applicaion.
+For more details visit VisionAI [web application](https://visionify.ai/).
+
 
 ## Training with custom data
 

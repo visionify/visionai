@@ -39,15 +39,48 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
 The Yolov5 model provides the following metrics:
 
 
-|Acccuracy|	Recall	|mAP	|
-|---------|---------|-------|
-|84%  |85.12%    |81.51%  |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>PERSON DETECTION</td>
+            <td>84.0% </td>
+            <td>85.1% </td>
+            <td>81.5% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 and landmark detection model gives the following metrics:
 
-|Acccuracy|Recall	|Precision|
-|---------|---------|-------|
-|84%|72.8%|84.9%  |
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>LANDMARK DETECTION</td>
+            <td>84.0% </td>
+            <td>72.8% </td>
+            <td>84.9% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
 The model is light-weight enough to be run on any edge devices.
 
 ### Scenario details
