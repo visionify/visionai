@@ -55,12 +55,12 @@ class PpeDetection(Scenario):
                 continue
             
             # Load model
-            pay_load = {'gloves' : 'No',
-                        'head' : 'No',
-                        'helmet' : 'No',
-                        'person' : 'No',
-                        'safety-shoes' : 'No',
-                        'vest' : 'No'}
+            pay_load = {'Cardboard' : 'No',
+                        'Vest' : 'No',
+                        'Helmet' : 'No',
+                        'Shoes' : 'No',
+                        'Gloves' : 'No'
+                        }
             results = self.model(image, size=640) #, visualize=False)
             stride, names= self.model.stride, self.model.names
             im0 = image
@@ -73,24 +73,33 @@ class PpeDetection(Scenario):
                 for *xyxy, conf, cls in reversed(det):
                     c = int(cls)  # integer class
                     label = f'{names[c]} {conf:.2f}'
-                    if 'class0' in label:
-                        pay_load['gloves'] = 'Yes'
-                        annotator.box_label(xyxy, 'gloves')
-                    elif 'class1' in label:
-                        pay_load['head'] = 'Yes'
-                        annotator.box_label(xyxy, 'head')
-                    elif 'class2' in label:
-                        pay_load['helmet'] = 'Yes'
-                        annotator.box_label(xyxy, 'helmet')
-                    elif 'class3' in label:
-                        pay_load['person'] = 'Yes'
-                        annotator.box_label(xyxy, 'person')
-                    elif 'class4' in label:
-                        pay_load['safety-shoes'] = 'Yes'
-                        annotator.box_label(xyxy, 'safty-shoes')
-                    elif 'class5' in label:
-                        pay_load['vest'] = 'Yes'
-                        annotator.box_label(xyxy, 'vest')
+                    if 'Cardboard' in label:
+                        pay_load['Cardboard'] = 'Yes'
+                        annotator.box_label(xyxy, 'Cardboard')
+                    elif 'Vest' in label:
+                        pay_load['Vest'] = 'Yes'
+                        annotator.box_label(xyxy, 'Vest')
+                    elif 'Helmet' in label:
+                        pay_load['Helmet'] = 'Yes'
+                        annotator.box_label(xyxy, 'Helmet')
+                    elif 'No Vest' in label:
+                        pay_load['Vest'] = 'No Vest'
+                        annotator.box_label(xyxy, 'No Vest')
+                    elif 'No Helmet' in label:
+                        pay_load['Helmet'] = 'No Helmet'
+                        annotator.box_label(xyxy, 'No Helmet')
+                    elif 'Shoes' in label:
+                        pay_load['Shoes'] = 'Yes'
+                        annotator.box_label(xyxy, 'Shoes')
+                    elif 'No Shoes' in label:
+                        pay_load['Shoes'] = 'No Shoes'
+                        annotator.box_label(xyxy, 'No Shoes')
+                    elif 'Gloves' in label:
+                        pay_load['Gloves'] = 'Yes'
+                        annotator.box_label(xyxy, 'Gloves')
+                    elif 'No Gloves' in label:
+                        pay_load['Gloves'] = 'No Gloves'
+                        annotator.box_label(xyxy, 'No Gloves')
                     # annotator.box_label(xyxy, label)
                     self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'ppe-detection', 'PPE_Detection', pay_load)
                 im0 = annotator.result()
