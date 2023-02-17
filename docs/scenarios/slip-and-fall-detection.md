@@ -45,7 +45,7 @@ Here are some situations where a slip-fall detection system would be useful.
 
 ## Vision AI based monitoring 
 
-Vision AI-based monitors can be used to detect slip and fall with high accuracy. Additionally, our model trained on real-world images minimizes false-positives or false-negatives.  
+Vision AI-based system can be used to detect slip and fall with high accuracy. Additionally, our model trained on real-world images minimizes false-positives or false-negatives.  
 
 The cameras scan every frame to ensure there are no accidents related to slip and fall cases. 
 
@@ -74,9 +74,26 @@ COCO dataset has an even distribution of:
 The model is built using Yolov5 pre-trained model for detecting a person followed by a media pipe library used to estimate the pose of the person. The following performance metrics are recorded: 
 
 
-|Precision|	Recall	|mAP	|
-|---------|---------|-------|
-|65.0%	  |71.6%    |71.0%  |
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>SLIP AND FALL DETECTION</td>
+            <td>65.0% </td>
+            <td>71.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 
 
 The model is adaptable enough to run on any edge computing device. 
