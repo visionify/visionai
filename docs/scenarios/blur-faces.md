@@ -29,7 +29,7 @@ The dataset contains faces with:
 - Different lighting conditions
 - Variations in scale, pose and occlusion
 
-Total number of images used was 32,203
+Total number of mages used was 32,203
 
 
 ### Model 
@@ -38,9 +38,25 @@ The model is based off of the YOLOv5-face algorithm. The model is trained on WID
 
 The model recorded the following performance metrics:
 
-| Easy  | Medium | Hard  |
-| ----- | ------ | ----- |
-| 95.30 | 93.76  | 85.28 |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Easy</th>
+            <th>Medium</th>
+            <th> Hard</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>FACE BLUR</td>
+            <td>95.3% </td>
+            <td>93.7% </td>
+            <td>85.2% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 
 
 The model is adaptable enough to run on any edge computing device.
@@ -135,7 +151,7 @@ Starting scenario: face-blur..
 </div>
 
 
-For more details visit VisionAI [web application](https://visionify.ai/)
+For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 
