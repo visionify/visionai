@@ -63,10 +63,11 @@ Compliance policies are important at the workplace because they set clear expect
 
 They cover a wide range of issues, from data protection to health and safety, and exist to protect both the company and its workers. These policies help to ensure that the company is in compliance with all relevant regulations, as well as providing a safe and productive working environment for employees.
 
-Compliance policies help promote a safe and secure work environment
+Compliance policies help promote a safe and secure work environment.
 
-
-
+Find more details about these scenarios [here]
+(compliance-policies.md).
+As part of compliance policies, we provide the following scenarios:
 ### Equipment monitoring
 
 - Our equipment monitoring systems helps to identify areas where corrosion and erosion may have already begun, allowing for early remedial action. This can help to extend the life of the material and prevent costly repairs or replacements later on. Additionally, rust and corrosion can weaken the strength of a material, so early detection can help to avoid catastrophic failure in the event of a structural load.
@@ -128,6 +129,7 @@ Compliance policies help promote a safe and secure work environment
 - To ensure a safe and distraction-free environment for employees it is important to follow no children policy and it can also be dangerous as children may be exposed to hazardous materials or machinery. 
 - Find more details about these scenarios [here]
 (no-children.md).
+
 
 
 ## Privacy Suite
