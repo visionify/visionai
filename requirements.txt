@@ -3,3 +3,4 @@ typer[all]
 coloredlogs
 pyyaml
 docker
+page-to-pdf
