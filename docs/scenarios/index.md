@@ -63,10 +63,11 @@ Compliance policies are important at the workplace because they set clear expect
 
 They cover a wide range of issues, from data protection to health and safety, and exist to protect both the company and its workers. These policies help to ensure that the company is in compliance with all relevant regulations, as well as providing a safe and productive working environment for employees.
 
-Compliance policies help promote a safe and secure work environment
+Compliance policies help promote a safe and secure work environment.
 
-
-
+Find more details about these scenarios [here]
+(compliance-policies.md).
+As part of compliance policies, we provide the following scenarios:
 ### Equipment monitoring
 
 - Our equipment monitoring systems helps to identify areas where corrosion and erosion may have already begun, allowing for early remedial action. This can help to extend the life of the material and prevent costly repairs or replacements later on. Additionally, rust and corrosion can weaken the strength of a material, so early detection can help to avoid catastrophic failure in the event of a structural load.
@@ -130,6 +131,7 @@ Compliance policies help promote a safe and secure work environment
 (no-children.md).
 
 
+
 ## Privacy Suite
 
 We came up with these scenarios in order to protect the user's privacy. For example, it can be used to blur out faces in videos or images. AI can identify features in a video or image and then apply a blur effect to those features. This can be used to blur out faces, license plates, and other identifying features that a user may not want to be seen by others.
@@ -141,9 +143,13 @@ As part of VisionAI preprocessing we provide the following scenarios:
 - Find more details about these scenarios [here](blur-faces.md).
 
 ### Blur signs
-- Our algorithms can help to blur the signs by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
-- Find more details about these scenarios [here](blur-signs.md).
+- Our algorithms can help to blur the signs (eg. licence plates) by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
+- Find more details about these scenarios [here](blur-licence-plates.md).
 
+
+### Blur documents
+- Ensure the privacy of individuals and organizations by blurring out sensitive information 
+- Find more details about these scenarios [here](blur-documents.md).
 ### Blur screens
 - Identify screens in a video or image and then apply a blur effect to prevent sensitive information from being seen.
 - Find more details about these scenarios [here](blur-screens.md).
