@@ -10,3 +10,5 @@ pytest-mock
 coverage
 flake8
 safety
+mkdocs-page-pdf
+mkdocs-material
