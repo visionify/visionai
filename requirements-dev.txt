@@ -11,4 +11,4 @@ coverage
 flake8
 safety
 mkdocs-page-pdf
-page-to-pdf
+mkdocs-material
