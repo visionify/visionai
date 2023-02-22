@@ -1,47 +1,19 @@
-# **Slip and Fall Detection** 
 
-> Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace. 
+# **Working at Heights** 
 
-![Slip and Fall Detection](../img/slipandfall_collage.jpg)
-
-## Overview
-
-Slip and Falls are among the leading causes of occupational fatalities. Timely action in the event of a Fall/Slip accident can minimize damage and save lives. However, working alone or in a noisy environment hinders timely assistance.  
-
-Here are some situations where a slip-fall detection system would be useful. 
-
-- Construction sites: Detect slips and falls among workers and alert supervisors to potential hazards. Potential deployment zones include ladders, ramps, and scaffolds.  
-
-- Working at heights: Falls from higher to lower levels are the most common cause of fatalities in Slip and Fall accidents, making Slip and Fall detection for workers at height vital. 
+> Ensure the safety of employees at workplace.
 
 
-- Working Alone: Slip and Fall detection is crucial for specific job settings where employees are required to work alone, particularly during off-hours. Deployment areas could be for the following category of workers. 
 
-- Construction Sites: Electricians, plumbers, and HVAC (Heating, ventilation, and air conditioning) technicians work alone on specific tasks where slip and fall would be useful. 
+![Detection of slip and fall while working at heights](../img/workingatheights_collage.png)
 
-- Oil and gas: The system will be useful for remote location workers such as drill operators, pipeline inspectors, and pump operators working in oil and gas mining regions. 
+Working at heights is a hazardous activity and has the potential to cause serious injuries or fatalities. It is important for employers to ensure that the work place is set up to prevent employees from falling off of elevated surfaces. Employers must provide proper training and equipment to employees who work at heights and must ensure that safety regulations are followed. Employers should also provide periodic reviews to ensure that employees are following safety protocols and that the work environment is safe and secure.
 
-- Telecommunications: Workers such as tower climbers and cable technicians often work alone at high-rise towers and other elevated locations and their safety can be ensured by slip and detection system. 
+Working at heights, such as on a roof or in a tall building, requires specialized safety equipment and training to ensure the safety of the workers. Depending on the job, you may need to wear a safety harness or other protective gear.
 
-- Mining Industry: Workers such as underground miners and drill operators often work alone in remote and confined spaces. 
-
-- Maintenance: Building engineers, window cleaners, painters, facility maintenance workers, etc., often work alone during the night shift and in isolated places at heights.
- 
-
-- Noisy Environments: Like working alone, a noisy environment can hinder the process of quick response. Deployment areas could be for the following category of workers.  
- 
-- Construction: Heavy equipment operators like jackhammer operators at construction sites work in extremely noisy environments. 
-
- 
-
-- Manufacturing: Workers in factories and assembly lines are exposed to a lot of noise due to the machinery and equipment used. 
-
- 
-
-- Airports: Workers at airports, such as ground crew and baggage handlers, are often exposed to high noise levels from aircraft engines and other airport equipment. 
+Falling from heights is a serious hazard, and can result in serious injury or even death. Timely action in the event of a Fall/Slip accident can minimize damage and save lives.
 
 
-- Elderly care facilities and Smart Homes: Detect slip and fall hazards in elderly care facilities. Such systems can also be deployed in homes to monitor the elderly or disabled, alerting caregivers or family members. 
 
 ## Vision AI based monitoring 
 
@@ -74,7 +46,6 @@ COCO dataset has an even distribution of:
 The model is built using Yolov5 pre-trained model for detecting a person followed by a media pipe library used to estimate the pose of the person. The following performance metrics are recorded: 
 
 
-
 <div class="table">
     <table class="fl-table">
         <thead>
@@ -96,7 +67,7 @@ The model is built using Yolov5 pre-trained model for detecting a person followe
 
 
 
-The model is adaptable enough to run on any edge computing device. 
+The model is adaptable enough to run on any edge computing device.
 
 
 ### Scenario details

@@ -48,9 +48,25 @@ The model is based on the YOLOv5 algorithm to detect documents. Document/text bl
 
 The document blurring model based on Yolov5 recorded the following performance metrics:
 
-|Precision| Recall  |mAP    |
-|---------|---------|-------|
-|97.4%    |97.5%    |99.1%  |
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>DOCUMENT BLUR</td>
+            <td>97.4% </td>
+            <td>97.5% </td>
+            <td>99.1% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
 

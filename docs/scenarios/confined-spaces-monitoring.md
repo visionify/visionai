@@ -40,9 +40,24 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 The model provides the following metrics:
 
 
-|Precision|	Recall	|mAP	|
-|---------|---------|-------|
-|94.5%	  |96.4%    |94.2%  |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>CONFINED SPACE MONITORING</td>
+            <td>94.5% </td>
+            <td>96.4% </td>
+            <td>94.2% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 The model is light-weight enough to be run on any edge devices.

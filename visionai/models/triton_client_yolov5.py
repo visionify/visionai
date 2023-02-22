@@ -9,7 +9,7 @@ if str(ROOT) not in sys.path:
     sys.path.append(str(ROOT))  # add ROOT to PATH
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))  # relative
 
-def yolov5_triton(url, model_name):
+def yolov5_triton(url, model_name, labels=None):
 
     from models.common import AutoShape, Yolov5Triton
     from util.general import LOGGER, check_requirements
@@ -19,7 +19,7 @@ def yolov5_triton(url, model_name):
     LOGGER.info(f'Using {url} as Triton inference server. Model name {model_name}')
     check_requirements('tritonclient[all]', install=True)
 
-    model = Yolov5Triton(url=url, model_name=model_name)
+    model = Yolov5Triton(url=url, model_name=model_name, labels=labels)
     model = AutoShape(model)    # Add nms, auto-scaling results
     return model.to(device)
 
