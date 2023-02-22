@@ -49,9 +49,24 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 
 The model recorded the following performance metrics:
 
-|Precision|	Recall	|mAP50	|
-|---------|---------|-------|
-|58.7%	  |83.4%    |78.1%  |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>SMOKE AND FIRE DETECTION</td>
+            <td>58.7% </td>
+            <td>83.4% </td>
+            <td>78.1% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
 

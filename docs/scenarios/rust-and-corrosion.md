@@ -18,15 +18,37 @@ Visionify’s AI Vision Model for Rust/Corrosion Detection is designed to detect
 ## Model Details 
 ### Dataset
 
-The dataset for this scenario is based on rust/corrosion detection algorithms. The dataset is made up of images and videos gathered from various sources where instances of rust were found. The dataset has been catalogued to ensure real-world situations. It has an even distribution of:- Variations of pieces of equipment- Different(indoor/outdoor) environments-Different rust severity-Variations in camera orientations- Using security camera feeds- Total number of images used was 5572.
+The dataset for this scenario is based on rust/corrosion detection algorithms. The dataset is made up of images and videos gathered from various sources where instances of rust were found. The dataset has been catalogued to ensure real-world situations. It has an even distribution of:
+- Variations of pieces of equipment
+- Different(indoor/outdoor) environments
+- Different rust severity
+- Variations in camera orientations
+- Using security camera feeds
+
+Total number of images used was 5572.
 
 ### Model
 
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.The model provides the following metrics:- 
 
-|Precision|	Recall	|mAP	|
-|---------|---------|-------|
-|79.5%	  |49.0%    |56.2%  |
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>RUST AND CORROSION DETECTION</td>
+            <td>79.5% </td>
+            <td>49.0% </td>
+            <td>56.2% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
 

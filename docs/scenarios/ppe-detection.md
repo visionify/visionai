@@ -22,45 +22,6 @@ Vision AI based monitors can be used to monitor PPE compliance by providing real
 
 To ensure accuracy and reliability, these camera-based monitoring services should be supplemented by strong compliance processes. Furthermore, workers working in different factory units should always be made aware of PPE compliance practices.
 
-## Model Details
-
-<div class="main">
-<div class="bar">
-<h4>Precision <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar" style="--value:98"></div>
-</div>
-<div class="bar">
-<h4>Recall <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar1" style="--value:97"></div>
-</div>
-<div class="bar">
-<h4>mAP <i class="fa fa-info-circle"></i></h4>
-<div role="progressbar2" style="--value:95"></div>
-</div>
-</div>
-
-## Performance Matrix For PPE DETECTION
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th>mAP</th>
-            <th>Data Size</th>
-        </thead>
-        <tbody>
-        <tr>
-            <td>PPE DETECTION</td>
-            <td>98%</td>
-            <td>97%</td>
-            <td>95%</td>
-            <td>12,5000 images</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
 
 ### Dataset
 
@@ -84,9 +45,25 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 
 The model provides the following metrics:
 
-| Precision | Recall | mAP   |
-| --------- | ------ | ----- |
-| 88.6%     | 86.4%  | 91.2% |
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Model Name</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>PPE DETECTION</td>
+            <td>88.6% </td>
+            <td>86.4% </td>
+            <td>91.2% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
 

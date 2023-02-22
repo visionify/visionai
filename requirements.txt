@@ -4,3 +4,4 @@ coloredlogs
 pyyaml
 docker
 mkdocs-page-pdf
+mkdocs-material
