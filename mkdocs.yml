@@ -1,10 +1,6 @@
 site_name: VisionAI
 site_description: VisionAI Toolkit - Ready to use models & vision apps
 site_url: https://docs.visionify.ai/
-plugins:
-    - search
-    - page-to-pdf 
-    - mermaid2
 
 theme:
   name: material

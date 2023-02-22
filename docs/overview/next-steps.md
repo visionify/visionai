@@ -1,118 +1,71 @@
-There are some cases where you might want to terminate a command at some point, and stop all subsequent execution.
+# Next steps
+> This provides a comprehensive guideline for the VisionAI toolkit's access path.
 
-It could be that your code determined that the program completed successfully, or it could be an operation aborted.
+-  ## Install the application
+    To test this model & scenario, you can use the following steps:
 
-## `Exit` a CLI program
+     * Install the visionai package from PyPI
+        
+        ```console
+        $ pip install visionai
+       
+        ```
+        Test the scenario from your local web-cam by mentioning scenario name
 
-You can normally just let the code of your CLI program finish its execution, but in some scenarios, you might want to terminate at some point in the middle of it. And prevent any subsequent code to run.
+        
+        ```console
+        $ visionai scenario test [OPTIONS] NAME
+        ```
 
-This doesn't have to mean that there's an error, just that nothing else needs to be executed.
+        **Arguments**:
 
-In that case, you can raise a `typer.Exit()` exception:
+        * `NAME`: [required]
 
-```Python hl_lines="9"
-{!../docs_src/terminating/tutorial001.py!}
-```
+        
+        NAME can be any of the scenarios integrated in VisionAI
+        
 
-There are several things to see in this example.
+        - Example
 
-* The CLI program is the function `main()`, not the others. This is the one that takes a *CLI argument*.
-* The function `maybe_create_user()` can terminate the program by raising `typer.Exit()`.
-* If the program is terminated by `maybe_create_user()` then `send_new_user_notification()` will never execute inside of `main()`.
+        ```console
+        $ visionai scenario test ppe-detection
+        
+        Downloading models for scenario: ppe-detection
+        Model: ppe-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        
+        
+        Starting scenario: ppe-detection..
+        ```
+        
+        You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
+    
 
-Check it:
+-  ## Access the visionAI Web-app
+    
+    VisionAI web-app, a software application that runs in a web browser and designed to provide a user-friendly interface and functionality that can be accessed from any device with an intpernet connection, without the need for installation on the device. It can be accessed by [here](https://webapp-msejccxdwi33c.azurewebsites.net/).
 
-<div class="termy">
+    The app has built-in functionality to accomodate different scenarios and wide range of camera instances.
+    
+    ![Web-app main screen](../img/main-screen.PNG)
+    
+    Find more details about these sections [here](webapp.md).
 
-```console
-$ python main.py Camila
+-  ## Access the Azure Managed-app
 
-User created: Camila
-Notification sent for new user: Camila
+    The VisionAI Azure Managed application is intended to provide customers with a quick and secure way to deliver applications and services while maintaining consistency and control.
 
-// Try with an existing user
-$ python main.py rick
+    VisionAI Azure App is accessible by logging into **Azure Market Place**.
+    
+    ![VisionAI webapp](../img/azure-app-main.PNG)
+    The appeared screen shows its Overview, different plans and ratings. To access it, click on **Get it Now** and follow the sequence of steps. 
 
-The user already exists
+    Find more details about these sections [here](azure-managed-app.md).
 
-// Notice that the notification code was never run, the second message is not printed
-```
+In summary, the VisionAI toolkit is accessible via direct installation, web-app, and Azure managed app. This makes it more adaptable and dynamic.
 
-</div>
 
-!!! tip
-    Even though you are raising an exception, it doesn't necessarily mean there's an error.
 
-    This is done with an exception because it works as an "error" and stops all execution.
 
-    But then **Typer** (actually Click) catches it and just terminates the program normally.
 
-## Exit with an error
+    
 
-`typer.Exit()` takes an optional `code` parameter. By default, `code` is `0`, meaning there was no error.
-
-You can pass a `code` with a number other than `0` to tell the terminal that there was an error in the execution of the program:
-
-```Python hl_lines="7"
-{!../docs_src/terminating/tutorial002.py!}
-```
-
-Check it:
-
-<div class="termy">
-
-```console
-$ python main.py Camila
-
-New user created: Camila
-
-// Print the result code of the last program executed
-$ echo $?
-
-0
-
-// Now make it exit with an error
-$ python main.py root
-
-The root user is reserved
-
-// Print the result code of the last program executed
-$ echo $?
-
-1
-
-// 1 means there was an error, 0 means no errors.
-```
-
-</div>
-
-!!! tip
-    The error code might be used by other programs (for example a Bash script) that execute your CLI program.
-
-## Abort
-
-There's a special exception that you can use to "abort" a program.
-
-It works more or less the same as `typer.Exit()` but will print `"Aborted!"` to the screen and can be useful in certain cases later to make it explicit that the execution was aborted:
-
-```Python hl_lines="7"
-{!../docs_src/terminating/tutorial003.py!}
-```
-
-Check it:
-
-<div class="termy">
-
-```console
-$ python main.py Camila
-
-New user created: Camila
-
-// Now make it exit with an error
-$ python main.py root
-
-The root user is reserved
-Aborted!
-```
-
-</div>
