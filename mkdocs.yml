@@ -1,8 +1,6 @@
 site_name: VisionAI
 site_description: VisionAI Toolkit - Ready to use models & vision apps
 site_url: https://docs.visionify.ai/
-plugins:
-    - page-to-pdf 
 
 theme:
   name: material
@@ -109,7 +107,8 @@ nav:
     - Team: company/team.md
     - Careers: company/careers.md
     - Contact: company/contact.md
-
+    - Privacy Policy: company/privacy-policy.md
+    - Terms and Conditions: company/terms-and-conditions.md
 markdown_extensions:
   - toc:
       permalink: true
