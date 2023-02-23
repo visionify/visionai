@@ -1,6 +1,127 @@
 # Scenarios
 
-> VisionAI is designed with Workplace Safety in mind. Each of the scenarios mentioned here promotes a safe and secure work environment.
+Scenarios form the building blocks of VisionAI platform. They consolidate the business logic into a deployable Vision AI model. You can pick and choose different scenarios based on your use-case.
+
+## Supported Scenarios
+Below list provides our roadmap support for the scenarios we support for workplace safety industry. We are continuing to add new scenarios to our platform. If you have a specific scenario in mind - please let us know [here](custom/new-scenario-request.md).
+
+
+- [x] Hazard Warnings
+    * [x] Smoke and Fire Detection [[link]( scenarios/smoke-and-fire-detection.md)]
+    * [x] In scelerisque nibh non dolor mollis congue sed et metus
+    * [ ] Praesent sed risus massa
+- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+
+- :
+  - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
+  - No smoking/no vaping: scenarios/no-smoking.md
+  - Spills & leaks detection: scenarios/spills-and-leaks.md
+  - Gask leak detection: scenarios/gas-leak-detection.md
+  - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
+  - Blocked exit monitoring: scenarios/blocked-exit.md
+  - Equipment temperature monitoring: scenarios/equipment-temperature.md
+  - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
+
+- Worker health & safety:
+  - Overview: scenarios/worker-health-and-safety.md
+  - PPE Detection: scenarios/ppe-detection.md
+  - Working at heights: scenarios/working-at-heights.md
+  - Environment monitoring: scenarios/environment-monitoring.md
+  - Slip, trip and fall detection: scenarios/fall-and-accident-detection.md
+  - Posture & Ergonomics: scenarios/ergonomics.md
+  - Empty pallets: scenarios/empty-pallets.md
+  - Spills & Leaks detection (Liquids): scenarios/spills-and-leaks.md
+  - Hand sanitizer/hand-wash: scenarios/hand-wash.md
+  - Worker fatigue detection: scenarios/worker-fatigue-detection.md
+  - Worker skin tempreature monitoring: scenarios/skin-temperature.md
+  - Confined spaces monitoring: scenarios/confined-spaces-monitoring.md
+
+- Occupancy Policies:
+  - Overview: scenarios/occupancy-policies.md
+  - Max occupancy: scenarios/max-occupancy-count.md
+  - Restricted areas/times: scenarios/exclusion-zones.md
+  - Dwell time: scenarios/dwell-time.md
+  - Social distancing: scenarios/social-distance.md
+  - Station occupancy: scenarios/station-occupancy.md
+  - Occupancy metrics: scenarios/occupancy-metrics.md
+  - Authorized personnel: scenarios/authorized-personnel.md
+  - Tailgating: scenarios/unauthorized-entry.md
+  - Perimeter control: scenarios/perimeter-control.md
+
+- Company Policies:
+  - Overview: scenarios/compliance-policies.md
+  - No food or drinks: scenarios/no-food-or-drinks.md
+  - No phone, text, pictures: scenarios/cell-phone-usage.md
+  - No Smoking zones: scenarios/no-smoking.md
+  - No children/visitors: scenarios/authorized-personnel.md
+  - Waste Management: scenarios/waste-management.md
+  - Energy Conservation: scenarios/energy-conservation.md
+  - Restricted Areas: scenarios/restricted-areas.md
+
+- Equipment monitoring:
+  - Overview: scenarios/equipment-monitoring.md
+  - Equipment temperature monitoring: scenarios/equipment-temperature.md
+  - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
+  - Equipment vibration monitoring: scenarios/equipment-vibration.md
+  - Equipment noise monitoring: scenarios/equipment-noise.md
+  - Read analog dials: scenarios/analog-dials.md
+  - Tools check-in/out: scenarios/tools-check-in-out.md
+  - Spill & leak: scenarios/equipment-spills-and-leaks.md
+
+
+- Environment monitoring:
+  - Temperature monitoring: scenarios/environment-temperature.md
+  - Humidity monitoring: scenarios/environment-humidity.md
+  - Air quality monitoring: scenarios/environment-air-quality.md
+  - Noise monitoring: scenarios/environment-noise.md
+  - Pressure monitoring: scenarios/environment-pressure.md
+  - Water leak detection: scenarios/environment-water-leak.md
+  - Volatile organic compounds (VOCs): scenarios/environment-voc.md
+  - Carbon monoxide (CO): scenarios/environment-co.md
+  - Ambient light: scenarios/environment-light.md
+  - Dust monitoring: scenarios/environment-dust.md
+  - Water quality monitoring: scenarios/environment-water-quality.md
+  - Energy usage monitoring: scenarios/environment-energy-usage.md
+  - Waste management: scenarios/environment-waste-management.md
+  - Water usage monitoring: scenarios/environment-water-usage.md
+  - Water level monitoring: scenarios/environment-water-level.md
+  - Radiation monitoring: scenarios/environment-radiation.md
+
+
+- Suspicious Activity:
+  - Overview: scenarios/suspicious-activity.md
+  - Loitering: scenarios/loitering.md
+  - Unattended packages: scenarios/unattended-package.md
+  - Aggressive behavior: scenarios/aggressive-behavior.md
+  - Vandalism & property destruction: scenarios/vandalism.md
+  - Firearms & knives: scenarios/firearms-and-knives.md
+  - Sexual harassments: scenarios/sexual-harassment.md
+  - Solicitation: scenarios/solicitation.md
+  - Theft: scenarios/theft.md
+  - Shipping activity: scenarios/shipping-activity.md
+  - Intrusion detection: scenarios/intrusion-detection.md
+
+- Vehicle Activity:
+  - Overview: scenarios/vehicle-activity.md
+  - Vehicle usage: scenarios/vehicle-usage.md
+  - Vehicle policies: scenarios/vehicle-policies.md
+  - Forklift zone breach: scenarios/forklift-zone-breach.md
+  - Vehicle license plate: scenarios/vehicle-license-plate.md
+  - Vehicle speed: scenarios/vehicle-speed.md
+  - Vehicle cargo: scenarios/vehicle-cargo.md
+
+- Employee Privacy:
+  - Overview: scenarios/employee-privacy.md
+  - Blur faces: preprocess/blur-faces.md
+  - Blur signs/text: preprocess/blur-signs.md
+  - Blur screens: preprocess/blur-screens.md
+  - Blur license plates: preprocess/blur-license-plates.md
+  - Obstructed camera view: preprocess/obstructed-camera-view.md
+
+
+!!! note "VisionAI Suites"
+    VisionAI suites are a collection of scenarios that are commonly used together. For example, the Hazard Warning suite includes scenarios such as smoke and fire detection, no-smoking/no-vaping zones, spills-and-leak detection, gas leak detection, missing fire extinguisher, blocked exit monitoring etc.
+
 
 
 === "Material for MkDocs"
