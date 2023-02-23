@@ -1,14 +1,88 @@
-# Overview
+# Scenarios
 
-Workplace health and safety involves protecting employees from potential hazards and risks in the workplace. 
-VisionAI is designed to ensure that employees are safe and healthy in their work environment.
+> VisionAI is designed with Workplace Safety in mind. Each of the scenarios mentioned here promotes a safe and secure work environment.
 
-Common workplace health and safety scenarios include hazardous materials, ergonomic hazards, workplace compliance violations, and suspicious activities. Hazardous materials may include flammable materials, biological agents, and hazardous chemicals. Employees should understand the risks associated with these materials and the need for proper handling and storage. Ergonomic hazards refer to the physical and environmental conditions of a workplace that may cause injuries or illnesses due to repetitive motions, awkward postures, or heavy lifting. Employers need to assess the environment and take steps to reduce or eliminate these hazards. Employers should create a safe and supportive environment and provide resources to help employees understrand the workplace compliances. 
+
+=== "Material for MkDocs"
+
+    ``` yaml
+    name: ci # (1)!
+    on:
+      push:
+        branches:
+          - master # (2)!
+          - main
+    permissions:
+      contents: write
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v4
+            with:
+              python-version: 3.x
+          - uses: actions/cache@v2
+            with:
+              key: ${{ github.ref }}
+              path: .cache
+          - run: pip install mkdocs-material # (3)!
+          - run: mkdocs gh-deploy --force
+    ```
+
+    1.  You can change the name to your liking.
+
+    2.  At some point, GitHub renamed `master` to `main`. If your default branch
+        is named `master`, you can safely remove `main`, vice versa.
+
+    3.  This is the place to install further [MkDocs plugins] or Markdown
+        extensions with `pip` to be used during the build:
+
+        ``` sh
+        pip install \
+          mkdocs-material \
+          mkdocs-awesome-pages-plugin \
+          ...
+        ```
+
+=== "Insiders"
+
+    ``` yaml
+    name: ci
+    on:
+      push:
+        branches:
+          - master
+          - main
+    permissions:
+      contents: write
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        if: github.event.repository.fork == false
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v4
+            with:
+              python-version: 3.x
+          - uses: actions/cache@v2
+            with:
+              key: ${{ github.ref }}
+              path: .cache
+          - run: apt-get install pngquant # (1)!
+          - run: pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+          - run: mkdocs gh-deploy --force
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }} # (2)!
+    ```
+
+
+Common workplace health and safety scenarios include hazardous materials, ergonomic hazards, workplace compliance violations, and suspicious activities. Hazardous materials may include flammable materials, biological agents, and hazardous chemicals. Employees should understand the risks associated with these materials and the need for proper handling and storage. Ergonomic hazards refer to the physical and environmental conditions of a workplace that may cause injuries or illnesses due to repetitive motions, awkward postures, or heavy lifting. Employers need to assess the environment and take steps to reduce or eliminate these hazards. Employers should create a safe and supportive environment and provide resources to help employees understrand the workplace compliances.
 
 
 # VisionAI Scenarios
 
-VisionAI can help to streamline safety processes, detect hazards, monitor job site conditions, and improve communication between workers. VisionAI can help to identify risks that may have been previously overlooked and alert workers and managers to potential hazards. 
+VisionAI can help to streamline safety processes, detect hazards, monitor job site conditions, and improve communication between workers. VisionAI can help to identify risks that may have been previously overlooked and alert workers and managers to potential hazards.
 
 Most of the VisionAI Scenarios fall under:
 
@@ -26,7 +100,7 @@ Workplace Personnel Health & Safety is important because it ensures that employe
 
 For Personnel health we have the following scenarios available:
 ### PPE Detection
-- Ensures that employees are following safety protocols and wearing the proper PPE at all times. 
+- Ensures that employees are following safety protocols and wearing the proper PPE at all times.
 - An alert will be sent when a person/employee detected without proper PPE and then the employeer may be required to take further steps such as putting on protective equipment.
 - Find more details about these scenarios [here](ppe-detection.md).
 
@@ -42,15 +116,15 @@ For Personnel health we have the following scenarios available:
 - Find more details about these scenarios [here](slip-and-fall-detection.md).
 
 ### Confined spaces
-- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand. 
+- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand.
 - Find more details about these scenarios [here](confined-spaces-monitoring.md).
 
 
 ### Hazard warning
 Early detection of fire signs is important in preventing major fire incidents. Our ready-to-integrate solution provides reliable detection and continuous 24/7 monitoring. As a result, you can achieve quick response time, safer workplaces, minimized costs, and successfully avoid inessential business interruptions.
-- Smoke and fire detection systems provide early warning of potential hazards, allowing people to take action and evacuate the premises before the fire can spread. 
+- Smoke and fire detection systems provide early warning of potential hazards, allowing people to take action and evacuate the premises before the fire can spread.
 - Find more details about these scenarios [here](smoke-and-fire-detection.md).
-      
+
 
 ### Ergonomics
 
@@ -74,12 +148,12 @@ As part of **compliance policies**, we provide the following scenarios:
 
 ###  Max occupancy
 
-- Ensures the safety and well-being of all the occupants at workplace by limiting the number of people in a particular space or area. This helps to prevent overcrowding, which can lead to accidents and fire hazards. 
+- Ensures the safety and well-being of all the occupants at workplace by limiting the number of people in a particular space or area. This helps to prevent overcrowding, which can lead to accidents and fire hazards.
 - Find more details about these scenarios [here](max-occupancy-count.md).
 
 
 ### Confined spaces monitoring
-- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand. 
+- Confined space monitoring is done to ensure the safety of workers who are entering the space and to ensure that the space is suitable for the task at hand.
 - Find more details about these scenarios [here](confined-spaces-monitoring.md).
 
 ### Shipping activity
@@ -90,14 +164,14 @@ As part of **compliance policies**, we provide the following scenarios:
 
 ### Unauthorized entry
 
-- With unauthorized entry detection system employers will be able to ensure the security of their premises, equipment, and personnel. 
+- With unauthorized entry detection system employers will be able to ensure the security of their premises, equipment, and personnel.
 - Help to  ensure the safety and security of employees, visitors, and the company's assets.
 - Find more details about these scenarios [here](unauthorized-entry.md).
 
 
 ### No mobile usage
 
-- Mobile phone usage detection system can help to prevent and address potential problems that can arise from the improper use of mobile devices. 
+- Mobile phone usage detection system can help to prevent and address potential problems that can arise from the improper use of mobile devices.
 - Find more details about these scenarios [here](no-phone-usage.md).
 
 ### No visitors
@@ -117,7 +191,7 @@ As part of **compliance policies**, we provide the following scenarios:
 
 ### No children
 
-- To ensure a safe and distraction-free environment for employees it is important to follow no children policy and it can also be dangerous as children may be exposed to hazardous materials or machinery. 
+- To ensure a safe and distraction-free environment for employees it is important to follow no children policy and it can also be dangerous as children may be exposed to hazardous materials or machinery.
 - Find more details about these scenarios [here](no-children.md).
 
 
@@ -133,12 +207,12 @@ As part of **VisionAI preprocessing** we provide the following options:
 - Find more details about these scenarios [here](blur-faces.md).
 
 ### Blur signs
-- Our algorithms can help to blur the signs (eg. licence plates) by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area. 
+- Our algorithms can help to blur the signs (eg. licence plates) by using image recognition algorithms to identify the area of the image that contains the sign and then applying a blurring effect to that area.
 - Find more details about these scenarios [here](blur-licence-plates.md).
 
 
 ### Blur documents
-- Ensure the privacy of individuals and organizations by blurring out sensitive information 
+- Ensure the privacy of individuals and organizations by blurring out sensitive information
 - Find more details about these scenarios [here](blur-documents.md).
 
 ### Blur screens
