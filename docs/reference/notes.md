@@ -29,6 +29,47 @@
 - [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
 
+## Tables
+Suite	Scenarios	Supported events
+Hazard Warnings	Smoke and Fire Detection	"Smoke event detected
+Fire event detected
+Sparks detected
+Open flames detection"
+	No smoking/no-vaping zones	"Smoking event detected
+Vaping event detected"
+	Spills & Leaks detection (Liquids)	"Water puddle detected
+Water leak from equipment detected
+Spill event detected
+Slippery sign detected"
+	Gas leak detection	Gas leak detected
+	Missing fire-extinguisher	Missing fire extinguisher
+	Blocked exit monitoring	Blocked exit detected
+	Equipment temperature	"Temperature exceeds limit
+Temperature subceeds limit"
+	Slip/trip and fall detection	Blocker on pathway detected.
+	Equipment rust-and-corrosion	Rust or corrosion event detected
+
+
+---
+**Hazard Warnings**
+---
+| Scenario name  | Supported Events |
+| :------------- | :-------------   |
+| `smoke-and-fire-detection` ✅  | Fire event detected <br> Smoke Event Detected <br> Sparks Detected <br> Open Flames Detected  |
+| `no-smoking-no-vaping-zones` ✅  | Smoking event detected <br> Vaping event detected |
+| `smoke-and-fire-detection` ✅   | Fire event detected <br> Smoke Event Detected <br> Sparks Detected <br> Open Flames Detected  |
+
+  Smoke and Fire Detection
+  No smoking/no-vaping zones
+  Spills & Leaks detection (Liquids)
+  Gas leak detection
+  Missing fire-extinguisher
+  Blocked exit monitoring
+  Equipment temperature
+  Slip/trip and fall detection
+  Equipment rust-and-corrosion
+
+
 
 ## Callout
 
