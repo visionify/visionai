@@ -14,11 +14,7 @@ if str(ROOT) not in sys.path:
 from util.general import LOGGER
 from scenarios import Scenario
 from config import TRITON_HTTP_URL
-from util.sort import *
-
-from models.plots import Annotator
-from models.common import Detections
-
+from util.track import *
 
 from events.events_engine import EventsEngine
 from enum import Enum
@@ -41,16 +37,13 @@ class OccupancyMonitoring(Scenario):
         super().__init__(scenario_name, camera_name, events, triton_url)
 
 
-    def draw_boxes(self, img, bbox, count, total_time, identities=None, categories=None, 
-                names=None, color_box=None,offset=(0, 0)):
+    def draw_boxes(self, img, bbox, count, total_time, offset=(0, 0)):
         for i, box in enumerate(bbox):
             x1, y1, x2, y2 = [int(i) for i in box]
             x1 += offset[0]
             x2 += offset[0]
             y1 += offset[1]
             y2 += offset[1]
-            cat = int(categories[i]) if categories is not None else 0
-            id = int(identities[i]) if identities is not None else 0
             data = (int((box[0]+box[2])/2),(int((box[1]+box[3])/2)))
             label = f"ID: {str(count)} - Duration: {str(int(total_time))}"
 
@@ -70,7 +63,6 @@ class OccupancyMonitoring(Scenario):
         When running a scenario - the caller can specify any specific camera.
         '''
 
-        import cv2
         stream = camera_name
 
         print(f'Opening capture for {stream}')
@@ -79,13 +71,12 @@ class OccupancyMonitoring(Scenario):
         sort_max_age = 5 
         sort_min_hits = 2
         sort_iou_thresh = 0.2
-        sort_tracker = Sort(max_age=sort_max_age,
+        sort_tracker = Track(max_age=sort_max_age,
                         min_hits=sort_min_hits,
                         iou_threshold=sort_iou_thresh) 
 
         prev_frame_time = time.time()
         new_frame_time = 0
-        total_time = 0
         while True:
             # Do processing
             ret, frame = video.read()
@@ -103,56 +94,50 @@ class OccupancyMonitoring(Scenario):
 
             # Detect smoke & fire
             results = self.model(frame, size=640)  # batched inference
-            stride, names= self.model.stride, self.model.names
 
             det = results.xyxy[0]
+            print(det)
             if len(det):
                 dets_to_sort = np.empty((0,6))
-                for *xyxy, conf, cls in reversed(det):
-                    c = int(cls)  # integer class
-                    label = f'{names[c]} {conf:.2f}'
-                
-                    # if 'class0' in label:
                 for x1,y1,x2,y2,conf,detclass in det.cpu().detach().numpy():
                     if int(detclass) == 0:
+                        print("found")
                         dets_to_sort = np.vstack((dets_to_sort, 
                                                 np.array([x1, y1, x2, y2, 
                                                             conf, detclass])))
 
                         tracked_dets = sort_tracker.update(dets_to_sort)
-                        tracks =sort_tracker.getTrackers()
 
                         if len(tracked_dets)>0:
-                            vector = np.vectorize(np.int_)
-
                             bbox_xyxy = tracked_dets[:,:4]
                             identities = tracked_dets[:, 8]
-                            categories = tracked_dets[:, 4]
-                            offset=(0, 0)
-                            for id in identities:
+                            for i in range(len(identities)):
+                                id = identities[i]
+                                bbox = bbox_xyxy[i]
+                                print(id, bbox, bbox_xyxy)
                                 if id in info_dic:
                                     info_dic[id] = {
                                         "count/id": int(id),
                                         "frames": info_dic[id]["frames"] + 1, 
                                         "duration": round((info_dic[id]["duration"] + 1/fps), 2),
-                                        "bbox": list(bbox_xyxy[0])
+                                        "bbox": list(bbox)
                                     } 
-                                    self.draw_boxes(frame, bbox_xyxy, info_dic[id]['count/id'], info_dic[id]['duration'])  
-                                    print(info_dic)
+                                    print(info_dic[id])
+                                    self.draw_boxes(frame, [bbox], info_dic[id]['count/id'], info_dic[id]['duration'])  
                                     if info_dic[id]["duration"] > self.alert_time:
                                         self.f_event.fire_event(Event.CRITICAL, 'WEBCAM', "occupancy-monitoring", 'TIME-EXCEEDED', info_dic[id])         
 
                                 else:
-                                    info_dic[id] = {"count/id": int(id), "frames": 1, "duration": 0, "bbox": bbox_xyxy[0]}
+                                    info_dic[id] = {"count/id": int(id), "frames": 1, "duration": 0, "bbox": list(bbox)}
 
-                                    self.draw_boxes(frame, bbox_xyxy, info_dic[id]['count/id'], info_dic[id]['duration'])                 
+                                    self.draw_boxes(frame,  [bbox], info_dic[id]['count/id'], info_dic[id]['duration'])                 
                                 
-                            cv2.imshow('Output', frame)
-                            key = cv2.waitKey(5)
-                            if key == 27:
-                                import sys
-                                print('Exiting.')
-                                sys.exit(0)
+                cv2.imshow('Output', frame)
+                key = cv2.waitKey(5)
+                if key == 27:
+                    import sys
+                    print('Exiting.')
+                    sys.exit(0)
                         
             results.print()
             if self.stop_evt.is_set():

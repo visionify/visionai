@@ -508,20 +508,20 @@
         {
             "id": "1f14d200-e15c-4b55-ad1b-908ca81ebf08",
             "name": "occupancy-monitoring",
-            "version": "0.0.1",
-            "overview": "Enforce compliance policies like not using phone/text next to heavy machinery. This model can also enforce other scenarios like not taking pictures of sensitive areas with mobile phone.",
-            "docs": "https://docs.visionify.ai/scenarios/phone-detection.md",
-            "image": "https://scenariosblob.blob.core.windows.net/phone-detection.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/phone-detection-200x200.jpg",
+            "version": "0.0.2",
+            "overview": "Preventative maintenance. Count person and watch if the person is present in the frame for more than restricted time",
+            "docs": "https://docs.visionify.ai/scenarios/occupancy-monitoring.md",
+            "image": "https://scenariosblob.blob.core.windows.net/occupancy-monitoring.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/occupancy-monitoring-200x200.jpg",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
+                    "version": "0.0.2",
                     "name": "occupancy-monitoring",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/phone-detection/phone-detection-0.0.2.zip",
+                    "datasetSize": 3500,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/occupancy-monitoring/occupancy-monitoring-0.0.2.zip",
                     "model_hash": "2169880d951e98f54fd7772d31648db6"
                 },
                 "other": [
