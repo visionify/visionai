@@ -2,7 +2,6 @@ from __future__ import print_function
 
 import os
 import numpy as np
-from skimage import io
 
 import glob
 import time
@@ -295,7 +294,7 @@ if __name__ == '__main__':
         os.makedirs('output')
     pattern = os.path.join(args.seq_path, phase, '*', 'det', 'det.txt')
     for seq_dets_fn in glob.glob(pattern):
-        mot_tracker = Sort(max_age=args.max_age, 
+        mot_tracker = Track(max_age=args.max_age, 
                    min_hits=args.min_hits,
                    iou_threshold=args.iou_threshold) #create instance of the SORT tracker
     seq_dets = np.loadtxt(seq_dets_fn, delimiter=',')
@@ -311,7 +310,6 @@ if __name__ == '__main__':
 
         if(display):
             fn = os.path.join('mot_benchmark', phase, seq, 'img1', '%06d.jpg'%(frame))
-            im =io.imread(fn)
 
         start_time = time.time()
         trackers = mot_tracker.update(dets)
