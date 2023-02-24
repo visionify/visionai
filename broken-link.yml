@@ -1,22 +1,5 @@
 trigger:
-  - main
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Build website
-        run: npm run build
-      - name: Check for broken links
-        run: npx deadlink https://docs.visionify.ai/
+  - broken-link
 
 pool:
   vmImage: ubuntu-latest
@@ -45,6 +28,12 @@ steps:
 - script: |
     poetry build
   displayName: Build package
+
+- script: |
+    npm install
+    npm run build
+    npx deadlink https://docs.visionify.ai/
+    displayName: Check for broken links
 
 - script: |
     python -m pip install dist/*.whl
