@@ -1,0 +1,59 @@
+trigger:
+  - main
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm install
+      - name: Build website
+        run: npm run build
+      - name: Check for broken links
+        run: npx deadlink https://docs.visionify.ai/
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: 3.9
+  displayName: 'Use Python 3.9'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    pip install poetry
+    cat requirements.txt | xargs poetry add
+    poetry install
+  displayName: Install poetry
+
+- script: |
+    poetry run python -m pytest
+  displayName: Test software
+
+- script: |
+    poetry build
+  displayName: Build package
+
+- script: |
+    python -m pip install dist/*.whl
+    VISIONAI_EXEC=visionai python -m pytest
+  displayName: Install & test package
+
+- script: |
+    echo $(PYPI-TOKEN)
+    poetry config pypi-token.pypi $(PYPI-TOKEN)
+    poetry publish -vvv
+  displayName: Publishing to PyPI
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))
