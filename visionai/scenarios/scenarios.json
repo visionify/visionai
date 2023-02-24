@@ -64,7 +64,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.9",
-                    "name": "yolov5-ppe-detection",
+                    "name": "ppe-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -124,7 +124,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-smoking-detection",
+                    "name": "smoking-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -179,7 +179,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-phone-detection",
+                    "name": "phone-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -235,7 +235,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-rust-and-corrosion-detection",
+                    "name": "rust-and-corrosion-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -289,7 +289,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.5",
-                    "name": "yolov5s-slip-and-fall-detection",
+                    "name": "slip-and-fall-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -410,7 +410,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-people-taking-picture-detection",
+                    "name": "people-taking-picture-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -463,7 +463,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.1",
-                    "name": "yolov5s-ergonomics-detection",
+                    "name": "ergonomics-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
