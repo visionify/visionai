@@ -96,41 +96,40 @@ class OccupancyMonitoring(Scenario):
             results = self.model(frame, size=640)  # batched inference
 
             det = results.xyxy[0]
-            print(det)
+            print("-----------------------------------")
             if len(det):
                 dets_to_sort = np.empty((0,6))
                 for x1,y1,x2,y2,conf,detclass in det.cpu().detach().numpy():
                     if int(detclass) == 0:
-                        print("found")
                         dets_to_sort = np.vstack((dets_to_sort, 
                                                 np.array([x1, y1, x2, y2, 
                                                             conf, detclass])))
 
-                        tracked_dets = sort_tracker.update(dets_to_sort)
+                tracked_dets = sort_tracker.update(dets_to_sort)
 
-                        if len(tracked_dets)>0:
-                            bbox_xyxy = tracked_dets[:,:4]
-                            identities = tracked_dets[:, 8]
-                            for i in range(len(identities)):
-                                id = identities[i]
-                                bbox = bbox_xyxy[i]
-                                print(id, bbox, bbox_xyxy)
-                                if id in info_dic:
-                                    info_dic[id] = {
-                                        "count/id": int(id),
-                                        "frames": info_dic[id]["frames"] + 1, 
-                                        "duration": round((info_dic[id]["duration"] + 1/fps), 2),
-                                        "bbox": list(bbox)
-                                    } 
-                                    print(info_dic[id])
-                                    self.draw_boxes(frame, [bbox], info_dic[id]['count/id'], info_dic[id]['duration'])  
-                                    if info_dic[id]["duration"] > self.alert_time:
-                                        self.f_event.fire_event(Event.CRITICAL, 'WEBCAM', "occupancy-monitoring", 'TIME-EXCEEDED', info_dic[id])         
+                if len(tracked_dets)>0:
+                    bbox_xyxy = tracked_dets[:,:4]
+                    identities = tracked_dets[:, 8]
 
-                                else:
-                                    info_dic[id] = {"count/id": int(id), "frames": 1, "duration": 0, "bbox": list(bbox)}
+                    for i in range(len(identities)):
+                        id = identities[i]
+                        bbox = bbox_xyxy[i]
+                        if id in info_dic:
+                            info_dic[id] = {
+                                "id": int(id),
+                                "count": info_dic[id]["count"] + 1,
+                                "frames": info_dic[id]["frames"] + 1, 
+                                "duration": round((info_dic[id]["duration"] + 1/fps), 2),
+                                "bbox": list(bbox)
+                            } 
+                            self.draw_boxes(frame, [bbox], info_dic[id]['id'], info_dic[id]['duration'])  
+                            if info_dic[id]["duration"] > self.alert_time:
+                                self.f_event.fire_event(Event.CRITICAL, 'WEBCAM', "occupancy-monitoring", 'TIME-EXCEEDED', info_dic[id])         
 
-                                    self.draw_boxes(frame,  [bbox], info_dic[id]['count/id'], info_dic[id]['duration'])                 
+                        else:
+                            info_dic[id] = {"id": int(id), "count": 1, "frames": 1, "duration": 0, "bbox": list(bbox)}
+
+                            self.draw_boxes(frame, [bbox], info_dic[id]['id'], info_dic[id]['duration'])                 
                                 
                 cv2.imshow('Output', frame)
                 key = cv2.waitKey(5)
