@@ -28,15 +28,13 @@ class PpeDetection(Scenario):
         labels_file = ROOT / 'models-repo' / 'ppe-detection' / 'labels.txt'
         with open(labels_file, 'r') as f:
             labels = [line.strip() for line in f.readlines()]
-        self.model = yolov5_triton(triton_url, scenario_name, labels=labels)
+        self.model = yolov5_triton(triton_url, scenario_name)
         self.model.conf = 0.35
         super().__init__(scenario_name, camera_name, events, triton_url)
-
 
     def start(self, camera_name=0):
         '''
         Stream processing
-
         When running a scenario - the caller can specify any specific camera.
         '''
 
@@ -55,11 +53,18 @@ class PpeDetection(Scenario):
                 continue
             
             # Load model
-            pay_load = {'Cardboard' : 'No',
-                        'Vest' : 'No',
-                        'Helmet' : 'No',
-                        'Shoes' : 'No',
-                        'Gloves' : 'No'
+            pay_load = {'safety-goggles' : 'No',
+                        'gloves' : 'No',
+                        'safety-helmet' : 'No',
+                        'safety-mask' : 'No',
+                        'safety-shoes' : 'No',
+                        'person' : 'No',
+                        'safety-vest' : 'No',
+                        'safety-harness' : 'No',
+                        'head' : 'No',
+                        'no-gloves' : 'No',
+                        'no-safety-shoes' : 'No',
+                        'no-mask' : 'No'
                         }
             results = self.model(image, size=640) #, visualize=False)
             stride, names= self.model.stride, self.model.names
@@ -73,33 +78,40 @@ class PpeDetection(Scenario):
                 for *xyxy, conf, cls in reversed(det):
                     c = int(cls)  # integer class
                     label = f'{names[c]} {conf:.2f}'
-                    if 'Cardboard' in label:
-                        pay_load['Cardboard'] = 'Yes'
-                        annotator.box_label(xyxy, 'Cardboard')
-                    elif 'Vest' in label:
-                        pay_load['Vest'] = 'Yes'
-                        annotator.box_label(xyxy, 'Vest')
-                    elif 'Helmet' in label:
-                        pay_load['Helmet'] = 'Yes'
-                        annotator.box_label(xyxy, 'Helmet')
-                    elif 'No Vest' in label:
-                        pay_load['Vest'] = 'No Vest'
-                        annotator.box_label(xyxy, 'No Vest')
-                    elif 'No Helmet' in label:
-                        pay_load['Helmet'] = 'No Helmet'
-                        annotator.box_label(xyxy, 'No Helmet')
-                    elif 'Shoes' in label:
-                        pay_load['Shoes'] = 'Yes'
-                        annotator.box_label(xyxy, 'Shoes')
-                    elif 'No Shoes' in label:
-                        pay_load['Shoes'] = 'No Shoes'
-                        annotator.box_label(xyxy, 'No Shoes')
-                    elif 'Gloves' in label:
-                        pay_load['Gloves'] = 'Yes'
-                        annotator.box_label(xyxy, 'Gloves')
-                    elif 'No Gloves' in label:
-                        pay_load['Gloves'] = 'No Gloves'
-                        annotator.box_label(xyxy, 'No Gloves')
+                    print(label)
+                    if 'class0' in label:
+                        pay_load['safety-goggles'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-goggles')
+                    elif 'class1' in label:
+                        pay_load['gloves'] = 'Yes'
+                        annotator.box_label(xyxy, 'gloves')
+                    elif 'class2' in label:
+                        pay_load['safety-helmet'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-helmet')
+                    elif 'class3' in label:
+                        pay_load['safety-mask'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-mask')
+                    elif 'class4' in label:
+                        pay_load['safety-shoes'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-shoes')
+                    elif 'class6' in label:
+                        pay_load['safety-vest'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-vest')
+                    elif 'class7' in label:
+                        pay_load['safety-harness'] = 'Yes'
+                        annotator.box_label(xyxy, 'safety-harness')
+                    elif 'class8' in label:
+                        pay_load['head'] = 'Yes'
+                        annotator.box_label(xyxy, 'head')
+                    elif 'class9' in label:
+                        pay_load['no-gloves'] = 'Yes'
+                        annotator.box_label(xyxy, 'no-gloves')
+                    elif 'class10' in label:
+                        pay_load['no-safety-shoes'] = 'Yes'
+                        annotator.box_label(xyxy, 'no-safety-shoes')
+                    elif 'class11' in label:
+                        pay_load['no-mask'] = 'Yes'
+                        annotator.box_label(xyxy, 'no-mask')
                     # annotator.box_label(xyxy, label)
                     self.f_event.fire_event(Event.INFO, 'OFFICE-01', 'ppe-detection', 'PPE_Detection', pay_load)
                 im0 = annotator.result()
