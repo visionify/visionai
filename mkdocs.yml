@@ -1,7 +1,10 @@
 site_name: VisionAI
 site_description: VisionAI Toolkit - Ready to use models & vision apps
 site_url: https://docs.visionify.ai/
-
+plugins:
+    - search
+    - page-to-pdf 
+    - mermaid2
 theme:
   name: material
   custom_dir: docs/overrides
@@ -97,11 +100,11 @@ nav:
     - Overview: reference/index.md
     - Changelog: changelog/index.md
   - Customization:
-    - Overview: custom/index.md
+    - Overview: custom/overview.md
     - Retrain models: custom/retraining.md
     - License: custom/licensing.md
     - FAQs: custom/faqs.md
-    - Custom Services: custom/request.md
+    - Custom Integration: custom/request.md
   - About:
     - About: company/about.md
     - Team: company/team.md
@@ -110,6 +113,8 @@ nav:
     - Privacy Policy: company/privacy-policy.md
     - Terms and Conditions: company/terms-and-conditions.md
 markdown_extensions:
+  - attr_list
+  - md_in_html
   - toc:
       permalink: true
   - admonition

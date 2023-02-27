@@ -40,7 +40,7 @@
         You should be able to see the events generated on your console window with the detections of safety gloves, goggles, helmet, mask, safety-shoes and vest within the camera field of view.
     
 
--  ## Access the visionAI Web-app
+-  ##  Access the visionAI Web-app
     
     VisionAI web-app, a software application that runs in a web browser and designed to provide a user-friendly interface and functionality that can be accessed from any device with an intpernet connection, without the need for installation on the device. It can be accessed by [here](https://webapp-msejccxdwi33c.azurewebsites.net/).
 
@@ -63,9 +63,4 @@
 
 In summary, the VisionAI toolkit is accessible via direct installation, web-app, and Azure managed app. This makes it more adaptable and dynamic.
 
-
-
-
-
-    
 
