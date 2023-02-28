@@ -2,6 +2,14 @@
 
 ## VisionAI Changelog
 
+### **0.2.0** <small> February 14, 2023  </small>
+
+- 💚 Migrate all documentation to public site.
+- 🎨 Added documentation for difference scenarios.
+- 🚚 Support for occupancy monitoring scenario.
+- 🔥 Support for better smoke-and-fire detection scenario.
+
+
 ### **0.1.18** <small> February 14, 2023  </small>
 
 - 💚 Added support for grafana and redis servers.
