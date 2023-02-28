@@ -1,5 +1,5 @@
 
-## Supported Scenarios
+## Scenarios Roadmap
 
 1. **Hazard Warning**
     1. [x] [Smoke and Fire Detection](scenarios/smoke-and-fire-detection.md)
