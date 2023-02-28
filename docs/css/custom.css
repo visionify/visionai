@@ -1,0 +1,308 @@
+.termynal-comment {
+    color: #4a968f;
+    font-style: italic;
+    display: block;
+}
+
+.termy [data-termynal] {
+    white-space: pre-wrap;
+}
+
+a.external-link::after {
+    /* \00A0 is a non-breaking space
+        to make the mark be on the same line as the link
+    */
+    content: "\00A0[↪]";
+}
+
+a.internal-link::after {
+    /* \00A0 is a non-breaking space
+        to make the mark be on the same line as the link
+    */
+    content: "\00A0↪";
+}
+
+
+
+
+
+/* ProgressBar and table css section */
+
+.main {
+    background: #fffcfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+
+
+div[role="progressbar"] {
+  justify-content: center;
+  align-content: center;
+  /* margin: 5px; */
+  --size: 7rem;
+  --fg: rgb(231, 112, 112);
+  --bg: #def;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 25px;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  justify-content: space-around;
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: 
+    radial-gradient(closest-side, white 70%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%'; 
+}
+
+
+div[role="progressbar1"] {
+    --size: 7rem;
+    --fg: rgb(23, 209, 107);
+    --bg: #def;
+    --pgPercentage: var(--value);
+    /* margin: 5px; */
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 25px;
+    justify-content: space-around;
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 70%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar1"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+
+  
+  div[role="progressbar2"] {
+    --size: 7rem;
+    --fg: rgb(121, 125, 206);
+    --bg: #def;
+    --pgPercentage: var(--value);
+    /* margin: 5px; */
+    justify-content: center;
+    align-content: center;
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    margin-bottom: 25px;
+    /* margin: 50px; */
+    justify-content: space-around;
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 70%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar2"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+  
+
+  .bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .bar > h4 {
+    font-weight: 500;
+    font-family: 'Roboto Mono', 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    color: gray;
+  }
+
+  .table {    
+    font-weight: 500;
+    font-family: 'Roboto Mono', 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
+.fl-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+  font-family: 'Roboto Mono', 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+  background: #e3e1e1;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+  font-family: 'Roboto Mono', 'Fira Mono', Consolas, Menlo, Monaco, 'Courier New', Courier, monospace;
+  color: rgb(71, 70, 70);
+  font-family: 600;
+}
+
+.fl-table thead th {
+  color: #ffffff;
+  background: #9ea1a0;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: rgb(150, 154, 159);
+}
+
+.fl-table tr:nth-child(even) {
+  background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table {
+      display: block;
+      width: 100%;
+  }
+  .table-wrapper:before{
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
+  }
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+      display: block;
+  }
+  .fl-table thead th:last-child{
+      border-bottom: none;
+  }
+  .fl-table thead {
+      float: left;
+  }
+  .fl-table tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+  }
+  .fl-table td, .fl-table th {
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+      display: table-cell;
+      
+  }
+  .fl-table tbody tr:nth-child(odd) {
+      background: none;
+  }
+  .fl-table tr:nth-child(even) {
+      background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+      background: #F8F8F8;
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tr td:nth-child(even) {
+      border-right: 1px solid #E6E4E4;
+  }
+  .fl-table tbody td {
+      display: block;
+      text-align: center;
+  }
+}
+
+
+.btnDiv {
+  height: 100px;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+justify-content:left;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 45px;
+  border-radius: 5px;
+  background: rgb(18, 18, 18);
+  color: white;
+}
+
+.btn:hover {
+  background: black;
+  color: #ffffff;
+  cursor: pointer;
+}
