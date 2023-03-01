@@ -1,0 +1,17 @@
+name: Checks
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  my-broken-link-checker:
+    name: Check broken links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://docs.visionify.ai/
+          cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page
