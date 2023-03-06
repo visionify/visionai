@@ -80,7 +80,7 @@ nav:
       - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
       - No smoking/no vaping: scenarios/no-smoking.md
       - Spills & leaks detection: scenarios/spills-and-leaks.md
-      - Gask leak detection: scenarios/gas-leak-detection.md
+      - Gask leak detection: scenarios/gas-leaks-detection.md
       - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
       - Blocked exit monitoring: scenarios/blocked-exit.md
       - Equipment temperature monitoring: scenarios/equipment-temperature.md

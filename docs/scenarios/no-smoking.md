@@ -1,97 +1,102 @@
-# No Smoking
+# No Smoking/No Vaping
 
 > No smoking & No vaping zone enforcements with Vision AI.
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/no-smoking.png "Detection of smoke at a work-place!"){ width="350" }
+  <figcaption>Detection of Smoking event</figcaption>
+</figure>
 
-TODO: Talk about why enforcing no-smoking zones is impoortant.
+
+## Overview
+Smoking and vaping are typically banned in workplaces like manufacturing plants, construction sites, warehouses, chemical plants, etc., an ideal 100% compliance rate can be challenging to achieve. However, it is imperative for employers to ensure that their workplaces are absolutely smoke-free.
+
+VisionAI makes it possible to avert workplace hazards and help employers maintain 100% compliance through smart AI solutions. Our next-gen real-time detection systems make sure a fire/smoke or any sign of vaping is detected instantly. These systems are also trained to generate alerts and notifications accordingly.
 
 ## Vision AI based monitoring
 
-!!! Note TODO: No Smoking zone how-to
-    How Vision AI can help with No Smoking Zone enforcement.
+Vision AI based monitors can be used to detect smoking/vaping events by providing real-time video feeds of the factory area. The cameras scan every frame to ensure there is no sign of smoking/vaping.
 
 
 ## Model Details
 
 ### Dataset
-
-TODO:
-
-- Indoor vs Outdoor environments
-- Male vs Female
-- Day vs Night
-- Different types of clothing
-- Different distances from the camera
-- Various lighting conditions
-- Various camera angles and resolutions
-- Using seurity camera feeds
-
+The dataset for this scenario is based on real-world smoking/vaping events.
+The dataset consists of images and videos collected from various sources. 
 
 ### Model
 
-TODO: mode metrics.
+The model to detect smoking/vaping event is in progress and it will be released soon.
 
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>PERSON DETECTION</td>
-            <td>84.0% </td>
-            <td>85.1% </td>
-            <td>81.5% </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-and landmark detection model gives the following metrics:
-
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>LANDMARK DETECTION</td>
-            <td>84.0% </td>
-            <td>72.8% </td>
-            <td>84.9% </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
-The model is light-weight enough to be run on any edge devices.
 
 ### Scenario details
 
-TODO: Enforcement scenarios. How to configure & use this scenario.
+The business logic for this scenario is as follows:
 
-TODO: Implement these as multi-tab content views.
-- Test now with online Web-Cam
-- With RTSP Camera - Pipelines
-- With Azure Setup
+- We use existing camera feeds from the premises to detect smoking/vaping events.
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing.
+- We detect people in the camera feed and we monitor whether the person is involved in any smoking/vaping activity.
+- If the person is detected with this event, an alert is raised.
 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
+
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
+
+        ```console
+        $ visionai scenario test no-smoking-detection
+
+        Downloading models for scenario: no-smoking-detection
+        Model: no-smoking-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        
+
+        Starting scenario: no-smoking-detection..
+
+        ```
+    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
+
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 
 ## Features
 
-TODO: List of features here. Highlight why this is the most efficient way to implement this.
 
+The VisionAI solution is the most efficient way of implementing this scenario, as evidenced by the following features:
+
+-  *Unmatched accuracy*
+
+    Trained and Tested to give the best results. Our systems are trained to detect Fire and Smoke at the earliest detection with an accuracy of 99%
+
+- *Lightning Fast and Response Time*
+
+    Our Ultra-fast Processing provides real-time inference results and feedback (~30 frames per second processing). 
+
+- *Minimizing false-positives/negatives*
+
+    Our systems create a fail-proof system by ensuring there are no false-positives or false-negatives. 
+
+- *Scalability and Deployment* 
+
+    Our models can be deployed instantly and are camera independent which means they can be pre-installed with existing cameras on site. We also offer cameras, IoT sensors and edge devices with strategic placement that helps scale a large workplace area with minimum installations. 
+
+- *Custom Integrations*
+
+    Our detection system can be integrated with other safety systems, such as building management systems or alarm systems, allowing for a coordinated response to emergencies.
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 Open-Source package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
 
 
 ## Contact Us
