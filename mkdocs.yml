@@ -187,7 +187,7 @@ nav:
     - Changelog: reference/changelog.md
     - Notes: reference/notes.md
   - Customization:
-    - Overview: custom/index.md
+    - Overview: custom/overview.md
     - Retrain models: custom/retraining.md
     - License: custom/licensing.md
     - FAQs: custom/faqs.md
