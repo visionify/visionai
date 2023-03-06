@@ -2,7 +2,7 @@
 >Learn more about the platform
 
 ## What is VisionAl ?
-VisionAI is a open-source ready-to-use Python Library for various Computer Vision Scenarios.
+VisionAI is ready-to-use Python Library for various Computer Vision Scenarios.
 
 ## What scenarios do you support?
 VisionAI library is focused on common workplace and employee health & safety scenarios. At a high-level these include the employee health and safety hazard & fire warnings, equipment monitoring, vehicle monitoring people & productivity monitoring, auspicious activity monitoring and common company compliance policies.
@@ -30,7 +30,6 @@ We work with our clients to quickly create customized models for their use-cases
 ## How do I ensure that my images are not used in training other models?
 We take our customers data privacy very seriously. All our current models available in the community edition are based off of open-source datasets We have several customer specific models trained on private data, but those datasets are maintained on their own storage accounts.
 They are not used for training any publicly available models.
-This way we are able to serve open-source community as well as commercial use-cases.
 
 ## We already have some Vision Al models running, can you integrate with them?
 Our system is isoluated on its own and all it needs is a set of comera output. We are focused on building more use-cases to cover common safety and compliance scenarios As such, we would work with you to build a framework where these use cases are isolated and easy to. integrate into your organization.

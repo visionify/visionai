@@ -6,12 +6,12 @@ Documentation for **VisionAI** toolkit.
   <a href="https://docs.visionify.ai"><img src="https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-toolkit-by-visionify.png" alt="VisionAI Toolkit by Visionify"></a>
 </p>
 <p align="center">
-    <em>Ready to deploy Vision AI scenarios. Open source. Try our CLI now. </em>
+    <em>Ready to deploy Vision AI scenarios. Try our CLI now. </em>
 </p>
 <p align="center">
-<a href="https://github.com/visionify/visionai/actions/workflows/codeql.yml" target="_blank">
+<!-- <a href="https://github.com/visionify/visionai/actions/workflows/codeql.yml" target="_blank">
     <img src="https://github.com/visionify/visionai/actions/workflows/codeql.yml/badge.svg" alt="CodeQL">
-</a>
+</a> -->
 <a href="https://github.com/visionify/visionai/blob/main/.github/workflows/docs.yaml" target="_blank">
     <img src="https://github.com/visionify/visionai/actions/workflows/docs.yaml/badge.svg" alt="Documentation">
 </a>

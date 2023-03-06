@@ -1,15 +1,19 @@
 # Early Fire Signs Detection
 
-## Smoke and fire detection
+
 
 > An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities
 
-![Smoke and fire detection](../img/smokeandfire_collage.jpg)
 
+
+<figure markdown>
+  ![smoke](https://github.com/visionify/visionai-images/raw/main/visionai-images/smokeandfire_collage.jpg "Detection of smoke and Fire at a work-place!"){ width="400" }
+  <figcaption>Detection of Smoke and Fire event</figcaption>
+</figure>
 
 ## Overview 
 
-Fire can be one of the most catastrophic disasters that can happen anywhere and cause major destruction. Fire hazards exist in all types of industrial buildings and business environments. Fire incident in the workplace not only accounts for a large number of injuries but also for downtime and running costs to repair the damage to the premises and machinery. A Fire hazard can be any material, action or condition that might cause a fire to start or can increase the severity of a fire. Industries can have many causes of fire, like electrical overloads, combustible materials, hot works like welding, paint booths, an imperfect preventive maintenance schedule or human errors, and if not carefully protected, these hazards can be really dangerous.  
+Fire can be one of the most catastrophic disasters that can happen anywhere and cause major destruction. Fire hazards exist in all types of industrial buildings and business environments. Fire incident in the workplace not only accounts for a large number of injuries but also for downtime and running costs to repair the damage to the premises and machinery. 
 
 Conventional heat detector-based fire warning systems cannot detect an early fire. Heat detectors only alert when the temperature of the surrounding environment reaches a certain level, and it doesn’t happen until fire spreads considerably, not leaving many opportunities to avoid the incident. Therefore, it is important to have an early fire signs detection method that would allow authorities to detect and put out fires before it goes out of control.  
 
@@ -49,24 +53,8 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 
 The model recorded the following performance metrics:
 
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>SMOKE AND FIRE DETECTION</td>
-            <td>58.7% </td>
-            <td>83.4% </td>
-            <td>78.1% </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:58"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:83"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:78"></div></div></div>
+
 
 The model is adaptable enough to run on any edge computing device.
 
@@ -169,30 +157,37 @@ For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 ## Features: 
-- Unparalleled Accuracy and faster detection
-     - Visionify’s Early Fire Signs detection model is capable of detecting fire incidents at an outstanding accuracy of up to 98% and a detection speed of 36 FPS.
-- Flexible and Scalable 
-    - Visionify’s Early Fire Signs detection is an end-to-end solution that integrates seamlessly with your existing camera network and is ready to detect. It can fit any building size and is easily expandable by adding more IP cameras to the network. 
-- Integrated Solution 
-    - It is an integrated system combining surveillance and early fire signs detection in one system.
-- Deployment Ready 
-	- Our pre-trained AI models are ready for immediate industrial deployments
-- Versatile Framework 
-    - We offer flexibility in deployment; the model can operate at the Edge, in the cloud, or any self-hosted environment 
-- Compatible 
-    - Visionify’s Early Fire Signs detection model has a broad potential and can be efficiently used for indoor and outdoor applications. 
-- Privacy Protection
-    - We understand your concerns about data privacy and take a proactive approach to preserve it. Our models are privacy oriented by design.
+- *Unparalleled Accuracy and faster detection*
 
+    VisionAI's Fire Signs detection model is capable of detecting fire incidents at an outstanding accuracy of up to 98% and a detection speed of 36 FPS.
 
+- *Flexible and Scalable* 
 
+    VisionAI's Fire Signs detection is an end-to-end solution that integrates seamlessly with your existing camera network and is ready to detect. It can fit any building size and is easily expandable by adding more IP cameras to the network. 
 
+- *Integrated Solution* 
 
+    It is an integrated system combining surveillance and early fire signs detection in one system.
 
+- *Deployment Ready* 
+
+	Our pre-trained AI models are ready for immediate industrial deployments
+
+- *Versatile Framework* 
+
+    We offer flexibility in deployment; the model can operate at the Edge, in the cloud, or any self-hosted environment 
+
+- *Compatible* 
+
+    VisionAI's Early Fire Signs detection model has a broad potential and can be efficiently used for indoor and outdoor applications. 
+
+- *Privacy Protection*
+
+    We understand your concerns about data privacy and take a proactive approach to preserve it. Our models are privacy oriented by design.
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 Open-Source package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
 
 
 ## Contact Us
