@@ -4,7 +4,7 @@
 
 > Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion. 
 
-![Rust and corrosion detection](../img/rustcorrosion_collage.jpg)
+![Rust and corrosion detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/rustcorrosion_collage.jpg"Detection of Rust/Corrosion!"){width="400"}
 
 ## Overview 
 
@@ -14,11 +14,19 @@ Many of these industries deal with huge metal surfaces and harsh environments. A
 
 Visionify’s AI Vision Model for Rust/Corrosion Detection is designed to detect instances of rust/corrosion if any in machine parts, manufacturing equipments etc. 
 
- 
+## Events
+
+VisionAI model's generated events would be:
+
+- Rust or corrosion event detected
+
+
+
 ## Model Details 
 ### Dataset
 
 The dataset for this scenario is based on rust/corrosion detection algorithms. The dataset is made up of images and videos gathered from various sources where instances of rust were found. The dataset has been catalogued to ensure real-world situations. It has an even distribution of:
+
 - Variations of pieces of equipment
 - Different(indoor/outdoor) environments
 - Different rust severity
@@ -31,24 +39,8 @@ Total number of images used was 5572.
 
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.The model provides the following metrics:- 
 
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>RUST AND CORROSION DETECTION</td>
-            <td>79.5% </td>
-            <td>49.0% </td>
-            <td>56.2% </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:79"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:49"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:56"></div></div></div>
+
 
 The model is adaptable enough to run on any edge computing device.
 
@@ -60,101 +52,43 @@ The business logic for this scenario is as follows:
 - VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
 - We detect instances of rust/corrosion if any in machine parts, manufacturing equipments.
 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
 
-## Try it now
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
 
-### Quick method - using your local web-cam
+        ```console
+        $ visionai scenario test slip-fall-detection
 
+        Downloading models for scenario: slip-fall-detection
+        Model: slip-fall-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        
 
-To test this model & scenario, you can use the following steps:
+        Starting scenario: slip-fall-detection..
 
-- Install the visionai package from PyPI
+        ```
+    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
 
-<div class=termy>
-
-```console
-
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test rust-and-corrosion-detection
-
-Downloading models for scenario: rust-and-corrosion-detection
-Model: rust-and-corrosion-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: rust-and-corrosion-detection..
-
-```
-</div>
-
-
-- You should be able to see the events generated on your console window with rust and corrosion being detected within the camera field of view.
-
-### In an actual environment
-
-To use this scenario in an actual environment, you can follow these steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download rust-and-corrosion-detection
-
-Downloading models for scenario: rust-and-corrosion-detection
-Model: rust-and-corrosion-detection
-https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario rust-and-corrosion-detection
-$ visionai run
-
-Starting scenario: rust-and-corrosion-detection..
-
-```
-
-</div>
-
-- You should be able to see the events generated on your console window with rust and corrosion being detected within the camera field of view.
-
-
-For more details visit VisionAI [web application](https://visionify.ai/).
-
-
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 
 
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 
 ## Contact Us
