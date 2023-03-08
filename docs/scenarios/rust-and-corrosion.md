@@ -66,13 +66,13 @@ The business logic for this scenario is as follows:
      
 
         ```console
-        $ visionai scenario test slip-fall-detection
+        $ visionai scenario test rust-detection
 
-        Downloading models for scenario: slip-fall-detection
-        Model: slip-fall-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        Downloading models for scenario: rust-detection
+        Model: rust-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
         
 
-        Starting scenario: slip-fall-detection..
+        Starting scenario: rust-detection..
 
         ```
     - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.

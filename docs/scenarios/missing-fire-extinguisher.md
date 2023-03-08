@@ -84,13 +84,13 @@ Our VisionAI solution detects missing fire extinguishers in different scenarios 
      
 
         ```console
-        $ visionai scenario test no-smoking-detection
+        $ visionai scenario test miss-fire-exting-detection
 
-        Downloading models for scenario: no-smoking-detection
-        Model: no-smoking-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        Downloading models for scenario: miss-fire-exting-detection
+        Model: miss-fire-exting-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
         
 
-        Starting scenario: no-smoking-detection..
+        Starting scenario: miss-fire-exting-detection..
 
         ```
     - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
