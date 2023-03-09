@@ -38,46 +38,37 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
 
 The Yolov5 model provides the following metrics:
 
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>PERSON DETECTION</td>
-            <td>84.0% </td>
-            <td>85.1% </td>
-            <td>81.5% </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="main">
+    <div class="bar">
+        <h4>Precision <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar" style="--value:84"></div>
+    </div>
+    <div class="bar">
+        <h4>Recall <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar1" style="--value:85"></div>
+    </div>
+    <div class="bar">
+        <h4>mAP <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar2" style="--value:81"></div>
+    </div>
 </div>
+
 
 and landmark detection model gives the following metrics:
 
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>LANDMARK DETECTION</td>
-            <td>84.0% </td>
-            <td>72.8% </td>
-            <td>84.9% </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="main">
+    <div class="bar">
+        <h4>Precision <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar" style="--value:84"></div>
+    </div>
+    <div class="bar">
+        <h4>Recall <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar1" style="--value:72"></div>
+    </div>
+    <div class="bar">
+        <h4>mAP <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar2" style="--value:84"></div>
+    </div>
 </div>
 
 
@@ -91,89 +82,37 @@ The business logic for this scenario is as follows:
 - We detect the mobile phone usage event and an alert is raised.
 
 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
 
-## Try it now 
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
 
-### Quick method - using your local web-cam
+        ```console
+        $ visionai scenario test mobile-usage-detection
 
-To test this model & scenario, you can use the following steps:
+        Downloading models for scenario: mobile-usage-detection
+        Model: mobile-usage-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-mobile-usage-detection/yolov5s-mobile-usage-detection-0.0.1.zip
+        
 
-- Install the visionai package from PyPI
+        Starting scenario: mobile-usage-detection..
 
-<div class=termy>
+        ```
+    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
 
-```console
-$ pip install visionai
----> 100%
-```
-</div>
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test mobile-usage-detection
-
-Downloading models for scenario: mobile-usage-detection
-Model: mobile-usage-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: mobile-usage-detection..
-
-```
-</div>
-
-
-- You should be able to see the events generated on your console window with phone usage being detected within the camera field of view.
-
-### In an actual environment
-
-To use this scenario in an actual environment, you can follow these steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download mobile-usage-detection
-
-Downloading models for scenario: mobile-usage-detection
-Model: mobile-usage-detection
-https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario mobile-usage-detection
-$ visionai run
-
-Starting scenario: mobile-usage-detection..
-
-```
-
-</div>
-
-- You should be able to see the events generated on your console window with phone usage being detected within the camera field of view.
-
-For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 ## Features
@@ -189,7 +128,7 @@ For more details visit VisionAI [web application](https://visionify.ai/).
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 
 ## Contact Us
