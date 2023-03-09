@@ -176,7 +176,7 @@ nav:
 
     - Employee Privacy:
       - Overview: scenarios/employee-privacy.md
-      - Blur faces: preprocess/blur-faces.md
+      - Blur faces: scenarios/blur-faces.md
       - Blur signs/text: preprocess/blur-signs.md
       - Blur screens: preprocess/blur-screens.md
       - Blur license plates: preprocess/blur-license-plates.md

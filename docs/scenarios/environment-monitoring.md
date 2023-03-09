@@ -77,7 +77,7 @@ TODO: Enforcement scenarios. How to configure & use this scenario.
         Starting scenario: environment-monitoring..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of spills and leak event within the camera field of view.
+    - You should be able to see the events generated on your console window with Temperature, Air quality, Humidity, CO2 levels, Noise levels within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

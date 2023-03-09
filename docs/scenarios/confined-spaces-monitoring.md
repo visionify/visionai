@@ -87,7 +87,7 @@ The business logic for this scenario is as follows:
         Starting scenario: obstructed-camera-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of people exceeding the duration limit within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

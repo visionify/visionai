@@ -1,6 +1,6 @@
-# Obstructed camera detection
+# **Obstructed Camera View**
 
-> Keep your camera view clear with our obstructed camera detection model
+> Keep your camera view clear with our obstructed camera detection model.
 
 ## Overview
 
@@ -30,7 +30,7 @@ The business logic for this scenario is as follows:
 
 - We use existing camera feeds from the premises to monitor whether the camera view is obstructed or not. We detect partial obstructions that may only partially block the camera view, such as fingers partially covering the lens. 
 
-- VisionAI systemis able to run on edge devices. It uses camera feeds for processing.
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing.
 
 - When an instance of obstructed camera is detected, an alert will be raised.
 
@@ -57,7 +57,7 @@ The business logic for this scenario is as follows:
         Starting scenario: obstructed-camera-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of obstructed cameras.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

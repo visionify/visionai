@@ -2,6 +2,8 @@
 
 > Enabling businesses to overcome digital distractions and misuse of mobile phones at workplaces.
 
+## Overview 
+
 Mobile phones at workplaces are proving to be an insidious way to execute malicious purposes. Prevent industrial espionage and reinforce security measures with the most reliable mobile phone usage detection models powered by AI and Deep Learning. 
 Visionify's computer vision solutions are more accurate than the conventional methods, can safely detect mobile phone usage (people taking pictures, recording videos/audios, sending texts in prohibited areas). We offer instant integration with your existing camera infrastructure, and quick results. 
 
@@ -105,7 +107,7 @@ The business logic for this scenario is as follows:
         Starting scenario: mobile-usage-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
+    - You should be able to see the events generated on your console window with phone usage being detected within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

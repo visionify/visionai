@@ -1,7 +1,7 @@
-# Worker Fatigue Detection
+# **Worker Fatigue Detection**
 
 
-> Worker fatigue and drowsiness detectoin with Vision AI.
+> Stay alert, stay safe with our advanced worker fatigue detection model.
 
 ## Overview
 
@@ -58,7 +58,7 @@ The business logic for this scenario is as follows:
         Starting scenario: worker-fatigue-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of smoking/vaping event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of worker fatigue event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
@@ -71,9 +71,9 @@ The business logic for this scenario is as follows:
 
 ## Features
 
-- Real-time monitoring: A worker fatigue detection model should be capable of real-time monitoring of workers' fatigue levels. This means that it should be able to detect signs of fatigue as they occur, rather than relying on post hoc analysis.
+- Real-time monitoring: Worker fatigue detection model is capable of real-time monitoring of workers' fatigue levels. This means that it is be able to detect signs of fatigue as they occur, rather than relying on post hoc analysis.
 
-- Alert system: The model should be able to alert supervisors or managers when a worker's fatigue level exceeds the threshold. This can be in the form of an automated alert or a visual warning on a dashboard.
+- Alert system: The model is able to alert supervisors or managers when a worker's fatigue level exceeds the threshold. This can be in the form of an automated alert or a visual warning on a dashboard.
 
 - Customization: The model should be customizable to the specific needs of the workplace, including factors such as lighting, noise levels, and work schedules, which can all impact the detection of worker fatigue.
 
