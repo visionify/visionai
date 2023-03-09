@@ -2,17 +2,15 @@
 
 > Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.
 
-
 ## Overview
+
 
 Hand hygiene is critical to preventing the spread of infectious diseases. However, ensuring that individuals properly wash their hands at appropriate times can be challenging, particularly in high-traffic areas. 
 
 A hand wash detection model can help address this challenge by automatically detecting and monitoring hand washing behaviors, providing real-time feedback and alerts to individuals who may need to improve their hygiene practices. This can enhance overall hygiene compliance, reduce the spread of germs and diseases, and promote a safer and healthier environment for all.
 
-Hand sanitizer/hand wash detection model can be a useful tool for promoting good hand hygiene practices and reducing the spread of germs and diseases.
-
-
 ## Vision AI based monitoring
+
 
 Vision AI-based hand-wash system is designed to detect and ensure no one misses hand wash and/or using hand sanitizer. The system uses image processing and machine learning algorithms to analyze the hand region in images or videos and identify the presence of hand sanitizer or hand wash based on specific features.
 
@@ -61,6 +59,7 @@ The business logic for this scenario is as follows:
         Starting scenario: hand-wash-detection..
 
         ```
+
     - You should be able to see the events generated on your console window with the detections of missing hand-wash/hand-sanitizer event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
