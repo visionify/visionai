@@ -25,7 +25,8 @@ theme:
       toggle:
         icon: material/brightness-5
         name: Switch to light mode
-
+  plugins:
+    - mkdocs-video
   icon:
     repo: fontawesome/brands/github-alt
     admonition:
@@ -91,7 +92,7 @@ nav:
       - PPE Detection: scenarios/ppe-detection.md
       - Working at heights: scenarios/working-at-heights.md
       - Environment monitoring: scenarios/environment-monitoring.md
-      - Slip, trip and fall detection: scenarios/fall-and-accident-detection.md
+      - Slip, trip and fall detection: scenarios/slip-and-fall-detection.md
       - Posture & Ergonomics: scenarios/ergonomics.md
       - Empty pallets: scenarios/empty-pallets.md
       - Spills & Leaks detection (Liquids): scenarios/spills-and-leaks.md
