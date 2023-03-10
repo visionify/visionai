@@ -155,7 +155,7 @@ nav:
     - Suspicious Activity:
       - Overview: scenarios/suspicious-activity.md
       - Loitering: scenarios/loitering.md
-      - Unattended packages: scenarios/unattended-package.md
+      - Suspicious package detection: scenarios/suspicious-package-detection.md
       - Aggressive behavior: scenarios/aggressive-behavior.md
       - Vandalism & property destruction: scenarios/vandalism.md
       - Firearms & knives: scenarios/firearms-and-knives.md

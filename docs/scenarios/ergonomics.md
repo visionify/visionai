@@ -84,7 +84,7 @@ The business logic for this scenario is as follows:
 
 - We use existing camera feeds from the premises to monitor the presence of workers. 
 
--  VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
 
 - We detect and track the number of objects transported and we monitor the total number of bending motions of a person while working.
 
