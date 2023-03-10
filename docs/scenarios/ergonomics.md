@@ -12,17 +12,33 @@ Companies can put compliance policies in place to ensure that workers are made a
 
 It is important to note that these camera-based monitoring provides should be supplanted by strong compliance processes to ensure their accuracy and reliability. In addition, workers working in companies should always be trained on ergonomics and its significance for safety and its impact on human health.
 
+## Events
+
+VisionAI model's generated events would be:
+
+- Bend count event per individual
+
+
+## Configuration
+Camera placement for detecting ergonomics can help to identify workplace design issues that may be contributing to other ergonomic-related injuries. Here are some general guidelines for camera placement in this context:
+
+- Workstation cameras: Cameras can be placed at individual workstations to monitor employee movements and postures. This can help to identify ergonomic issues such as poor posture, repetitive motions.
+
+- Assembly line cameras: Cameras can also be placed along assembly lines to monitor employee movements and postures during repetitive tasks.
+
+- Multiple angles: Multiple cameras may be necessary to ensure complete coverage of the area being monitored. Cameras should be placed at different angles to ensure complete coverage, with overlapping views to ensure no blind spots.
+
+!!! Note
+
+    It's important to ensure that any data collected through camera monitoring is stored and used in compliance with relevant regulations and privacy considerations.
+
+
 
 ## Model Details 
-
- 
-
 ### Dataset 
 
 Model training is carried out with Microsoft COCO: Common Objects in Context dataset. Person and Book classes are considered for model building. Person class is considered here because the problem of ergonomics is related to pose estimation and the object used to show movement is the book. It is the object carried by a person from one location to the other. Other objects can be considered as per the requirement.  
-
-Basically, COCO is a  large-scale dataset that addresses three core research problems in scene understanding: detecting non-iconic views (or non-canonical perspectives of objects, contextual reasoning between objects and the precise 2D localization of objects.  
-
+ 
 The dataset is made up of a large number of images and it is curated to ensure a true  representation of the real world for: 
 
 - Indoor vs Outdoor environments 
@@ -49,30 +65,7 @@ This provides ergonomics data that may be utilised for a variety of tasks, such 
 
 The DenseNet Model for Landmark detection provides the following metrics: 
 
-|Accuracy |	Recall	|Precision	|
-|---------|---------|-------|
-|84.0%	  |72.8%    |84.9%  |
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Accuracy</th>
-            <th>Recall</th>
-            <th>Precision</th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>ERGONOMICS DETECTION</td>
-            <td>84.0% </td>
-            <td>72.8% </td>
-            <td>84.9% </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-
- 
+<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:84"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:72"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:84"></div></div></div>
 
 The model is lightweight enough to be run on any edge device. 
 
@@ -88,95 +81,44 @@ The business logic for this scenario is as follows:
 
 - We detect and track the number of objects transported and we monitor the total number of bending motions of a person while working.
 
+ === "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
+     
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
+
+        ```console
+        $ visionai scenario test ergonomics
+        
+        ```
+
+        Downloading models for scenario: ergonomics
+
+        
+
+        Starting scenario: ergonomics..
+
+        ```
+    - You should be able to see the events generated on your console window with the detections of firearms and knives event within the camera field of view.
+
+=== "With RTSP Camera - Pipelines"
+     [TODO]
  
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
-## Try it now 
-
-### Quick method - using your local web-cam
-
-To test this model & scenario, you can use the following steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test ergonomics-detection
-
-Downloading models for scenario: ergonomics-detection
-Model: ergonomics-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: ergonomics-detection..
-
-```
-</div>
-
-
-- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
-
-### In an actual environment
-
-To use this scenario in an actual environment, you can follow these steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download ergonomics-detection
-
-Downloading models for scenario: ergonomics-detection
-Model: ergonomics-detection
-https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario ergonomics-detection
-$ visionai run
-
-Starting scenario: ergonomics-detection..
-
-```
-
-</div>
-
-- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
-
-For more details visit VisionAI [web application](https://visionify.ai/).
 
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us] (../company/contact.md).
 
 
 ## Contact Us

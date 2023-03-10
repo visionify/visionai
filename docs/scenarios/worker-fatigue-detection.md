@@ -1,3 +1,4 @@
+
 # **Worker Fatigue Detection**
 
 
@@ -58,6 +59,7 @@ The business logic for this scenario is as follows:
         Starting scenario: worker-fatigue-detection..
 
         ```
+
     - You should be able to see the events generated on your console window with the detections of worker fatigue event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
