@@ -38,6 +38,48 @@ The model to detect fall and accident events is in progress and it will be relea
 ### Scenario details
 
 
+The business logic for this scenario is as follows:
+
+- We use existing camera feeds from the premises to detect potential collision/accident and wet floor, monitor and detect occurrences of slip and fall incidents.  
+
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing.
+
+- An alert will be raised, when a potential collision/accident and wet floor is detected and/or occurrence slip and fall instance.
+
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
+
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
+
+        ```console
+        $ visionai scenario test fall-and-accident-detection
+
+        Downloading models for scenario: fall-and-accident-detection
+        Model: fall-and-accident-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-fall-and-accident-detection/yolov5s-fall-and-accident-detection-0.0.1.zip
+        
+
+        Starting scenario: fall-and-accident-detection..
+
+        ```
+    - You should be able to see the events generated on your console window with the detections of potential collision/accident and wet floor, slip and fall instances within the camera field of view.
+
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
+
+
+
+
 ## Features
 
 - Continuous monitoring: The model continuously monitors the user movements to ensure that they are safe and alert the user or emergency services if necessary. This includes monitoring the user's heart rate, breathing, and other vital signs to detect any signs of distress or injury.
