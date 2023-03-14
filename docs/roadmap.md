@@ -25,7 +25,7 @@
 3. **Company Compliance Policies**
     1. [x] [Max occupancy](scenarios/max-occupancy-count.md)
     2. [x] [Restricted areas/times](scenarios/exclusion-zones.md)
-    3. [x] [Dwell time](scenarios/dwell-time.md)
+    3. [x] [Dwell time](scenarios/confined-space-monitoring.md)
     4. [ ] [Social distancing](scenarios/social-distance.md)
     5. [ ] [Station occupancy](scenarios/station-occupancy.md)
     6. [x] [Occupancy metrics](scenarios/occupancy-metrics.md)

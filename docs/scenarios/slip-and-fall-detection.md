@@ -106,93 +106,41 @@ The business logic for this scenario is as follows:
 
 - We use existing camera feeds from the premises to monitor and detect occurrences of slip and fall incidents. 
 
-- VisionAI systemis able to run on edge devices. It uses camera feeds for processing. 
+- VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
 
 - We detect human poses to identify slip and fall accidents in the camera feed.  
 - If either slip or fall is detected, an alert is raised.
 
-## Try it now 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
 
-### Quick method - using your local web-cam
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
 
-To test this model & scenario, you can use the following steps:
+        ```console
+        $ visionai scenario test slip-and-fall-detection
 
-- Install the visionai package from PyPI
+        Downloading models for scenario: slip-and-fall-detection
+        Model: slip-and-fall-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-slip-and-fall-detection/yolov5s-slip-and-fall-detection-0.0.1.zip
+        
 
-<div class=termy>
+        Starting scenario: slip-and-fall-detection..
 
-```console
-$ pip install visionai
----> 100%
-```
-</div>
+        ```
+    - You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
 
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test slip-and-fall-detection
-
-Downloading models for scenario: slip-and-fall-detection
-Model: slip-and-fall-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: slip-and-fall-detection..
-
-```
-</div>
-
-
-- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
-
-### In an actual environment
-
-To use this scenario in an actual environment, you can follow these steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download slip-and-fall-detection
-
-Downloading models for scenario: slip-and-fall-detection
-Model: slip-and-fall-detection
-https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario slip-and-fall-detection
-$ visionai run
-
-Starting scenario: slip-and-fall-detection..
-
-```
-
-</div>
-
-- You should be able to see the events generated on your console window with slip and fall being detected within the camera field of view.
-
-For more details visit VisionAI [web application](https://visionify.ai/).
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 
 ## Training with custom data

@@ -27,7 +27,8 @@ theme:
       toggle:
         icon: material/brightness-5
         name: Switch to light mode
-
+  plugins:
+    - mkdocs-video
   icon:
     repo: fontawesome/brands/github-alt
     admonition:
@@ -105,7 +106,7 @@ nav:
       - Overview: scenarios/occupancy-policies.md
       - Max occupancy: scenarios/max-occupancy-count.md
       - Restricted areas/times: scenarios/exclusion-zones.md
-      - Dwell time: scenarios/dwell-time.md
+      - Dwell time: scenarios/confined-spaces-monitoring.md
       - Social distancing: scenarios/social-distance.md
       - Station occupancy: scenarios/station-occupancy.md
       - Occupancy metrics: scenarios/occupancy-metrics.md
@@ -116,7 +117,7 @@ nav:
     - Company Policies:
       - Overview: scenarios/compliance-policies.md
       - No food or drinks: scenarios/no-food-or-drinks.md
-      - No phone, text, pictures: scenarios/cell-phone-usage.md
+      - No phone, text, pictures: scenarios/no-phone-usage.md
       - No Smoking zones: scenarios/no-smoking.md
       - No children/visitors: scenarios/authorized-personnel.md
       - Waste Management: scenarios/environment-waste-management.md
@@ -156,7 +157,7 @@ nav:
     - Suspicious Activity:
       - Overview: scenarios/suspicious-activity.md
       - Loitering: scenarios/loitering.md
-      - Unattended packages: scenarios/unattended-package.md
+      - Suspicious package detection: scenarios/suspicious-package-detection.md
       - Aggressive behavior: scenarios/aggressive-behavior.md
       - Vandalism & property destruction: scenarios/vandalism.md
       - Firearms & knives: scenarios/firearms-and-knives.md
@@ -177,7 +178,7 @@ nav:
 
     - Employee Privacy:
       - Overview: scenarios/employee-privacy.md
-      - Blur faces: preprocess/blur-faces.md
+      - Blur faces: scenarios/blur-faces.md
       - Blur signs/text: preprocess/blur-signs.md
       - Blur screens: preprocess/blur-screens.md
       - Blur license plates: preprocess/blur-license-plates.md

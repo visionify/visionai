@@ -2,7 +2,6 @@
 
 > Prevent Workplace Injuries and Occupational Hazards with Vision AI
 
-![PPE Detection](../img/ppe_collage.png)
 
 ## Overview
 
@@ -46,23 +45,19 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 The model provides the following metrics:
 
 
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>PPE DETECTION</td>
-            <td>88.6% </td>
-            <td>86.4% </td>
-            <td>91.2% </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="main">
+    <div class="bar">
+        <h4>Precision <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar" style="--value:88"></div>
+    </div>
+    <div class="bar">
+        <h4>Recall <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar1" style="--value:86"></div>
+    </div>
+    <div class="bar">
+        <h4>mAP <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar2" style="--value:91"></div>
+    </div>
 </div>
 
 The model is adaptable enough to run on any edge computing device.
@@ -297,7 +292,7 @@ Be it cost-effectiveness, managing occlusions/poor image quality or covering all
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 ## Contact Us
 
