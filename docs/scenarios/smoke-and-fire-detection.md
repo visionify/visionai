@@ -1,4 +1,4 @@
-# Early Fire Signs Detection
+# **Early Fire Signs Detection**
 
 
 

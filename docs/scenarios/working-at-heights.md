@@ -3,8 +3,6 @@
 
 > Ensure the safety of employees at workplace.
 
-
-
 ![Detection of slip and fall while working at heights](../img/workingatheights_collage.png)
 
 Working at heights is a hazardous activity and has the potential to cause serious injuries or fatalities. It is important for employers to ensure that the work place is set up to prevent employees from falling off of elevated surfaces. Employers must provide proper training and equipment to employees who work at heights and must ensure that safety regulations are followed. Employers should also provide periodic reviews to ensure that employees are following safety protocols and that the work environment is safe and secure.

@@ -77,7 +77,6 @@ nav:
 
     - Hazard Warnings:
       - Overview: scenarios/hazard-warning-suite.md
-      - Hazard warning suite: scenarios/hazard-warning-suite.md
       - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
       - No smoking/no vaping: scenarios/no-smoking.md
       - Spills & leaks detection: scenarios/spills-and-leaks.md
@@ -105,7 +104,7 @@ nav:
       - Overview: scenarios/occupancy-policies.md
       - Max occupancy: scenarios/max-occupancy-count.md
       - Restricted areas/times: scenarios/exclusion-zones.md
-      - Dwell time: scenarios/dwell-time.md
+      - Dwell time: scenarios/confined-spaces-monitoring.md
       - Social distancing: scenarios/social-distance.md
       - Station occupancy: scenarios/station-occupancy.md
       - Occupancy metrics: scenarios/occupancy-metrics.md

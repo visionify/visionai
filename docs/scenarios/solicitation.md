@@ -71,7 +71,7 @@ Our VisionAI solution for solicitation detection works in different scenarios to
         Starting scenario: solicitation-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of light sensor monitoring events within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of light sensor monitoring within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

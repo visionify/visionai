@@ -70,7 +70,7 @@ The model to detect air quality events is in progress and it will be released so
         Starting scenario: air-quality-monitoring..
 
         ```
-    - You should be able to see the events generated on your console window with the air quality events within the camera field of view.
+    - You should be able to see the information generated on your console window with the air quality events within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

@@ -37,6 +37,36 @@ Our VisionAI solution for Suspicious shipping activity detection works in differ
 - Once the model identifies a potentially suspicious shipment, it can trigger an alert to notify relevant personnel or authorities, who can then 
 investigate further and take appropriate action as needed.
 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
+
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
+
+        ```console
+        $ visionai scenario test shipping-activity-detection
+
+        Downloading models for scenario: shipping-activity-detection
+        Model: shipping-activity-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-shipping-activity-detection/yolov5s-shipping-activity-detection-0.0.1.zip
+        
+
+        Starting scenario: shipping-activity-detection..
+
+        ```
+    - You should be able to see the information generated on your console window with suspicious shipping activity detection events within the camera field of view.
+
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 ## Features
 

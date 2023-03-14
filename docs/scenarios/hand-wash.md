@@ -60,7 +60,7 @@ The business logic for this scenario is as follows:
 
         ```
 
-    - You should be able to see the events generated on your console window with the detections of missing hand-wash/hand-sanitizer event within the camera field of view.
+    - You should be able to see the information generated on your console window with the detections of missing hand-wash/hand-sanitizer event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

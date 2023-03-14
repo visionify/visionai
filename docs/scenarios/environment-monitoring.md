@@ -71,20 +71,19 @@ TODO: Enforcement scenarios. How to configure & use this scenario.
         $ visionai scenario test environment-monitoring
 
         Downloading models for scenario: environment-monitoring
-        Model: environment-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
+        Model: environment-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-environment-monitoring/yolov5s-environment-monitoring-0.0.1.zip
         
 
         Starting scenario: environment-monitoring..
 
         ```
-    - You should be able to see the events generated on your console window with Temperature, Air quality, Humidity, CO2 levels, Noise levels within the camera field of view.
+    - You should be able to see the events generated on your console window with environment monitoring events within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
  
 === "With Azure Setup"
      VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
-
 
 
 ## Features
