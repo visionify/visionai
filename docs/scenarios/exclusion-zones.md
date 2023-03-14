@@ -65,7 +65,7 @@ Real-time detection and alerts for different kinds unauthorized access which inc
 
 - When an unauthorized person follows an authorized person through a secure area without proper authorization
 - When an individual lingering around restricted areas without proper authorization
-Forceful entry 
+- Forceful entry 
 - Use of counterfeit access credentials
 - Unauthorized access attempts during off-hours
 
@@ -94,7 +94,7 @@ Forceful entry
         Starting scenario: exclusion-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of unauthorized event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of unauthorized access or forceful entry within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

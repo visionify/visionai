@@ -1,4 +1,4 @@
-# Social Distance
+# **Social Distancing**
 
 > Creating Safe Workplaces: Companies Implement Measures to Ensure Social Distancing in the Workplace with Vision AI.
 
@@ -70,7 +70,7 @@ The business logic for this scenario is as follows:
         Starting scenario: social distancing..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of social distancing event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of social distancing within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
