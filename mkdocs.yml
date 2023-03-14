@@ -2,6 +2,8 @@ site_name: VisionAI
 site_description: VisionAI Toolkit - Ready to use models & vision apps
 site_url: https://docs.visionify.ai/
 
+plugins:
+    - page-to-pdf
 theme:
   name: material
   custom_dir: docs/overrides
@@ -118,7 +120,7 @@ nav:
       - No phone, text, pictures: scenarios/no-phone-usage.md
       - No Smoking zones: scenarios/no-smoking.md
       - No children/visitors: scenarios/authorized-personnel.md
-      - Waste Management: scenarios/waste-management.md
+      - Waste Management: scenarios/environment-waste-management.md
       - Energy Conservation: scenarios/energy-conservation.md
       - Restricted Areas: scenarios/restricted-areas.md
 
@@ -130,7 +132,7 @@ nav:
       - Equipment noise monitoring: scenarios/equipment-noise.md
       - Read analog dials: scenarios/analog-dials.md
       - Tools check-in/out: scenarios/tools-check-in-out.md
-      - Spill & leak: scenarios/equipment-spills-and-leaks.md
+      - Spill & leak: scenarios/spills-and-leaks.md
 
 
     - Environment monitoring:

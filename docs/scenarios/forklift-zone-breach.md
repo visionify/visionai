@@ -86,7 +86,7 @@ The business logic for this scenario is as follows:
         Starting scenario: vehicle-forklift-detection..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of vehicle cargo monitoring within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of vehicle cargo  monitoring event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
