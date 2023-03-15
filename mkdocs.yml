@@ -110,7 +110,7 @@ nav:
       - Social distancing: scenarios/social-distance.md
       - Station occupancy: scenarios/station-occupancy.md
       - Occupancy metrics: scenarios/occupancy-metrics.md
-      - Authorized personnel: scenarios/authorized-personnel.md
+      - Authorized personnel: scenarios/authorized-personnel-occupancy.md
       - Tailgating: scenarios/unauthorized-entry.md
       - Perimeter control: scenarios/perimeter-control.md
 
@@ -132,13 +132,13 @@ nav:
       - Equipment noise monitoring: scenarios/equipment-noise.md
       - Read analog dials: scenarios/analog-dials.md
       - Tools check-in/out: scenarios/tools-check-in-out.md
-      - Spill & leak: scenarios/spills-and-leaks.md
+      - Spill & leak: scenarios/equipment-spills-and-leaks.md
 
 
     - Environment monitoring:
       - Temperature monitoring: scenarios/environment-temperature.md
       - Humidity monitoring: scenarios/environment-humidity.md
-      - Air quality monitoring: scenarios/environment-air-quality.md
+      - Air quality monitoring: scenarios/air-quality.md
       - Noise monitoring: scenarios/environment-noise.md
       - Pressure monitoring: scenarios/environment-pressure.md
       - Water leak detection: scenarios/environment-water-leak.md
