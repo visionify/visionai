@@ -4,7 +4,7 @@
 1. **Hazard Warning**
     1. [x] [Smoke and Fire Detection](scenarios/smoke-and-fire-detection.md)
     1. [x] [No smoking/no vaping](scenarios/no-smoking.md)
-    1. [ ] [Spills & leaks detection](scenarios/spills-and-leaks.md)
+    1. [ ] [Spills & leaks detection](scenarios/spills-and-leaks-hazard.md)
     1. [ ] [Gask leak detection](scenarios/gas-leak-detection.md)
     1. [x] [Missing fire extinguisher](scenarios/missing-fire-extinguisher.md)
     1. [x] [Blocked exit monitoring](scenarios/blocked-exit.md)
