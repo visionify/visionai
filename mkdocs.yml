@@ -81,11 +81,11 @@ nav:
       - Overview: scenarios/hazard-warning-suite.md
       - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
       - No smoking/no vaping: scenarios/no-smoking-hazard.md
-      - Spills & leaks detection: scenarios/spills-and-leaks.md
+      - Spills & leaks detection: scenarios/spills-and-leaks-hazard.md
       - Gask leak detection: scenarios/gas-leaks-detection.md
       - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
       - Blocked exit monitoring: scenarios/blocked-exit.md
-      - Equipment temperature monitoring: scenarios/equipment-temperature.md
+      - Equipment temperature monitoring: scenarios/equipment-temperature-hazard.md
       - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
 
     - Worker health & safety:

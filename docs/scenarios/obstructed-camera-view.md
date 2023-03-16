@@ -2,6 +2,10 @@
 
 > Keep your camera view clear with our obstructed camera detection model.
 
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/obstructed-camera-detection.png "Detection of obstructed camera at workplace!"){ width="350" }<figcaption>Detection of obstructed camera event</figcaption>
+</figure>
+
 ## Overview
 
 The obstructed camera detection model uses computer vision techniques to analyze the camera's video feed and identify if there is any obstruction present in the camera's field of view. The model utilizes deep learning techniques to learn the features of an unobstructed camera view and detects the presence of obstructions by analyzing the changes in the image features.

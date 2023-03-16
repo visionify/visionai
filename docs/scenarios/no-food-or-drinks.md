@@ -2,6 +2,11 @@
 
 > An easier, smarter way to enforce policies with VisionAI
 
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/no-food-or-drinks.jpg "Detection of food and drinks at work-place!"){ width="350" }
+  <figcaption>Event: No food, No drinks</figcaption>
+</figure>
+
 ## Overview
 
 Implementing a ‘No Food, No Drinks’ policy can be challenging. However, for some industries like healthcare, manufacturing, textiles, laboratories and pharmaceuticals, it is imperative to have an effective ‘no food, no drinks’ policy to maintain strict hygiene and safety standards essential to prevent product contamination. Unfortunately, the current mechanisms rely on manual inspections, are highly human-oriented, and are difficult to automate, depending on enforcement by supervisors and security personnel.

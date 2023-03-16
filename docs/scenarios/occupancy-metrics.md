@@ -2,6 +2,10 @@
 
 > Track workplace Occupancy Metrics effortlessly.
 
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/Occupancy-Metrics.jpeg "Real-time occupancy metrics!"){ width="350" }<figcaption>Occupancy metrics</figcaption>
+</figure>
+
 ## Overview
 
 Measuring occupancy metrics is crucial for businesses because of the valuable insights it offers. Such insights help optimize various aspects of a business operation, from customer experiences and marketing strategies to operational efficiencies. By accurately measuring and analyzing occupancy metrics, businesses can make data-driven decisions to improve other aspects of their business, like optimizing the physical layout and resource management. While there are existing systems such as sensors, Wi-Fi devices, and Surveillance, they all exhibit lack of accuracy, and manual intervention.
