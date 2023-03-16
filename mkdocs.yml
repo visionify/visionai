@@ -144,7 +144,7 @@ nav:
       - Water leak detection: scenarios/environment-water-leak.md
       - Volatile organic compounds (VOCs): scenarios/environment-voc.md
       - Carbon monoxide (CO): scenarios/environment-co.md
-      - Ambient light: scenarios/environment-light.md
+      - Ambient light: scenarios/light-sensor-monitoring.md
       - Dust monitoring: scenarios/environment-dust.md
       - Water quality monitoring: scenarios/environment-water-quality.md
       - Energy usage monitoring: scenarios/environment-energy-usage.md

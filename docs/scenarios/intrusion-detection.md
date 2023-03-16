@@ -1,4 +1,4 @@
-# ** Intrusion Detection**
+# **Intrusion Detection**
 
 > An advanced physical intrusion detection system powered with Computer Vision and AI.
 

@@ -1,4 +1,5 @@
 # **Light Sensor Monitoring**
+
 > Monitor ambient light in real-time with our light-sensing solution
 
 ## Overview
