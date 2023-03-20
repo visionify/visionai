@@ -3,7 +3,10 @@
 
 > Ensure the safety of employees at workplace.
 
-
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/working-at-heights.png "Working at heights!"){ width="350" }
+  <figcaption>Events: Working at heights</figcaption>
+</figure>
 
 ![Detection of slip and fall while working at heights](../img/workingatheights_collage.png)
 
@@ -77,7 +80,7 @@ The business logic for this scenario is as follows:
 
 - We use existing camera feeds from the premises to monitor and detect occurrences of slip and fall incidents. 
 
-- VisionAI systemis able to run on edge devices. It uses camera feeds for processing. 
+- VisionAI s able to run on edge devices. It uses camera feeds for processing. 
 
 - We detect human poses to identify slip and fall accidents in the camera feed.  
 - If either slip or fall is detected, an alert is raised.

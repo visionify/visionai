@@ -123,7 +123,7 @@ Starting scenario: people-taking-picture-detection..
 </div>
 
 
-- You should be able to see the events generated on your console window with people taking picture event being detected within the camera field of view.
+- You should be able to see the events generated on your console window with people taking picture being detected within the camera field of view.
 
 ### In an actual environment
 

@@ -2,6 +2,11 @@
 
 > Ensure that your organziation is safe & compliant for any emergency evacuations. If any of your exits are blocked - get an event notifications so it can be quickly resolved.
 
+
+<figure markdown>
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/blocked-exit-monitoring.png "Detection of blocked exit at workplace!"){ width="350" }<figcaption>Detection of blocked exit</figcaption>
+</figure>
+
 ## Overview
 
 Every second counts in emergency situations such as fires, earthquakes, or other disasters, and people need to evacuate the premises as quickly as possible to avoid being trapped or injured. Therefore, the presence of functional emergency exits and a well-designed escape route plan is of paramount importance. 

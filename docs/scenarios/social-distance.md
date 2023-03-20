@@ -1,9 +1,9 @@
-# Social Distance
+# **Social Distancing**
 
 > Creating Safe Workplaces: Companies Implement Measures to Ensure Social Distancing in the Workplace with Vision AI.
 
 <figure markdown>
-  ![Image title](../img/social-distancing.png "Detection of social distancing at a work-place!"){ width="350" }
+  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/Social-Distancing.png "Detection of social distancing at a work-place!"){ width="350" }
   <figcaption>Detection of Social distancing event</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ The business logic for this scenario is as follows:
         Starting scenario: social distancing..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of social distancing event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of social distancing within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]

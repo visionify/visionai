@@ -2,6 +2,8 @@ site_name: VisionAI
 site_description: VisionAI Toolkit - Ready to use models & vision apps
 site_url: https://docs.visionify.ai/
 
+# plugins:
+#     - page-to-pdf
 theme:
   name: material
   custom_dir: docs/overrides
@@ -77,14 +79,13 @@ nav:
 
     - Hazard Warnings:
       - Overview: scenarios/hazard-warning-suite.md
-      - Hazard warning suite: scenarios/hazard-warning-suite.md
       - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
-      - No smoking/no vaping: scenarios/no-smoking.md
-      - Spills & leaks detection: scenarios/spills-and-leaks.md
+      - No smoking/no vaping: scenarios/no-smoking-hazard.md
+      - Spills & leaks detection: scenarios/spills-and-leaks-hazard.md
       - Gask leak detection: scenarios/gas-leaks-detection.md
       - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
       - Blocked exit monitoring: scenarios/blocked-exit.md
-      - Equipment temperature monitoring: scenarios/equipment-temperature.md
+      - Equipment temperature monitoring: scenarios/equipment-temperature-hazard.md
       - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
 
     - Worker health & safety:
@@ -105,21 +106,21 @@ nav:
       - Overview: scenarios/occupancy-policies.md
       - Max occupancy: scenarios/max-occupancy-count.md
       - Restricted areas/times: scenarios/exclusion-zones.md
-      - Dwell time: scenarios/dwell-time.md
+      - Dwell time: scenarios/confined-spaces-monitoring.md
       - Social distancing: scenarios/social-distance.md
       - Station occupancy: scenarios/station-occupancy.md
       - Occupancy metrics: scenarios/occupancy-metrics.md
-      - Authorized personnel: scenarios/authorized-personnel.md
+      - Authorized personnel: scenarios/authorized-personnel-occupancy.md
       - Tailgating: scenarios/unauthorized-entry.md
       - Perimeter control: scenarios/perimeter-control.md
 
     - Company Policies:
       - Overview: scenarios/compliance-policies.md
       - No food or drinks: scenarios/no-food-or-drinks.md
-      - No phone, text, pictures: scenarios/cell-phone-usage.md
+      - No phone, text, pictures: scenarios/no-phone-usage.md
       - No Smoking zones: scenarios/no-smoking.md
       - No children/visitors: scenarios/authorized-personnel.md
-      - Waste Management: scenarios/waste-management.md
+      - Waste Management: scenarios/environment-waste-management.md
       - Energy Conservation: scenarios/energy-conservation.md
       - Restricted Areas: scenarios/restricted-areas.md
 
@@ -137,13 +138,13 @@ nav:
     - Environment monitoring:
       - Temperature monitoring: scenarios/environment-temperature.md
       - Humidity monitoring: scenarios/environment-humidity.md
-      - Air quality monitoring: scenarios/environment-air-quality.md
+      - Air quality monitoring: scenarios/air-quality.md
       - Noise monitoring: scenarios/environment-noise.md
       - Pressure monitoring: scenarios/environment-pressure.md
       - Water leak detection: scenarios/environment-water-leak.md
       - Volatile organic compounds (VOCs): scenarios/environment-voc.md
       - Carbon monoxide (CO): scenarios/environment-co.md
-      - Ambient light: scenarios/environment-light.md
+      - Ambient light: scenarios/light-sensor-monitoring.md
       - Dust monitoring: scenarios/environment-dust.md
       - Water quality monitoring: scenarios/environment-water-quality.md
       - Energy usage monitoring: scenarios/environment-energy-usage.md
@@ -156,7 +157,7 @@ nav:
     - Suspicious Activity:
       - Overview: scenarios/suspicious-activity.md
       - Loitering: scenarios/loitering.md
-      - Unattended packages: scenarios/unattended-package.md
+      - Suspicious package detection: scenarios/suspicious-package-detection.md
       - Aggressive behavior: scenarios/aggressive-behavior.md
       - Vandalism & property destruction: scenarios/vandalism.md
       - Firearms & knives: scenarios/firearms-and-knives.md
@@ -177,7 +178,7 @@ nav:
 
     - Employee Privacy:
       - Overview: scenarios/employee-privacy.md
-      - Blur faces: preprocess/blur-faces.md
+      - Blur faces: scenarios/blur-faces.md
       - Blur signs/text: preprocess/blur-signs.md
       - Blur screens: preprocess/blur-screens.md
       - Blur license plates: preprocess/blur-license-plates.md

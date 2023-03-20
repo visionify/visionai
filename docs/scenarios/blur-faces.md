@@ -1,8 +1,11 @@
-# **Face blur** 
+# **Face Blur** 
 
 > Ensure the privacy of individuals in public spaces
+<figure markdown>
+  ![Face blur](https://github.com/visionify/visionai-images/raw/main/visionai-images/faceblur_collage.png"Face blur!"){width="400"}
+  <figcaption>Face blur as part of preprocessing</figcaption>
+</figure>
 
-![Face blur by custom model](../img/faceblur_collage.png)
 
 ## Overview
 
@@ -19,7 +22,9 @@ Vision AI-based Model for Face Blurring is designed to ensure that the privacy o
 
 This model uses a combination of facial recognition algorithms and image processing techniques to automatically blur faces in real-time video streams. The system is designed to detect faces in real-time, and then blur them out so that they are not recognizable. This model has been used in various applications including public surveillance, online video streaming, and social media platforms.
 
-### Dataset 
+## Model Details
+
+### Dataset
 
 WIDER FACE dataset is a face detection benchmark dataset, of which images are selected from the publicly available WIDER dataset. WIDER FACE dataset is organized based on 61 event classes. For each event class, we randomly select 40%/10%/50% data as training, validation and testing sets. 
 The dataset contains faces with:
@@ -38,25 +43,20 @@ The model is based off of the YOLOv5-face algorithm. The model is trained on WID
 
 The model recorded the following performance metrics:
 
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Easy</th>
-            <th>Medium</th>
-            <th> Hard</th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>FACE BLUR</td>
-            <td>95.3% </td>
-            <td>93.7% </td>
-            <td>85.2% </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="main">
+    <div class="bar">
+        <h4>Precision <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar" style="--value:95"></div>
+    </div>
+    <div class="bar">
+        <h4>Recall <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar1" style="--value:93"></div>
+    </div>
+    <div class="bar">
+        <h4>mAP <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar2" style="--value:85"></div>
+    </div>
 </div>
-
 
 
 The model is adaptable enough to run on any edge computing device.
@@ -70,95 +70,42 @@ The business logic for this scenario is as follows:
 - VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
 - We detect and blur the faces identified in this camera feed.
 
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
 
-## Try it now
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
 
-### Quick method - using your local web-cam
+        ```console
+        $ visionai scenario test face-blur
 
-To test this model & scenario, you can use the following steps:
+        Downloading models for scenario: face-blur
+        Model: face-blur: https://workplaceos.blob.core.windows.net/models/yolov5s-face-blur/yolov5s-face-blur-0.0.1.zip
+        
 
-- Install the visionai package from PyPI
+        Starting scenario: face-blur..
 
-<div class=termy>
+        ```
+    - You should be able to see faces being blurred as part of preprocessing.
 
-```console
-
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test face-blur
-
-Downloading models for scenario: face-blur
-Model: face-blur: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: face-blur..
-
-```
-</div>
-
-
-### In an actual environment
-
-
-To use this scenario in an actual environment, you can follow these steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download face-blur
-
-Downloading models for scenario: face-blur
-Model: face-blur
-https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario face-blur
-$ visionai run
-
-Starting scenario: face-blur..
-
-```
-
-</div>
-
-
-For more details visit VisionAI [web application](https://visionify.ai/).
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
-
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 ## Contact Us
 

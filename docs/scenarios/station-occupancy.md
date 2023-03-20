@@ -1,4 +1,4 @@
-# Station Occupancy
+# **Station Occupancy**
 
 > Revolutionize your workspace with our Smart Desk Occupancy Tracker.
 
@@ -95,7 +95,7 @@ Real-time detection and alerts for different scenarios includes but are not limi
         Starting scenario: desk-occupancy..
 
         ```
-    - You should be able to see the events generated on your console window with the detections of desk occupancy event within the camera field of view.
+    - You should be able to see the events generated on your console window with the detections of desk occupancy within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
