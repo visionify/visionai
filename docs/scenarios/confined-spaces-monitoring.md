@@ -2,8 +2,6 @@
 
 > Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.
 
-
-
 ## Overview
 Confined spaces refer to areas that are partially or fully enclosed and are not designed for continuous human occupancy. Examples include tanks, silos, storage bins, manholes, and underground vaults. These spaces can be hazardous due to limited ventilation, lack of natural light, and potential for hazardous atmospheric conditions.
 
@@ -39,24 +37,19 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
 
 The model provides the following metrics:
 
-
-<div class="table">
-    <table class="fl-table">
-        <thead>
-        <tr><th>Model Name</th>
-            <th>Precision</th>
-            <th>Recall</th>
-            <th> mAP  </th>  
-        </thead>
-        <tbody>
-        <tr>
-            <td>CONFINED SPACE MONITORING</td>
-            <td>94.5% </td>
-            <td>96.4% </td>
-            <td>94.2% </td>
-        </tr>
-        </tbody>
-    </table>
+<div class="main">
+    <div class="bar">
+        <h4>Precision <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar" style="--value:94"></div>
+    </div>
+    <div class="bar">
+        <h4>Recall <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar1" style="--value:96"></div>
+    </div>
+    <div class="bar">
+        <h4>mAP <i class="fa fa-info-circle"></i></h4>
+        <div role="progressbar2" style="--value:94"></div>
+    </div>
 </div>
 
 
@@ -71,131 +64,36 @@ The business logic for this scenario is as follows:
 - We monitor the total duration of stay of these people in the confined space.
 - If the duration of stay exceeds the compliance policy, an alert is raised.
 
-## Try it now
+=== "Test now with online Web-Cam"
+     To test this model & scenario, you can use the following steps:
 
-### Quick method - using your local web-cam
+     - Install the visionai package from PyPI
+     
+        ```console
+        $ pip install visionai
+        
+        ```
+     
+     - Test the scenario from your local web-cam
+     
 
-To test this model & scenario, you can use the following steps:
+        ```console
+        $ visionai scenario test obstructed-camera-detection
 
-- Install the visionai package from PyPI
+        Downloading models for scenario: obstructed-camera-detection
+        Model: obstructed-camera-detection: https://workplaceos.blob.core.windows.net/models/yolov5s-obstructed-camera-detection/yolov5s-obstructed-camera-detection-0.0.1.zip
+        
 
-<div class=termy>
+        Starting scenario: obstructed-camera-detection..
 
-```console
-$ pip install visionai
----> 100%
-```
-</div>
+        ```
+    - You should be able to see the events generated on your console window with the detections of people exceeding the duration limit within the camera field of view.
 
-- Test the scenario from your local web-cam
-
-<div class=termy>
-
-```console
-$ visionai scenario test confined-spaces-monitoring
-
-Downloading models for scenario: confined-spaces-monitoring
-Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-
-Starting scenario: confined-spaces-monitoring..
-
-```
-</div>
-
-
-
-- You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
-
-### In an actual confined space
-
-To use this scenario in an actual confined space, you can use the following steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-$ pip install visionai
----> 100%
-```
-</div>
-
-- Download the scenario
-
-<div class=termy>
-
-```console
-$ visionai scenario download confined-spaces-monitoring
-
-Downloading models for scenario: confined-spaces-monitoring
-Model: confined-spaces-monitoring: https://workplaceos.blob.core.windows.net/models/yolov5s-people/yolov5s-people-0.0.4.zip
----> 100%
-```
-
-</div>
-
-- Add the camera feed to the scenario
-
-<div class=termy>
-
-```console
-$ visionai camera add OFFICE-01 --url rtsp://192.168.0.1/stream1
-$ visionai camera OFFICE-01 add-scenario confined-spaces-monitoring
-$ visionai run
-
-Starting scenario: confined-spaces-monitoring..
-
-```
-
-</div>
-
-- You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
-
-### Through VisionAI Web-Application
-
-You can also use the VisionAI web-application to manage your cameras & scenarios. You can use the following steps:
-
-- Install the visionai package from PyPI
-
-<div class=termy>
-
-```console
-pip install visionai
----> 100%
-```
-
-</div>
-
-
-- Run the VisionAI web-application
-
-<div class=termy>
-
-```console
-$ visionai web start
-
-Starting VisionAI web-application..
-
-```
-
-</div>
-
-- This opens up a web-app that you can use to manage your cameras & scenarios. First add the camera feed to the system and check if it is working.
-
-TODO: Add image for the showing how to add camera
-
-- Once the camera is added, you can add the scenario to the system. Search for "confined spaces monitoring" and add it to the camera.
-
-TODO: Show image for adding scenario to a camera.
-
-- Click start to start the scenario. You should be able to see the events generated on your console window if the same person is detected for more than 30 seconds within the camera field of view.
-
-TODO: Show image for starting the scenario & seeing the feed from the scenario
-
-### Using Azure Managed Service App
-
-TODO: Add instructions for using Azure Managed Service App
+=== "With RTSP Camera - Pipelines"
+     [TODO]
+ 
+=== "With Azure Setup"
+     VisionAI app is available at a Azure Market place, one can download and use it by following steps mentioned [here](../overview/azure-managed-app.md)
 
 ## Events Supported
 
@@ -208,7 +106,7 @@ This scenario supports the following events:
 
 ## Training with custom data
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please (contact us)[contact.md].
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 
 ## Contact Us

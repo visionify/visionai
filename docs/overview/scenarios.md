@@ -1,180 +1,248 @@
-!!! warning
-    This is a more advanced topic, if you are starting with **Typer**, feel free to skip it.
+# Scenarios
 
-    It will be mostly useful for people that already work with Click and have questions around it.
+Scenarios form the building blocks of VisionAI platform. These scenarios are organized into `Suites`. Below we talk about different suites and the scenarios that are part of them.
 
-**Typer** is powered by <a href="https://click.palletsprojects.com" class="external-link" target="_blank">Click</a>. It does all the work underneath.
+- All scenarios are available as pick-n-choose scenarios. You can pick the scenarios you want based on your business needs. Each scenario is independently tested.
+- Events provided by these scenarios are given below. Events are sent to Redis & Azure EventHub pubsub systems for [further integration](custom/events-integration.md).
+- There are a few common events supported by all scenarios (daily summary, weekly summary etc.)
+- Currently supported scenarios are highlighted by a ✅. Roadmap scenarios are highlighted by a 📅.
+- Each of the scenarios can be quickly tested through `visionai run <scenario-name>` command. For example:
 
-Here is some more information related to using both together.
-
-## A single app with both Click and **Typer**
-
-If you already have a Click application and want to migrate to **Typer**, or to add some Typer components, you can get a Click `Command` from your Typer application and then use Click directly.
-
-### How Click works
-
-Before knowing how to combine Click and **Typer**, let's first check a little about how Click works.
-
-#### Click `Command`
-
-Any Click application has an object of class `Command`. That's, more or less, the most basic Click object.
-
-A `Command` can have its own *CLI arguments* and *CLI options*, and it has a function that it calls.
-
-For example, in this Click app:
-
-```Python hl_lines="7  14"
-{!../docs_src/using_click/tutorial001.py!}
+``` bash
+visionai run smoke-and-fire-detection
 ```
 
-The original `hello` variable is converted by Click from a function to a `Command` object. And the original `hello` function is used by that `Command` internally, but it is no longer named `hello` (as `hello` is now a Click `Command`).
+---
 
-#### Click `Group`
+!!! note "New scenario request"
+    This section lists down all the scenarios that are supported by the VisionAI platform. There are more scenarios added daily - please [send a request](https://github.com/visionify/visionai/issues/new) to us about any additional scenarios you need.
 
-Then Click also has a `Group` class, it **inherits from `Command`**. So, a `Group` object is *also* a `Command`.
+---
 
-A `Group` can also have its own *CLI arguments* and *CLI options*.
+## Privacy Suite
 
-A `Group` can have subcommands of class `Command` or sub groups of class `Group` as well.
+For a majority of organizations - employee privacy is a top concern. Along with employee privacy, the organization needs to make sure that any data does not leave the premises. Any faces detected through Vision AI system need to be blurred, along with text, signage, computer screens and other sensitive information.
 
-And a `Group` can also have a function that it calls, right before calling the function for any specific subcommand.
+Before any other scenarios are run, or before we store or process the images - the images are pre-processed through this privacy suite. As such, privacy suite is treated differently from other scenarios. Below examples provide a high-level overview of the privacy suite.
 
-For example:
+---
 
-```Python hl_lines="5  19 20"
-{!../docs_src/using_click/tutorial002.py!}
+| Status | Scenario name | Details | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| ✅ | `face-blurring` | Blur any faces detected | [More details](blur-faces.md){:target="_blank"} |
+| ✅ | `text-blurring` | Blue any text detected (paper, computer screens etc) | [More details](blur-text.md){:target="_blank"} |
+| ✅ | `license-plate-blurring` | Blur any license plates detected | [More details](blur-license-plates.md){:target="_blank"} |
+| 📅 | `signs-blurring` | Blur any signs detected | [More details](blur-signs.md){:target="_blank"} |
+| 📅 | `obstructed-camera` | If camera feed is obstructed, send an alert | [More details](obstructed-camera.md){:target="_blank"} |
+
+---
+
+
+## Hazard Warnings Suite
+
+Following scenarios provide hazard warning examples supported by VisionAI suite. Currently supported scenarios are highlighted by a ✅. You can run these through VisionAI CLI, for example, you can run the following command for smoke-and-fire-detection. Once the scenario has started - you can use a lighter or a match to generate the events. The events can be viewed on CLI window.
+
+``` bash
+visionai run smoke-and-fire-detection
 ```
 
-The `cli` variable is converted by Click from a function to a `Group` object. And the original `cli` function is used by that `Group` internally.
+!!! warning "TODO"
+    - TODO: For scenarios requiring IR camera and/or IoT Sensor, point to the exact device this has been tested with.
 
-!!! tip
-    The original `cli` function would be the equivalent of a [Typer Callback](./commands/callback.md){.internal-link target=_blank}.
 
-Then the `cli` variable, that now is a `Group` object, is used to add sub-commands.
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](smoke-and-fire-detection.md){:target="_blank"} |
+| ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking-zone.md){:target="_blank"} |
+| 📅 | `spills-and-leak-detection`      | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Spill event detected` <br> `Slippery sign detected` |
+| 📅 | `gas-leak-detection`             | `Gas leak event detected` | IR Camera Required |
+| 📅 | `missing-fire-extinguisher`      | `Fire extinguisher missing` |
+| 📅 | `blocked-exit-monitoring`        | `Blocked exit detected` |
+| ✅ | `slip-and-fall-detection`        | `Person fall event detected` <br> `Path block detected` | [More details](slip-and-fall-detection.md){:target="_blank"} |
+| 📅 | `equipment-temperature-ir-camera`| `Temperature exceeds limit` <br> `Temperature subceeds limit` | IR Camera Required |
+| ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](rust-and-corrosion.md){:target="_blank"} |
 
-### How **Typer** works
+---
 
-Typer doesn't modify the functions. You create an explicit variable of class `typer.Typer` and use it to *register* those functions.
+## Worker Health & Safety Suite
 
-And then, when you call the app, Typer goes and creates a Click `Command` (or `Group`), and then calls it.
+Following scenarios provide Worker Health and Safety examples supported by VisionAI suite. (Also referred to as Personnel Health and Safety).
 
-If your app only has one command, then when you call it, **Typer** creates a single Click `Command` object and calls it.
+Workplace Personnel Health & Safety is important because it ensures that employees are safe and healthy in their work environment. This includes providing a safe and healthy work environment, proper safety training, and regular safety inspections. Additionally, it also includes enforcing safety policies to ensure that all employees are aware of and follow safety procedures, as well as encouraging a culture of safety within the workplace.
 
-But **Typer** creates a Click `Group` object if your app has any of:
+Currently supported scenarios are highlighted by a ✅. You can run these through VisionAI CLI, for example:
 
-* More than one command.
-* A callback.
-* Sub-Typer apps (sub commands).
-
-!!! tip
-    If you want to learn more about this check the section [One or Multiple Commands](./commands/one-or-multiple.md){.internal-link target=_blank}.
-
-### Combine Click and **Typer**
-
-**Typer** uses an internal function `typer.main.get_command()` to generate a Click `Command` (or `Group`) from a `typer.Typer` object.
-
-You can use it directly, and use the Click object with other Click applications.
-
-### Including a Click app in a **Typer** app
-
-For example, you could have a **Typer** app, generate a Click `Group` from it, and then include other Click apps in it:
-
-```Python hl_lines="15 16  29  31  34"
-{!../docs_src/using_click/tutorial003.py!}
+``` bash
+visionai run ppe-detection
 ```
 
-Notice that we add a callback that does nothing (only document the CLI program), to make sure **Typer** creates a Click `Group`. That way we can add sub-commands to that Click `Group`.
+You can see real-time events generated as soon as person is detected without PPE (helmets, gloves, safety boots etc.). There are options to configure what PPE's are required for your scenario. This can be done through the VisionAI web-application which can be accessed on through http://localhost:3001.
 
-Then we generate a Click object from our `typer.Typer` app (`typer_click_object`), and then we can include another Click object (`hello`) in this Click `Group`.
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](ppe-detection.md){:target="_blank"}
+| ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](working-at-heights.md){:target="_blank"}
+| ✅ | `fall-and-accident-detection` | `Person slip & fall detected` <br> `Potential collision/accident detected` <br> `Wet floor detected` <br> `Debris detected on floor` <br> `Wet/slippery sign detected` |
+| ✅ | `worker-fatigue-detection` | `Drowsy worker detected` | Straight camera angle |
+| ✅ | `posture-and-ergonomics` | `Bend count per individual ` | Straight camera angle <br> [More details](ergonomics.md){:target="_blank"} |
+| ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| 📅 | `empty-pallets-detection` | `Empty pallets detected` <br> `Partially empty pallets detected` |
+| 📅 | `spills-and-leaks-detection` | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Wet floor detected` <br> `Spill event detected` <br> `Slippery sign detected` |
+| 📅 | `hand-wash-compliance` | `Missed hand wash` |
+| 📅 | `environment-monitoring` | `CO out of range` <br> `CO2 out of range` <br> `CH4 out of range` <br> `VOCs out of range` <br> `Temperature out of range` <br> `Pressure out of range` <br> `Humidity out of range` |
+| 📅 | `person-temperature-monitoring` | `Person temperature exceeds threshold` | IR Camera required |
 
-And that way, our **Typer** app will have a subcommand `top` built with Typer, and a subcommand `hello` built with Click.
+---
 
-Check it:
+## Occupancy Policies
 
-<div class="termy">
+Occupancy Policies relate to counting and tracking employees and/or other personnel in the room. These could include people-counting and enforcing max-occupancy policies, or tracking people's dwell time in a confined space.
 
-```console
-$ python main.py
+Currently supported scenarios are highlighted by a ✅. You can run these through VisionAI CLI, for example:
 
-// Notice we have both subcommands, top and hello
-Usage: main.py [OPTIONS] COMMAND [ARGS]...
-
-Error: Missing command.
-
-// Call the Typer part
-$ python main.py top
-
-The Typer app is at the top level
-
-// Call the Click part
-$ python main.py hello --name Camila
-
-Hello Camila!
+``` bash
+visionai run max-occupancy
 ```
 
-</div>
+!!! note "Occupancy Metrics"
+    - Occupancy metrics is similar in structure to max-occupancy, or restricted areas scenarios.
+    - However it sends out a summary event is structured like this. This will give a granular summary event at the end of the day.
+    - Users can start with occupancy-metrics and then move to max-occupancy or restricted areas if they need to enforce policies.
+    ``` json
+    {
+      "date": "2023-02-23",
+      "stations": [{
+        "id": "station_1",
+        "hours": [
+            {
+              "start_time": "2023-02-23T14:00:01",
+              "end_time": "2023-02-23T15:00:00",
+              "occupancy_cnt": 14
+            }
+            ...
+        ]
+      }...]
+    }
+    ```
 
-### Including a **Typer** app in a Click app
+Also need to specify that the camera needs to be configured to have a good view of the stations where occupancy metrics need to be checked.
 
-The same way, you can do the contrary and include a **Typer** sub app in a bigger Click app:
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](max-occupancy.md) |
+| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](restricted-areas.md){:target="_blank"} |
+| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| 📅 | `social-distancing`          | `Person detected` <br> `Person left` <br> `Person distance event` |
+| ✅ | `desk-occupancy`             | `Daily summary event` | [More details](desk-occupancy.md){:target="_blank"} |
+| ✅ | `station-occupancy`          | `Daily summary event` | [More details](station-occupancy.md){:target="_blank"} |
+| 📅 | `occupancy-metrics`          | `Daily summary event` |
+| 📅 | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` |
+| 📅 | `authorized-personnel-only`  | `Unauthorized person detected` |
 
-```Python hl_lines="31  33  36"
-{!../docs_src/using_click/tutorial004.py!}
-```
+[^1]: This works by detecting a person's uniform and comparing it to a list of authorized personnel. This is a more advanced scenario and requires a custom model to be trained for your specific use-case.
 
-Notice that we don't have to add a callback or more commands, we can just create a **Typer** app that generates a single Click `Command`, as we don't need to include anything under the Typer app.
+---
 
-Then we generate a Click object from our `typer.Typer` app (`typer_click_object`), and then we use **the Click `cli` to include** our Click object from our Typer app.
+## Company Policies
 
-In this case, the original Click app includes the **Typer** app.
+Company policies include specific scenarios that are relevant to your company. These could include scenarios like no-smoking/no-vaping zones, no food or drinks in certain areas, or no cell phones/pictures in certain areas. Some of these scenarios overlap with [occupancy policies](#occupancy-policies), but they are still useful to have here as separate scenarios.
 
-And then we call the *original Click* app, not the Typer app.
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](max-occupancy.md) |
+| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](restricted-areas.md){:target="_blank"} |
+| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| 📅 | `social-distancing`          | `Person detected` <br> `Person left` <br> `Person distance event` |
+| ✅ | `desk-occupancy`             | `Daily summary event` | [More details](desk-occupancy.md){:target="_blank"} |
+| ✅ | `station-occupancy`          | `Daily summary event` | [More details](station-occupancy.md){:target="_blank"} |
+| ✅ | `occupancy-metrics`          | `Daily summary event` | [More details](occupancy-metrics.md){:target="_blank"} |
+| 📅 | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` |
+| 📅 | `authorized-personnel-only`  | `Unauthorized person detected` |
+| 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` |
+| ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](no-phone-text-pictures.md){:target="_blank"} |
+| ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking-zone.md){:target="_blank"} |
+| ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](no-children-pets-visitors.md){:target="_blank"} |
+| 📅 | `authorized-personnel-only`  | `Person without uniform detected` <br> `Person without badge detected` |
+| 📅 | `waste-management`           | `Spill event detected` <br> `Waste bin full` <br> `Debris detected in Field of View` |
+| 📅 | `energy-conservation`        | `Occupancy pattern daily summary` <br> `Light usage daily summary` |
+| 📅 | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` |
+| ✅ | `badge-tailgating`         | `Multi-entry (tailgating) event detected` <br> `Unauthorized entry event detected` | [More details](unauthorized-entry.md){:target="_blank"} |
+| ✅ | `perimeter-control`          | `Person detected near fence/perimeter` <br> `Movement detected near fence/perimeter` | IR camera required<br>[More details](perimeter-control.md){:target="_blank"} |
 
-Check it:
+---
 
-<div class="termy">
+## Equipment Monitoring
 
-```console
-$ python main.py
+Equipment policies include specific scenarios that are relevant monitoring heavy machinaries. These could be through monitoring the temperature of the equipment, or through IoT sensors that are attached to the equipment that allow to monitor vibration, noise, or other parameters for the equipment.
 
-// We get our Typer app down there in the sub command
-Usage: main.py [OPTIONS] COMMAND [ARGS]...
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| 📅 | `equipment-temperature`        | `Equipment temperature exceeds limit` <br> `Equipment temperature subsceeds limit` |
+| ✅ | `rust-and-corrosion-detection` | `Rust or corrosion event detected` | [More details](rust-and-corrosion-detection.md){:target="_blank"} |
+| 📅 | `equipment-vibration`          | `Equipment vibration exceeds limit` | [^2] |
+| 📅 | `equipment-noise`              | `Equipment noise exceeds limit` |  [^3]|
+| 📅 | `reading-analog-dials`         | `Analog meter reading event`    |
+| 📅 | `tools-check-in-check-out`     | `Person left without checkout`  |
+| 📅 | `equipment-water-leak-puddle`  | `Water leak detected from equipment` |
 
-Options:
-  --help  Show this message and exit.
+[^2]: Vibration sensor needed to implement this scenario.
+[^3]: Noise sensor needed to implement this scenario.
 
-Commands:
-  dropdb
-  initdb
-  sub     A single-command Typer sub app
+---
+
+## Environment Monitoring
+Monitoring the environment like current temperature, humidity, or air quality is important to ensure that the workplace is safe and comfortable for employees. These scenarios are implemented through IoT sensors that are completely integrated into Vision AI suite.
 
 
-// Use the Click part
-$ python main.py initdb
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](temperature-moniotring.md){:target="_blank"} |
+| 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](humidity-moniotring.md){:target="_blank"} |
+| 📅 | `pressure-monitoring` | `Pressure excceds limit` <br> `Pressure subsceeds limit` | [More details](pressure-moniotring.md){:target="_blank"} |
+| 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](air-quality.md){:target="_blank"} |
+| 📅 | `light-sensor-monitoring` | `Light intensity exceeds limit` <br> `Light intensity subsceeds limit` | [More details](light-sensor-monitoring.md){:target="_blank"} |
+| 📅 | `noise-level-monitoring` | `Noise level exceeds limit` <br> `Noise level subsceeds limit` | [More details](noise-level-monitoring.md){:target="_blank"} |
+| 📅 | `energy-usage-monitoring` | `Energy usage hourly smmary` | [More details](energy-usage-monitoring.md){:target="_blank"} |
+| 📅 | `water-management` | `TODO` | [More details](water-management.md){:target="_blank"} |
+| 📅 | `waste-management` | `TODO` | [More details](waste-management.md){:target="_blank"} |
+| 📅 | `radiation-monitoring` | `Radiation level exceeds limit` <br> `Radiation level subsceeds limit` | [More details](radiation-monitoring.md){:target="_blank"} |
 
-Initialized the database
+---
 
-// And use the Typer part
-$ python main.py sub
+## Suspicious Activity detection
 
-Typer is now below Click, the Click app is the top level
-```
+Suspicious activity detection suite relies on a combination of activity detection models and object detection models. These models are trained to detect suspicious activity in a variety of scenarios.
 
-</div>
 
-## About Click decorators
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| 📅 | `loitering-detection` | `Person detected in closed space` <br> `Person detected during off hours` <br> `Person dwell time exceeds limit` | [More details](loitering-detection.md){:target="_blank"} |
+| 📅 | `suspicious-package-detection` | `Suspicious package detected` <br> `Package abandoned` | [More details](suspicious-package-detection.md){:target="_blank"} |
+| 📅 | `bullying-fighting-aggressive-behavior` | `Bullying/fighting/aggressive event detected` | [More details](bullying-fighting-aggressive-behavior.md){:target="_blank"} |
+| 📅 | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](vandalism-graffiti-company-property-destruction.md){:target="_blank"} |
+| ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](firearms-knives-detection.md){:target="_blank"} |
+| 📅 | `solictation-detection` | `Potential solicitation event detected` | [More details](solictation-detection.md){:target="_blank"} |
+| 📅 | `theft-and-or-shoplifting` | `Potential theft detected` <br> `Potential shoplifting activity detected` | [More details](theft-and-or-shoplifting.md){:target="_blank"} |
+| 📅 | `shipping-activity-detection` | `Shipping activity detected during after-hours` <br> `Shipping activity detected from non-designated areas` | [More details](shipping-activity-detection.md){:target="_blank"} |
+| 📅 | `intrusion-detection` | `Intrusion event detected` | [More details](intrusion-detection.md){:target="_blank"} |
 
-Typer apps don't work with Click decorators directly.
+---
 
-This is because **Typer** doesn't modify functions to add metadata or to convert them to another object like Click does.
+## Vehicle Activity
 
-So, things like `@click.pass_context` won't work.
+The below scenarios are designed to detect vehicle activity in and around the factory.
 
-Most of the functionality provided by decorators in Click has an alternative way of doing it in **Typer**.
+| Status | Scenario name | Supported Events | Additional considerations |
+| :----: | :------------ | :--------------- | :------------------------ |
+| 📅 | `vehicle-policies` | `Vehicle activity detected in non-designtated areas` <br> `Vehicle activity detected during after-hours` <br> `Collision event detected` <br> `Near collision event detected` | [More details](vehicle-policies.md){:target="_blank"} |
+| 📅 | `vehicle-usage`  | `Daily summary event of vehicle usage` <br> `Path-map of vehicle usage` | [More details](vehicle-usage.md){:target="_blank"} |
+| 📅 | `forklift-zone-breach` | `Forklift observed outside of configured zone` <br> `Pedestrian observed in forklift zone` | [More details](forklift-zone-breach.md){:target="_blank"} |
+| 📅 | `vehicle-license-plate-detection` | `Vehicle detected with license plate number` | [More details](vehicle-license-plate-detection.md){:target="_blank"} |
+| 📅 | `vehicle-speed-monitoring` | `Vehicle speed exceeds limit` | [More details](vehicle-speed-monitoring.md){:target="_blank"} |
+| 📅 | `vehicle-cargo-volume-limit` | `Vehicle cargo volume exceeds limit` | [More details](vehicle-cargo-volume-limit.md){:target="_blank"} |
 
-For example, to access the context, you can just declare a function parameter of type `typer.Context`.
+---
 
-!!! tip
-    You can read more about using the context in the docs: [Commands: Using the Context](commands/context.md){.internal-link target=_blank}
+## Next Steps
 
-But if you need to use something based on Click decorators, you can always generate a Click object using the methods described above, and use it as you would normally use Click.
+Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](contact.md)

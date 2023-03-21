@@ -1,4 +1,4 @@
-# Temperature monitoring
+# **Temperature monitoring**
 
 > Monitor the temperature of workers at your facility in real-time and alert if the temperature exceeds or falls a threshold value.
 
