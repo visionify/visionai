@@ -1,9 +1,15 @@
-# Forklift Zone Monitoring
+# **Forklift Zone Monitoring**
 
 > An intelligent alarm system that could be used to detect forklifts entering restricted zones
 
-# Overview
+<figure markdown>
+  ![Forklift Zone Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/forklift-breach-zone.png "Forklift Zone Monitoring at a work-place!"){ width="350" }
+  <figcaption>Forklift Zone Monitoring event</figcaption>
+</figure>
+
+## Overview
 Vehicle forklift zone monitoring is a system that uses cameras to monitor the forklifts entering restricted zones. It is used to enforce safety rules and calculate fine amounts, as well as to manage the flow of traffic. 
+
 ## Vision AI based monitoring
 VisionAI based forklift zone monitoring is an advanced technology that can be used to monitor and enforce forklifts entering restricted zones in the workplace. 
 

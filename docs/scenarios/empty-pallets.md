@@ -2,6 +2,11 @@
 
 > Maximize warehouse productivity and safety with our reliable empty pallet detection model.
 
+<figure markdown>
+  ![Empty Pallet Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/empty-pallets.png "Empty Pallet Detection at work-place!"){ width="350" }
+  <figcaption>Empty Pallet Detection</figcaption>
+</figure>
+
 ## Overview
 
 Empty pallet detection is the process of identifying whether a pallet is empty or not in a warehouse or manufacturing facility. This is important because it can help optimize storage space and ensure efficient inventory management. Empty pallet detection can be automated through the use of various technologies such as sensors, cameras, and machine learning algorithms.
