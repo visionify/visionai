@@ -2,6 +2,11 @@
 
 > An intelligent alarm system that could be used to monitor vehicle speed
 
+<figure markdown>
+  ![Vehicle Speed Monitoring](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-speed-limit.png "Detection of vehicle collision!"){ width="350" }
+  <figcaption>Detection of vehicle speed monitoring event</figcaption>
+</figure>
+
 # Overview
 Vehicle speed monitoring is a system that uses cameras to monitor the speed of vehicles on a road. It is used to enforce speed limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are travelling at an unsafe speed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.
 

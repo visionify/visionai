@@ -1,6 +1,11 @@
-# Vehicle Cargo Monitoring
+# **Vehicle Cargo Monitoring**
 
 > An intelligent alarm system that could be used to detect cargo in vehicles
+
+<figure markdown>
+  ![Vehicle Cargo Monitoring](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-cargo-limit.png "Vehicle cargo monitoring at workplace!"){ width="350" }
+  <figcaption>Vehicle cargo monitoring event</figcaption>
+</figure>
 
 # Overview
 Vehicle cargo monitoring is a system that uses cameras to monitor the cargo in vehicles. It is used to enforce cargo limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are carrying cargo that is not allowed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.
