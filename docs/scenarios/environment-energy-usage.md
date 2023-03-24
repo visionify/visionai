@@ -3,9 +3,10 @@
 >Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
 
 <figure markdown>
-  ![](../img/energy-usage-monitoring.png "Energy Usage Monitoring at work-place!"){ width="350" }
-  <figcaption>Energy Usage Monitoring events</figcaption>
+  ![Energy Usage Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/Energy%20usage%20monitoring.jpg"Energy Usage!"){ width="350" }
+  <figcaption>Detection of Energy Usage event</figcaption>
 </figure>
+
 
 ## Overview
 Energy usage monitoring refers to the process of collecting and analyzing data on how energy is being used in buildings, facilities, and other settings. The purpose of energy usage monitoring is to identify opportunities for energy conservation and efficiency improvements, reduce energy waste and costs, and promote sustainability.

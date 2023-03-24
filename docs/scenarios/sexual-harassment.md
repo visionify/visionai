@@ -2,6 +2,12 @@
 
 > Create a safer and more respectful workplace for all employees
 
+<figure markdown>
+  ![Sexual Harassment monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/Sexual%20harrassment-03.jpg"Detection of Sexual Harassment!"){ width="350" }
+  <figcaption>Monitoring of Sexual Harassment event</figcaption>
+</figure>
+
+
 ## Overview
 
 Sexual harassment in the workplace is a serious issue that can have significant negative impacts on employees' mental health, job satisfaction, and overall well-being. In addition, it can also result in decreased productivity and increased turnover, leading to financial costs for the company.
