@@ -1,6 +1,11 @@
-# Maximum Occupancy
+# **Maximum Occupancy**
 
 > Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution.
+
+<figure markdown>
+  ![Maximum Occupancy](https://github.com/visionify/visionai-images/raw/main/visionai-images/max-occupancy.jpg "Maximum occupancy monitoring at work-place!"){ width="350" }
+  <figcaption>Maximum Occupancy monitoring event</figcaption>
+</figure>
 
 # Overview
 Effective crowd management is critical for many workplaces like airports, hospitals, factories, and retail shops, among others. One key aspect is maintaining compliance with maximum occupancy limits which is  crucial for maintaining safety, mitigating potential injuries, and legal issues. 

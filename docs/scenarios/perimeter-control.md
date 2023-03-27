@@ -1,6 +1,11 @@
 # **Perimeter Control/Fence Intruder Detection**
 
-> 
+> An advanced perimeter control system powered with Computer Vision and AI.
+
+<figure markdown>
+  ![Perimeter Control/Fence Intruder Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/perimeter-control.png "Perimeter control system at work-place!"){ width="350" }
+  <figcaption>Perimeter monitoring event</figcaption>
+</figure>
 
 ## Overview
 

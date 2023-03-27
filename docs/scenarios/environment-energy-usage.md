@@ -1,9 +1,9 @@
-# Energy Usage Monitoring
+# **Energy Usage Monitoring**
 
->Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
+> Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
 
 <figure markdown>
-  ![](../img/energy-usage-monitoring.png "Energy Usage Monitoring at work-place!"){ width="350" }
+  ![]("Energy Usage Monitoring at work-place!"){ width="350" }
   <figcaption>Energy Usage Monitoring events</figcaption>
 </figure>
 

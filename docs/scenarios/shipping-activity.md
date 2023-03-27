@@ -2,6 +2,10 @@
 
 > Stay vigilant even after hours with our advanced suspicious shipping activity solution.
 
+<figure markdown>
+  ![Shipping activity detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/suspicious-shipping.png "Suspicious shipping activity detection at workplace!"){ width="350" }<figcaption>Detection of suspicious shipping activity event</figcaption>
+</figure>
+
 ## Overview
 
 Shipping activity detection refers to the use of technology to identify and monitor shipping activity that may be indicative of illicit activity. Shipping activity detection technologies may include sensors, cameras, and other monitoring systems that can detect and track shipping activity. Some of these technologies can be integrated with machine learning and artificial intelligence (AI) algorithms to analyze data and identify patterns of behavior that may be indicative of suspicious shipping activity.

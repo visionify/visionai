@@ -2,6 +2,12 @@
 
 > Ensure prevention of Shoplifting, employee theft, minimize insurance loss and other related damages across the retail sector.
 
+<figure markdown>
+  ![Shoplifting detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/theft-detection.png "Theft detection!"){ width="350" }
+  <figcaption>Detection of shoplifting or theft event</figcaption>
+</figure>
+
+
 ## Overview
 
 Typically considered one of the most accessible and in many cases least-sophisticated types of crime, shoplifting persists as an undeniably damaging affliction across the retail sector. In fact, the National Retail Security Survey reported that loss of inventory cost U.S. retailers an estimated $49 billion USD in 2016, with 70 percent of the loss caused by employee theft and shoplifting.

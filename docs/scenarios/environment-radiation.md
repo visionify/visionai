@@ -1,7 +1,11 @@
 # **Radiation Monitoring**
 
->Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.
+> Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.
 
+<figure markdown>
+  ![Environment Radiation Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/radiation-monitoring.png "Radiation monitoring at work-place!"){ width="350" }
+  <figcaption>Radiation monitoring event</figcaption>
+</figure>
 ## Overview
 
 Radiation monitoring refers to the process of measuring and analyzing levels of ionizing radiation in a particular area, in order to ensure safety and compliance with regulatory standards. Ionizing radiation is a type of energy that can cause damage to living cells and genetic material, and can potentially cause cancer and other health problems if exposure levels are too high.

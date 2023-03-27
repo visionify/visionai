@@ -1,9 +1,10 @@
-# Firearms and knives detection
+# **Firearms And Knives Detection**
 
 > New Technology aims to improve Firearm Detection and Save Lives with VisionAI.
+
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/firearm-detection.png "Detection of firearms and knives at a work-place!"){ width="350" }
-  <figcaption>Detection of Firearms and knives event</figcaption>
+  ![Firearms And Knives Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/firearms-detection.png "Detection of firearms and knives at a work-place!"){ width="350" }
+  <figcaption>Detection of firearms and knives event</figcaption>
 </figure>
 
 ## Overview

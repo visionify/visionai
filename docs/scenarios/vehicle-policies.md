@@ -2,6 +2,11 @@
 
 > An intelligent alarm system that could be used to detect fraudulent vehicle activity
 
+<figure markdown>
+  ![Vehicle Policies](https://github.com/visionify/visionai-images/raw/main/visionai-images/vehicle-collision-detected.png "Detection of vehicle collision!"){ width="350" }
+  <figcaption>Detection of vehicle collision event</figcaption>
+</figure>
+
 # Overview
 Vehicle policies at the workplace are a set of guidelines and rules that govern the use of vehicles owned or leased by a company or used by employees for work-related purposes. These policies are designed to ensure the safe and responsible use of company vehicles, as well as to protect the company from liability in case of accidents or other incidents.
 
