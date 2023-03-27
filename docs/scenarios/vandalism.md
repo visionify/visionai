@@ -2,6 +2,10 @@
 
 > Safeguard your assets with our advanced vandalism detection model.
 
+<figure markdown>
+  ![Vandalism detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/VANDALISM_GRAFFITI-04.jpg "Vandalism at workplace!"){ width="350" }<figcaption>Vandalism/Graffiti detection event</figcaption>
+</figure>
+
 ## Overview
 Vandalism and property destruction can have serious consequences, both for individuals and for society as a whole. For example, it can lead to physical harm, emotional distress, financial losses, and damage to public infrastructure. By developing a model that can accurately detect and predict incidents of vandalism and property destruction, we can take proactive measures to prevent them from occurring or minimize their impact if they do occur. This can include increasing surveillance, enhancing security measures, and improving emergency response protocols. Ultimately, a vandalism and property destruction model can help protect people and property, reduce costs associated with damage, and promote a safer and more secure society. We need a vandalism and property destruction model to help prevent and mitigate damage caused by these types of incidents. 
 
