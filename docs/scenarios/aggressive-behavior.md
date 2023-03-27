@@ -2,6 +2,12 @@
 
 > Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.
 
+<figure markdown>
+  ![Aggressive Behavior](https://github.com/visionify/visionai-images/raw/main/visionai-images/aggressive-behavior-detection.png "HAggressive behavior detection at work-place!"){ width="350" }
+  <figcaption>Detection of Aggressive Behavior</figcaption>
+</figure>
+
+
 ## Overview
 
 A workplace that is free from bullying, fighting, and aggressive behavior can help to improve employee well-being and overall job satisfaction. This can result in higher levels of productivity, better employee retention rates, and a more positive work environment. Aggressive behavior is a serious problem at workplaces. It can lead to serious injuries and even death. It is important to detect these behaviors early on, and preventive measures can be taken to address the issue before it escalates.

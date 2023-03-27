@@ -1,10 +1,15 @@
-# Energy Usage Monitoring
+# **Energy Usage Monitoring**
 
->Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
+> Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
 
 <figure markdown>
+<<<<<<< HEAD
   ![Energy Usage Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/Energy%20usage%20monitoring.jpg"Energy Usage!"){ width="350" }
   <figcaption>Detection of Energy Usage event</figcaption>
+=======
+  ![]("Energy Usage Monitoring at work-place!"){ width="350" }
+  <figcaption>Energy Usage Monitoring events</figcaption>
+>>>>>>> 699b65462a3a4588644f298a36b080823a5e7d1c
 </figure>
 
 

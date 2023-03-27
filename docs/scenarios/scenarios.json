@@ -1,0 +1,2993 @@
+{
+    "version": "0.0.3",
+    "scenarios": [
+        {
+            "id": "73218220-69e3-455c-9594-e28a310c8282",
+            "name": "smoke-and-fire-detection",
+            "version": "0.0.7",
+            "overview": "Detect early signs of sparks, smoke or fire. Get real-time events when a smoke, fire, sparks, embers are detected. It is trained with 240032 images, out of which 183453 images were from outdoors environment, and remaining images were indoor environment. There is a good balance between day and night pictures (44-56%)",
+            "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smokeandfire_collage.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smokeandfire_collage.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.7",
+                    "name": "smoke-and-fire-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoke-and-fire-detection/smoke-and-fire-detection-0.0.7.zip",
+                    "model_hash": "1e0585f776e1dd2a7f391107458fdd6a"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Smoke",
+                "Fire",
+                "Sparks",
+                "Embers",
+                "Early Fire Signature",
+                "Hazard warning"
+            ],
+            "categories": [
+                "Personnel health",
+                "Hazard warning"
+            ],
+            "events": [
+                "Smoke Detected",
+                "Fire Detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "38c5b702-c646-4193-b54f-064157168407",
+            "name": "ppe-detection",
+            "version": "0.0.8",
+            "overview": "Detect presence or absence of PPE (Personal Protective Equipments). Get real-time (configurable) events when employees are non compliant. Supports helmets, safety boots, vests, masks, and eye goggles",
+            "docs": "https://docs.visionify.ai/scenarios/ppe-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ppe_collage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ppe_collage.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.8",
+                    "name": "yolov5-ppe-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.0.8.zip",
+                    "model_hash": "257e4f2a85defb28d5e839e7c1989c2e"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Personnel Protective Equipment",
+                "Helmets",
+                "Work Boots",
+                "Goggles",
+                "Safety Vests"
+            ],
+            "categories": [
+                "Personnel health",
+                "Personnel safety",
+                "Company policies"
+            ],
+            "events": [
+                "Person Detected with No Helmet",
+                "Person Detected with No Boots",
+                "Person Detected with No Vests",
+                "Person Detected with No Goggles"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "77bf4816-393a-47cb-8dd1-9790942959c9",
+            "name": "smoking-detection",
+            "version": "0.0.2",
+            "overview": "Enforce no-smoking, no-vaping compliance policies in and around an organization. Model is trained for detecting people who are smoking or vaping.",
+            "docs": "https://docs.visionify.ai/scenarios/no-smoking-hazard/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-smoking.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-smoking.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.2",
+                    "name": "yolov5s-smoking-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoking-detection/smoking-detection-0.0.2.zip",
+                    "model_hash": "f1a77567bddd6c5f565a6c83ce756953"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Smoking Detection",
+                "No Smoking",
+                "No Vaping"
+            ],
+            "categories": [
+                "Employee health",
+                "Company policies"
+            ],
+            "events": [
+                "Person detected smoking",
+                "Person detected with vaping"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "rust-and-corrosion-detection",
+            "version": "0.0.2",
+            "overview": "Preventative maintenance for equipments. Detect regions where rust, corrosion is occuring",
+            "docs": "https://docs.visionify.ai/scenarios/rust-and-corrosion/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rustcorrosion_collage.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rustcorrosion_collage.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.2",
+                    "name": "yolov5s-rust-and-corrosion-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/rust-and-corrosion-detection/rust-and-corrosion-detection-0.0.2.zip",
+                    "model_hash": "e51344bc586a34ad7e06f0ff9443ece7"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Machinery maintenance"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment detected with rust and/or corrosion"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "name": "slip-and-fall-detection",
+            "version": "0.0.5",
+            "overview": "Preventative maintenance. Detect person slip and fall is occuring.",
+            "docs": "https://docs.visionify.ai/scenarios/slip-and-fall-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slipandfall_collage.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slipandfall_collage.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.5",
+                    "name": "yolov5s-slip-and-fall-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.0.5.zip",
+                    "model_hash": "12f72472662beb9906d94841fcb01d3a"
+                },
+                "other": []
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Machinery maintenance"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person fall event detected",
+                "Person slip event detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "750fc3fd-265e-44b6-84a1-9e307a5d6804",
+            "name": "face-blur",
+            "version": "0.0.1",
+            "overview": "Blur any faces detected in the system. Based on yolov5-face module. [Reference](https://arxiv.org/abs/2105.12931). Trained over WIDERFace dataset.",
+            "docs": "https://docs.visionify.ai/privacy/face-blur",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/faceblur_collage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/faceblur_collage.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.4",
+                    "name": "yolov5s-face",
+                    "accuracy": 94.67,
+                    "recall": 94.67,
+                    "f1": 94.67,
+                    "datasetSize": 393703,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-face/yolov5s-face-0.0.6.zip",
+                    "model_hash": "17150b2e8a6042613e6bf5ed61779578"
+                },
+                "other": [
+                    {
+                        "version": "0.0.1",
+                        "name": "yolov5m-face",
+                        "accuracy": 95.30,
+                        "recall": 95.30,
+                        "f1": 95.30,
+                        "datasetSize": 393703,
+                        "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5m-face/yolov5m-face-0.0.1.zip",
+                        "model_hash": "29ed75541eb847cddc1ccb8487721dbc"
+                    }
+                ]
+            },
+            "tags": [
+                "Privacy",
+                "Face detection",
+                "Object detection",
+                "Privacy by Design",
+                "Embedded devices",
+                "Convolutional Neural Network",
+                "Face blurring",
+                "Face anonymization"
+            ],
+            "categories": [
+                "Preprocessing",
+                "Privacy"
+            ],
+            "events": [
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "900e92f8-a724-4194-b92c-80be3c46c372",
+            "name": "people-taking-picture-detection",
+            "version": "0.0.2",
+            "overview": "Detect person taking selfie is occuring.",
+            "docs": "https://docs.visionify.ai/scenarios/people-taking-picture",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people_taking_picture.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people_taking_picture.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.2",
+                    "name": "yolov5s-people-taking-picture-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/people-taking-picture-detection/people-taking-picture-detection-0.0.2.zip",
+                    "model_hash": "ef3c6b45fe4c9b80ca4dd99220919ffd"
+                },
+                "other": []
+            },
+            "tags": [
+                "People detection",
+                "Phone usage",
+                "People taking picture"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person detected while taking pictures"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "0e9eef0d-686b-473d-b4b2-e43cc12ac6cf",
+            "name": "ergonomics-detection",
+            "version": "0.0.1",
+            "overview": "Detect person bending is occuring.",
+            "docs": "https://docs.visionify.ai/scenarios/ergonomics",
+            "image": "https://scenariosblob.blob.core.windows.net/ergonomics.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/ergonomics-200x200.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-ergonomics-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/ergonomics-detection/ergonomics-detection-0.0.1.zip",
+                    "model_hash": "e8f02808d3313aae320fbe5d043edb58"
+                },
+                "other": []
+            },
+            "tags": [
+                "Person bending",
+                "Ergonomics detection",
+                "Bent count"
+                
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Bend count event per individual"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "1f14d200-e15c-4b55-ad1b-908ca81ebf08",
+            "name": "occupancy-monitoring",
+            "version": "0.0.2",
+            "overview": "Preventative maintenance. Count person and watch if the person is present in the frame for more than restricted time",
+            "docs": "https://docs.visionify.ai/scenarios/max-occupancy-count/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.2",
+                    "name": "occupancy-monitoring",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 3500,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/occupancy-monitoring/occupancy-monitoring-0.0.2.zip",
+                    "model_hash": "2169880d951e98f54fd7772d31648db6"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Person Counting",
+                "Dwell Duration",
+                "Person Tracking"            
+            ],
+            "categories": [
+                "Security",
+                "Company policies"
+            ],
+            "events": [
+                "Person is present in the room more than the restricted time"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "73218220-69e3-455c-9594-e28a310c8282",
+            "name": "firearms-detection",
+            "version": "0.0.1",
+            "overview": "Detect presence of Gun or Knife",
+            "docs": "https://docs.visionify.ai/scenarios/firearms-and-knives/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/firearms-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/firearms-detection.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.7",
+                    "name": "firearms-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 4230,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/firearms-detection/firearms-detection-0.0.1.zip",
+                    "model_hash": "1e0585f776e1dd2a7f391107458fdd6a"
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Gun",
+                "Knife"
+            ],
+            "categories": [
+                "Personnel health",
+                "Hazard warning"
+            ],
+            "events": [
+                "Gun Detected",
+                "Knife Detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "name": "spills-and-leaks-detection",
+            "version": "0.0.1",
+            "overview": "Machinery maintenance. Detect spills and leaks.",
+            "docs": "https://docs.visionify.ai/scenarios/spills-and-leaks-hazard/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/oil-leakage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/oil-leakage.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Spill detection",
+                "Leak detection",
+                "Equipment maintenance",
+                "Machinery maintenance"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Machinery/equipment detected with spills and/or leaks"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "equipment-temperature-detection",
+            "version": "0.0.2",
+            "overview": "Preventative maintenance for equipments. Detect temperature as part of Hazard warning",
+            "docs": "https://docs.visionify.ai/scenarios/equipment-temperature/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Temperature monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment temperature detection"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "pe6fdsdhfc56-1fa0-4ae3-83fe-8g6751de7535",
+            "name": "gas-leak-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance for equipments. Detect gas leakage",
+            "docs": "https://docs.visionify.ai/scenarios/gas-leaks-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/gas-leak.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/gas-leak.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Preventative service",
+                "Gas leak detection"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment gas leakage detection"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "name": "fall-and-accident-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Detect person fall and accidents.",
+            "docs": "https://docs.visionify.ai/scenarios/fall-and-accident.md",
+            "image": "https://scenariosblob.blob.core.windows.net/fall-and-accident.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/fall-and-accident-200x200.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Fall detection",
+                "Potential collision",
+                "Wet floor detection",
+                "Slip detection",
+                "Fall and accident detection"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person slip & fall detected",
+                "Potential collision/accident detected",
+                "Wet floor detected",
+                "Debris detected on floor",
+                "Wet/slippery sign detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "978fc3fd-265e-44b6-84b1-fg870a5d6801",
+            "name": "text-blur",
+            "version": "0.0.1",
+            "overview": "Blur any text detected in the system.",
+            "docs": "https://docs.visionify.ai/scenarios/text-blur.md",
+            "image": "https://scenariosblob.blob.core.windows.net/text-blur.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/text-blur-200x200.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Privacy",
+                "Text detection",
+                "Object detection",
+                "Privacy by Design",
+                "Embedded devices",
+                "Convolutional Neural Network",
+                "Text blurring"
+            ],
+            "categories": [
+                "Preprocessing",
+                "Privacy"
+            ],
+            "events": [
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "978fc3df-265e-44b6-84b1-fg870dfad6801",
+            "name": "license-plate-blur",
+            "version": "0.0.1",
+            "overview": "Blur any license plates detected in the system.",
+            "docs": "https://docs.visionify.ai/privacy/license-plate-blur",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Privacy",
+                "License plate detection",
+                "Object detection",
+                "Privacy by Design",
+                "Embedded devices",
+                "Convolutional Neural Network",
+                "License plate blurring"
+            ],
+            "categories": [
+                "Preprocessing",
+                "Privacy"
+            ],
+            "events": [
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "8942c3fd-265e-44b6-84b1-fg870a5d6801",
+            "name": "sign-blur",
+            "version": "0.0.1",
+            "overview": "Blur any signs detected in the system.",
+            "docs": "https://docs.visionify.ai/privacy/sign-blur.md",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/sign-blur.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/sign-blur.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Privacy",
+                "Sign detection",
+                "Object detection",
+                "Privacy by Design",
+                "Embedded devices",
+                "Convolutional Neural Network",
+                "Sign blurring"
+            ],
+            "categories": [
+                "Preprocessing",
+                "Privacy"
+            ],
+            "events": [
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "90568434-913f-4a61-be18-gh61d63a47841",
+            "name": "obstructed-camera-detection",
+            "version": "0.0.5",
+            "overview": "Detect obstructed cameras",
+            "docs": "https://docs.visionify.ai/privacy/obstructed-camera/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Camera detection",
+                "Obstructed camera"
+            ],
+            "categories": [
+                "Preprocessing",
+                "Privacy"
+            ],
+            "events": [
+                "Real-time obstructed camera detection"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "96gh26f-913f-4a61-be18-dft24654564",
+            "name": "fire-extinguisher-detection",
+            "version": "0.0.5",
+            "overview": "Detection of fire extinguisher",
+            "docs": "https://docs.visionify.ai/scenarios/missing-fire-extinguisher/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/missing-fire-exting.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/missing-fire-exting.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Fire extinguisher",
+                "Equipment maintenance",
+                "Preventative service"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Missing fire-extinguisher detection"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "84gb95d-84g5-4a61-fd89-fd45456dfg8",
+            "name": "blocked-exit-monitoring",
+            "version": "0.0.5",
+            "overview": "Monitoring blocked-exits",
+            "docs": "https://docs.visionify.ai/scenarios/blocked-exit/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/blocked-exit-monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/blocked-exit-monitoring.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Blocked exit monitoring",
+                "Preventative service"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Blocked-exit detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "84gb9sd-56f5-4a61-fd89-dgf545ds5115",
+            "name": "temperature-monitoring",
+            "version": "0.0.5",
+            "overview": "Monitoring the temperature for better health and safety",
+            "docs": "https://docs.visionify.ai/scenarios/temperature-monitoring",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people temperature monitoring.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people temperature monitoring.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Workplace health and safety",
+                "Preventative service",
+                "Temperature monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person temperature exceeding limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "2w343d56e-913f-4a61-be18-kd5r599rt655821n",
+            "name": "working-at-heights",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Person detection without PFAS, Steps detection without railings, Person detection at height without parapets and Ladder detected not in compliance",
+            "docs": "https://docs.visionify.ai/scenarios/working-at-heights/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/working-at-heights.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/working-at-heights.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Working at heights",
+                "Preventative service",
+                "Workplace health and safety"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person detected without PFAS/Full-body harness",
+                "Steps detected without railings",
+                "Person detected at height without parapets",
+                "Ladder detected not in compliance"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
+            "name": "empty-pallet-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Detect empty pallets",
+            "docs": "https://docs.visionify.ai/scenarios/empty-pallets/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/empty-pallets.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/empty-pallets.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Empty pallet detection"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Detected empty pallet"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
+            "name": "hand-wash-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Detect whether people are missing hand wash or not.",
+            "docs": "https://docs.visionify.ai/scenarios/hand-wash/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Workplace health and safety",
+                "Hand sanitizer usage",
+                "Hand wash"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Missed using hand-sanitizer",
+                "Missed hand-wash"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "34hjks9532gr5-913f-4a61-be18-bk848541325fdghbq2p",
+            "name": "worker-fatigue-detection",
+            "version": "0.0.1",
+            "overview": "Preventative maintenance. Fatigue detection to reduce fatigue related fatalities and incidents.",
+            "docs": "https://docs.visionify.ai/scenarios/worker-fatigue-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/worker-fatigue-detectoin.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/worker-fatigue-detectoin.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Workplace health and safety",
+                "Preventative service",
+                "Worker fatigue detection"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Worker fatigue detection"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
+            "name": "water-mangement",
+            "version": "0.0.1",
+            "overview": "Water management",
+            "docs": "https://docs.visionify.ai/scenarios/water-mangement.md",
+            "image": "https://scenariosblob.blob.core.windows.net/scenarios-water-mangement.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-water-mangement.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Water management",
+                "Monitoring water storage",
+                "Identifying potential environmental hazards"
+            ],
+            "categories": [
+                "Environment monitoring"
+            ],
+            "events": [
+                "Water level exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7321x43a220-69e3-455c-9594-e28a3werdfs2",
+            "name": "restricted-areas",
+            "version": "0.0.1",
+            "overview": "Detect presence of people in restricted areas and after hours",
+            "docs": "https://docs.visionify.ai/scenarios/exclusion-zones/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Restricted areas",
+                "Restricted times"
+            ],
+            "categories": [
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Person detected in restricted area",
+                "Movement detected in restricted area",
+                "Person detected after hours",
+                "Movement detected after hours"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9321sdfs20-69e3-455c-9594-e28a3s6921282",
+            "name": "confined-space-monitoring",
+            "version": "0.0.1",
+            "overview": "Confined space dwell time monitoring measures the amount of time that people spend in a particular location. It can be used to track how long customers spend in a store or how long employees spend in a particular workspace.",
+            "docs": "https://docs.visionify.ai/scenarios/confined-spaces-monitoring/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Dwell time",
+                "Confined space monitoring"
+            ],
+            "categories": [
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Person dwell time exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "459dfsdfs20-69e3-455c-9594-e28a3s8522193f",
+            "name": "social-distance-detection",
+            "version": "0.0.1",
+            "overview": "Detect distance between people in the frame",
+            "docs": "https://docs.visionify.ai/scenarios/social-distance/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Social-Distancing.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Social-Distancing.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Social distancing"
+            ],
+            "categories": [
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Different people observed in the frame and the distances between them"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9dfsdfs20-69e3-455c-9594-dfg51515wer791s",
+            "name": "desk-occupancy",
+            "version": "0.0.1",
+            "overview": "Summary of occupancy metrics on a per desk/station basis",
+            "docs": "https://docs.visionify.ai/scenarios/station-occupancy/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.pngg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Desk occupancy",
+                "Station occupancy"
+            ],
+            "categories": [
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Daily summary of occupancy metrics on a per desk/station basis"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
+            "name": "occupancy-metrics",
+            "version": "0.0.1",
+            "overview": "Summary of different metrics related related to occupancy",
+            "docs": "https://docs.visionify.ai/scenarios/occupancy-metrics/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Occupancy-Metrics.jpeg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Occupancy-Metrics.jpeg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Occupancy metrics",
+                "Desk occupancy",
+                "Station occupancy"
+            ],
+            "categories": [
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Daily summary event of different metrics related related to occupancy"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
+            "name": "no-visitors",
+            "version": "0.0.1",
+            "overview": "Ensuring the compliance policies like no children, visitors, no pets, authorized personnel only",
+            "docs": "https://docs.visionify.ai/scenarios/no-visitors.md",
+            "image": "https://scenariosblob.blob.core.windows.net/scenarios-no-visitors.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-no-visitors.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "No children",
+                "No visitors",
+                "No pets",
+                "Authorized personnel only"
+            ],
+            "categories": [
+                "Company policies",
+                "Occupancy policies",
+                "Warnings"
+            ],
+            "events": [
+                "Children detected in area",
+                "Visitors detected in area",
+                "Person without uniform detected",
+                "Person without badge detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9fphsdfs20-69e3-455c-9594-cj5bgv312022gi978",
+            "name": "no-food",
+            "version": "0.0.1",
+            "overview": "Ensuring the compliance policies like no food and no drinks",
+            "docs": "https://docs.visionify.ai/scenarios/no-food-or-drinks/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "No food",
+                "No drinks"
+            ],
+            "categories": [
+                "Company policies",
+                "Warnings"
+            ],
+            "events": [
+                "Person with food detected",
+                "Person with drinks detected",
+                "Spill event detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4rfb83921252dd-6d9e3-455c-9594-cj5bgv312022gi978",
+            "name": "energy-conservation",
+            "version": "0.0.1",
+            "overview": "Monitor energy consumption and identify opportunities for energy conservation",
+            "docs": "https://docs.visionify.ai/scenarios/energy-conservation/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Energy conservation",
+                "Optimize heating and cooling systems", 
+                "Identify lighting fixtures that consume excessive energy"
+            ],
+            "categories": [
+                "Company policies",
+                "Occupancy policies"
+            ],
+            "events": [
+                "Occupancy pattern summary & lighting pattern recommendations"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
+            "name": "waste-management",
+            "version": "0.0.1",
+            "overview": "Monitor waste disposal practices, such as identifying and tracking waste streams, monitoring waste storage and handling procedures, and identifying potential environmental hazards.",
+            "docs": "https://docs.visionify.ai/scenarios/environment-waste-management/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/waste-monitoring.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/waste-monitoring.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Waste management",
+                "Monitoring waste storage and handling procedures",
+                "Identifying potential environmental hazards"
+            ],
+            "categories": [
+                "Company policies"
+            ],
+            "events": [
+                "Spill detected",
+                "Waste bin full",
+                "Environmental hazard detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
+            "name": "unauthorized-entry",
+            "version": "0.0.1",
+            "overview": "Unauthorized entry or tailgating detection",
+            "docs": "https://docs.visionify.ai/scenarios/unauthorized-entry/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Tailgating",
+                "Unauthorized entry"
+            ],
+            "categories": [
+                "Company policies"
+            ],
+            "events": [
+                "Multi-entry detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "85df4rw5154tg8d221-6d9e3-455c-9594-sd5268sg4e641s",
+            "name": "perimeter-control",
+            "version": "0.0.1",
+            "overview": "Perimeter/fence control",
+            "docs": "https://docs.visionify.ai/scenarios/perimeter-control/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/perimeter-control.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/perimeter-control.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Perimeter control",
+                "Fence control"
+            ],
+            "categories": [
+                "Company policies"
+            ],
+            "events": [
+                "Person detected on fence/perimeter",
+                "Movement detected on fence/perimeter"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d15w782sr9-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "equipment-vibration-monitoring",
+            "version": "0.0.1",
+            "overview": "Monitoring of equipment vibrations",
+            "docs": "https://docs.visionify.ai/scenarios/equipment-vibration-monitoring.md",
+            "image": "https://scenariosblob.blob.core.windows.net/equipment-vibration-monitoring.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/equipment-vibration-monitoring-200x200.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Equipment monitoring",
+                "Vibration monitoring of equipment"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment vibration exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "q8a51f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "equipment-noise-monitoring",
+            "version": "0.0.2",
+            "overview": "Monitoring of equipment noises",
+            "docs": "https://docs.visionify.ai/scenarios/equipment-noise-monitoring",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment-noise-monitoring.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment-noise-monitoring.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Equipment maintenance",
+                "Noise monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Equipment noise exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "reading-analog-dials",
+            "version": "0.0.1",
+            "overview": "Single camera can support multiple analog readings as long as that fits in its field of view",
+            "docs": "https://docs.visionify.ai/scenarios/analog-dials/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Reading analog dials",
+                "Analog readings"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Analog meter reading"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "name": "tools-checkout-monitoring",
+            "version": "0.0.1",
+            "overview": "Ensure that all tools that employees use - go through a common checkout process.",
+            "docs": "https://docs.visionify.ai/scenarios/tools-checkout-monitoring.md",
+            "image": "https://scenariosblob.blob.core.windows.net/tools-checkout-monitoring.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/tools-checkout-monitoring-200x200.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": [
+                ]
+            },
+            "tags": [
+                "Tool check-in",
+                "Tool check-out",
+                "Tool checkout monitoring" 
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Person left without checkout"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "84v82j9sd-56f5-4a61-fd89-dgf545ds5115",
+            "name": "environment-temperature-monitoring",
+            "version": "0.0.1",
+            "overview": "Monitoring the envionment temperature for better health and safety",
+            "docs": "hthttps://docs.visionify.ai/scenarios/equipment-temperature/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Environment monitoring",
+                "Workplace health and safety",
+                "Temperature monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Temperature exceeds limit",
+                "Temperature subceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "8nv832c80-56f5-4a61-fd89-nj5648541ch78",
+            "name": "environment-humidity-monitoring",
+            "version": "0.0.1",
+            "overview": "Monitoring the environment humidity",
+            "docs": "https://docs.visionify.ai/scenarios/environment-humidity/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-environment-humidity-monitoring",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 240032,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/environment-humidity-monitoring/environment-humidity-monitoring-0.0.1.zip",
+                    "model_hash": "g457y4b2i5u8erb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Environment monitoring",
+                "Workplace health and safety",
+                "Humidity monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Humidity exceeds limit",
+                "Humidity subceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "9s5ds15nmj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "environment-pressure-monitoring",
+            "version": "0.0.1",
+            "overview": "Monitoring the pressure for better health and safety",
+            "docs": "https://docs.visionify.ai/scenarios/environment-pressure/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Environment monitoring",
+                "Workplace health and safety",
+                "Pressure monitoring"
+            ],
+            "categories": [
+                "Maintenance",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Pressure exceeds limit",
+                "Pressure subceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "84gb95d-56f5-4a61-fd89-dgf545ds5115",
+            "name": "air-quality-monitoring",
+            "version": "0.0.1",
+            "overview": "Monitoring the environment for better health and safety",
+            "docs": "https://docs.visionify.ai/scenarios/air-quality/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/air-quality-monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/air-quality-monitoring.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Environment gas monitoring",
+                "Workplace health and safety",
+                "Gas level monitoring"
+            ],
+            "categories": [
+                "Environment monitoring",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "CO exceeds limit",
+                "CO2 exceeds limit",
+                "VOCs exceed limit",
+                "NOx exceeds limit",
+                "SOx exceeds limit",
+                "Particulate matters exceed limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "light-sensor-monitoring",
+            "version": "0.0.1",
+            "overview": "Light sensor monitoring",
+            "docs": "https://docs.visionify.ai/scenarios/light-sensor-monitoring/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Light sensor monitoring",
+                "Workplace health and safety"
+            ],
+            "categories": [
+                "Environment monitoring",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Ambient light subceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "noise-level-monitoring",
+            "version": "0.0.1",
+            "overview": "Noise level monitoring",
+            "docs": "https://docs.visionify.ai/scenarios/noise-level-monitoring",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/environment noise monitoring (1).jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/environment noise monitoring (1).jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Noise level monitoring",
+                "Workplace health and safety"
+            ],
+            "categories": [
+                "Environment monitoring",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Noise level exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "4d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "radiation-monitoring",
+            "version": "0.0.1",
+            "overview": "Radiation level monitoring",
+            "docs": "https://docs.visionify.ai/scenarios/environment-radiation/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Radiation monitoring",
+                "Workplace health and safety"
+            ],
+            "categories": [
+                "Environment monitoring",
+                "Preventative Maintenance"
+            ],
+            "events": [
+                "Detected radiation level above configured limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "6d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "loitering-detection",
+            "version": "0.0.1",
+            "overview": "Loitering detection",
+            "docs": "https://docs.visionify.ai/scenarios/loitering/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Loitering detection"
+                
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Event fired when a person enters from an usually closed location.",
+                "Event fired when when person detected during off-hours.",
+                "Event fired when person detected for extended duration of time."
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "suspicious-package-detection",
+            "version": "0.0.1",
+            "overview": "Suspicious package detection",
+            "docs": "https://docs.visionify.ai/scenarios/suspicious-package-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-suspicious-package-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 56742,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/suspicious-package-detection/suspicious-package-detection-0.0.1.zip",
+                    "model_hash": "k98ds61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Suspicious package detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Event fired when a suspicious package is detected without owner (abandoned package event)."
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "fighting-detection",
+            "version": "0.0.1",
+            "overview": "Bullying/fighting/aggressive behavior detection",
+            "docs": "https://docs.visionify.ai/scenarios/aggressive-behavior/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-fighting-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 56742,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/fighting-detection/fighting-detection-0.0.1.zip",
+                    "model_hash": "f98ds61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Bullying behaviour detection",
+                "Fighting behaviour detection",
+                "Aggressive behaviour detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Event fired when bullying/fighting/aggressive behavior is detected."
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "6s5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd91",
+            "name": "energy-usage-monitoring",
+            "version": "0.0.1",
+            "overview": "Energy usage monitoring",
+            "docs": "https://docs.visionify.ai/scenarios/environment-energy-usage/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Environment energy monitoring",
+                "Energy usage monitoring"
+            ],
+            "categories": [
+                "Environment monitoring"
+            ],
+            "events": [
+                "Energy usage exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "4fgsq56kd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vandalism-detection",
+            "version": "0.0.1",
+            "overview": "Vandalism, graffiti & company property destruction",
+            "docs": "https://docs.visionify.ai/scenarios/vandalism/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vandalism-detection.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vandalism-detection.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Vandalism detection",
+                "Demolition/destruction event detection",
+                "Paint detection on walls",
+                "Destruction detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Motion detected in area (gross event)",
+                "People detected in area (more granular event)",
+                "Unauthorized personnel detected in area (based on uniform/badge)",
+                "Vandalism detected in area (before & after changes)",
+                "Paint/graffiti detected in area (before & after changes)",
+                "Behavior analysis event showing company property destruction."
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "pn946a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "sexual-harrassment",
+            "version": "0.0.1",
+            "overview": "Sexual harrassment",
+            "docs": "https://docs.visionify.ai/scenarios/sexual-harassment/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Sexual harrassment-03.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Sexual harrassment-03.jpg",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Sexual harrassment"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Potential sexual harrassment event detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ln9d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "solicitation-detection",
+            "version": "0.0.1",
+            "overview": "Solicitation detection",
+            "docs": "https://docs.visionify.ai/scenarios/solicitation/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Solicitation detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Potential solicitation event detected (public spaces)"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "pc8d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "shoplifting-detection",
+            "version": "0.0.1",
+            "overview": "Shoplifting and/or theft detection",
+            "docs": "https://docs.visionify.ai/scenarios/theft/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Shoplifting detection",
+                "Theft detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Potential shoplifting event detected",
+                "Potential theft event detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ub98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "shipping-activity-detection",
+            "version": "0.0.1",
+            "overview": "Shipping activity detection",
+            "docs": "https://docs.visionify.ai/scenarios/shipping-activity/",
+            "image": "https://scenariosblob.blob.core.windows.net/shipping-activity-detection.jpg",
+            "thumbnail": "https://scenariosblob.blob.core.windows.net/shipping-activity-detection-200x200.jpg",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-shipping-activity-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 94122,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/shipping-activity-detection/shipping-activity-detection-0.0.1.zip",
+                    "model_hash": "d45bgv4c61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Shipping activity detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Suspicious shipping activity detected from non-designated area",
+                "Suspicious shipping activity detected during after-hours"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "bc998d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "intrusion-detection",
+            "version": "0.0.1",
+            "overview": "Intrusion detection",
+            "docs": "https://docs.visionify.ai/scenarios/intrusion-detection/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-intrusion-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 94122,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/intrusion-detection/intrusion-detection-0.0.1.zip",
+                    "model_hash": "pd8gv4c61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Intrusion detection"
+            ],
+            "categories": [
+                "Suspicious activity detection"
+            ],
+            "events": [
+                "Possible intrusion detection near door"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "gc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vehicle-policies",
+            "version": "0.0.1",
+            "overview": "Vehicle policies",
+            "docs": "https://docs.visionify.ai/scenarios/vehicle-policies/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-collision-detected.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-collision-detected.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Vehicle policies",
+                "Vehicle collision detection",
+                "Vehicle activity detection"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Vehicle activity detected in non-designtated areas",
+                "Vehicle activity detected during after-hours",
+                "Collision event detected",
+                "Near collision event detected"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vehicle-usage",
+            "version": "0.0.1",
+            "overview": "Vehicle usage",
+            "docs": "https://docs.visionify.ai/scenarios/vehicle-usage/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-usage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-usage.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Vehicle policies",
+                "Vehicle usage",
+                "Vehicle activity detection"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Daily summary event of vehicle usage",
+                "Path-map of vehicle usage"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "forklift-zone-breach",
+            "version": "0.0.1",
+            "overview": "Forklift Zone Breach",
+            "docs": "https://docs.visionify.ai/scenarios/forklift-zone-breach/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/forklift-breach-zone.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/forklift-breach-zone.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Forklift Zone Breach",
+                "Vehicle usage",
+                "Pedestrian in forklift zone"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Forklift observed outside of configured zone",
+                "Pedestrian observed in forklift zone"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ov48d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vehicle-license-plate-detection",
+            "version": "0.0.1",
+            "overview": "Vehicle license plate detection",
+            "docs": "https://docs.visionify.ai/scenarios/vehicle-license-plate/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-vehicle-license-plate-detection",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 94122,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/vehicle-license-plate-detection/vehicle-license-plate-detection-0.0.1.zip",
+                    "model_hash": "r5sdv4c61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Vehicle license plate detection",
+                "Vehicle usage"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Car detected with license plate"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "ib58d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vehicle-speed-monitoring",
+            "version": "0.0.1",
+            "overview": "Vehicle speed monitoring",
+            "docs": "https://docs.visionify.ai/scenarios/vehicle-speed/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png",
+            "models": {
+                "latest": {
+                    "version": "0.0.1",
+                    "name": "yolov5s-vehicle-speed-monitoring",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": 94122,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/vehicle-speed-monitoring/vehicle-speed-monitoring-0.0.1.zip",
+                    "model_hash": "n6cl4c61db2i5u8eb815952ss2es4d56sd45"
+                },
+                "other": []
+            },
+            "tags": [
+                "Vehicle speed monitoring",
+                "Vehicle usage"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Vehicle speed exceeds limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        },
+        {
+            "id": "us5464s3f5951f-56f5-4a61-fd89-sr982s65g1njd21",
+            "name": "vehicle-cargo-volume-limit",
+            "version": "0.0.1",
+            "overview": "Vehicle cargo volume limit",
+            "docs": "https://docs.visionify.ai/scenarios/vehicle-cargo/",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png",
+            "models": {
+                "latest": {
+                },
+                "other": []
+            },
+            "tags": [
+                "Vehicle cargo volume limit",
+                "Vehicle usage"
+            ],
+            "categories": [
+                "Vehicle Activity"
+            ],
+            "events": [
+                "Vehicle cargo exceeds volume limit",
+                "Vehicle cargo subceeds volume limit"
+            ],
+            "configuration": [
+                {
+                    "name": "focus_area",
+                    "type": "region_of_interest",
+                    "required": false,
+                    "default": [
+                        0,
+                        0,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "name": "time_of_day",
+                    "type": "schedule",
+                    "required": false,
+                    "default": "always"
+                }
+            ]
+        }
+    ]
+}

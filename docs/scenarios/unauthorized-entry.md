@@ -2,6 +2,11 @@
 
 > Real-time alerts for any unauthorized entry, anywhere.
 
+<figure markdown>
+  ![Unauthorized Entry/Tailgating](https://github.com/visionify/visionai-images/raw/main/visionai-images/unauthorized-entry.png "Unauthorized entry at workplace!"){ width="350" }
+  <figcaption>Detection of unauthorized entry event</figcaption>
+</figure>
+
 ## Overview
 
 Tailgating or piggybacking is the entry or exit of more people, things, or vehicles than are permitted by access control rules into or out of a controlled area or through a controlled access gateway.

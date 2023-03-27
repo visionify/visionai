@@ -1,6 +1,11 @@
-# Vehicle Usage Detection
+# **Vehicle Usage Detection**
 
 > An intelligent alarm system that could be used to detect vehicle usage
+
+<figure markdown>
+  ![Vehicle Usage Detection](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-usage.png "Detection of vehicle collision!"){ width="350" }
+  <figcaption>Detection of vehicle usage event</figcaption>
+</figure>
 
 # Overview
 Vehicle usage monitoring is a system that uses cameras to monitor the usage of vehicles on a road. It is used to enforce usage limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are travelling at an unsafe speed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.

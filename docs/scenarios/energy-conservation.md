@@ -1,9 +1,10 @@
-# Energy Conservation
+# **Energy Conservation**
 
->Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.
+> Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.
+
 <figure markdown>
-  ![Image title]( "Energy Conservation at work-place!"){ width="350" }
-  <figcaption>Energy Conservation event</figcaption>
+  ![Energy Conservation](https://github.com/visionify/visionai-images/raw/main/visionai-images/energy-conservation.png "Energy Conservation at work-place!"){ width="350" }
+  <figcaption>Energy conservation event</figcaption>
 </figure>
 
 ## Overview
