@@ -1534,11 +1534,19 @@
             "name": "no-food",
             "version": "0.0.1",
             "overview": "Ensuring the compliance policies like no food and no drinks",
-            "docs": "https://docs.visionify.ai/scenarios/no-food-or-drinks/",
+            "docs": "https://docs.visionify.ai/scenarios/no-food-or-drinks.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
             "models": {
                 "latest": {
+                    "version": "0.0.1",
+                    "name": "no-food",
+                    "precision": 79.7,
+                    "recall": 76.1,
+                    "map": 81.9,
+                    "datasetSize": 2028,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/food-drinks-detection/food-drinks-detection-0.0.1.zip",
+                    "model_hash": "b817060ffdd955ccd3b15116bd2689f3"
                 },
                 "other": [
                 ]
@@ -1553,8 +1561,7 @@
             ],
             "events": [
                 "Person with food detected",
-                "Person with drinks detected",
-                "Spill event detected"
+                "Person with drinks detected"
             ],
             "configuration": [
                 {
