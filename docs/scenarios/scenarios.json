@@ -7,8 +7,8 @@
             "version": "0.0.7",
             "overview": "Detect early signs of sparks, smoke or fire. Get real-time events when a smoke, fire, sparks, embers are detected. It is trained with 240032 images, out of which 183453 images were from outdoors environment, and remaining images were indoor environment. There is a good balance between day and night pictures (44-56%)",
             "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smokeandfire_collage.jpg",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smokeandfire_collage.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
             "models": {
                 "latest": {
                     "version": "0.0.7",
@@ -59,8 +59,8 @@
             "version": "0.0.8",
             "overview": "Detect presence or absence of PPE (Personal Protective Equipments). Get real-time (configurable) events when employees are non compliant. Supports helmets, safety boots, vests, masks, and eye goggles",
             "docs": "https://docs.visionify.ai/scenarios/ppe-detection/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ppe_collage.png",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ppe_collage.png",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/PPE_detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/PPE_detection.png",
             "models": {
                 "latest": {
                     "version": "0.0.8",
@@ -174,18 +174,10 @@
             "version": "0.0.2",
             "overview": "Preventative maintenance for equipments. Detect regions where rust, corrosion is occuring",
             "docs": "https://docs.visionify.ai/scenarios/rust-and-corrosion/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rustcorrosion_collage.jpg",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rustcorrosion_collage.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rust-and-corrosion-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rust-and-corrosion-detection.png",
             "models": {
                 "latest": {
-                    "version": "0.0.2",
-                    "name": "yolov5s-rust-and-corrosion-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/rust-and-corrosion-detection/rust-and-corrosion-detection-0.0.2.zip",
-                    "model_hash": "e51344bc586a34ad7e06f0ff9443ece7"
                 },
                 "other": [
                 ]
@@ -228,8 +220,8 @@
             "version": "0.0.5",
             "overview": "Preventative maintenance. Detect person slip and fall is occuring.",
             "docs": "https://docs.visionify.ai/scenarios/slip-and-fall-detection/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slipandfall_collage.jpg",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slipandfall_collage.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slip-fall-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slip-fall-detection.png",
             "models": {
                 "latest": {
                     "version": "0.0.5",
@@ -282,8 +274,8 @@
             "version": "0.0.1",
             "overview": "Blur any faces detected in the system. Based on yolov5-face module. [Reference](https://arxiv.org/abs/2105.12931). Trained over WIDERFace dataset.",
             "docs": "https://docs.visionify.ai/privacy/face-blur",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/faceblur_collage.png",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/faceblur_collage.png",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/face-blurring.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/face-blurring.jpg",
             "models": {
                 "latest": {
                     "version": "0.0.4",
@@ -403,8 +395,8 @@
             "version": "0.0.1",
             "overview": "Detect person bending is occuring.",
             "docs": "https://docs.visionify.ai/scenarios/ergonomics",
-            "image": "https://scenariosblob.blob.core.windows.net/ergonomics.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/ergonomics-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ergonomics-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ergonomics-detection.png",
             "models": {
                 "latest": {
                     "version": "0.0.1",
@@ -697,8 +689,8 @@
             "version": "0.0.1",
             "overview": "Preventative maintenance. Detect person fall and accidents.",
             "docs": "https://docs.visionify.ai/scenarios/fall-and-accident.md",
-            "image": "https://scenariosblob.blob.core.windows.net/fall-and-accident.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/fall-and-accident-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/fall-and-accident-detection.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/fall-and-accident-detection.png",
             "models": {
                 "latest": {
                 },
@@ -748,8 +740,8 @@
             "version": "0.0.1",
             "overview": "Blur any text detected in the system.",
             "docs": "https://docs.visionify.ai/scenarios/text-blur.md",
-            "image": "https://scenariosblob.blob.core.windows.net/text-blur.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/text-blur-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png",
             "models": {
                 "latest": {
                 },
@@ -796,8 +788,8 @@
             "version": "0.0.1",
             "overview": "Blur any license plates detected in the system.",
             "docs": "https://docs.visionify.ai/privacy/license-plate-blur",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
             "models": {
                 "latest": {
                 },
@@ -1253,8 +1245,8 @@
             "version": "0.0.1",
             "overview": "Water management",
             "docs": "https://docs.visionify.ai/scenarios/water-mangement.md",
-            "image": "https://scenariosblob.blob.core.windows.net/scenarios-water-mangement.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-water-mangement.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/water-quality-monitoring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/water-quality-monitoring.png",
             "models": {
                 "latest": {
                 },
@@ -1411,7 +1403,7 @@
             "version": "0.0.1",
             "overview": "Summary of occupancy metrics on a per desk/station basis",
             "docs": "https://docs.visionify.ai/scenarios/station-occupancy/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.pngg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
             "models": {
                 "latest": {
@@ -1490,8 +1482,8 @@
             "version": "0.0.1",
             "overview": "Ensuring the compliance policies like no children, visitors, no pets, authorized personnel only",
             "docs": "https://docs.visionify.ai/scenarios/no-visitors.md",
-            "image": "https://scenariosblob.blob.core.windows.net/scenarios-no-visitors.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/scenarios-no-visitors.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-children-visitors.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-children-visitors.png",
             "models": {
                 "latest": {
                 },
@@ -1734,8 +1726,8 @@
             "version": "0.0.1",
             "overview": "Monitoring of equipment vibrations",
             "docs": "https://docs.visionify.ai/scenarios/equipment-vibration-monitoring.md",
-            "image": "https://scenariosblob.blob.core.windows.net/equipment-vibration-monitoring.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/equipment-vibration-monitoring-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vibrating_monitor-07.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vibrating_monitor-07.jpg",
             "models": {
                 "latest": {
                 },
@@ -1869,8 +1861,8 @@
             "version": "0.0.1",
             "overview": "Ensure that all tools that employees use - go through a common checkout process.",
             "docs": "https://docs.visionify.ai/scenarios/tools-checkout-monitoring.md",
-            "image": "https://scenariosblob.blob.core.windows.net/tools-checkout-monitoring.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/tools-checkout-monitoring-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg",
             "models": {
                 "latest": {
                 },
@@ -1965,14 +1957,6 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-environment-humidity-monitoring",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/environment-humidity-monitoring/environment-humidity-monitoring-0.0.1.zip",
-                    "model_hash": "g457y4b2i5u8erb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2292,14 +2276,6 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-suspicious-package-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 56742,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/suspicious-package-detection/suspicious-package-detection-0.0.1.zip",
-                    "model_hash": "k98ds61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2342,14 +2318,6 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-fighting-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 56742,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/fighting-detection/fighting-detection-0.0.1.zip",
-                    "model_hash": "f98ds61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2611,18 +2579,10 @@
             "version": "0.0.1",
             "overview": "Shipping activity detection",
             "docs": "https://docs.visionify.ai/scenarios/shipping-activity/",
-            "image": "https://scenariosblob.blob.core.windows.net/shipping-activity-detection.jpg",
-            "thumbnail": "https://scenariosblob.blob.core.windows.net/shipping-activity-detection-200x200.jpg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-shipping-activity-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 94122,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/shipping-activity-detection/shipping-activity-detection-0.0.1.zip",
-                    "model_hash": "d45bgv4c61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2666,14 +2626,6 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-intrusion-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 94122,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/intrusion-detection/intrusion-detection-0.0.1.zip",
-                    "model_hash": "pd8gv4c61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2849,18 +2801,10 @@
             "version": "0.0.1",
             "overview": "Vehicle license plate detection",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-license-plate/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licenceblur_collage.png",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-vehicle-license-plate-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 94122,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/vehicle-license-plate-detection/vehicle-license-plate-detection-0.0.1.zip",
-                    "model_hash": "r5sdv4c61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
@@ -2904,14 +2848,6 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
-                    "name": "yolov5s-vehicle-speed-monitoring",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 94122,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/vehicle-speed-monitoring/vehicle-speed-monitoring-0.0.1.zip",
-                    "model_hash": "n6cl4c61db2i5u8eb815952ss2es4d56sd45"
                 },
                 "other": []
             },
