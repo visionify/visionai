@@ -3,6 +3,11 @@
 
 > Ideal tool to monitor humidity in the surrounding environment.
 
+<figure markdown>
+  ![Humidity Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/humidity%20monitoring%20.jpeg"Detection of Humidity!"){ width="350" }
+  <figcaption>Detection of Humidity event</figcaption>
+</figure>
+
 ## Overview
 
 Uncontrolled humidity has several implications in day-to-day life. Firstly, high humidity makes the air thicker and the surroundings uncomfortable for people. Secondly, uncontrolled humidity can build up electrostatic charges or cause corrosion. High humidity also leads to throat, eye, and skin irritation. Finally, the manufacturing process also needs to improve due to unmaintained humidity leading to compromised products. 
