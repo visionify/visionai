@@ -1403,7 +1403,7 @@
             "version": "0.0.1",
             "overview": "Summary of occupancy metrics on a per desk/station basis",
             "docs": "https://docs.visionify.ai/scenarios/station-occupancy/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.pngg",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
             "models": {
                 "latest": {
