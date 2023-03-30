@@ -132,7 +132,7 @@ nav:
       - Equipment noise monitoring: scenarios/equipment-noise.md
       - Read analog dials: scenarios/analog-dials.md
       - Tools check-in/out: scenarios/tools-check-in-out.md
-      - Spill & leak: scenarios/equipment-spills-and-leaks.md
+      - Spill & leak: scenarios/spills-and-leaks.md
 
 
     - Environment monitoring:
@@ -175,15 +175,15 @@ nav:
       - Vehicle license plate: scenarios/vehicle-license-plate.md
       - Vehicle speed: scenarios/vehicle-speed.md
       - Vehicle cargo: scenarios/vehicle-cargo.md
-
-    - Employee Privacy:
-      - Overview: scenarios/employee-privacy.md
-      - Blur faces: scenarios/blur-faces.md
-      - Blur signs/text: preprocess/blur-signs.md
-      - Blur screens: preprocess/blur-screens.md
-      - Blur license plates: preprocess/blur-license-plates.md
-      - Obstructed camera view: preprocess/obstructed-camera-view.md
-
+  
+  - Privacy:
+      - Overview: privacy/employee-privacy.md
+      - Blur faces: privacy/blur-faces.md
+      - Blur signs/text: privacy/blur-signs.md
+      - Blur screens: privacy/blur-screens.md
+      - Blur license plates: privacy/blur-license-plates.md
+      - Obstructed camera view: privacy/obstructed-camera-view.md
+  
   - Reference:
     - Overview: reference/reference.md
     - Changelog: reference/changelog.md

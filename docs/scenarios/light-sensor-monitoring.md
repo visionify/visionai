@@ -2,6 +2,11 @@
 
 > Monitor ambient light in real-time with our light-sensing solution
 
+<figure markdown>
+  ![Light Sensor Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/light%20monitoring.webp"Detection of ambient lights!"){ width="350" }
+  <figcaption>Detection of ambient lights event</figcaption>
+</figure>
+
 ## Overview
 
 Energy is valuable, hence efforts should be made for optimum energy usage. As carbon footprints increase, enterprises must adopt innovative methods to optimize energy consumption and reduce spendings. Innovative lighting solutions can help minimize service disruption, allow prompt servicing, and ensure centralized governance.

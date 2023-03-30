@@ -1,6 +1,12 @@
 # **Pressure Monitoring**
 > Measure pressure in real-time, ensuring safe equipment and work conditions.
 
+<figure markdown>
+  ![Pressure Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/pressure%20sensor%20monitoring.png"Detection of Pressure!"){ width="350" }
+  <figcaption>Detection of Pressure event</figcaption>
+</figure>
+
+
 ## Overview
 
 Pressure sensors are essential for smooth equipment functioning and safe work conditions within the facility. Pressure sensors are used for various purposes, from automotive to medical, industrial to consumer, and building devices. A pressure sensor simply monitors the pressure of liquids, air, and gas and displays it in several units, such as Pascal, Bar, and PSI.

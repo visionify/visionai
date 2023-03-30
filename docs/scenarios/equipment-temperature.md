@@ -17,9 +17,10 @@ By installing this in your facility, you can ensure the following:
 - Long-term equipment health
 - Quick equipment maintenance 
 - Safe evacuation in case of an emergency
+
 <figure markdown>
-  ![](https://github.com/visionify/visionai-images/raw/main/visionai-images/equp-temp.jpg "Equipment temperature monitoring!"){ width="350" }
-  <figcaption>Detection of equipment temperature event</figcaption>
+  ![Equipment temperature Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/equipment%20temperature%20monitoring.jpeg"Detection of equipment temperature!"){ width="350" }
+  <figcaption>Detection of Equipment temperature crossing limits event</figcaption>
 </figure>
 
     

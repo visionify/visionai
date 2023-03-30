@@ -1688,11 +1688,16 @@
                 "Company policies",
                 "Warnings"
             ],
-            "events": [
-                "Person with food detected",
-                "Person with drinks detected",
-                "Spill event detected"
-            ],
+            "events": {
+                "NO_FOOD":{
+                    "description": "Person with food detected",
+                    "schedule": "Immediate"
+                },
+                "NO_DRINKS":{
+                    "description": "Person with drinks detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",

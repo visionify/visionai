@@ -22,9 +22,10 @@ By installing this in your facility, you can ensure the following:
 - Centralized monitoring of all cameras
 
 <figure markdown>
-  ![](https://github.com/visionify/visionai-images/raw/main/visionai-images/person-temperature.jpg "Person temperature monitoring!"){ width="350" }
+  ![Person skin temperature monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/people%20temperature%20monitoring.jpg"Detection of person temperature!"){ width="350" }
   <figcaption>Detection of Person temperature event</figcaption>
 </figure>
+
 
     
 ## Events
