@@ -1280,7 +1280,7 @@
         },
         {
             "id": "7321x43a220-69e3-455c-9594-e28a3werdfs2",
-            "name": "restricted-areas",
+            "name": "restricted-zone",
             "version": "0.0.1",
             "overview": "Detect presence of people in restricted areas and after hours",
             "docs": "https://docs.visionify.ai/scenarios/exclusion-zones/",
@@ -1288,6 +1288,14 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png",
             "models": {
                 "latest": {
+                    "version": "0.0.1",
+                    "name": "restricted-zone",
+                    "accuracy": 98.2,
+                    "recall": 95.2,
+                    "f1": 95,
+                    "datasetSize": "coco",
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/restricted-zone/restricted-zone-0.0.1.zip",
+                    "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
                 },
                 "other": [
                 ]
