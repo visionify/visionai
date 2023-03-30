@@ -5,7 +5,8 @@
             "id": "73218220-69e3-455c-9594-e28a310c8282",
             "name": "smoke-and-fire-detection",
             "version": "0.0.7",
-            "overview": "Detect early signs of sparks, smoke or fire. Get real-time events when a smoke, fire, sparks, embers are detected. It is trained with 240032 images, out of which 183453 images were from outdoors environment, and remaining images were indoor environment. There is a good balance between day and night pictures (44-56%)",
+            "tagline": "An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities.",
+            "overview": "Early Fire Signs Detection is designed to spot early signs of smoke and fire and helps save lives and mitigate damages caused by industry fires. We aim to create safe workplaces by offering innovative, reliable, flexible, and scalable solutions.",
             "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
@@ -35,10 +36,17 @@
                 "Personnel health",
                 "Hazard warning"
             ],
-            "events": [
-                "Smoke Detected",
-                "Fire Detected"
-            ],
+            "events":{
+                "SMOKE_DETECTED" : {
+                    "description": "Smoke detected",
+                    "schedule": "Immediate"
+                },
+                "FIRE_DETECTED" : {
+                    "description": "Fire detected",
+                    "schedule": "Immediate"
+                }
+                
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -57,6 +65,7 @@
             "id": "38c5b702-c646-4193-b54f-064157168407",
             "name": "ppe-detection",
             "version": "0.0.8",
+            "tagline": "Prevent Workplace Injuries and Occupational Hazards with Vision AI.",
             "overview": "Detect presence or absence of PPE (Personal Protective Equipments). Get real-time (configurable) events when employees are non compliant. Supports helmets, safety boots, vests, masks, and eye goggles",
             "docs": "https://docs.visionify.ai/scenarios/ppe-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/PPE_detection.png",
@@ -87,12 +96,24 @@
                 "Personnel safety",
                 "Company policies"
             ],
-            "events": [
-                "Person Detected with No Helmet",
-                "Person Detected with No Boots",
-                "Person Detected with No Vests",
-                "Person Detected with No Goggles"
-            ],
+            "events": {
+                "NO_HELMET" : {
+                    "description": "People detected without a helmet",
+                    "schedule": "Immediate"
+                },
+                "NO_BOOTS" : {
+                    "description": "People detected without boots",
+                    "schedule": "Immediate"
+                },
+                "NO_VEST" : {
+                    "description": "People detected without a vest",
+                    "schedule": "Immediate"
+                },
+                "NO_GOGGLES" : {
+                    "description": "People detected without goggles",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -117,6 +138,7 @@
             "id": "77bf4816-393a-47cb-8dd1-9790942959c9",
             "name": "smoking-detection",
             "version": "0.0.2",
+            "tagline": "No smoking & No vaping zone enforcements with Vision AI.",
             "overview": "Enforce no-smoking, no-vaping compliance policies in and around an organization. Model is trained for detecting people who are smoking or vaping.",
             "docs": "https://docs.visionify.ai/scenarios/no-smoking-hazard/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-smoking.png",
@@ -144,10 +166,17 @@
                 "Employee health",
                 "Company policies"
             ],
-            "events": [
-                "Person detected smoking",
-                "Person detected with vaping"
-            ],
+            "events":
+            {
+                "NO_SMOKING":{
+                    "description": "People detected smoking",
+                    "schedule": "Immediate"
+                },
+                "NO_VAPING":{
+                    "description": "People detected vaping",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -172,7 +201,8 @@
             "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
             "name": "rust-and-corrosion-detection",
             "version": "0.0.2",
-            "overview": "Preventative maintenance for equipments. Detect regions where rust, corrosion is occuring",
+            "tagline": "Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion.",
+            "overview": "Preventative maintenance for equipments. Rust/Corrosion detection model is designed to detect regions of rust/corrosion if any in machine parts, manufacturing equipments etc.",
             "docs": "https://docs.visionify.ai/scenarios/rust-and-corrosion/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rust-and-corrosion-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/rust-and-corrosion-detection.png",
@@ -191,9 +221,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Equipment detected with rust and/or corrosion"
-            ],
+            "events":{
+                "RUST":{
+                    "description": "Equipment detected with rust",
+                    "schedule": "Immediate"
+                },
+                "CORROSION":{
+                    "description": "Equipment detected with corrosion",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -218,7 +255,8 @@
             "id": "50948434-913f-4a61-be18-be61d63a4193",
             "name": "slip-and-fall-detection",
             "version": "0.0.5",
-            "overview": "Preventative maintenance. Detect person slip and fall is occuring.",
+            "tagline": "Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace.",
+            "overview": "Designed to detect slip and fall instances with high accuracy. Additionally, our model trained on real-world images minimizes false-positives or false-negatives. Timely action in the event of a Fall/Slip accident can minimize damage and save lives.",
             "docs": "https://docs.visionify.ai/scenarios/slip-and-fall-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slip-fall-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/slip-fall-detection.png",
@@ -244,10 +282,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person fall event detected",
-                "Person slip event detected"
-            ],
+            "events": {
+                "FALL":{
+                    "description": "Person fall event detected",
+                    "schedule": "Immediate"
+                },
+                "SLIP":{
+                    "description": "Person slip event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -272,7 +316,8 @@
             "id": "750fc3fd-265e-44b6-84a1-9e307a5d6804",
             "name": "face-blur",
             "version": "0.0.1",
-            "overview": "Blur any faces detected in the system. Based on yolov5-face module. [Reference](https://arxiv.org/abs/2105.12931). Trained over WIDERFace dataset.",
+            "tagline": "Ensure the privacy of individuals in public spaces.",
+            "overview": "Face blurring privacy model can be used to protect the identity of individuals in images. Face Blurring is designed to ensure that the privacy of individuals is respected while still allowing the public to have access to the video feed.",
             "docs": "https://docs.visionify.ai/privacy/face-blur",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/face-blurring.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/face-blurring.jpg",
@@ -314,8 +359,12 @@
                 "Preprocessing",
                 "Privacy"
             ],
-            "events": [
-            ],
+            "events": {
+                "FACE_BLUR":{
+                    "description": "Blurred all the faces detected in the system",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -340,7 +389,8 @@
             "id": "900e92f8-a724-4194-b92c-80be3c46c372",
             "name": "people-taking-picture-detection",
             "version": "0.0.2",
-            "overview": "Detect person taking selfie is occuring.",
+            "tagline": "Get real-time alerts when workers are taking pictures at the workplace, a monitoring system that can detect camera usage on company-owned devices or company networks.",
+            "overview": "People taking picture detection model can be used to safely detect mobile phone usage (people taking pictures, recording or streaming videos/audios, sending texts in prohibited areas) by providing real-time video feeds of the area.",
             "docs": "https://docs.visionify.ai/scenarios/people-taking-picture",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people_taking_picture.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people_taking_picture.png",
@@ -366,9 +416,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person detected while taking pictures"
-            ],
+            "events":{
+                "PHONE_USAGE":{
+                    "description": "Person detected while taking pictures",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -393,7 +446,8 @@
             "id": "0e9eef0d-686b-473d-b4b2-e43cc12ac6cf",
             "name": "ergonomics-detection",
             "version": "0.0.1",
-            "overview": "Detect person bending is occuring.",
+            "tagline": "Ensure safety and comfort of employees by monitoring ergonomics.",
+            "overview": "Ergonomics detection model can be used to monitor productivity and workers health by providing real-time video feeds of different areas.The primary focus of ergonomics is to create environments that optimize human performance and well-being.",
             "docs": "https://docs.visionify.ai/scenarios/ergonomics",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ergonomics-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/ergonomics-detection.png",
@@ -420,9 +474,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Bend count event per individual"
-            ],
+            "events":{
+                "BEND_COUNT":{
+                    "description": "Bend count event per individual",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -447,7 +504,8 @@
             "id": "1f14d200-e15c-4b55-ad1b-908ca81ebf08",
             "name": "occupancy-monitoring",
             "version": "0.0.2",
-            "overview": "Preventative maintenance. Count person and watch if the person is present in the frame for more than restricted time",
+            "tagline": "Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution",
+            "overview": "Monitor the number of people in a given area and get alerts when a person is present in the frame for more than restricted time",
             "docs": "https://docs.visionify.ai/scenarios/max-occupancy-count/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
@@ -474,9 +532,12 @@
                 "Security",
                 "Company policies"
             ],
-            "events": [
-                "Person is present in the room more than the restricted time"
-            ],
+            "events":{
+                "EXCECCED_TIME_LIMIT":{
+                    "description": "Person is present in the room more than the restricted time",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -501,7 +562,8 @@
             "id": "73218220-69e3-455c-9594-e28a310c8282",
             "name": "firearms-detection",
             "version": "0.0.1",
-            "overview": "Detect presence of Gun or Knife",
+            "tagline": "New Technology aims to improve Firearm Detection and Save Lives with VisionAI.",
+            "overview": "The goal of firearms detection is to prevent violence and ensure public safety by detecting and responding to the presence of firearms including knives, guns and other weapons.",
             "docs": "https://docs.visionify.ai/scenarios/firearms-and-knives/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/firearms-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/firearms-detection.png",
@@ -527,10 +589,16 @@
                 "Personnel health",
                 "Hazard warning"
             ],
-            "events": [
-                "Gun Detected",
-                "Knife Detected"
-            ],
+            "events": {
+                "GUN_DETECTED":{
+                    "description": "Gun Detected",
+                    "schedule": "Immediate"
+                },
+                "KNIFE_DETECTED":{
+                    "description": "Knife Detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -549,7 +617,8 @@
             "id": "50948434-913f-4a61-be18-be61d63a4193",
             "name": "spills-and-leaks-detection",
             "version": "0.0.1",
-            "overview": "Machinery maintenance. Detect spills and leaks.",
+            "tagline": "Spills and Leaks detection through Vision AI.",
+            "overview": "Designed to detect spills and leaks including water puddles, water leaks and slippery surfaces. The model can analyze images and video footage to identify visual anomalies, such as the appearance of a spill or leak, which can be missed by human inspectors.",
             "docs": "https://docs.visionify.ai/scenarios/spills-and-leaks-hazard/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/oil-leakage.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/oil-leakage.png",
@@ -595,7 +664,8 @@
             "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
             "name": "equipment-temperature-detection",
             "version": "0.0.2",
-            "overview": "Preventative maintenance for equipments. Detect temperature as part of Hazard warning",
+            "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
+            "overview": "Our solution detects equipment temperature and performance by processing real-time images and videos from different sources. In addition, it can trigger an alarm (as soon as the temperature reaches the threshold margins or faulty equipment is detected) and identify areas where exits are present.",
             "docs": "https://docs.visionify.ai/scenarios/equipment-temperature/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
@@ -614,9 +684,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Equipment temperature detection"
-            ],
+            "events": {
+                "EQUIPMENT_TEMPERATURE":{
+                    "description": "Equipment temperature exceeded the threshold",
+                    "schedule": "Immediate"
+                }
+            }, 
             "configuration": [
                 {
                     "name": "focus_area",
@@ -641,7 +714,8 @@
             "id": "pe6fdsdhfc56-1fa0-4ae3-83fe-8g6751de7535",
             "name": "gas-leak-detection",
             "version": "0.0.1",
-            "overview": "Preventative maintenance for equipments. Detect gas leakage",
+            "tagline": "Gas leaks detection through VisionAI.",
+            "overview": "Our solution aimed at detecting the infrared radiation emitted by objects and can be used to visualize gas leaks that are invisible to the naked eye. The infrared cameras can be used for leak detection in large areas, such as pipelines and storage tanks.",
             "docs": "https://docs.visionify.ai/scenarios/gas-leaks-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/gas-leak.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/gas-leak.jpg",
@@ -660,9 +734,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Equipment gas leakage detection"
-            ],
+            "events": {
+                "GAS_LEAKAGE":{
+                    "description": "Equipment gas leakage detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -687,7 +764,8 @@
             "id": "50948434-913f-4a61-be18-be61d63a4193",
             "name": "fall-and-accident-detection",
             "version": "0.0.1",
-            "overview": "Preventative maintenance. Detect person fall and accidents.",
+            "tagline": "Detect potential collision/accident and wet floor, inspect slip and fall instances with VisionAI.",
+            "overview": "Fall & Accident computer vision based detection system is designed to detect potential safety hazards in a given environment. The system uses video data from cameras placed in the area to identify a range of potential hazards, including person slip & fall, potential collision/accident, wet floor, debris on the floor, and wet/slippery signs.",
             "docs": "https://docs.visionify.ai/scenarios/fall-and-accident.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/fall-and-accident-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/fall-and-accident-detection.png",
@@ -707,13 +785,24 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person slip & fall detected",
-                "Potential collision/accident detected",
-                "Wet floor detected",
-                "Debris detected on floor",
-                "Wet/slippery sign detected"
-            ],
+            "events": {
+                "SLIP_AND_FALL":{
+                    "description": "Person slip & fall detected",
+                    "schedule": "Immediate"
+                },
+                "POTENTIAL_COLLISION":{
+                    "description": "Potential collision/accident detected",
+                    "schedule": "Immediate"
+                },
+                "WET_FLOOR":{
+                    "description": "Wet floor detected",
+                    "schedule": "Immediate"
+                },
+                "SLIPPERY_SIGN":{
+                    "description": "Wet/slippery sign detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -738,7 +827,8 @@
             "id": "978fc3fd-265e-44b6-84b1-fg870a5d6801",
             "name": "text-blur",
             "version": "0.0.1",
-            "overview": "Blur any text detected in the system.",
+            "tagline": "Ensure the privacy of individuals by obscuring documents and other signs in camera feeds.",
+            "overview": "The model works in a way that it ensures that documents and signs are fully and effectively obscured so that it cannot be read or easily recovered by others. The model uses a detection algorithm followed by computer vision techniques to obscure texts in images and videos.",
             "docs": "https://docs.visionify.ai/scenarios/text-blur.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png",
@@ -760,8 +850,8 @@
                 "Preprocessing",
                 "Privacy"
             ],
-            "events": [
-            ],
+            "events": {
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -786,7 +876,8 @@
             "id": "978fc3df-265e-44b6-84b1-fg870dfad6801",
             "name": "license-plate-blur",
             "version": "0.0.1",
-            "overview": "Blur any license plates detected in the system.",
+            "tagline": "Ensure the privacy of vehicle owners in images and videos by blurring licence plates.",
+            "overview": "License plate blurring can be a useful and intended application in certain contexts, such as when capturing images or video in public places or in situations where license plates may contain sensitive or identifying information. This technology can help protect the privacy and security of individuals by blurring or obscuring license plate numbers.",
             "docs": "https://docs.visionify.ai/privacy/license-plate-blur",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
@@ -808,8 +899,8 @@
                 "Preprocessing",
                 "Privacy"
             ],
-            "events": [
-            ],
+            "events": {
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -834,7 +925,8 @@
             "id": "8942c3fd-265e-44b6-84b1-fg870a5d6801",
             "name": "sign-blur",
             "version": "0.0.1",
-            "overview": "Blur any signs detected in the system.",
+            "tagline": "Ensure the privacy of individuals by obscuring signs in camera feeds.",
+            "overview": "The model works in a way that it ensures that signs are fully and effectively obscured so that it cannot be read or easily recovered by others. The model uses a detection algorithm followed by computer vision techniques to obscure texts in images and videos.",
             "docs": "https://docs.visionify.ai/privacy/sign-blur.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/sign-blur.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/sign-blur.png",
@@ -856,8 +948,8 @@
                 "Preprocessing",
                 "Privacy"
             ],
-            "events": [
-            ],
+            "events": {
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -882,7 +974,8 @@
             "id": "90568434-913f-4a61-be18-gh61d63a47841",
             "name": "obstructed-camera-detection",
             "version": "0.0.5",
-            "overview": "Detect obstructed cameras",
+            "tagline": "Keep your camera view clear with our obstructed camera detection model.",
+            "overview": "The aim of an obstructed camera detection model is to detect whether a cameras field of view is obstructed or not. This model is designed to detect various types of obstructions such as fingers, tape, post-it notes, or other physical objects that might block the camera view.",
             "docs": "https://docs.visionify.ai/privacy/obstructed-camera/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png",
@@ -899,9 +992,8 @@
                 "Preprocessing",
                 "Privacy"
             ],
-            "events": [
-                "Real-time obstructed camera detection"
-            ],
+            "events": {
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -926,7 +1018,8 @@
             "id": "96gh26f-913f-4a61-be18-dft24654564",
             "name": "fire-extinguisher-detection",
             "version": "0.0.5",
-            "overview": "Detection of fire extinguisher",
+            "tagline": "Strengthen your smoke & fire detection compliance - through adding custom logic for checking for missing fire extinguisher from required places.",
+            "overview": "Make your workplace safer with our VisionAI monitoring, a computer vision and deep learning-based solution that helps you detect missing fire extinguishers by analyzing visual data, making it easier for businesses to ensure that they have the necessary safety equipment in place.",
             "docs": "https://docs.visionify.ai/scenarios/missing-fire-extinguisher/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/missing-fire-exting.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/missing-fire-exting.jpg",
@@ -1281,20 +1374,21 @@
         {
             "id": "7321x43a220-69e3-455c-9594-e28a3werdfs2",
             "name": "restricted-zone",
-            "version": "0.0.1",
-            "overview": "Detect presence of people in restricted areas and after hours",
+            "version": "0.0.2",
+            "tagline": "Secure restricted areas with our powerful AI-based monitoring system that detects and prevents unauthorized access in real-time.",
+            "overview": "With our Vision AI restricted area monitoring solution you can authorize access as well as continuous monitor live feeds inside a restricted area for real-time detection of unauthorized personnel.",
             "docs": "https://docs.visionify.ai/scenarios/exclusion-zones/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png",
             "models": {
                 "latest": {
-                    "version": "0.0.1",
+                    "version": "0.0.2",
                     "name": "restricted-zone",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
                     "datasetSize": "coco",
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/restricted-zone/restricted-zone-0.0.1.zip",
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/restricted-zone/restricted-zone-0.0.2.zip",
                     "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
                 },
                 "other": [
@@ -1308,12 +1402,24 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Person detected in restricted area",
-                "Movement detected in restricted area",
-                "Person detected after hours",
-                "Movement detected after hours"
-            ],
+            "events": {
+                "PERSON_RESTRICTED_AREA":{
+                    "description": "Person detected in restricted area",
+                    "schedule": "Immediate"
+                },
+                "MOVEMENT_RESTRICTED_AREA":{
+                    "description": "Movement detected in restricted area",
+                    "schedule": "Immediate"
+                },
+                "PERSON_RESTRICTED_TIME":{
+                    "description": "Person detected after hours",
+                    "schedule": "Immediate"
+                },
+                "MOVEMENT_RESTRICTED_TIME":{
+                    "description": "Movement detected after hours",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1332,7 +1438,8 @@
             "id": "9321sdfs20-69e3-455c-9594-e28a3s6921282",
             "name": "confined-space-monitoring",
             "version": "0.0.1",
-            "overview": "Confined space dwell time monitoring measures the amount of time that people spend in a particular location. It can be used to track how long customers spend in a store or how long employees spend in a particular workspace.",
+            "tagline": "Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.",
+            "overview": "Aimed at monitoring the presence of workers in the confined space, as well as the duration of how long they are present within the space. Companies can put compliance policies in place to ensure that workers are not present in the confined space for an extended period of time.",
             "docs": "https://docs.visionify.ai/scenarios/confined-spaces-monitoring/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg",
@@ -1350,9 +1457,12 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Person dwell time exceeds limit"
-            ],
+            "events": {
+                "DWELL_TIME":{
+                    "description": "Person dwell time exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1409,7 +1519,8 @@
             "id": "9dfsdfs20-69e3-455c-9594-dfg51515wer791s",
             "name": "desk-occupancy",
             "version": "0.0.1",
-            "overview": "Summary of occupancy metrics on a per desk/station basis",
+            "tagline": "Revolutionize your workspace with our Smart Desk Occupancy Tracker.",
+            "overview": "Our next-gen AI models detect and count the presence of people within a specific area, whether they are performing a particular task or not, their dwell time, occupancy density and many more metrics. Summary of occupancy metrics on a per desk/station basis",
             "docs": "https://docs.visionify.ai/scenarios/station-occupancy/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png",
@@ -1448,7 +1559,8 @@
             "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
             "name": "occupancy-metrics",
             "version": "0.0.1",
-            "overview": "Summary of different metrics related related to occupancy",
+            "tagline": "Track workplace Occupancy Metrics effortlessly.",
+            "overview": "Our Vision AI occupancy metrics monitoring solution provides real-time insights and analysis to optimize various aspects of a business operation, from customer experiences and marketing strategies to operational efficiencies. Our ready-to-deploy model is designed to provide businesses and organizations with valuable insights such as occupnacy count, dwell time, heat maps, queue management and occupancy alerts.",
             "docs": "https://docs.visionify.ai/scenarios/occupancy-metrics/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Occupancy-Metrics.jpeg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Occupancy-Metrics.jpeg",
@@ -1467,9 +1579,12 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Daily summary event of different metrics related related to occupancy"
-            ],
+            "events": {
+                "OCCUPANCY_METRICS_SUMMARY":{
+                    "description": "Daily summary event of different metrics related related to occupancy",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1488,7 +1603,8 @@
             "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
             "name": "no-visitors",
             "version": "0.0.1",
-            "overview": "Ensuring the compliance policies like no children, visitors, no pets, authorized personnel only",
+            "tagline": "An intelligent way to enhance security and prevent unauthorized access to restricted areas.",
+            "overview": "Make your workplace safer and smarter with our VisionAI monitoring, a complete solution that helps you enforce security policy adherence and deter intruders effectively. Now, you can easily detect any attempts to gain unauthorized access with our fully automated system that guards your facility 24/7 and sends instant alerts to help you prevent a security breach before it occurs.",
             "docs": "https://docs.visionify.ai/scenarios/no-visitors.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-children-visitors.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-children-visitors.png",
@@ -1509,12 +1625,24 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Children detected in area",
-                "Visitors detected in area",
-                "Person without uniform detected",
-                "Person without badge detected"
-            ],
+            "events": {
+                "NO_CHILDREN":{
+                    "description": "Children detected in area",
+                    "schedule": "Immediate"
+                },
+                "NO_VISITORS":{
+                    "description": "Visitors detected in area",
+                    "schedule": "Immediate"
+                },
+                "NO_UNIFORM":{
+                    "description": "Person without uniform detected",
+                    "schedule": "Immediate"
+                },
+                "NO_BADGE":{
+                    "description": "Person without badge detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1533,15 +1661,16 @@
             "id": "9fphsdfs20-69e3-455c-9594-cj5bgv312022gi978",
             "name": "no-food",
             "version": "0.0.1",
-            "overview": "Ensuring the compliance policies like no food and no drinks",
-            "docs": "https://docs.visionify.ai/scenarios/no-food-or-drinks.md",
+            "tagline": "An easier, smarter way to enforce policies with VisionAI",
+            "overview": "Our solution instantly alerts the appropriate personnel to take action and proves to be an effective tool for enforcing a 'no food and drinks' policy in an organizational setting, improving hygiene and safety measures, and ensuring compliance with regulations.",
+            "docs": "https://docs.visionify.ai/scenarios/no-food-or-drinks/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg",
             "models": {
                 "latest": {
                     "version": "0.0.1",
                     "name": "no-food",
-                    "precision": 79.7,
+                    "accuracy": 79.7,
                     "recall": 76.1,
                     "map": 81.9,
                     "datasetSize": 2028,
@@ -1559,10 +1688,16 @@
                 "Company policies",
                 "Warnings"
             ],
-            "events": [
-                "Person with food detected",
-                "Person with drinks detected"
-            ],
+            "events": {
+                "NO_FOOD":{
+                    "description": "Person with food detected",
+                    "schedule": "Immediate"
+                },
+                "NO_DRINKS":{
+                    "description": "Person with drinks detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1581,7 +1716,8 @@
             "id": "4rfb83921252dd-6d9e3-455c-9594-cj5bgv312022gi978",
             "name": "energy-conservation",
             "version": "0.0.1",
-            "overview": "Monitor energy consumption and identify opportunities for energy conservation",
+            "tagline": "Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.",
+            "overview": "Our solution can analyze building occupancy patterns to optimize heating and cooling systems, identify lighting fixtures that consume excessive energy, or identify appliances and equipment that need to be replaced to improve energy efficiency.",
             "docs": "https://docs.visionify.ai/scenarios/energy-conservation/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png",
@@ -1600,9 +1736,12 @@
                 "Company policies",
                 "Occupancy policies"
             ],
-            "events": [
-                "Occupancy pattern summary & lighting pattern recommendations"
-            ],
+            "events": {
+                "ENERGY_CONSERVATION_SUMMARY":{
+                    "description": "Occupancy pattern summary & lighting pattern recommendations",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1621,7 +1760,8 @@
             "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
             "name": "waste-management",
             "version": "0.0.1",
-            "overview": "Monitor waste disposal practices, such as identifying and tracking waste streams, monitoring waste storage and handling procedures, and identifying potential environmental hazards.",
+            "tagline": "Innovative Technologies for Efficient Waste Management Detection with Vision AI.",
+            "overview": "Monitor waste disposal practices, such as identifying and tracking waste streams, monitoring waste storage and handling procedures, and identifying potential environmental hazards. Our solution focused on the detection of waste management events by identifying opportunities for waste reduction, recycling, and cost savings.",
             "docs": "https://docs.visionify.ai/scenarios/environment-waste-management/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/waste-monitoring.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/waste-monitoring.jpg",
@@ -1739,7 +1879,8 @@
             "id": "d15w782sr9-1fa0-4ae3-83fe-6b6851de7535",
             "name": "equipment-vibration-monitoring",
             "version": "0.0.1",
-            "overview": "Monitoring of equipment vibrations",
+            "tagline": "Monitor equipment vibrations. Get an alert when vibration exceeds a limit.",
+            "overview": "Model is aimed at monitoring equipment vibrations and detecting the vibration of equipment and alerting the user if the vibration exceeds a limit. This can be used to detect any potential failure in the equipment.",
             "docs": "https://docs.visionify.ai/scenarios/equipment-vibration-monitoring.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vibrating_monitor-07.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vibrating_monitor-07.jpg",
@@ -1757,9 +1898,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Equipment vibration exceeds limit"
-            ],
+            "events": {
+                "EQUIPMENT_VIBRATION":{
+                    "descritpion": "Equipment vibration exceeded the limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1784,7 +1928,8 @@
             "id": "q8a51f8s15s-1fa0-4ae3-83fe-6b6851de7535",
             "name": "equipment-noise-monitoring",
             "version": "0.0.2",
-            "overview": "Monitoring of equipment noises",
+            "tagline": "Monitor equipment noise levels. Get an alert when noise exceeds a limit.",
+            "overview": "Model is aimed at monitoring equipment noise levels and detecting the noise levels of equipment and alerting the user if the noise exceeds a limit. This can be used to detect any potential failure in the equipment.",
             "docs": "https://docs.visionify.ai/scenarios/equipment-noise-monitoring",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment-noise-monitoring.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment-noise-monitoring.jpg",
@@ -1802,9 +1947,13 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Equipment noise exceeds limit"
-            ],
+            "events": {
+                "EQUIPMENT_NOISE":{
+                    "description": "Equipment noise exceeded the threshold",
+                    "schedule": "Immediate"
+                }
+
+            }, 
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1829,7 +1978,8 @@
             "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
             "name": "reading-analog-dials",
             "version": "0.0.1",
-            "overview": "Single camera can support multiple analog readings as long as that fits in its field of view",
+            "tagline": "Monitor analog dials and generate periodic events.",
+            "overview": "Vision AI-based model for monitoring analog dials using camera would be detecting the analog dials and generating periodic events. This can be used to monitor analog dials.",
             "docs": "https://docs.visionify.ai/scenarios/analog-dials/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png",
@@ -1847,9 +1997,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Analog meter reading"
-            ],
+            "events": {
+                "ANALOG_READING":{
+                    "description": "Analog meter reading",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1874,7 +2027,8 @@
             "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
             "name": "tools-checkout-monitoring",
             "version": "0.0.1",
-            "overview": "Ensure that all tools that employees use - go through a common checkout process.",
+            "tagline": "Monitor tools check-in/out and generate periodic events.",
+            "overview": "Vision AI-based tool checkout monitoring model is used to ensure that all tools that employees use - go through a common checkout process. Event is raised when employees don't check-out the tool and carry them out. Configuration is required to mark where the check-out counter is located. ",
             "docs": "https://docs.visionify.ai/scenarios/tools-checkout-monitoring.md",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg",
@@ -1893,9 +2047,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person left without checkout"
-            ],
+            "events": {
+                "NO_CHECKOUT":{
+                    "description": "Person left without checkout",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
