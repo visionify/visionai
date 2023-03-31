@@ -36,7 +36,7 @@
                 "Personnel health",
                 "Hazard warning"
             ],
-            "events":{
+            "events": {
                 "SMOKE_DETECTED" : {
                     "description": "Smoke detected",
                     "schedule": "Immediate"
@@ -166,8 +166,7 @@
                 "Employee health",
                 "Company policies"
             ],
-            "events":
-            {
+            "events": {
                 "NO_SMOKING":{
                     "description": "People detected smoking",
                     "schedule": "Immediate"
@@ -221,7 +220,7 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events":{
+            "events": {
                 "RUST":{
                     "description": "Equipment detected with rust",
                     "schedule": "Immediate"
@@ -416,7 +415,7 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events":{
+            "events": {
                 "PHONE_USAGE":{
                     "description": "Person detected while taking pictures",
                     "schedule": "Immediate"
@@ -474,7 +473,7 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events":{
+            "events": {
                 "BEND_COUNT":{
                     "description": "Bend count event per individual",
                     "schedule": "Immediate"
@@ -532,7 +531,7 @@
                 "Security",
                 "Company policies"
             ],
-            "events":{
+            "events": {
                 "EXCECCED_TIME_LIMIT":{
                     "description": "Person is present in the room more than the restricted time",
                     "schedule": "Immediate"
@@ -637,9 +636,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Machinery/equipment detected with spills and/or leaks"
-            ],
+            "events": {
+                "SPILLS/LEAKS":{
+                    "description": "Machinery/equipment detected with spills and/or leaks",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1037,9 +1039,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Missing fire-extinguisher detection"
-            ],
+            "events": {
+                "NO_FIRE_EXTINGUISHER":{
+                    "description": "Missing fire-extinguisher detection",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1521,7 +1526,8 @@
             "id": "459dfsdfs20-69e3-455c-9594-e28a3s8522193f",
             "name": "social-distance-detection",
             "version": "0.0.1",
-            "overview": "Detect distance between people in the frame",
+            "tagline": "Ensure social distancing in your workplace with our AI-based social distancing monitoring solution.",
+            "overview": "Vision AI based social distancing solution can be used to push out events for different people observed in the frame and the distances between them by providing real-time video feeds of the factory area. The cameras scan every frame to ensure social distancing is well maintained.",
             "docs": "https://docs.visionify.ai/scenarios/social-distance/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Social-Distancing.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Social-Distancing.png",
@@ -1538,9 +1544,12 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Different people observed in the frame and the distances between them"
-            ],
+            "events": {
+                "DISTANCE_BETWEEN_PEOPLE":{
+                    "description": "Different people observed in the frame and the distances between them",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1578,9 +1587,12 @@
                 "Occupancy policies",
                 "Warnings"
             ],
-            "events": [
-                "Daily summary of occupancy metrics on a per desk/station basis"
-            ],
+            "events": {
+                "OCCUPANCY_METRICS_SUMMARY":{
+                    "description": "Daily summary of occupancy metrics on a per desk/station basis",
+                    "schedule": "Daily"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1728,11 +1740,20 @@
                 "Company policies",
                 "Warnings"
             ],
-            "events": [
-                "Person with food detected",
-                "Person with drinks detected",
-                "Spill event detected"
-            ],
+            "events": {
+                "FOOD":{
+                    "description": "Person with food detected",
+                    "schedule": "Immediate"
+                },
+                "DRINKS":{
+                    "description": "Person with drinks detected",
+                    "schedule": "Immediate"
+                },
+                "SPILL":{
+                    "description": "Spill event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1814,11 +1835,20 @@
             "categories": [
                 "Company policies"
             ],
-            "events": [
-                "Spill detected",
-                "Waste bin full",
-                "Environmental hazard detected"
-            ],
+            "events": {
+                "SPILL":{
+                    "description": "Spill detected",
+                    "schedule": "Immediate"
+                },
+                "WASTE_BIN_FULL":{
+                    "description": "Warning! Waste bin full",
+                    "schedule": "Immediate"
+                },
+                "ENVIRONMENTAL_HAZARD":{
+                    "description": "Environmental hazard event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1837,7 +1867,8 @@
             "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
             "name": "unauthorized-entry",
             "version": "0.0.1",
-            "overview": "Unauthorized entry or tailgating detection",
+            "tagline": "Real-time alerts for any unauthorized entry, anywhere.",
+            "overview": "VisionAI based solution is focused on detecting unauthorized entry. The cameras scan every frame and raise an event when an unauthorized entry of a person is detected by considering tailgating, piggybacking and reverse entry.",
             "docs": "https://docs.visionify.ai/scenarios/unauthorized-entry/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png",
@@ -1854,9 +1885,12 @@
             "categories": [
                 "Company policies"
             ],
-            "events": [
-                "Multi-entry detected"
-            ],
+            "events": {
+                "UNAUTHORIZED_ENTRY":{
+                    "description": "Unauthorized entry detected/Multi-entry detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2545,7 +2579,8 @@
             "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "suspicious-package-detection",
             "version": "0.0.1",
-            "overview": "Suspicious package detection",
+            "tagline": "Reliable and accurate Suspicious package detection for a safe and secure workplace environment.",
+            "overview": "VisionAI suspicious package detection model is trained on a large dataset of known suspicious packages, as well as non-suspicious packages, to learn to recognize the characteristics that are most indicative of a threat. VisionAI based suspicious package monitoring can be used to analyze new packages and determine whether they are suspicious or not. If a package is flagged as suspicious, security personnel can be alerted to investigate further and take appropriate action.",
             "docs": "https://docs.visionify.ai/scenarios/suspicious-package-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
@@ -2560,9 +2595,12 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Event fired when a suspicious package is detected without owner (abandoned package event)."
-            ],
+            "events": {
+                "SUSPICIOUS_PACKAGE":{
+                    "description": "Suspicious package detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2587,7 +2625,8 @@
             "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "fighting-detection",
             "version": "0.0.1",
-            "overview": "Bullying/fighting/aggressive behavior detection",
+            "tagline": "Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.",
+            "overview": "VisionAI's agressive behaviour detection model is designed to promote a safe, healthy, and productive workplace environment for all employees. The model is able to provide real-time alerts when it detects aggressive behavior. This will enable management to intervene and prevent escalation of the situation.",
             "docs": "https://docs.visionify.ai/scenarios/aggressive-behavior/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
@@ -2604,9 +2643,12 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Event fired when bullying/fighting/aggressive behavior is detected."
-            ],
+            "events": {
+                "AGRESSIVE_BEHAVIOUR":{
+                    "description": "Event fired when bullying/fighting/aggressive behavior is detected.",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2631,7 +2673,8 @@
             "id": "6s5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd91",
             "name": "energy-usage-monitoring",
             "version": "0.0.1",
-            "overview": "Energy usage monitoring",
+            "tagline": "Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.",
+            "overview": "Vision AI based monitors can be used for the detection of energy usage monitoring events by providing real-time video feeds of the factory area. The cameras scan every frame and monitor the energy usage of machines and equipment in a factory and help identify inefficiencies, optimize processes, and reduce energy costs.",
             "docs": "https://docs.visionify.ai/scenarios/environment-energy-usage/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg",
@@ -2647,9 +2690,12 @@
             "categories": [
                 "Environment monitoring"
             ],
-            "events": [
-                "Energy usage exceeds limit"
-            ],
+            "events": {
+                "ENERGY_USAGE":{
+                    "description": "Energy usage exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2674,7 +2720,8 @@
             "id": "4fgsq56kd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vandalism-detection",
             "version": "0.0.1",
-            "overview": "Vandalism, graffiti & company property destruction",
+            "tagline": "Safeguard your assets with our advanced vandalism detection model.",
+            "overview": "An effective approach to investigate if the site has temporally consistent and significant static changes, indicative of damage, when an object is detected departing such a place. It recognises several types of vandalism, including theft and graffiti, and it can deal with abrupt illumination changes, occlusions, and segmentation mistakes.",
             "docs": "https://docs.visionify.ai/scenarios/vandalism/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vandalism-detection.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vandalism-detection.jpg",
@@ -2692,14 +2739,32 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Motion detected in area (gross event)",
-                "People detected in area (more granular event)",
-                "Unauthorized personnel detected in area (based on uniform/badge)",
-                "Vandalism detected in area (before & after changes)",
-                "Paint/graffiti detected in area (before & after changes)",
-                "Behavior analysis event showing company property destruction."
-            ],
+            "events": {
+                "MOTION":{
+                    "description": "Motion detected in area (gross event)",
+                    "schedule": "Immediate"
+                },
+                "PEOPLE":{
+                    "description": "People detected in area (more granular event)",
+                    "schedule": "Immediate"
+                },
+                "UNAUTHORIZED_PERSONNEL":{
+                    "description": "Unauthorized personnel detected in area (based on uniform/badge)",
+                    "schedule": "Immediate"
+                },
+                "VANDALISM":{
+                    "description": "Vandalism detected in area (before & after changes)",
+                    "schedule": "Immediate"
+                },
+                "PAINT_GRAFFITI":{
+                    "description": "Paint/graffiti detected in area (before & after changes)",
+                    "schedule": "Immediate"
+                },
+                "BEHAVIOR_ANALYSIS":{
+                    "description": "Behavior analysis showing company property destruction.",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2724,7 +2789,8 @@
             "id": "pn946a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "sexual-harrassment",
             "version": "0.0.1",
-            "overview": "Sexual harrassment",
+            "tagline": "Create a safer and more respectful workplace for all employees.",
+            "overview": "Sexual harassment detection using VisionAI based solution can help to prevent inappropriate behavior and create safer environments. Our models can analyze video footage or images and identify patterns or actions that are indicative of sexual harassment.",
             "docs": "https://docs.visionify.ai/scenarios/sexual-harassment/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Sexual harrassment-03.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Sexual harrassment-03.jpg",
@@ -2739,9 +2805,12 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Potential sexual harrassment event detected"
-            ],
+            "events": {
+                "SEXUAL_HARRASSMENT":{
+                    "description": "Potential sexual harrassment event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2766,7 +2835,8 @@
             "id": "ln9d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "solicitation-detection",
             "version": "0.0.1",
-            "overview": "Solicitation detection",
+            "tagline": "A smarter way to unveil solicitation.",
+            "overview": "Implement VisionAI solution to address the problems associated with Solicitation by timely detection of any unethical behaviors in public spaces or companies. Our AI and deep learning-based solution can identify behavioral anomalies that may indicate solicitation.",
             "docs": "https://docs.visionify.ai/scenarios/solicitation/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png",
@@ -2781,9 +2851,12 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Potential solicitation event detected (public spaces)"
-            ],
+            "events": {
+                "POTENTIAL_SOLICITATION":{
+                    "description": "Potential solicitation event detected (public spaces)",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2808,7 +2881,8 @@
             "id": "pc8d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "shoplifting-detection",
             "version": "0.0.1",
-            "overview": "Shoplifting and/or theft detection",
+            "tagline": "Ensure prevention of Shoplifting, employee theft, minimize insurance loss and other related damages across the retail sector.",
+            "overview": "Our trained model can be used to analyze live video footage from surveillance cameras in real-time. The system can alert security personnel or trigger an alarm when it detects suspicious behavior, allowing them to intervene and prevent the theft or shoplifting from occurring.",
             "docs": "https://docs.visionify.ai/scenarios/theft/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png",
@@ -2824,10 +2898,16 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Potential shoplifting event detected",
-                "Potential theft event detected"
-            ],
+            "events": {
+                "POTENTIAL_SHOPLIFTING":{
+                    "description": "Potential shoplifting event detected",
+                    "schedule": "Immediate"
+                },
+                "POTENTIAL_THEFT":{
+                    "description": "Potential theft event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2852,7 +2932,8 @@
             "id": "ub98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "shipping-activity-detection",
             "version": "0.0.1",
-            "overview": "Shipping activity detection",
+            "tagline": "Stay vigilant even after hours with our advanced suspicious shipping activity solution.",
+            "overview": "Suspicious Shipping Activity Detection model is an important tool for helping to prevent fraudulent or criminal activity in the shipping industry, and it works in real time to help ensure that potentially suspicious activity is identified and addressed as quickly as possible.",
             "docs": "https://docs.visionify.ai/scenarios/shipping-activity/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png",
@@ -2867,10 +2948,16 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Suspicious shipping activity detected from non-designated area",
-                "Suspicious shipping activity detected during after-hours"
-            ],
+            "events": {
+                "SHIPPING_NON-DESIGNATED_AREA":{
+                    "description": "Suspicious shipping activity detected from non-designated area",
+                    "schedule": "Immediate"
+                },
+                "SHIPPING_AFTER_HOURS":{
+                    "description": "Suspicious shipping activity detected during after-hours",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2895,7 +2982,8 @@
             "id": "bc998d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "intrusion-detection",
             "version": "0.0.1",
-            "overview": "Intrusion detection",
+            "tagline": "An advanced physical intrusion detection system powered with Computer Vision and AI.",
+            "overview": "Expand your security capabilities with VisionAI, a modern AI and ML solution to detect intrusions and protect your premises against all potential physical intrusion threats. Our model can accurately identify suspicious behaviors that may indicate a physical intrusion and instantly alerts the security personnel, allowing them to take appropriate and timely action against it to avoid associated dangers.",
             "docs": "https://docs.visionify.ai/scenarios/intrusion-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
@@ -2910,9 +2998,12 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Possible intrusion detection near door"
-            ],
+            "events": {
+                "POSSIBLE_INTRUSION":{
+                    "description": "Possible intrusion detection near door",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2937,7 +3028,8 @@
             "id": "gc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vehicle-policies",
             "version": "0.0.1",
-            "overview": "Vehicle policies",
+            "tagline": "An intelligent alarm system that could be used to detect fraudulent vehicle activity.",
+            "overview": "VisionAI based vehicle policy solution can be used to monitor and enforce vehicle policies in the workplace.These policies are designed to ensure the safe and responsible use of company vehicles, as well as to protect the company from liability in case of accidents or other incidents.",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-policies/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-collision-detected.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-collision-detected.png",
@@ -2954,12 +3046,24 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Vehicle activity detected in non-designtated areas",
-                "Vehicle activity detected during after-hours",
-                "Collision event detected",
-                "Near collision event detected"
-            ],
+            "events": {
+                "ACTIVITY_NON-DESIGNATED_AREA":{
+                    "description": "Vehicle activity detected in non-designtated areas",
+                    "schedule": "Immediate"
+                },
+                "ACTIVITY_AFTER_HOURS":{
+                    "description": "Vehicle activity detected during after-hours",
+                    "schedule": "Immediate"
+                },
+                "COLLISION":{
+                    "description": "Collision event detected",
+                    "schedule": "Immediate"
+                },
+                "NEAR_COLLISION":{
+                    "description": "Near collision event detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2984,7 +3088,8 @@
             "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vehicle-usage",
             "version": "0.0.1",
-            "overview": "Vehicle usage",
+            "tagline": "An intelligent alarm system that could be used to detect vehicle usage.",
+            "overview": "VisionAI's vehicle usage detection model can be used to monitor and enforce vehicle usage in the workplace.  It is also used to detect vehicles that are travelling at an unsafe speed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-usage/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-usage.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-usage.png",
@@ -3001,10 +3106,16 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Daily summary event of vehicle usage",
-                "Path-map of vehicle usage"
-            ],
+            "events": {
+                "USAGE_SUMMARY":{
+                    "description": "Daily summary event of vehicle usage",
+                    "schedule": "Daily"
+                },
+                "PATHMAP":{
+                    "description": "Path-map of vehicle usage",
+                    "schedule": "Daily"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
