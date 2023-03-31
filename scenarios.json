@@ -8,8 +8,8 @@
             "tagline": "An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities.",
             "overview": "Early Fire Signs Detection is designed to spot early signs of smoke and fire and helps save lives and mitigate damages caused by industry fires. We aim to create safe workplaces by offering innovative, reliable, flexible, and scalable solutions.",
             "docs": "https://docs.visionify.ai/scenarios/smoke-and-fire-detection/",
-            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
-            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/early-fire-detection.png",
+            "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smoke-and-fire.png",
+            "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smoke-and-fire.png",
             "models": {
                 "latest": {
                     "version": "0.0.7",
@@ -1064,7 +1064,8 @@
             "id": "84gb95d-84g5-4a61-fd89-fd45456dfg8",
             "name": "blocked-exit-monitoring",
             "version": "0.0.5",
-            "overview": "Monitoring blocked-exits",
+            "tagline": "Ensure that your organziation is safe & compliant for any emergency evacuations. If any of your exits are blocked - get an event notifications so it can be quickly resolved.",
+            "overview": "With our Blocked Exit Monitoring solution, you can rest assured that your premises are being monitored continuously, providing early warnings in case of any blockages in emergency exits. Our models can be deployed instantly and can augment your existing camera infrastructure with just a few clicks.",
             "docs": "https://docs.visionify.ai/scenarios/blocked-exit/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/blocked-exit-monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/blocked-exit-monitoring.png",
@@ -1081,9 +1082,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Blocked-exit detected"
-            ],
+            "events": {
+                "BLOCKED_EXIT":{
+                    "descriptioin": "Detected blocked exit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1108,7 +1112,8 @@
             "id": "84gb9sd-56f5-4a61-fd89-dgf545ds5115",
             "name": "temperature-monitoring",
             "version": "0.0.5",
-            "overview": "Monitoring the temperature for better health and safety",
+            "tagline": "Monitor the temperature of workers at your facility in real-time and alert if the temperature exceeds or falls a threshold value.",
+            "overview": "Visionify's thermal temperature monitoring solution monitors the skin temperature of people within the work premises. It consists of three main components i.e., a thermal camera, a computer, and a temperature reference which is gained through real-time images and videos collected from different sources.",
             "docs": "https://docs.visionify.ai/scenarios/temperature-monitoring",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people temperature monitoring.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/people temperature monitoring.jpg",
@@ -1126,9 +1131,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person temperature exceeding limit"
-            ],
+            "events": {
+                "PERSON_TEMPERATURE":{
+                    "descriptioin": "Person temperature exceeding limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1153,6 +1161,7 @@
             "id": "2w343d56e-913f-4a61-be18-kd5r599rt655821n",
             "name": "working-at-heights",
             "version": "0.0.1",
+            "tagline": "Ensure the safety of employees at workplace.",
             "overview": "Preventative maintenance. Person detection without PFAS, Steps detection without railings, Person detection at height without parapets and Ladder detected not in compliance",
             "docs": "https://docs.visionify.ai/scenarios/working-at-heights/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/working-at-heights.jpg",
@@ -1171,12 +1180,24 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Person detected without PFAS/Full-body harness",
-                "Steps detected without railings",
-                "Person detected at height without parapets",
-                "Ladder detected not in compliance"
-            ],
+            "events": {
+                "NO_PFAS":{
+                    "descriptioin": "Person detected without PFAS/Full-body harness",
+                    "schedule": "Immediate"
+                },
+                "NO_RAILINGS":{
+                    "descriptioin": "Steps detected without railings",
+                    "schedule": "Immediate"
+                },
+                "NO_PARAPET":{
+                    "descriptioin": "Person detected at height without parapets",
+                    "schedule": "Immediate"
+                },
+                "LADDER_NOT_IN_COMPLIANCE":{
+                    "descriptioin": "Ladder detected not in compliance",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1201,7 +1222,8 @@
             "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
             "name": "empty-pallet-detection",
             "version": "0.0.1",
-            "overview": "Preventative maintenance. Detect empty pallets",
+            "tagline": "Maximize warehouse productivity and safety with our reliable empty pallet detection model.",
+            "overview": "Detect empty pallets in real-time to improve productivity in several key areas, including time savings, reduced errors, increased throughput, and improved safety. Manufacturers can easily streamline their production processes and optimize their workflows, ultimately improving their bottom line.",
             "docs": "https://docs.visionify.ai/scenarios/empty-pallets/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/empty-pallets.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/empty-pallets.png",
@@ -1218,9 +1240,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Detected empty pallet"
-            ],
+            "events": {
+                "EMPTY_PALLET":{
+                    "descriptioin": "Detected empty pallet",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1245,7 +1270,8 @@
             "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
             "name": "hand-wash-detection",
             "version": "0.0.1",
-            "overview": "Preventative maintenance. Detect whether people are missing hand wash or not.",
+            "tagline": "Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.",
+            "overview": "Vision AI-based hand-wash system is designed to detect and ensure no one misses hand wash and/or using hand sanitizer. By detecting whether people have used hand sanitizer or hand wash, the system can help encourage good hygiene practices and reduce the risk of infection.",
             "docs": "https://docs.visionify.ai/scenarios/hand-wash/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png",
@@ -1263,10 +1289,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Missed using hand-sanitizer",
-                "Missed hand-wash"
-            ],
+            "events": {
+                "NO_HAND_SANITIZER":{
+                    "descriptioin": "Missed using hand-sanitizer",
+                    "schedule": "Immediate"
+                },
+                "NO_HAND_WASH":{
+                    "descriptioin": "Missed hand-wash",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1291,7 +1323,8 @@
             "id": "34hjks9532gr5-913f-4a61-be18-bk848541325fdghbq2p",
             "name": "worker-fatigue-detection",
             "version": "0.0.1",
-            "overview": "Preventative maintenance. Fatigue detection to reduce fatigue related fatalities and incidents.",
+            "tagline": "Stay alert, stay safe with our advanced worker fatigue detection model.",
+            "overview": "An effective approach for fatigue detection because it allows for non-intrusive and continuous monitoring of individuals. These systems can monitor various facial and eye movements, such as eyelid closure, head drooping, yawning, and pupil dilation, to detect changes in behavior that may indicate fatigue. ",
             "docs": "https://docs.visionify.ai/scenarios/worker-fatigue-detection/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/worker-fatigue-detectoin.jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/worker-fatigue-detectoin.jpg",
@@ -1309,9 +1342,12 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Worker fatigue detection"
-            ],
+            "events": {
+                "WORKER_FATIGUE":{
+                    "descriptioin": "Worker fatigue detected",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1334,10 +1370,11 @@
         },
         {
             "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
-            "name": "water-mangement",
+            "name": "water-quality-monitoring",
             "version": "0.0.1",
-            "overview": "Water management",
-            "docs": "https://docs.visionify.ai/scenarios/water-mangement.md",
+            "tagline": "Advanced Technologies for Effective Water Management and Conservation with Vision AI.",
+            "overview": "Water quality monitoring by VisionAI's camera based approach involves using cameras to capture images or videos of water bodies and then analyzing them to determine the water quality. This approach can provide a cost-effective and efficient way to monitor water quality over a large area, as cameras can cover a wide range of locations and can operate continuously.",
+            "docs": "https://docs.visionify.ai/scenarios/environment-water-quality/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/water-quality-monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/water-quality-monitoring.png",
             "models": {
@@ -1354,9 +1391,12 @@
             "categories": [
                 "Environment monitoring"
             ],
-            "events": [
-                "Water level exceeds limit"
-            ],
+            "events": {
+                "WATER_QUALITY":{
+                    "descriptioin": "Water quality level exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1688,16 +1728,11 @@
                 "Company policies",
                 "Warnings"
             ],
-            "events": {
-                "NO_FOOD":{
-                    "description": "Person with food detected",
-                    "schedule": "Immediate"
-                },
-                "NO_DRINKS":{
-                    "description": "Person with drinks detected",
-                    "schedule": "Immediate"
-                }
-            },
+            "events": [
+                "Person with food detected",
+                "Person with drinks detected",
+                "Spill event detected"
+            ],
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1840,7 +1875,8 @@
             "id": "85df4rw5154tg8d221-6d9e3-455c-9594-sd5268sg4e641s",
             "name": "perimeter-control",
             "version": "0.0.1",
-            "overview": "Perimeter/fence control",
+            "tagline": "An advanced perimeter control system powered with Computer Vision and AI.",
+            "overview": "Vision AI based perimeter control can be used to detect intruders in the premises. The model uses a detection algorithm followed by computer vision techniques to detect intruders in images and videos. The model works in a way that it ensures that intruders are fully and effectively detected so that neccesary action can be taken to  prevent unauthorized access.",
             "docs": "https://docs.visionify.ai/scenarios/perimeter-control/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/perimeter-control.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/perimeter-control.png",
@@ -1857,10 +1893,16 @@
             "categories": [
                 "Company policies"
             ],
-            "events": [
-                "Person detected on fence/perimeter",
-                "Movement detected on fence/perimeter"
-            ],
+            "events": {
+                "PERSON_PERIMETER":{
+                    "description": "Person detected on fence/perimeter",
+                    "schedule": "Immediate"
+                },
+                "MOVEMENT_PERIMETER":{
+                    "description": "Movement detected on fence/perimeter",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -1952,7 +1994,6 @@
                     "description": "Equipment noise exceeded the threshold",
                     "schedule": "Immediate"
                 }
-
             }, 
             "configuration": [
                 {
@@ -2075,10 +2116,11 @@
         },
         {
             "id": "84v82j9sd-56f5-4a61-fd89-dgf545ds5115",
-            "name": "environment-temperature-monitoring",
+            "name": "equipment-temperature-monitoring",
             "version": "0.0.1",
-            "overview": "Monitoring the envionment temperature for better health and safety",
-            "docs": "hthttps://docs.visionify.ai/scenarios/equipment-temperature/",
+            "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
+            "overview": "Visionify's thermal monitoring solution integrated with an IR camera monitors equipment temperature and functioning under various conditions and surroundings. Our solution detects equipment temperature and performance by processing real-time images and videos from different sources.",
+            "docs": "https://docs.visionify.ai/scenarios/equipment-temperature/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
             "models": {
@@ -2087,7 +2129,7 @@
                 "other": []
             },
             "tags": [
-                "Environment monitoring",
+                "Equipment monitoring",
                 "Workplace health and safety",
                 "Temperature monitoring"
             ],
@@ -2095,10 +2137,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Temperature exceeds limit",
-                "Temperature subceeds limit"
-            ],
+            "events": {
+                "TEMPERATURE_EXCEED":{
+                    "description": "Equipment temperature exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "TEMPERATURE_SUBCEED":{
+                    "description": "Equipment temperature subceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2123,7 +2171,8 @@
             "id": "8nv832c80-56f5-4a61-fd89-nj5648541ch78",
             "name": "environment-humidity-monitoring",
             "version": "0.0.1",
-            "overview": "Monitoring the environment humidity",
+            "tagline": "Ideal tool to monitor humidity in the surrounding environment.",
+            "overview": "VisionAI’s humidity monitoring solution helps businesses control humidity in various environments. Our sensor-based solution can monitor the humidity level and triggers an alarm/signal when levels break a threshold value.",
             "docs": "https://docs.visionify.ai/scenarios/environment-humidity/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
@@ -2141,10 +2190,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Humidity exceeds limit",
-                "Humidity subceeds limit"
-            ],
+            "events": {
+                "HUMIDITY_EXCEED":{
+                    "description": "Humidity exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "HUMIDITY_SUBCEED":{
+                    "description": "Humidity subceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2169,7 +2224,8 @@
             "id": "9s5ds15nmj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "environment-pressure-monitoring",
             "version": "0.0.1",
-            "overview": "Monitoring the pressure for better health and safety",
+            "tagline": "Measure pressure in real-time, ensuring safe equipment and work conditions.",
+            "overview": "Visionify’s pressure sensors empower industry players to maintain and monitor the pressure in real time. Our intelligent sensors can measure the air, gas, or liquid pressure and alert you for preventive care of your infrastructure.",
             "docs": "https://docs.visionify.ai/scenarios/environment-pressure/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png",
@@ -2187,10 +2243,16 @@
                 "Maintenance",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Pressure exceeds limit",
-                "Pressure subceeds limit"
-            ],
+            "events": {
+                "PRESSURE_EXCEED":{
+                    "description": "Pressure exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "PRESSURE_SUBCEED":{
+                    "description": "Pressure subceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2215,7 +2277,8 @@
             "id": "84gb95d-56f5-4a61-fd89-dgf545ds5115",
             "name": "air-quality-monitoring",
             "version": "0.0.1",
-            "overview": "Monitoring the environment for better health and safety",
+            "tagline": "Monitor CO, CO2, VOCs, NOx, SOx, O2, and Particulate matters in real-time.", 
+            "overview": "VisionAI's sensor-powered gas detection solutions can identify CO, CO2, VOCs, NOx, SOx, O2, and particulate matter in real time. In addition, our models integrated with advanced sensors can sense gas and dust particles in the air as soon as their percentage level increases or falls below a threshold value",
             "docs": "https://docs.visionify.ai/scenarios/air-quality/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/air-quality-monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/air-quality-monitoring.png",
@@ -2233,14 +2296,32 @@
                 "Environment monitoring",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "CO exceeds limit",
-                "CO2 exceeds limit",
-                "VOCs exceed limit",
-                "NOx exceeds limit",
-                "SOx exceeds limit",
-                "Particulate matters exceed limit"
-            ],
+            "events": {
+                "CO":{
+                    "description": "CO exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "CO2":{
+                    "description": "CO2 exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "VOCs":{
+                    "description": "VOCs exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "NOx":{
+                    "description": "NOx exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "SOx":{
+                    "description": "SOx exceeds limit",
+                    "schedule": "Immediate"
+                },
+                "Particulate matters":{
+                    "description": "Particulate matters exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2265,7 +2346,8 @@
             "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "light-sensor-monitoring",
             "version": "0.0.1",
-            "overview": "Light sensor monitoring",
+            "tagline": "Monitor ambient light in real-time with our light-sensing solution.",
+            "overview": "Visionify’s light monitoring solution can monitor the ambient light of your electronic devices in real-time. When the ambient light of your equipment/devices sub-seeds a specific limit, it can be increased to the desired level. ",
             "docs": "https://docs.visionify.ai/scenarios/light-sensor-monitoring/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp",
@@ -2282,9 +2364,12 @@
                 "Environment monitoring",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Ambient light subceeds limit"
-            ],
+            "events": {
+                "AMBIENT_LIGHT":{
+                    "description": "Ambient light subceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2309,7 +2394,8 @@
             "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "noise-level-monitoring",
             "version": "0.0.1",
-            "overview": "Noise level monitoring",
+            "tagline": "Measure the sound level in the environment and identify a noise source.",
+            "overview": "VisionAI's noise monitoring solution is integrated with sensors that can automatically validate sound sources from a distance. Our model can classify noise sources using a classification algorithm capable of learning a sophisticated noise source classifier for an arbitrary scenario just by using relevant annotated recordings as training material.",
             "docs": "https://docs.visionify.ai/scenarios/noise-level-monitoring",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/environment noise monitoring (1).jpg",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/environment noise monitoring (1).jpg",
@@ -2326,9 +2412,12 @@
                 "Environment monitoring",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Noise level exceeds limit"
-            ],
+            "events": {
+                "NOISE":{
+                    "description": "Noise level exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2353,7 +2442,8 @@
             "id": "4d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "radiation-monitoring",
             "version": "0.0.1",
-            "overview": "Radiation level monitoring",
+            "tagline": "Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.",
+            "overview": "Our solution can be used for the detection of radiation monitoring events by providing real-time video feeds of the factory area. The cameras scan every frame and raise an event whenever radiation level is detected to be above configured limit.",
             "docs": "https://docs.visionify.ai/scenarios/environment-radiation/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png",
@@ -2370,9 +2460,12 @@
                 "Environment monitoring",
                 "Preventative Maintenance"
             ],
-            "events": [
-                "Detected radiation level above configured limit"
-            ],
+            "events": {
+                "RADIATION_LEVEL":{
+                    "description": "Radiation level exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2397,7 +2490,8 @@
             "id": "6d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "loitering-detection",
             "version": "0.0.1",
-            "overview": "Loitering detection",
+            "tagline": "Keeping Public Spaces Safe: Innovations in Loitering Detection and Prevention with Vision AI.",
+            "overview": "Our solution can be used to for the detection of loitering events by providing real-time video feeds of the factory area. The cameras scan every frame and raise an event when a person enters from an usually closed location, person detected during off-hours, person detected for extended duration of time.",
             "docs": "https://docs.visionify.ai/scenarios/loitering/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png",
@@ -2413,11 +2507,20 @@
             "categories": [
                 "Suspicious activity detection"
             ],
-            "events": [
-                "Event fired when a person enters from an usually closed location.",
-                "Event fired when when person detected during off-hours.",
-                "Event fired when person detected for extended duration of time."
-            ],
+            "events": {
+                "UNUSUAL_ENTRY":{
+                    "description": "Person enters from an usually closed location",
+                    "schedule": "Immediate"
+                },
+                "OFF_HOURS":{
+                    "description": "Person detected during off-hours",
+                    "schedule": "Immediate"
+                },
+                "EXTENDED_DURATION":{
+                    "description": "Person detected for extended duration of time",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2926,7 +3029,8 @@
             "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "forklift-zone-breach",
             "version": "0.0.1",
-            "overview": "Forklift Zone Breach",
+            "tagline": "An intelligent alarm system that could be used to detect forklifts entering restricted zones.",
+            "overview": "Vehicle forklift zone monitoring is a system that uses cameras to monitor the forklifts entering restricted zones. It is used to enforce safety rules and calculate fine amounts, as well as to manage the flow of traffic.",
             "docs": "https://docs.visionify.ai/scenarios/forklift-zone-breach/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/forklift-breach-zone.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/forklift-breach-zone.png",
@@ -2943,10 +3047,16 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Forklift observed outside of configured zone",
-                "Pedestrian observed in forklift zone"
-            ],
+            "events": {
+                "FORKLIFT":{
+                    "description": "Forklift observed outside of configured zone",
+                    "schedule": "Immediate"
+                },
+                "PEDESTRIAN":{
+                    "description": "Pedestrian observed in forklift zone",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -2971,7 +3081,8 @@
             "id": "ov48d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vehicle-license-plate-detection",
             "version": "0.0.1",
-            "overview": "Vehicle license plate detection",
+            "tagline": "An intelligent alarm system that could be used to detect vehicle license plate numbers.",
+            "overview": "Vehicle license plate detection uses image processing algorithms to identify and extract the license plate information from images or video frames captured by a camera. License plate detection can be used for various purposes, including enforcing traffic laws, toll collection, parking management, and law enforcement.",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-license-plate/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
@@ -2987,9 +3098,12 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Car detected with license plate"
-            ],
+            "events": {
+                "LICENSE_PLATE":{
+                    "description": "Car detected with license plate",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -3014,7 +3128,8 @@
             "id": "ib58d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vehicle-speed-monitoring",
             "version": "0.0.1",
-            "overview": "Vehicle speed monitoring",
+            "tagline": "An intelligent alarm system that could be used to monitor vehicle speed.",
+            "overview": "Vehicle speed monitoring is a system that uses cameras to monitor the speed of vehicles on a road. It is used to enforce speed limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are travelling at an unsafe speed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-speed/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png",
@@ -3030,9 +3145,12 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Vehicle speed exceeds limit"
-            ],
+            "events": {
+                "VEHICLE_SPEED":{
+                    "description": "Vehicle speed exceeds limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
@@ -3057,7 +3175,8 @@
             "id": "us5464s3f5951f-56f5-4a61-fd89-sr982s65g1njd21",
             "name": "vehicle-cargo-volume-limit",
             "version": "0.0.1",
-            "overview": "Vehicle cargo volume limit",
+            "tagline": "An intelligent alarm system that could be used to detect cargo in vehicles.",
+            "overview": "Vehicle cargo monitoring is a system that uses cameras to monitor the cargo in vehicles. It is used to enforce cargo limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are carrying cargo that is not allowed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.",
             "docs": "https://docs.visionify.ai/scenarios/vehicle-cargo/",
             "image": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png",
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png",
@@ -3073,10 +3192,16 @@
             "categories": [
                 "Vehicle Activity"
             ],
-            "events": [
-                "Vehicle cargo exceeds volume limit",
-                "Vehicle cargo subceeds volume limit"
-            ],
+            "events": {
+                "CARGO_EXCEED":{
+                    "description": "Vehicle cargo exceeds volume limit",
+                    "schedule": "Immediate"
+                },
+                "CARGO_SUBCEED":{
+                    "description": "Vehicle cargo subceeds volume limit",
+                    "schedule": "Immediate"
+                }
+            },
             "configuration": [
                 {
                     "name": "focus_area",
