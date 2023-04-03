@@ -3,6 +3,7 @@
     "scenarios": [
         {
             "id": "73218220-69e3-455c-9594-e28a310c8282",
+            "title": "Early fire sign detection",
             "name": "smoke-and-fire-detection",
             "version": "0.0.7",
             "tagline": "An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities.",
@@ -63,6 +64,7 @@
         },
         {
             "id": "38c5b702-c646-4193-b54f-064157168407",
+            "title": "PPE detection",
             "name": "ppe-detection",
             "version": "0.0.8",
             "tagline": "Prevent Workplace Injuries and Occupational Hazards with Vision AI.",
@@ -136,6 +138,7 @@
         },
         {
             "id": "77bf4816-393a-47cb-8dd1-9790942959c9",
+            "title": "No smoking/No vaping",
             "name": "smoking-detection",
             "version": "0.0.2",
             "tagline": "No smoking & No vaping zone enforcements with Vision AI.",
@@ -198,6 +201,7 @@
         },
         {
             "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Rust or corrosion detection",
             "name": "rust-and-corrosion-detection",
             "version": "0.0.2",
             "tagline": "Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion.",
@@ -252,6 +256,7 @@
         },
         {
             "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "title": "Slip and fall detection",
             "name": "slip-and-fall-detection",
             "version": "0.0.5",
             "tagline": "Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace.",
@@ -313,6 +318,7 @@
         },
         {
             "id": "750fc3fd-265e-44b6-84a1-9e307a5d6804",
+            "title": "Face blur",
             "name": "face-blur",
             "version": "0.0.1",
             "tagline": "Ensure the privacy of individuals in public spaces.",
@@ -386,6 +392,7 @@
         },
         {
             "id": "900e92f8-a724-4194-b92c-80be3c46c372",
+            "title": "People taking picture detection",
             "name": "people-taking-picture-detection",
             "version": "0.0.2",
             "tagline": "Get real-time alerts when workers are taking pictures at the workplace, a monitoring system that can detect camera usage on company-owned devices or company networks.",
@@ -443,6 +450,7 @@
         },
         {
             "id": "0e9eef0d-686b-473d-b4b2-e43cc12ac6cf",
+            "title": "Ergonomics detection",
             "name": "ergonomics-detection",
             "version": "0.0.1",
             "tagline": "Ensure safety and comfort of employees by monitoring ergonomics.",
@@ -501,6 +509,7 @@
         },
         {
             "id": "1f14d200-e15c-4b55-ad1b-908ca81ebf08",
+            "title": "Occupancy monitoring",
             "name": "occupancy-monitoring",
             "version": "0.0.2",
             "tagline": "Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution",
@@ -559,6 +568,7 @@
         },
         {
             "id": "73218220-69e3-455c-9594-e28a310c8282",
+            "title": "Firearms detection",
             "name": "firearms-detection",
             "version": "0.0.1",
             "tagline": "New Technology aims to improve Firearm Detection and Save Lives with VisionAI.",
@@ -614,6 +624,7 @@
         },
         {
             "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "title": "Spills and Leaks detection",
             "name": "spills-and-leaks-detection",
             "version": "0.0.1",
             "tagline": "Spills and Leaks detection through Vision AI.",
@@ -664,6 +675,7 @@
         },
         {
             "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Equipment temperature detection",
             "name": "equipment-temperature-detection",
             "version": "0.0.2",
             "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
@@ -714,6 +726,7 @@
         },
         {
             "id": "pe6fdsdhfc56-1fa0-4ae3-83fe-8g6751de7535",
+            "title": "Gas leak detection",
             "name": "gas-leak-detection",
             "version": "0.0.1",
             "tagline": "Gas leaks detection through VisionAI.",
@@ -764,6 +777,7 @@
         },
         {
             "id": "50948434-913f-4a61-be18-be61d63a4193",
+            "title": "Fall and accident detection",
             "name": "fall-and-accident-detection",
             "version": "0.0.1",
             "tagline": "Detect potential collision/accident and wet floor, inspect slip and fall instances with VisionAI.",
@@ -827,6 +841,7 @@
         },
         {
             "id": "978fc3fd-265e-44b6-84b1-fg870a5d6801",
+            "title": "Text blur",
             "name": "text-blur",
             "version": "0.0.1",
             "tagline": "Ensure the privacy of individuals by obscuring documents and other signs in camera feeds.",
@@ -876,6 +891,7 @@
         },
         {
             "id": "978fc3df-265e-44b6-84b1-fg870dfad6801",
+            "title": "License plate blur",
             "name": "license-plate-blur",
             "version": "0.0.1",
             "tagline": "Ensure the privacy of vehicle owners in images and videos by blurring licence plates.",
@@ -925,6 +941,7 @@
         },
         {
             "id": "8942c3fd-265e-44b6-84b1-fg870a5d6801",
+            "title": "Sign blur",
             "name": "sign-blur",
             "version": "0.0.1",
             "tagline": "Ensure the privacy of individuals by obscuring signs in camera feeds.",
@@ -974,6 +991,7 @@
         },
         {
             "id": "90568434-913f-4a61-be18-gh61d63a47841",
+            "title": "Obstructed camera",
             "name": "obstructed-camera-detection",
             "version": "0.0.5",
             "tagline": "Keep your camera view clear with our obstructed camera detection model.",
@@ -1018,6 +1036,7 @@
         },
         {
             "id": "96gh26f-913f-4a61-be18-dft24654564",
+            "title": "Missing fire extinguisher",
             "name": "fire-extinguisher-detection",
             "version": "0.0.5",
             "tagline": "Strengthen your smoke & fire detection compliance - through adding custom logic for checking for missing fire extinguisher from required places.",
@@ -1067,6 +1086,7 @@
         },
         {
             "id": "84gb95d-84g5-4a61-fd89-fd45456dfg8",
+            "title": "Blocked exit monitoring",
             "name": "blocked-exit-monitoring",
             "version": "0.0.5",
             "tagline": "Ensure that your organziation is safe & compliant for any emergency evacuations. If any of your exits are blocked - get an event notifications so it can be quickly resolved.",
@@ -1115,6 +1135,7 @@
         },
         {
             "id": "84gb9sd-56f5-4a61-fd89-dgf545ds5115",
+            "title": "Temperature monitoring",
             "name": "temperature-monitoring",
             "version": "0.0.5",
             "tagline": "Monitor the temperature of workers at your facility in real-time and alert if the temperature exceeds or falls a threshold value.",
@@ -1164,6 +1185,7 @@
         },
         {
             "id": "2w343d56e-913f-4a61-be18-kd5r599rt655821n",
+            "title": "Working at heights",
             "name": "working-at-heights",
             "version": "0.0.1",
             "tagline": "Ensure the safety of employees at workplace.",
@@ -1225,6 +1247,7 @@
         },
         {
             "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
+            "title": "Empty pallet detection",
             "name": "empty-pallet-detection",
             "version": "0.0.1",
             "tagline": "Maximize warehouse productivity and safety with our reliable empty pallet detection model.",
@@ -1273,6 +1296,7 @@
         },
         {
             "id": "8jhb961vk85-913f-4a61-be18-kd5r599rt655821n",
+            "title": "Hand wash detection",
             "name": "hand-wash-detection",
             "version": "0.0.1",
             "tagline": "Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.",
@@ -1326,6 +1350,7 @@
         },
         {
             "id": "34hjks9532gr5-913f-4a61-be18-bk848541325fdghbq2p",
+            "title": "Worker fatigue detection",
             "name": "worker-fatigue-detection",
             "version": "0.0.1",
             "tagline": "Stay alert, stay safe with our advanced worker fatigue detection model.",
@@ -1375,6 +1400,7 @@
         },
         {
             "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
+            "title": "Water quality monitoring",
             "name": "water-quality-monitoring",
             "version": "0.0.1",
             "tagline": "Advanced Technologies for Effective Water Management and Conservation with Vision AI.",
@@ -1418,6 +1444,7 @@
         },
         {
             "id": "7321x43a220-69e3-455c-9594-e28a3werdfs2",
+            "title": "Restricted zone monitoring",
             "name": "restricted-zone",
             "version": "0.0.2",
             "tagline": "Secure restricted areas with our powerful AI-based monitoring system that detects and prevents unauthorized access in real-time.",
@@ -1481,6 +1508,7 @@
         },
         {
             "id": "9321sdfs20-69e3-455c-9594-e28a3s6921282",
+            "title": "Confined space monitoring",
             "name": "confined-space-monitoring",
             "version": "0.0.1",
             "tagline": "Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.",
@@ -1524,6 +1552,7 @@
         },
         {
             "id": "459dfsdfs20-69e3-455c-9594-e28a3s8522193f",
+            "title": "Social distancing monitoring",
             "name": "social-distance-detection",
             "version": "0.0.1",
             "tagline": "Ensure social distancing in your workplace with our AI-based social distancing monitoring solution.",
@@ -1566,6 +1595,7 @@
         },
         {
             "id": "9dfsdfs20-69e3-455c-9594-dfg51515wer791s",
+            "title": "Desk occupancy",
             "name": "desk-occupancy",
             "version": "0.0.1",
             "tagline": "Revolutionize your workspace with our Smart Desk Occupancy Tracker.",
@@ -1609,6 +1639,7 @@
         },
         {
             "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
+            "title": "Occupancy metrics",
             "name": "occupancy-metrics",
             "version": "0.0.1",
             "tagline": "Track workplace Occupancy Metrics effortlessly.",
@@ -1653,6 +1684,7 @@
         },
         {
             "id": "8dffsdfs20-69e3-455c-9594-dfg517f82515ws91s",
+            "title": "No visitors",
             "name": "no-visitors",
             "version": "0.0.1",
             "tagline": "An intelligent way to enhance security and prevent unauthorized access to restricted areas.",
@@ -1711,6 +1743,7 @@
         },
         {
             "id": "9fphsdfs20-69e3-455c-9594-cj5bgv312022gi978",
+            "title": "No food or drinks",
             "name": "no-food",
             "version": "0.0.1",
             "tagline": "An easier, smarter way to enforce policies with VisionAI",
@@ -1770,6 +1803,7 @@
         },
         {
             "id": "4rfb83921252dd-6d9e3-455c-9594-cj5bgv312022gi978",
+            "title": "Energy conservation",
             "name": "energy-conservation",
             "version": "0.0.1",
             "tagline": "Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.",
@@ -1865,6 +1899,7 @@
         },
         {
             "id": "2w92s826sdf29-6d9e3-455c-9594-sd5268sg4e641s",
+            "title": "Unauthorized entry",
             "name": "unauthorized-entry",
             "version": "0.0.1",
             "tagline": "Real-time alerts for any unauthorized entry, anywhere.",
@@ -1907,6 +1942,7 @@
         },
         {
             "id": "85df4rw5154tg8d221-6d9e3-455c-9594-sd5268sg4e641s",
+            "title": "Perimeter control",
             "name": "perimeter-control",
             "version": "0.0.1",
             "tagline": "An advanced perimeter control system powered with Computer Vision and AI.",
@@ -1953,6 +1989,7 @@
         },
         {
             "id": "d15w782sr9-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Equipment vibration monitoring",
             "name": "equipment-vibration-monitoring",
             "version": "0.0.1",
             "tagline": "Monitor equipment vibrations. Get an alert when vibration exceeds a limit.",
@@ -2002,6 +2039,7 @@
         },
         {
             "id": "q8a51f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Equipment noise monitoring",
             "name": "equipment-noise-monitoring",
             "version": "0.0.2",
             "tagline": "Monitor equipment noise levels. Get an alert when noise exceeds a limit.",
@@ -2051,6 +2089,7 @@
         },
         {
             "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Analog dials monitoring",
             "name": "reading-analog-dials",
             "version": "0.0.1",
             "tagline": "Monitor analog dials and generate periodic events.",
