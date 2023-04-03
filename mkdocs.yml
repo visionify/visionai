@@ -86,7 +86,7 @@ nav:
       - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
       - Blocked exit monitoring: scenarios/blocked-exit.md
       - Equipment temperature monitoring: scenarios/equipment-temperature-hazard.md
-      - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
+      - Equipment rust and corrosion: scenarios/rust-and-corrosion-hazard.md
 
     - Worker health & safety:
       - Overview: scenarios/worker-health-and-safety.md
@@ -139,9 +139,8 @@ nav:
       - Temperature monitoring: scenarios/environment-temperature.md
       - Humidity monitoring: scenarios/environment-humidity.md
       - Air quality monitoring: scenarios/air-quality.md
-      - Noise monitoring: scenarios/environment-noise.md
+      - Noise monitoring: scenarios/noise-level-monitoring.md
       - Pressure monitoring: scenarios/environment-pressure.md
-      - Water leak detection: scenarios/environment-water-leak.md
       - Volatile organic compounds (VOCs): scenarios/environment-voc.md
       - Carbon monoxide (CO): scenarios/environment-co.md
       - Ambient light: scenarios/light-sensor-monitoring.md

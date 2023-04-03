@@ -6,11 +6,11 @@ Documentation for VisionAI toolkit.
 
 **VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind.
 
-These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of [custom scenarios](TODO/custom-scenarios.md).
+These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of custom scenarios.
 
 ## Install **VisionAI**
 
-Install **VisionAI** application through `PyPI`. There are other options available for install - including a Docker container option. These are detailed in [installation](TODO/install.md) section.
+Install **VisionAI** application through `PyPI`. There are other options available for install - including a Docker container option. These are detailed in [installation](install.md) section.
 
 <div class="termy">
 
@@ -27,7 +27,7 @@ Successfully installed visionai
 
 ## Deploy to **Azure**
 
-Deploy a fully configured and tested solution directly from Azure Marketplace. **VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azure.microsoft.com) (TODO). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options. Get more details [here](azure/installation.md).
+Deploy a fully configured and tested solution directly from Azure Marketplace. **VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azure.microsoft.com). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options. Get more details here.
 
 ![Deploy to Azure](https://aka.ms/deploytoazurebutton)
 
@@ -210,7 +210,7 @@ $ visionai pipeline add-scenario --help
 
 ## Next **steps**
 
-Congratulations! You have successfully run the first scenario. Now go through [Tutorials](tutorials/index.md) to learn about how to run multiple scnearios, how to configure each scenario for the events you need, how to set up the dependencies etc.
+Congratulations! You have successfully run the first scenario. Now go through tutorials to learn about how to run multiple scnearios, how to configure each scenario for the events you need, how to set up the dependencies etc.
 
-Or you can also go through our [scenarios](scenarios/index.md) page to explore the different scenarios available and their model details. If you have a need for a scenario to be implemented, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues).
+Or you can also go through our [scenarios](../scenarios/index.md) page to explore the different scenarios available and their model details. If you have a need for a scenario to be implemented, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues).
 

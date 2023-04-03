@@ -2,7 +2,7 @@
 
 > Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace. 
 
-![Slip and Fall Detection](../img/slipandfall_collage.jpg)
+
 
 ## Overview
 
