@@ -61,11 +61,13 @@ Our primary focus is on workplace health and safety models, but we are expanding
 * Install **VisionAI** through `PyPI`:
 
 <div class="termy">
+
 ```console
 $ pip install visionai
 ---> 100%
 Successfully installed visionai
 ```
+
 </div>
 
 * Update to the latest version, if already installed:

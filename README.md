@@ -60,13 +60,11 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 * Install **VisionAI** through `PyPI`:
 
-<div class="termy">
-```console
+
+```bash
 $ pip install visionai
----> 100%
-Successfully installed visionai
 ```
-</div>
+
 
 * Update to the latest version, if already installed:
 
@@ -136,46 +134,9 @@ $                           --video /path/to/video.mp4          # Video file/you
 
 * Get details about an app:
 
-<div class="termy">
-
-``` console
+``` bash
 $ visionai scenarios details ppe-detection
-
-------------------------------------------------
-Category: Fire safety
-Scenario: early-smoke-and-fire-detection
-This scenario has been trained on open-source datasets consisting of 126,293 images. The datasets images are primarily outdoors (70%), but do contain a good number of indoor images (30%). There is a ~50-50% mix of day vs night images. You can find more details about this scenario at visionify.ai/early-smoke-and-fire-detection.
-
-
-Model: smoke-and-fire-detection-1.0.1.pt
-Model size: 127MB
-Model type: Object Detection
-Framework: PyTorch
-
-Model performance:
-Dataset size: 126,293 images
-Accuracy: 94.1%
-Recall: 93%
-F1-Score: 93.5%
-
-Events:
-smoke-detected  | Immediate
-fire-detected   | Immediate
-
-Event examples:
-{
-    "scenario": "smoke-and-fire-detection",
-    "event_name": "smoke-detected",
-    "event_details": {
-        "camera": "camera-01",
-        "date": "2023-01-04 11:05:02",
-        "confidence": 0.92
-    }
-}
-------------------------------------------------
-
 ```
-</div>
 
 
 
@@ -241,9 +202,7 @@ $ visionai pipeline start --name test-pipeline
 You can get help on any command by using the `--help` flag.
 
 
-<div class="termy">
-
-```console
+```bash
 
 $ visionai pipeline --help
 
@@ -273,11 +232,7 @@ $ visionai pipeline --help
 │ show            Show details of a pipeline               │
 ╰──────────────────────────────────────────────────────────╯
 
-
 ```
-
-</div>
-
 
 
 ## VisionAI Web Application
