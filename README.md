@@ -93,6 +93,8 @@ $ visionai init
 
 ---
 
+<details>
+<summary> VisionAI CLI </summary>
 
 ## VisionAI CLI
 
@@ -234,8 +236,12 @@ $ visionai pipeline --help
 
 ```
 
+</details>
 
-## VisionAI Web Application
+<details>
+<summary> VisionAI Web-App
+
+## VisionAI Web-App
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
 
 ``` bash
@@ -251,6 +257,22 @@ Web app available at: http://localhost:3001
 ![VisionAI Web Application](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios-web.jpg "VisionAI Web Application").
 
 - You can manage cameras, scenarios, pipelines, see events etc., directly on the web-app. The web-app is running your own local compute instance. All the data is saved in your machine, and it is persistent as long as VisionAI application is not uninstalled.
+
+</details>
+
+<details>
+
+<summary> VisionAI Azure Managed App </summary>
+
+
+## Azure Managed App
+
+Deploy a fully configured and tested solution directly from Azure Marketplace.
+
+**VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview)
+
 
 ## Events
 
@@ -292,15 +314,8 @@ Grafana server is at: http://localhost:3003
 Redis server is at: redis://localhost:6379
 ```
 
+</details>
 
-
-## Azure Managed App
-
-Deploy a fully configured and tested solution directly from Azure Marketplace.
-
-**VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options.
-
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview)
 
 ## Next steps
 
