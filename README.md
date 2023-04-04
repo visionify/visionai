@@ -2,7 +2,7 @@
   <a href="https://docs.visionify.ai"><img src="https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-toolkit-by-visionify.png" alt="VisionAI Toolkit by Visionify"></a>
 </p>
 <p align="center">
-    <em>Vision AI Apps for Workplace Safety. Pretrained & Ready to deploy. </em>
+    <em>VisionAI Apps for Workplace Safety. Pretrained & Ready to deploy. </em>
 </p>
 <p align="center">
 <!-- <a href="https://github.com/visionify/visionai/actions/workflows/codeql.yml" target="_blank">
@@ -30,7 +30,7 @@
 
 Key features of **VisionAI** include:
 
-- **No new installations/sensors/cameras needed**: Works with any IP/security cameras using RTSP streams.
+- **No hardware installation**: Works with any IP/security cameras using RTSP streams. No need to install any new cameras, sensors, or other hardware.
 
 - **User-friendly**: Easy-to-use web and CLI interfaces for managing cameras and associated apps, catering to both technical and non-technical users.
 
@@ -58,25 +58,29 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 ## Quick Start
 
-1. Install **VisionAI** through `PyPI`:
+* Install **VisionAI** through `PyPI`:
 
-```bash
+<div class="termy">
+```console
 $ pip install visionai
+---> 100%
+Successfully installed visionai
 ```
+</div>
 
-2. Update to the latest version, if already installed:
+* Update to the latest version, if already installed:
 
 ``` bash
 $ pip install --upgrade --force-reinstall visionai
 ```
 
-3. Initialize VisionAI to download and install dependencies (Docker, Pytorch, NVIDIA Triton, etc.):
+* Initialize VisionAI to download and install dependencies (Docker, Pytorch, NVIDIA Triton, etc.):
 
 ``` bash
 $ visionai init
 ```
 
-4. Upon successful initialization, you should be able to see the following services running:
+* Upon successful initialization, you should be able to see the following services running:
 
 ---
 | Service           | Port                     | Purpose                                         |
@@ -91,20 +95,18 @@ $ visionai init
 
 ---
 
-<details>
-<summary>VisionAI CLI</summary>
 
 ## VisionAI CLI
 
 
 ### Cameras
 
-1. List cameras
+* List cameras
 ``` bash
 $ visionai cameras list
 ```
 
-2. Add/remove cameras through the following commands.
+* Add/remove cameras through the following commands.
 
 ``` bash
 $ visionai models add --name OFFICE-01 --url rtsp://192.168.0.1:554/1
@@ -114,61 +116,169 @@ $ visionai models remove --name OFFICE-01
 
 ### VisionAI Apps
 
-1. List available VisionAI Apps:
+* List available VisionAI Apps:
 
 ``` bash
 $ visionai scenarios list
 ```
 
-![VisionAI Scenarios CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios.png "VisionAI scenarios CLI output")
+![VisionAI Scenarios CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios-list.jpg "VisionAI scenarios CLI output")
 
 
-2. Run Single VisionAI App:
-
-``` bash
-$ visionai scenarios run ppe-detection                                      # Web-cam
-$ visionai scenarios run ppe-detection --camera rtsp://192.168.0.1:554/1    # RTSP camera
-$ visionai scenarios run ppe-detection --video /path/to/video.mp4           # Video file/youtube link
-```
-
-3. Run Multiple VisionAI Apps through `pipelines`:
+* Run a VisionAI App:
 
 ``` bash
-$ visionai camera add --name OFFICE-01 --url rtsp://192.186.0.1:554/1
-$ visionai camera add --name OFFICE-02 --url rtsp://192.186.0.1:554/2
-$ visionai pipeline create --name test-pipeline
-$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-01
-$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-02
-$ visionai pipeline add-scenario --name test-pipeline --scenario ppe-detection
-$ visionai pipeline add-scenario --name test-pipeline --scenario face-blur
-$ visionai pipeline add-scenario --name test-pipeline --scenario smoke-and-fire-detection
-$ visionai pipeline start --name test-pipeline
+$ visionai scenarios run ppe-detection                          # Web-cam
+$                           --camera rtsp://192.168.0.1:554/1   # RTSP camera
+$                           --video /path/to/video.mp4          # Video file/youtube link
 ```
+
+
+* Get details about an app:
+
+<div class="termy">
+
+``` console
+$ visionai scenarios details ppe-detection
+
+------------------------------------------------
+Category: Fire safety
+Scenario: early-smoke-and-fire-detection
+This scenario has been trained on open-source datasets consisting of 126,293 images. The datasets images are primarily outdoors (70%), but do contain a good number of indoor images (30%). There is a ~50-50% mix of day vs night images. You can find more details about this scenario at visionify.ai/early-smoke-and-fire-detection.
+
+
+Model: smoke-and-fire-detection-1.0.1.pt
+Model size: 127MB
+Model type: Object Detection
+Framework: PyTorch
+
+Model performance:
+Dataset size: 126,293 images
+Accuracy: 94.1%
+Recall: 93%
+F1-Score: 93.5%
+
+Events:
+smoke-detected  | Immediate
+fire-detected   | Immediate
+
+Event examples:
+{
+    "scenario": "smoke-and-fire-detection",
+    "event_name": "smoke-detected",
+    "event_details": {
+        "camera": "camera-01",
+        "date": "2023-01-04 11:05:02",
+        "confidence": 0.92
+    }
+}
+------------------------------------------------
+
+```
+</div>
+
+
 
 ### VisionAI Models
 
 VisionAI models are automatically started & stopped as needed. You may want to see their status for debug purposes, you can use the following commands.
 
-1. List models being served by VisionAI:
+* List models being served by VisionAI:
 
 ``` bash
 $ visionai models list
 ```
 
-2. Start or stop serving models.
+![VisionAI Models List CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-models-list.png "VisionAI Models List CLI Output")
+
+* Start or stop serving models.
 
 ``` bash
 $ visionai models serve
 $ visionai models stop
 ```
 
-![VisionAI Models List CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-models-list.png "VisionAI Models List CLI Output")
+### VisionAI Pipelines
+
+Pipelines allow running multiple scenarios on a group of cameras. You can use the following commands to manage pipelines.
+
+* List pipelines:
+
+``` bash
+$ visionai pipelines list
+```
+
+* Create a pipeline
+
+``` bash
+$ visionai pipeline create --name test-pipeline
+```
+
+* Add cameras to a pipeline
+
+``` bash
+$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-01
+$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-02
+```
+
+* Add scenarios to a pipeline
+
+``` bash
+$ visionai pipeline add-scenario --name test-pipeline --scenario ppe-detection
+$ visionai pipeline add-scenario --name test-pipeline --scenario face-blur
+$ visionai pipeline add-scenario --name test-pipeline --scenario smoke-and-fire-detection
+```
+
+* Start a pipeline
+
+``` bash
+$ visionai pipeline start --name test-pipeline
+```
 
 
-</details>
+### Get help on any command
 
-<details>
-<summary> VisionAI Web Application </summary>
+You can get help on any command by using the `--help` flag.
+
+
+<div class="termy">
+
+```console
+
+$ visionai pipeline --help
+
+ Usage: visionai pipeline [OPTIONS] COMMAND [ARGS]...
+
+ Manage pipelines
+ Pipeline is a sequence of preprocess routines and
+ scenarios to be run on a given set of cameras. Each
+ pipeline can be configured to run specific scenarios -
+ each scenario with their own customizations for event
+ notifications. This module provides robust methods for
+ managing pipelines, showing their details, adding/remove
+ cameras from pipelines and running a pipeline.
+
+╭─ Options ────────────────────────────────────────────────╮
+│ --help          Show this message and exit.              │
+╰──────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────╮
+│ add-camera      Add a camera to a pipeline               │
+│ add-preprocess  Add a preprocess routine to a pipeline   │
+│ add-scenario    Add a scenario to a pipeline             │
+│ create          Create a named pipeline                  │
+│ remove-camera   Remove a camera from a pipeline          │
+│ reset           Reset the pipeline to original state.    │
+│ run             Run a pipeline of scenarios on given     │
+│                 cameras                                  │
+│ show            Show details of a pipeline               │
+╰──────────────────────────────────────────────────────────╯
+
+
+```
+
+</div>
+
+
 
 ## VisionAI Web Application
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
@@ -186,11 +296,6 @@ Web app available at: http://localhost:3001
 ![VisionAI Web Application](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios-web.jpg "VisionAI Web Application").
 
 - You can manage cameras, scenarios, pipelines, see events etc., directly on the web-app. The web-app is running your own local compute instance. All the data is saved in your machine, and it is persistent as long as VisionAI application is not uninstalled.
-
-</details>
-
-<details>
-<summary> Events/Integration </summary>
 
 ## Events
 
@@ -232,10 +337,7 @@ Grafana server is at: http://localhost:3003
 Redis server is at: redis://localhost:6379
 ```
 
-</details>
 
-<details>
-<summary> Azure Managed App </summary>
 
 ## Azure Managed App
 
@@ -245,24 +347,8 @@ Deploy a fully configured and tested solution directly from Azure Marketplace.
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview)
 
-</details>
-
-
-
-</details>
-
-
 ## Next steps
 
 Congratulations! You have successfully configured and used VisionAI toolkit. Now go through [Tutorials](tutorials/index.md) to learn about how to run multiple scnearios, how to configure each scenario for the events you need, how to set up pipelines with multiple cameras and scenarios.
 
 Or you can also browse through our [scenarios](scenarios/index.md) section to understand different use-cases that are supported currently. If you have a need for a scenario, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues) here.
-
-## Contributing
-
-We welcome contributions to VisionAI. Please read our [contribution guidelines](CONTRIBUTING.md) to learn about how you can contribute to VisionAI.
-
-## License
-
-VIsionAI is licensed under the [GPLv3 License](LICENSE.md). If you need a commercial license, please [contact us](company/contact.md).
-
