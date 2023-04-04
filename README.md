@@ -46,8 +46,6 @@ Key features of **VisionAI** include:
 - **Integrations**: VisionAI currently integrates with Azure Event hubs, Redis PubSub and InfluxDB time-series database for reporting, alerts and notifications. We have roadmap plans to add support for other message brokers as well.
 
 
-## VisionAI Apps
-
 VisionAI offers a variety of workplace health and safety scenarios, with continuous development of new use cases. View the complete list of over 60 VisionAI Apps [here](scenarios/index.md). If you require a specific scenario not listed here, feel free to [contact us](company/contact.md).
 
 Our primary focus is on workplace health and safety models, but we are expanding our scope to include Quality Inspection, Food Safety/Debris Detection, and more. These additional scenarios are available to customers on a case-by-case basis.
@@ -55,6 +53,9 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 ![VisionAI Scenarios](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/VisionAI-Workplace-Safety-Scenarios.png "VisionAI Scenarios for Workplace Safety")
 
+<details>
+
+<summary> Quick Start </summary>
 
 ## Quick Start
 
@@ -92,6 +93,8 @@ $ visionai init
 | `Grafana`         | `http://localhost:3003`  | Grafana server for charting & graphing          |
 
 ---
+
+</details>
 
 <details>
 <summary> VisionAI CLI </summary>
@@ -239,7 +242,7 @@ $ visionai pipeline --help
 </details>
 
 <details>
-<summary> VisionAI Web-App
+<summary> VisionAI Web-App </summary>
 
 ## VisionAI Web-App
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
