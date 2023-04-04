@@ -114,3 +114,5 @@
 
 - Initial release: `pip install visionai`
 - Pushed package to `PyPI` repository
+
+

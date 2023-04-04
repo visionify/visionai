@@ -2,7 +2,7 @@
   <a href="https://docs.visionify.ai"><img src="https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-toolkit-by-visionify.png" alt="VisionAI Toolkit by Visionify"></a>
 </p>
 <p align="center">
-    <em>Ready to deploy Vision AI scenarios. Open source. Try our CLI now. </em>
+    <em>Vision AI Apps for Workplace Safety. Pretrained & Ready to deploy. </em>
 </p>
 <p align="center">
 <!-- <a href="https://github.com/visionify/visionai/actions/workflows/codeql.yml" target="_blank">
@@ -22,27 +22,31 @@
 
 **Documentation**: <a href="https://docs.visionify.ai" target="_blank">https://docs.visionify.ai</a>
 
-**Source Code**: <a href="https://github.com/visionify/visionai" target="_blank">https://github.com/visionify/visionai</a>
-
 ---
 
-**VisionAI** provides a set of command line utilities for running Vision AI scenarios. We also have several industrial use-cases that are ready for production deployment. VisionAI is primarily a CLI (Command Line Interface) - but it also provides a Web-based GUI for managing your cameras. VisionAI is a developed by the team at **Visionify** - and is a part of the **Workplace Safety** suite of products.
+## Overview
 
-Key features of **VisionAI** include:
+`VisionAI` offers a suite of apps for Workplace Safety scenarios. Each app is pretrained and ready for production deployment. You can use VisionAI as a CLI or a web-based GUI. It is developed by `Visionify` and is part of the `Workplace Safety` suite of products.
 
-- **Easy to use**: VisionAI is designed to be a no-code platform for deploying Vision AI solutions for common  workplace safety scenarios. The command-line interface (CLI) or Web interface are designed to be used by non-technical users as well as technical users.
-- **Production Ready**: VisionAI provides a library of production-ready Workplace Safety scenarios that can be directly used out of the box. Each of these scenarios is trained from a large dataset of real-world images and videos.
-- **Open Source**: VisionAI library is Open Source is available through GPLv3 license. You can use it for free and contribute to it as well. We also offer commercial licenses to enterprises that want to modify the codebase.
-- **Custom Scenarios**: VisionAI can supports custom use-cases and scenarios. We have a flexible architecture based on NVIDIA triton server to serve multiple models, and common scenario pattern that can be used to easily add new use-cases. Check the customization documentation to get more information on how this can be achieved.
-- **Integrations**: VisionAI currently integrates with REDIS PubSub and Azure Event hubs for alerts and notifications. We have roadmap plans to add support for other message brokers as well.
-- **Cloud Ready**: VisionAI is available as as an Azure Marketplace offer. This provides scalable architecture for enterprise installations supporting a large number of cameras and scenarios.
+Key features of `VisionAI`:
+
+- **Works with any IP/security cameras**: VisionAI works with existing security camera systems and is built on top of RTSP streams.
+- **Easy to use**: VisionAI provides both web and CLI interfaces that are easy to use for both technical and non-technical users to manage cameras and apps.
+- **Production Ready**: Each VisionAI app is pre-trained with carefully curated datasets from industrial and academic sources, so it can be used directly out of the box.
+- **Azure Marketplace Solution**: VisionAI is available as an Azure Marketplace Solution for Azure VMs, Azure ARC VMs, Azure IoTEdge, and Azure AKS service, providing a scalable architecture for enterprise installations.
+- **Supports customization**: VisionAI apps support customization and fine-tuning of models. You can add new use-cases with a flexible architecture based on NVIDIA triton server.
+- **Integrations**: VisionAI integrates with Azure Event hubs, Redis PubSub, and InfluxDB time-series database for reporting, alerts, and notifications. Support for other message brokers is on the roadmap. Check the customization documentation for more information on how to customize your app.
 
 
-## Scenarios
 
-We support several Workplace health and safety scenarios. These are listed below. We are continuously adding new scenarios and you can [contact us](company/contact.md) if you need a scenario that is not listed here.
+## VisionAI Apps
+
+VisionAI supports several Workplace health and safety scenarios. These are listed below. We are continuously adding new scenarios and you can [contact us](company/contact.md) if you need a scenario that is not listed here.
 
 **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md).
+
+VisionAI roadmap includes adding support for Quality Inspection, Food Safety/Debris Detection, etc. These are available to customers on a case-by-case basis.
+
 
 ![VisionAI Scenarios](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/VisionAI-Workplace-Safety-Scenarios.png "VisionAI Scenarios for Workplace Safety")
 
@@ -55,16 +59,21 @@ We support several Workplace health and safety scenarios. These are listed below
 $ pip install visionai
 ```
 
-- Initialize visionai by running the following command. This would download the required dependencies on your setup. This might take a few minutes to complete as some of the dependencies are pretty large in size (1GB for Pytorch etc.)
+- If you had already installed VisionAI in the past, you can update to the latest version by running the following command:
+
+``` bash
+$ pip install --upgrade --force-reinstall visionai
+```
+
+- Initialize visionai by running the following command. This would download and install related dependencies (Docker, Pytorch, NVIDIA Triton etc).
 
 ``` bash
 $ visionai init
 ```
 
-- Once the initialization is successful, you can see the following output:
+- After `visionai init` is complete - you should see the following output:
 
-``` bash
-$ visionai init
+```bash
 - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Grafana server is at: http://localhost:3003
 Redis server is at: localhost:6379
@@ -86,45 +95,45 @@ Web server already running at: http://localhost:3001
 | `Triton Metrics`  | `http://localhost:8002`  | Triton Model metrics server (prometheus)        |
 | `Redis`           | `redis://localhost:6379` | Redis server, currently supports PUBSUB         |
 | `Grafana`         | `http://localhost:3003`  | Grafana server for charting & graphing          |
----
 
-- To list down available scenarios by running the following command.
+---
+<details>
+<summary>VisionAI CLI</summary>
+## VisionAI CLI
+
+- List available VisionAI Apps:
 
 ``` bash
 $ visionai scenarios list
 ```
 
-- Run a scenario by running the following command. This would run the scenario on your local web-cam.
+- Run Single VisionAI App:
 
 ``` bash
-$ visionai scenarios test ppe-detection
+$ visionai scenarios run ppe-detection                                      # Web-cam
+$ visionai scenarios run ppe-detection --camera rtsp://192.168.0.1:554/1    # RTSP camera
+$ visionai scenarios run ppe-detection --video /path/to/video.mp4           # Video file/youtube link
 ```
 
-- You can observe the command prompt for the output of the scenario. This scenario generates events when a person is detected without a PPE.
-
-- You can also run this scenario on IP camera (RTSP, RTMP, RTP, HLS etc). For example:
-
-``` bash
-$ visionai scenarios test ppe-detection --camera rtsp://192.168.0.1:554/1
-```
-
-- You can also run this scenario on a video file. For example:
-
-``` bash
-$ visionai scenarios test ppe-detection --video /path/to/video.mp4
-```
-
-- You can also create a pipeline to run multiple scenarios on a single camera. For example:
+- Create and run a pipeline (Multiple VisionAI apps for a group of cameras)
 
 ``` bash
 $ visionai camera add --name OFFICE-01 --url rtsp://192.186.0.1:554/1
-$ visionai pipeline create --name test-pipeline --camera OFFICE-01
+$ visionai camera add --name OFFICE-02 --url rtsp://192.186.0.1:554/2
+$ visionai pipeline create --name test-pipeline
+$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-01
+$ visionai pipeline add-camera --name test-pipeline --camera OFFICE-02
 $ visionai pipeline add-scenario --name test-pipeline --scenario ppe-detection
 $ visionai pipeline add-scenario --name test-pipeline --scenario face-blur
 $ visionai pipeline add-scenario --name test-pipeline --scenario smoke-and-fire-detection
 $ visionai pipeline start --name test-pipeline
 ```
 
+</details>
+
+<details>
+<summary> VisionAI Web Application </summary>
+## VisionAI Web Application
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
 
 ``` bash
@@ -141,6 +150,12 @@ Web app available at: http://localhost:3001
 
 - You can manage cameras, scenarios, pipelines, see events etc., directly on the web-app. The web-app is running your own local compute instance. All the data is saved in your machine, and it is persistent as long as VisionAI application is not uninstalled.
 
+</details>
+
+<details>
+<summary> Redis/Grafana </summary>
+
+## Redis/Grafana
 - VisionAI supports out-of-box integration with Redis, Prometheus, Grafana and Azure Event Hub. Once the web-app is started, you can view the Grafana dashboard at: http://localhost:3003. The default username and password is `admin`/`admin`.
 
 ```
@@ -148,18 +163,26 @@ Grafana server is at: http://localhost:3003
 Redis server is at: redis://localhost:6379
 ```
 
+</details>
+
+<details>
+<summary> Azure Managed App </summary>
 
 ## Deploy to **Azure**
 
-Deploy a fully configured and tested solution directly from Azure Marketplace. **VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azure.microsoft.com) (TODO). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options.
+Deploy a fully configured and tested solution directly from Azure Marketplace.
 
-![Deploy to Azure](https://aka.ms/deploytoazurebutton)
+**VisionAI** runs computer vision models, most of which run orders of magnitude faster if executed on a GPU machine. Our Azure Marketplace offer **VisionAI Community Edition** is available through Azure Marketplace [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview). The community edition deploys a fully configured Virtual Machine with the recommended hardware and software options.
 
-- TODO: Point to ARM template that needs to be deployed (using these [instructions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-azure-button) and here is an example [JSON file](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/quickstarts/microsoft.storage/storage-account-create/azuredeploy.json)).
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/visionifyai1673030402210.visionifyai?tab=Overview)
 
-## **Scenarios**
+</details>
 
-**VisionAI** is organized in terms of scenarios. Consider each scenario as being a business use-case, that is solved by a combination of Machine Learning models and an inference algorithm. For example *Warn me when max occupancy of this area exceeds 80 people* is a business scenario, where as the *People detection* is an ML model.
+<details>
+<summary> VisionAI Apps </summary>
+## VisionAI Apps
+
+**VisionAI** is composed of multiple apps. Each app contains Machine Learning models, algorithms and integration code to implement a business use-case. For example *Warn me when max occupancy of this area exceeds 80 people* is a business scenario, where as the *People detection* is an ML model.
 
 **VisionAI** supports 60 scenarios currently and more are being added continuously. Our current focus is on Workplace Safety scenarios. Please [contact us](company/contact.md) if a scenario you need is not present in our repo and we will look into it.
 
@@ -168,6 +191,11 @@ $ visionai scenarios list
 ```
 
 ![VisionAI Scenarios CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios.png "VisionAI scenarios CLI output")
+
+</details>
+
+<details>
+<summary> VisionAI Models </summary>
 
 ## **Models**
 
@@ -189,6 +217,10 @@ Don't think you'll need to shut down the model server. However, if you do, you c
 ``` bash
 $ visionai models stop
 ```
+</details>
+
+<details>
+<summary> Managing Cameras </summary>
 
 ## **Cameras**
 You can add/remove cameras through the following commands.
@@ -203,6 +235,11 @@ You can find the named camera instances through the `cameras list` command.
 ``` bash
 $ visionai cameras list
 ```
+
+</details>
+
+<details>
+<summary> Pipelines </summary>
 
 ## **Pipelines**
 Pipelines allow running complex scenarios (one after another, or in parallel) on a single camera. You can create a pipeline through the following command.
@@ -228,6 +265,11 @@ You can stop a pipeline through the following command.
 ``` bash
 $ visionai pipeline stop --name test-pipeline
 ```
+
+</details>
+
+<details>
+<summary> Events </summary>
 
 ## **Events**
 
@@ -260,6 +302,10 @@ for message in p.listen():
     print(message)
 
 ```
+</details>
+
+<details>
+<summary> Web App </summary>
 
 ## **Web App**
 
@@ -268,6 +314,8 @@ VisionAI comes with a web app that can be used to view the events and the status
 ``` bash
 $ visionai web
 ```
+
+</details>
 
 ## Next **steps**
 
