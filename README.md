@@ -100,14 +100,14 @@ $ visionai init
 
 * List cameras
 ``` bash
-$ visionai cameras list
+$ visionai camera list
 ```
 
 * Add/remove cameras through the following commands.
 
 ``` bash
-$ visionai models add --name OFFICE-01 --url rtsp://192.168.0.1:554/1
-$ visionai models remove --name OFFICE-01
+$ visionai camera add --name OFFICE-01 --url rtsp://192.168.0.1:554/1
+$ visionai camera remove --name OFFICE-01
 ```
 
 
@@ -116,7 +116,7 @@ $ visionai models remove --name OFFICE-01
 * List available VisionAI Apps:
 
 ``` bash
-$ visionai scenarios list
+$ visionai scenario list
 ```
 
 ![VisionAI Scenarios CLI Output](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios-list.jpg "VisionAI scenarios CLI output")
@@ -125,7 +125,7 @@ $ visionai scenarios list
 * Run a VisionAI App:
 
 ``` bash
-$ visionai scenarios run ppe-detection                          # Web-cam
+$ visionai scenario run ppe-detection                          # Web-cam
 $                           --camera rtsp://192.168.0.1:554/1   # RTSP camera
 $                           --video /path/to/video.mp4          # Video file/youtube link
 ```
@@ -134,7 +134,7 @@ $                           --video /path/to/video.mp4          # Video file/you
 * Get details about an app:
 
 ``` bash
-$ visionai scenarios details ppe-detection
+$ visionai scenario details ppe-detection
 ```
 
 
@@ -165,7 +165,7 @@ Pipelines allow running multiple scenarios on a group of cameras. You can use th
 * List pipelines:
 
 ``` bash
-$ visionai pipelines list
+$ visionai pipeline list
 ```
 
 * Create a pipeline
