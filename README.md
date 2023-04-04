@@ -97,7 +97,7 @@ $ visionai init
 </details>
 
 <details>
-<summary> VisionAI CLI </summary>
+<summary> CLI </summary>
 
 ## VisionAI CLI
 
@@ -242,7 +242,7 @@ $ visionai pipeline --help
 </details>
 
 <details>
-<summary> VisionAI Web-App </summary>
+<summary> Web-App </summary>
 
 ## VisionAI Web-App
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
@@ -265,7 +265,7 @@ Web app available at: http://localhost:3001
 
 <details>
 
-<summary> VisionAI Azure Managed App </summary>
+<summary> Azure Managed App </summary>
 
 
 ## Azure Managed App
@@ -320,8 +320,14 @@ Redis server is at: redis://localhost:6379
 </details>
 
 
+<details>
+<summary> Next Steps </summary>
+
 ## Next steps
 
 Congratulations! You have successfully configured and used VisionAI toolkit. Now go through [Tutorials](tutorials/index.md) to learn about how to run multiple scnearios, how to configure each scenario for the events you need, how to set up pipelines with multiple cameras and scenarios.
 
 Or you can also browse through our [scenarios](scenarios/index.md) section to understand different use-cases that are supported currently. If you have a need for a scenario, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues) here.
+
+</details>
+
