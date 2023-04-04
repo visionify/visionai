@@ -53,9 +53,6 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 ![VisionAI Scenarios](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/VisionAI-Workplace-Safety-Scenarios.png "VisionAI Scenarios for Workplace Safety")
 
-<details>
-
-<summary> Quick Start </summary>
 
 ## Quick Start
 
@@ -94,10 +91,7 @@ $ visionai init
 
 ---
 
-</details>
 
-<details>
-<summary> CLI </summary>
 
 ## VisionAI CLI
 
@@ -239,10 +233,7 @@ $ visionai pipeline --help
 
 ```
 
-</details>
 
-<details>
-<summary> Web-App </summary>
 
 ## VisionAI Web-App
 - VisionAI also supports a web-based option for managing cameras, scenarios and pipeline. You can run the following command to start the web-based GUI. Once the web-based GUI is started, you can access it at http://localhost:3001.
@@ -260,12 +251,6 @@ Web app available at: http://localhost:3001
 ![VisionAI Web Application](https://raw.githubusercontent.com/visionify/visionai/main/docs/img/visionai-scenarios-web.jpg "VisionAI Web Application").
 
 - You can manage cameras, scenarios, pipelines, see events etc., directly on the web-app. The web-app is running your own local compute instance. All the data is saved in your machine, and it is persistent as long as VisionAI application is not uninstalled.
-
-</details>
-
-<details>
-
-<summary> Azure Managed App </summary>
 
 
 ## Azure Managed App
@@ -317,11 +302,6 @@ Grafana server is at: http://localhost:3003
 Redis server is at: redis://localhost:6379
 ```
 
-</details>
-
-
-<details>
-<summary> Next Steps </summary>
 
 ## Next steps
 
@@ -329,5 +309,4 @@ Congratulations! You have successfully configured and used VisionAI toolkit. Now
 
 Or you can also browse through our [scenarios](scenarios/index.md) section to understand different use-cases that are supported currently. If you have a need for a scenario, do not hesitate to submit a [request](https://github.com/visionify/visionai/issues) here.
 
-</details>
 
