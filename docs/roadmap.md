@@ -9,7 +9,7 @@
     1. [x] [Missing fire extinguisher](scenarios/missing-fire-extinguisher.md)
     1. [x] [Blocked exit monitoring](scenarios/blocked-exit.md)
     1. [ ] [Equipment temperature monitoring](scenarios/equipment-temperature.md)
-    1. [ ] [Equipment rust and corrosion](scenarios/rust-and-corrosion.md)
+    1. [ ] [Equipment rust and corrosion](scenarios/rust-and-corrosion-hazard.md)
 2. **Employee Health & Safety**
     1. [x] [PPE Detection](scenarios/ppe-detection.md)
     2. [x] [Working at heights](scenarios/working-at-heights.md)
