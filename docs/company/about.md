@@ -6,7 +6,7 @@ Documentation for VisionAI toolkit.
 
 **VisionAI** provides a set of command line utilities for you to manage different Vision AI scenarios that have been pre-developed and pre-tested. **VisionAI** focuses on workplace health and safety models - and majority of the models you see here have been developed with that in mind.
 
-These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of custom scenarios.
+These are *production-ready* model trained from open-source and academic datasets. We are continuously working on new scenarios - and our current scenario repo consists of over 60 scenarios that are listed [here](../scenarios/index.md). They are developed with the intent of being easy-to-use for business. The framework also supports a whole bunch of custom scenarios.
 
 ## Install **VisionAI**
 
