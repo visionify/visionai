@@ -58,13 +58,8 @@ visionai run smoke-and-fire-detection
 | 📅 | `gas-leak-detection`             | `Gas leak event detected` | IR Camera Required |
 | 📅 | `missing-fire-extinguisher`      | `Fire extinguisher missing` |
 | 📅 | `blocked-exit-monitoring`        | `Blocked exit detected` |
-| 📅 | `equipment-temperature-ir-camera`| `Temperature exceeds limit` <br> `Temperature subceeds limit` | IR Camera Required |
+| 📅 | `equipment-temperature-monitoring`| `Temperature exceeds limit` <br> `Temperature subceeds limit` | IR Camera Required |
 | ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](rust-and-corrosion-hazard.md){:target="_blank"} |
-
-
-
-
-
 
 
 ---
@@ -87,7 +82,6 @@ You can see real-time events generated as soon as person is detected without PPE
 | :----: | :------------ | :--------------- | :------------------------ |
 | ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](ppe-detection.md){:target="_blank"}
 | ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](working-at-heights.md){:target="_blank"}
-
 | 📅 | `environment-monitoring` | `CO out of range` <br> `CO2 out of range` <br> `CH4 out of range` <br> `VOCs out of range` <br> `Temperature out of range` <br> `Pressure out of range` <br> `Humidity out of range` |
 | ✅ | `fall-and-accident-detection` | `Person slip & fall detected` <br> `Potential collision/accident detected` <br> `Wet floor detected` <br> `Debris detected on floor` <br> `Wet/slippery sign detected` |
 | ✅ | `worker-fatigue-detection` | `Drowsy worker detected` | Straight camera angle |
@@ -95,7 +89,6 @@ You can see real-time events generated as soon as person is detected without PPE
 | 📅 | `empty-pallets-detection` | `Empty pallets detected` <br> `Partially empty pallets detected` |
 | 📅 | `spills-and-leaks-detection` | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Wet floor detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `hand-wash-compliance` | `Missed hand wash` |
-
 | 📅 | `person-temperature-monitoring` | `Person temperature exceeds threshold` | IR Camera required |
 | ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
 
@@ -145,7 +138,6 @@ Also need to specify that the camera needs to be configured to have a good view 
 | ✅ | `station-occupancy`          | `Daily summary event` | [More details](station-occupancy.md){:target="_blank"} |
 | 📅 | `occupancy-metrics`          | `Daily summary event` |
 | 📅 | `authorized-personnel-only`  | `Unauthorized person detected` |
-
 | ✅ | `badge-tailgating`         | `Multi-entry (tailgating) event detected` <br> `Unauthorized entry event detected` | [More details](unauthorized-entry.md){:target="_blank"} |
 | ✅ | `perimeter-control`          | `Person detected near fence/perimeter` <br> `Movement detected near fence/perimeter` | IR camera required<br>[More details](perimeter-control.md){:target="_blank"} |
 

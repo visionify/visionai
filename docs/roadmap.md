@@ -65,7 +65,7 @@
     1. [ ] [Radiation monitoring](scenarios/environment-radiation.md)
 6. **Suspicious Activity Detection**
     1. [ ] [Loitering](scenarios/loitering.md)
-    1. [ ] [Unattended packages](scenarios/unattended-package.md)
+    1. [ ] [Suspicious packages](scenarios/suspicious-package-detection.md)
     1. [ ] [Aggressive behavior](scenarios/aggressive-behavior.md)
     1. [ ] [Vandalism & property destruction](scenarios/vandalism.md)
     1. [x] [Firearms & knives](scenarios/firearms-and-knives.md)
