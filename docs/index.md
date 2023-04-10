@@ -58,6 +58,35 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 ## Quick Start
 
+### Prerequisites
+
+=== "Windows"
+    - Install **Visual Studio** Code (VSCode) for Windows<br>
+    Download the latest version of VSCode from the official website and install it on your Windows machine.
+    - Install **Windows Subsystem** for Linux (WSL)<br>
+    Follow the instructions on the official Microsoft documentation to install WSL on your Windows machine. You will need to enable the WSL feature and install a Linux distribution of your choice. We recommend using Ubuntu.
+    - Install **Docker Desktop** for Windows<br>
+    Download the latest version of Docker Desktop from the official website and install it on your Windows machine. This will automatically install Docker Engine and Docker Container for WSL Ubuntu.
+
+
+=== "Ubuntu"
+    - Install Docker Engine and Docker tools<br>
+            Open a terminal window and run the following commands to install Docker Engine, Docker CLI, Docker Compose, and Docker Buildx plugin:
+        ```console
+        sudo chmod a+r /etc/apt/keyrings/docker.gpg
+        sudo apt-get update
+        sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+        ```
+    - Grant permissions to Docker<br>
+        Run the following command to grant permissions to Docker:
+        ```console
+        sudo chmod 666 /var/run/docker.sock
+        ```
+        This will avoid the error that may occur during fetching the server API version.
+
+
+### Installtion
+
 * Install **VisionAI** through `PyPI`:
 
 <div class="termy">
