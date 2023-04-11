@@ -75,7 +75,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.8",
-                    "name": "yolov5-ppe-detection",
+                    "name": "ppe-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -149,7 +149,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-smoking-detection",
+                    "name": "smoking-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -201,7 +201,7 @@
         },
         {
             "id": "ee6fbc56-1fa0-4ae3-83fe-6b6851de7535",
-            "title": "Rust or corrosion detection",
+            "title": "Rust and corrosion detection",
             "name": "rust-and-corrosion-detection",
             "version": "0.0.2",
             "tagline": "Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion.",
@@ -267,7 +267,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.5",
-                    "name": "yolov5s-slip-and-fall-detection",
+                    "name": "slip-and-fall-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -329,12 +329,12 @@
             "models": {
                 "latest": {
                     "version": "0.0.4",
-                    "name": "yolov5s-face",
+                    "name": "face-blur",
                     "accuracy": 94.67,
                     "recall": 94.67,
                     "f1": 94.67,
                     "datasetSize": 393703,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-face/yolov5s-face-0.0.6.zip",
+                    "model_url": " https://workplaceos.blob.core.windows.net/models/face-blur/face-blur-0.0.6.zip",
                     "model_hash": "17150b2e8a6042613e6bf5ed61779578"
                 },
                 "other": [
@@ -392,7 +392,7 @@
         },
         {
             "id": "900e92f8-a724-4194-b92c-80be3c46c372",
-            "title": "People taking picture detection",
+            "title": "Mobile phone usage detection",
             "name": "people-taking-picture-detection",
             "version": "0.0.2",
             "tagline": "Get real-time alerts when workers are taking pictures at the workplace, a monitoring system that can detect camera usage on company-owned devices or company networks.",
@@ -403,7 +403,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.2",
-                    "name": "yolov5s-people-taking-picture-detection",
+                    "name": "people-taking-picture-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -461,7 +461,7 @@
             "models": {
                 "latest": {
                     "version": "0.0.1",
-                    "name": "yolov5s-ergonomics-detection",
+                    "name": "ergonomics-detection",
                     "accuracy": 98.2,
                     "recall": 95.2,
                     "f1": 95,
@@ -624,7 +624,7 @@
         },
         {
             "id": "50948434-913f-4a61-be18-be61d63a4193",
-            "title": "Spills and Leaks detection",
+            "title": "Spills and leaks detection",
             "name": "spills-and-leaks-detection",
             "version": "0.0.1",
             "tagline": "Spills and Leaks detection through Vision AI.",
@@ -1552,7 +1552,7 @@
         },
         {
             "id": "459dfsdfs20-69e3-455c-9594-e28a3s8522193f",
-            "title": "Social distancing monitoring",
+            "title": "Social distance monitoring",
             "name": "social-distance-detection",
             "version": "0.0.1",
             "tagline": "Ensure social distancing in your workplace with our AI-based social distancing monitoring solution.",
@@ -2139,6 +2139,7 @@
         },
         {
             "id": "f86a2f8s15s-1fa0-4ae3-83fe-6b6851de7535",
+            "title": "Tools check-out monitoring",
             "name": "tools-checkout-monitoring",
             "version": "0.0.1",
             "tagline": "Monitor tools check-in/out and generate periodic events.",
@@ -2189,6 +2190,7 @@
         },
         {
             "id": "84v82j9sd-56f5-4a61-fd89-dgf545ds5115",
+            "title": "Equipment temperature monitoring",
             "name": "equipment-temperature-monitoring",
             "version": "0.0.1",
             "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
@@ -2242,6 +2244,7 @@
         },
         {
             "id": "8nv832c80-56f5-4a61-fd89-nj5648541ch78",
+            "title": "Environment humidity monitoring",
             "name": "environment-humidity-monitoring",
             "version": "0.0.1",
             "tagline": "Ideal tool to monitor humidity in the surrounding environment.",
@@ -2295,6 +2298,7 @@
         },
         {
             "id": "9s5ds15nmj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Environment pressure monitoring",
             "name": "environment-pressure-monitoring",
             "version": "0.0.1",
             "tagline": "Measure pressure in real-time, ensuring safe equipment and work conditions.",
@@ -2348,6 +2352,7 @@
         },
         {
             "id": "84gb95d-56f5-4a61-fd89-dgf545ds5115",
+            "title": "Air quality monitoring",
             "name": "air-quality-monitoring",
             "version": "0.0.1",
             "tagline": "Monitor CO, CO2, VOCs, NOx, SOx, O2, and Particulate matters in real-time.", 
@@ -2417,6 +2422,7 @@
         },
         {
             "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Light sensor monitoring",
             "name": "light-sensor-monitoring",
             "version": "0.0.1",
             "tagline": "Monitor ambient light in real-time with our light-sensing solution.",
@@ -2465,6 +2471,7 @@
         },
         {
             "id": "4d5ds15nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Noise level monitoring",
             "name": "noise-level-monitoring",
             "version": "0.0.1",
             "tagline": "Measure the sound level in the environment and identify a noise source.",
@@ -2513,6 +2520,7 @@
         },
         {
             "id": "4d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Radiation monitoring",
             "name": "radiation-monitoring",
             "version": "0.0.1",
             "tagline": "Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.",
@@ -2561,6 +2569,7 @@
         },
         {
             "id": "6d5dsd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Loitering detection",
             "name": "loitering-detection",
             "version": "0.0.1",
             "tagline": "Keeping Public Spaces Safe: Innovations in Loitering Detection and Prevention with Vision AI.",
@@ -2616,6 +2625,7 @@
         },
         {
             "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Suspicious package detection",
             "name": "suspicious-package-detection",
             "version": "0.0.1",
             "tagline": "Reliable and accurate Suspicious package detection for a safe and secure workplace environment.",
@@ -2662,6 +2672,7 @@
         },
         {
             "id": "6d5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Aggressive behaviour detection",
             "name": "fighting-detection",
             "version": "0.0.1",
             "tagline": "Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.",
@@ -2710,6 +2721,7 @@
         },
         {
             "id": "6s5dxd3nxj5-56f5-4a61-fd89-sr982s65g1njd91",
+            "title": "Energy usage monitoring",
             "name": "energy-usage-monitoring",
             "version": "0.0.1",
             "tagline": "Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.",
@@ -2757,6 +2769,7 @@
         },
         {
             "id": "4fgsq56kd3nxj5-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vandalism detection",
             "name": "vandalism-detection",
             "version": "0.0.1",
             "tagline": "Safeguard your assets with our advanced vandalism detection model.",
@@ -2826,6 +2839,7 @@
         },
         {
             "id": "pn946a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Sexual harrassment",
             "name": "sexual-harrassment",
             "version": "0.0.1",
             "tagline": "Create a safer and more respectful workplace for all employees.",
@@ -2872,6 +2886,7 @@
         },
         {
             "id": "ln9d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Soliciation detection",
             "name": "solicitation-detection",
             "version": "0.0.1",
             "tagline": "A smarter way to unveil solicitation.",
@@ -2918,6 +2933,7 @@
         },
         {
             "id": "pc8d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Theft/Shoplifting detection",
             "name": "shoplifting-detection",
             "version": "0.0.1",
             "tagline": "Ensure prevention of Shoplifting, employee theft, minimize insurance loss and other related damages across the retail sector.",
@@ -2969,6 +2985,7 @@
         },
         {
             "id": "ub98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Shipping activity detection",
             "name": "shipping-activity-detection",
             "version": "0.0.1",
             "tagline": "Stay vigilant even after hours with our advanced suspicious shipping activity solution.",
@@ -3019,6 +3036,7 @@
         },
         {
             "id": "bc998d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Intrusion detection",
             "name": "intrusion-detection",
             "version": "0.0.1",
             "tagline": "An advanced physical intrusion detection system powered with Computer Vision and AI.",
@@ -3065,6 +3083,7 @@
         },
         {
             "id": "gc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vehicle policies",
             "name": "vehicle-policies",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to detect fraudulent vehicle activity.",
@@ -3125,6 +3144,7 @@
         },
         {
             "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vehicle usage",
             "name": "vehicle-usage",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to detect vehicle usage.",
@@ -3177,6 +3197,7 @@
         },
         {
             "id": "pc98d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Forklift zone breach",
             "name": "forklift-zone-breach",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to detect forklifts entering restricted zones.",
@@ -3229,6 +3250,7 @@
         },
         {
             "id": "ov48d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vehicle license plate detection",
             "name": "vehicle-license-plate-detection",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to detect vehicle license plate numbers.",
@@ -3276,6 +3298,7 @@
         },
         {
             "id": "ib58d6a2g5151-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vehicle speed monitoring",
             "name": "vehicle-speed-monitoring",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to monitor vehicle speed.",
@@ -3323,6 +3346,7 @@
         },
         {
             "id": "us5464s3f5951f-56f5-4a61-fd89-sr982s65g1njd21",
+            "title": "Vehicle cargo volume limit",
             "name": "vehicle-cargo-volume-limit",
             "version": "0.0.1",
             "tagline": "An intelligent alarm system that could be used to detect cargo in vehicles.",
