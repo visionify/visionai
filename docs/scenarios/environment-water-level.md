@@ -1,10 +1,7 @@
 # Water Level Monitoring
 
 >Advanced Technologies for Effective Water Management and Conservation with Vision AI.
-<figure markdown>
-  ![](../img/Water-Management-Detection.png "Water Management Detection at work-place!"){ width="350" }
-  <figcaption>Water Level Detection event</figcaption>
-</figure>
+
 
 ## Overview
 

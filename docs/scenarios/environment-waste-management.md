@@ -1,10 +1,7 @@
 # Waste Management Detection
 
 >Innovative Technologies for Efficient Waste Management Detection with Vision AI.
-<figure markdown>
-  ![](../img/Waste-Management-Detection.png "Waste Management Detection at work-place!"){ width="350" }
-  <figcaption>Waste Management Detection event</figcaption>
-</figure>
+
 
 ## Overview
 
