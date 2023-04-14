@@ -26,9 +26,26 @@ VisionAI model's generated events would be:
 
 - Occupancy pattern summary & lighting pattern recommendations
 
-## Configuration
+## Camera Configuration
 
-It is recommended to set up camera to monitor energy conservation events.
+Recommended to set up ceiling-mounted cameras to monitor energy conservation events.
+
+### Camera Placement
+
+- Install cameras near areas where energy conservation measures are implemented, such as motion-sensor lighting and smart thermostats.
+- Place cameras in areas where people tend to interact with the energy conservation systems, such as control rooms, equipment rooms, and switch rooms.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 5-10 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the energy conservation systems and controls.
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
 

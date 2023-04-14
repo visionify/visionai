@@ -15,6 +15,28 @@ Vision AI based monitors can be used to monitor confined spaces by providing rea
 
 It is important to note that these camera based monitoring provides should be supplanted by strong compliance processes to ensure their accuracy and reliability. In addition, workers entering confined spaces should always be trained on proper use of the monitoring equipment and be familiar with the hazards associated with confined spaces.
 
+## Camera Configuration
+
+
+### Camera Placement
+
+- Install cameras at the entry and exit points of confined spaces, such as tanks, silos, and vaults.
+- Place cameras in areas where employees can easily see and respond to emergencies.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the confined space and surrounding area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Model Details
 

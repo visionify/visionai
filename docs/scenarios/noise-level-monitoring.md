@@ -14,10 +14,25 @@ VisionAI's noise monitoring solution is integrated with sensors that can automat
 
 All the extracted sound measurements are transmitted from the smart sensor to the cloud service for detailed analysis. The cloud service stores the data in the measurement database, and audio segments marked for later inspection are stored in your disk server. End-users can access the measurement data and analysis of the measurements through a web-based portal. Implement this solution to identify noise sources and prevent noise levels from exceeding a threshold value.
 
+## Camera Configuration
 
-## Training with custom data
+### Camera Placement
 
-The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
+- Install cameras in areas where noise levels need to be monitored, such as production areas, machinery rooms, and loading docks.
+- Place cameras in areas where employees can easily see and respond to noise levels.
+
+### Camera Height
+
+- Cameras should be installed at a height of 10-12 feet above the floor level.
+
+- Place the camera 12-15 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the machinery and surrounding areas.
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Model Details
 
@@ -36,6 +51,11 @@ The dataset contains crucial data collected from various sources over a consider
 ### Model
 
 We would be releasing the model to monitor noise level events in *Q2-2023*.
+
+
+## Training with custom data
+
+The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish to train this with custom datasets, please contact us and we can provide you with the training code. You can do custom training with your own datasets for free, as long as it complies with GPLv3 license (you give back the code to the community). If you are interested in a custom license, please [contact us](../company/contact.md).
 
 ## Contact Us
 

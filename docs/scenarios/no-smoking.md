@@ -17,6 +17,26 @@ VisionAI makes it possible to avert workplace hazards and help employers maintai
 Vision AI based monitors can be used to detect smoking/vaping events by providing real-time video feeds of the factory area. The cameras scan every frame to ensure there is no sign of smoking/vaping.
 
 
+## Camera Configuration
+
+### Camera Placement
+
+- Install cameras in areas where smoking or vaping is prohibited, such as designated smoking areas, entry points, and common areas.
+- Place cameras in areas where employees can easily see and respond to smoking or vaping.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 8-10 feet from the focal point.
+
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the smoking or vaping individuals and surrounding areas.
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 ## Model Details
 
 ### Dataset

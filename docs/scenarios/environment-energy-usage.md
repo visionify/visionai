@@ -3,13 +3,8 @@
 > Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
 
 <figure markdown>
-<<<<<<< HEAD
   ![Energy Usage Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/Energy%20usage%20monitoring.jpg"Energy Usage!"){ width="350" }
   <figcaption>Detection of Energy Usage event</figcaption>
-=======
-  ![]("Energy Usage Monitoring at work-place!"){ width="350" }
-  <figcaption>Energy Usage Monitoring events</figcaption>
->>>>>>> 699b65462a3a4588644f298a36b080823a5e7d1c
 </figure>
 
 
@@ -40,8 +35,26 @@ An event data for this may include the following information:
 
 - Device: The device where the event was detected.   
 
-## Configuration
+## Camera Configuration
+
 To set up a camera system for energy usage monitoring,You will need a camera capable of capturing footage of your energy meter or other relevant devices that you want to monitor. 
+
+### Camera Placement
+
+- Install cameras near energy usage systems, such as HVAC, lighting, and electrical panels.
+- Place cameras in areas where people tend to interact with the energy systems, such as control rooms, equipment rooms, and switch rooms.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 5-10 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the energy systems and controls.
+
+Find more details about camera placement [here](../overview/cameras.md).
 
   
 

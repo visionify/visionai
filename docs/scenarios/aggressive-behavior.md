@@ -18,6 +18,28 @@ These models are an important tool for promoting a safe and respectful environme
 
 VisionAI's agressive behaviour detection model is designed to promote a safe, healthy, and productive workplace environment for all employees. The model is able to provide real-time alerts when it detects aggressive behavior. This will enable management to intervene and prevent escalation of the situation.
 
+## Camera Configuration
+
+
+### Camera Placement
+
+- Install cameras in areas where aggressive behavior is most likely to occur, such as entrances, exits, lobbies, waiting areas, and areas with a high volume of foot traffic.
+- Place cameras in areas where staff and customers can easily see them.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 8-10 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the aggressor's face and upper body.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Model Details
 

@@ -38,9 +38,25 @@ An event data for this scenario has information such as:
 - Type of personnel identified
 
 
-## Configuration
+## Camera Configuration
 
-It is recommended to set up camera in ceiling view to detect and identify children, visitors, person without uniform and badges.
+Recommended to set up ceiling-mounted cameras to detect and identify children, visitors, person without uniform and badges.
+
+### Camera Placement
+
+- Install cameras near entry and exit points, such as doors, gates, and windows.
+- Place cameras in areas where unauthorized personnel might try to gain access, such as storage rooms, server rooms, and restricted areas.
+
+### Camera Height
+- Cameras should be installed at a height of 6-7 feet above the floor level.
+
+- Place the camera 5-8 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the employee's face and upper body.
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
 

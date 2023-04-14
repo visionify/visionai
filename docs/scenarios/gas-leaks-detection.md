@@ -29,6 +29,26 @@ Gas leak Example            |  Gas leak Example
 VisionAI model's generated events would be:
 - gas leak event detected
 
+## Camera Configuration
+
+### Camera Placement
+
+- Install cameras in areas where gas is stored and transported, such as gas pipes and tanks.
+- Place cameras in areas where employees can easily see and respond to gas leaks.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the gas leak and surrounding area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Configuration
 It is recommended to set up Infrared cameras for gas leak detection. 

@@ -26,10 +26,26 @@ Our smart solution seamlessly integrates with the existing camera infrastructure
 - The algorithm also detects objects generally related to solicitation, like signs, posters, and flyers
 - The algorithm can identify any unusual or suspicious behaviors in public spaces that indicate solicitation and help security and law enforcement personnel to respond more quickly to potential issues 
 
+## Camera Configuration
+
+### Camera Placement
+
+- Install cameras in areas where solicitation is most likely to occur, such as entrances, exits, and parking lots.
+- Place cameras in areas where employees can easily see and respond to solicitation attempts.
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-9 feet above the floor level.
+
+- Place the camera 12-14 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle that captures a wide area and any solicitation attempts.
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
-
-The model to detect solicitation events is in progress and it will be released soon.
 
 ### Dataset
 

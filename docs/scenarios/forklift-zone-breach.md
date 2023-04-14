@@ -31,15 +31,27 @@ An event data may include information such as:
 - Image of the event
 - Video of the event
 
-## Configuration
+## Camera Configuration
 
-To set up a camera system to detect forklifting of vehicles, you will need to consider the following:
 
-- Camera Placement: Cameras should be placed in locations where they can capture clear images of license plates, such as at entrances and exits to parking lots, toll booths, or intersections. Cameras should be mounted at an appropriate height and angle to capture the entire license plate.
+### Camera Placement
 
-- Camera Type: High-resolution cameras with a minimum resolution of 1080p are recommended for license plate detection. Cameras with a wide field of view (FOV) are also recommended to capture license plates from a distance.
+- Install cameras in areas where forklifts are operated, such as loading docks and production areas.
+- Place cameras in areas where employees can easily see and respond to forklift accidents.
 
-- Lighting: Adequate lighting is essential for license plate detection. The lighting should be bright and evenly distributed to minimize shadows and glare.
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-9 feet above the floor level.
+
+- Place the camera 12-14 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the forklift and surrounding area.
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Model Details
 
