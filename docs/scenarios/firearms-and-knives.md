@@ -27,8 +27,29 @@ VisionAI model's generated events would be:
 - Person brandishing firearm
 - Person brandishing knives
 
-## Configuration
-It is recommended to set up camera in ceiling view to detect weapons including guns and knives.
+
+## Camera Configuration
+
+Recommended to set up camera in ceiling view to detect weapons including guns and knives.
+
+
+### Camera Placement
+
+- Install cameras at the entry and exit points of the building, as well as in areas where firearms and knives may be stored, such as security checkpoints, storage areas, and break rooms.
+- Place cameras in areas where employees can easily see and respond to suspicious behavior.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the firearms and knives and surrounding area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
 

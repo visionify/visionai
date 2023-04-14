@@ -19,6 +19,29 @@ Existing solutions:
 Expand your security capabilities with VisionAI, a modern AI and ML solution to detect intrusions and protect your premises against all potential physical intrusion threats. Our model can accurately identify suspicious behaviors that may indicate a physical intrusion and instantly alerts the security personnel, allowing them to take appropriate and timely action against it to avoid associated dangers.
  
 Our smart solution seamlessly integrates with the existing camera infrastructure and analyzes the real-time video feed. It can help in different ways, offers a comprehensive solution to detect all forms of physical intrusion, and ensures compliance with all security and safety regulations.
+
+## Camera Configuration
+
+
+### Camera Placement
+
+- Install cameras at all entry points, including doors, windows, and loading docks.
+- Place cameras in areas where intruders are most likely to enter the building.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-10 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the entry points and surrounding areas.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
  
 
 ## Model Details

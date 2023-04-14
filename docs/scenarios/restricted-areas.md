@@ -1,4 +1,4 @@
-# Restricted areas/times
+# **Restricted areas/times**
 
 > Secure restricted areas with our powerful AI-based monitoring system that detects and prevents unauthorized access in real-time
 
@@ -34,10 +34,29 @@ An event data for a unauthozrized entry in exclusion zones may include informati
 - Location of the event
 - Image of the event
 
+## Camera Configuration
 
-## Configuration
+Recommended to set up camera in ceiling view to detect unauthorized entry events. 
 
-It is recommended to set up camera in ceiling view to detect unauthorized entry events. 
+### Camera Placement
+
+- Install cameras at all entry points to the restricted area.
+- Place cameras at regular intervals within the restricted area to ensure complete coverage.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-10 feet above the ground.
+
+- Place the camera 10-12 feet from the focal point.
+
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of people entering the restricted area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 
 ## Model Details

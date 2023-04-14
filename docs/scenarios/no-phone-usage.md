@@ -17,6 +17,27 @@ Vision AI-based system can be used to detect mobile phone usage by providing rea
 Enforce any company policies on mobile-usage in the workplace.
 These camera based detection processes should be supplimented by strong compliance practices. If workers are prohibited from mobile usage, ensure that they are aware of the policy and the consequences of violating it. So, if an employee is found to be using mobile phone, an appropriate action needs to be taken.
 
+## Camera Configuration
+
+
+### Camera Placement
+
+- Install cameras in areas where phone usage is prohibited, such as classrooms, meeting rooms, and work areas.
+- Place cameras near areas where phones tend to be used, such as desks, tables, and conference rooms.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 6-7 feet above the floor level.
+
+- Place the camera 5-8 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the employee's face and upper body.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
 

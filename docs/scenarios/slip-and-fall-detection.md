@@ -51,6 +51,27 @@ The cameras scan every frame to ensure there are no accidents related to slip an
 
 To ensure accuracy and reliability for the model, these camera-based monitoring services should be supplemented by strong compliance processes. Furthermore, workers working in different factory units should always be made aware of these accidents and how to safeguard them. 
 
+## Camera Configuration
+
+Recommended to set up ceiling-mounted cameras to detect and identify children, visitors, person without uniform and badges.
+
+### Camera Placement
+
+- Install cameras at entry and exit points, especially where people walk in wet conditions, such as near entrances, ramps, and stairways.
+- Place cameras in high-traffic areas, especially those prone to slips, such as aisles, hallways, and corridors.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a downward angle of 45-60 degrees to capture footage of the floor surface.
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 ## Model Details 
 
 ### Dataset 

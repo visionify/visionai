@@ -20,6 +20,27 @@ VisionAI's shipping activity detection solutions can be used to for the detectio
 
 Suspicious Shipping Activity Detection model is an important tool for helping to prevent fraudulent or criminal activity in the shipping industry, and it works in real time to help ensure that potentially suspicious activity is identified and addressed as quickly as possible.
 
+
+## Camera Configuration
+
+### Camera Placement
+
+- Install cameras at all loading docks, entry and exit points of the shipping area.
+- Place cameras at regular intervals within the shipping area to ensure complete coverage.
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-10 feet above the ground.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of people and vehicles in the shipping area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 ## Model Details
 
 ### Dataset

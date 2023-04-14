@@ -24,9 +24,25 @@ VisionAI model's generated events would be:
 
 - Blocked exit detected
 
-## Configuration
+## Camera Configuration
 
-It is recommended to set up camera to monitor blocked exits in the workplace. The location of cameras to monitor blocked exits will depend on the specific policies being enforced and the nature of the work environment.
+Recommended to set up ceiling-mounted cameras to monitor blocked exits in the workplace. The location of cameras to monitor blocked exits will depend on the specific policies being enforced and the nature of the work environment.
+
+### Camera Placement
+- Install cameras near exit doors, hallways, and stairwells to monitor any potential blockages.
+- Place cameras in areas where people tend to congregate, such as lobbies, cafeterias, and waiting areas.
+
+### Camera Height
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+- Place the camera at a level angle to capture footage of the exit doors and hallway.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 
 ## Model Details
 

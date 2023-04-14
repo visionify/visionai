@@ -32,9 +32,28 @@ An event data for a missing fire extinguisher may include information such as:
 - Type of fire extinguisher that is missing
 
 
-## Configuration
+## Camera Configuration
 
-It is recommended to set up camera in ceiling view to detect missing fire extinguisher event. Cameras can see an area, mark areas where a fire extinguisher should be present. Any time it is removed or used or not seen, we will generate this event.
+Recommended to set up camera in ceiling view to detect missing fire extinguisher event. Cameras can see an area, mark areas where a fire extinguisher should be present. Any time it is removed or used or not seen, we will generate this event.
+
+### Camera Placement
+
+- Install cameras near areas where fire extinguishers are supposed to be located, such as hallways, stairwells, and mechanical rooms.
+- Place cameras in areas with good lighting to capture surface details.
+
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at a level angle to capture footage of the fire extinguisher and surrounding area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 
 ## Model Details

@@ -24,9 +24,26 @@ Vision AI based monitors can be used to push out events for different people obs
 VisionAI model's generated events would be:
 - Person distance events detected
 
+## Camera Configuration
 
-## Configuration
-It is recommended to set up cameras in ceiling view for monitoring social distancing guidelines.           
+Recommended to set up cameras in ceiling view for monitoring social distancing guidelines.
+
+### Camera Placement
+
+- Install cameras in high traffic areas, such as entrances, exits, and common areas.
+- Place cameras in areas where social distancing violations are most likely to occur, such as checkout lines or waiting areas.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level.
+
+- Place the camera 10-12 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle that captures a wide area and any social distancing violations.
+
+Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details
 

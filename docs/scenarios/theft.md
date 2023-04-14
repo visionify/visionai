@@ -32,6 +32,27 @@ To detect theft or shoplifting our model is trained on a dataset of video footag
 
 Our trained model can be used to analyze live video footage from surveillance cameras in real-time. The system can alert security personnel or trigger an alarm when it detects suspicious behavior, allowing them to intervene and prevent the theft or shoplifting from occurring. Our systems for theft or shoplifting detection uses various techniques, such as object detection, tracking, and activity recognition. These techniques can be combined to create a more robust and accurate system.
 
+
+
+## Camera Configuration
+
+### Camera Placement
+
+- Install cameras in areas where high-value items are stored or displayed, such as jewelry or electronics.
+- Place cameras in areas where employees can easily see and respond to theft attempts.
+
+### Camera Height
+
+- Cameras should be installed at a height of 8-9 feet above the floor level.
+
+- Place the camera 12-14 feet from the focal point.
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle that captures a wide area and any theft attempts.
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 ## Model
 
 We would be releasing the model for Shoplifting or Theft Detection in *Q2-2023*.

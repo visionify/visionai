@@ -13,6 +13,27 @@ Go easy knowing that you can track and monitor the air quality in your surroundi
 
 VisionAI's sensor-powered gas detection solutions can identify CO, CO2, VOCs, NOx, SOx, O2, and particulate matter in real time. In addition, our models integrated with advanced sensors can sense gas and dust particles in the air as soon as their percentage level increases or falls below a threshold value. With a high response rate and accuracy, these solutions are your best companion for dealing with leakage and poor air quality. 
 
+## Camera Configuration
+
+
+### Camera Placement
+- Install cameras in areas where air quality is a concern, such as manufacturing plants, warehouses, and laboratories.
+- Place cameras in areas where air quality monitoring equipment is located.
+
+### Camera Height
+
+- Cameras should be installed at a height of 7-8 feet above the floor level. 
+ 
+- Place the camera 8-10 feet from the focal point.
+
+
+### Camera Angle Mounting Ranges
+
+- Place the camera at an angle to capture footage of the air quality monitoring equipment and surrounding area.
+
+
+Find more details about camera placement [here](../overview/cameras.md).
+
 ## Model Details
 
 ### Dataset
