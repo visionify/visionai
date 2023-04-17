@@ -58,13 +58,11 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 ## Quick Start
 
-### Prerequisites
+### Prerequisite
+
+#### Docker
 
 === "Windows"
-    - Install **Visual Studio** Code (VSCode) for Windows<br>
-    Download the latest version of VSCode from the official website and install it on your Windows machine.
-    - Install **Windows Subsystem** for Linux (WSL)<br>
-    Follow the instructions on the official Microsoft documentation to install WSL on your Windows machine. You will need to enable the WSL feature and install a Linux distribution of your choice. We recommend using Ubuntu.
     - Install **Docker Desktop** for Windows<br>
     Download the latest version of Docker Desktop from the official website and install it on your Windows machine. This will automatically install Docker Engine and Docker Container for WSL Ubuntu.
 
@@ -83,7 +81,30 @@ Our primary focus is on workplace health and safety models, but we are expanding
         sudo chmod 666 /var/run/docker.sock
         ```
         This will avoid the error that may occur during fetching the server API version.
+        
+=== "MacOS"
+    - Get Docker installer for Mac Desktop from [here](https://docs.docker.com/desktop/install/mac-install/)
+    - Follow the on-screen instructions to install Docker Desktop for Mac.
 
+#### Disc Space
+
+VisionAI application uses Docker containers to run the apps. The Docker images are large in size and require a minimum of 50GB of free space on the host machine.
+
+#### GPU
+
+VisionAI is a Video-based AI platform that uses GPU for inference. It is recommended to use a GPU with at least 8GB of memory for optimal performance. VisionAI supports NVIDIA GPUs only - Following are a few recommended options:
+
+- NVIDIA GeForce RTX 2060/RTX 2060 Ti
+- NVIDIA GeForce RTX 3050/RTX 3050 Ti
+- NVIDIA P40
+- NVIDIA A100
+
+#### Internet Connectivity
+
+During initial download and setup portion of VisionAI application, we would need good internet connectivity in order to download the required dependencies and Docker containers. Once the setup is complete, VisionAI can be used offline.
+
+
+---
 
 ### Installtion
 
