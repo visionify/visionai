@@ -69,6 +69,7 @@ nav:
     - How it works: overview/how-it-works.md
     - Scenarios: overview/scenarios.md
     - Cameras: overview/cameras.md
+    - Camera Placement Guide: overview/camera-placement-guide.md
     - Web-app: overview/web-app.md
     - Azure Managed App: overview/azure-managed-app.md
     - Next steps: overview/next-steps.md
