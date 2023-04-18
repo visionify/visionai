@@ -14,9 +14,10 @@ steps:
     scriptType: 'bash'
     azureSubscription: 'AzureRM authentication'
 
-- task: Bash@3
+- task: AzureCLI@2
   displayName: 'Upload files to Azure Blob Container'
   inputs:
-    targetType: 'inline'
+    scriptLocation: 'inline'
+    scriptType: 'bash'
     script: |
       az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $(DownloadStorageAccountKey.secureFilePath) --pattern *.json
