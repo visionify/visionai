@@ -13,7 +13,7 @@ steps:
     targetType: 'inline'
     script: |
       # Clone the repository
-      git clone https://github.com/visionify/visionai/blob/main/scenarios.json "$(System.DefaultWorkingDirectory)/scenarios"
+      git clone https://github.com/kar122/jsontoblob.git "$(System.DefaultWorkingDirectory)/scenarios"
 
 
 - checkout: self
