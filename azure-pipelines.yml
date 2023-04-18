@@ -7,11 +7,8 @@ pool:
 
 steps:
 - task: DownloadSecureFile@1
-  name: 'DownloadStorageAccountKey'
-  displayName: 'Download storage account key'
   inputs:
-    secureFile: 'storage-account-key'
-
+    secureFile: 'mySecureFile.myFile.txt'
 - task: AzureCLI@2
   displayName: 'Azure Login'
   inputs:
