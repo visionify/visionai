@@ -1,6 +1,6 @@
 # YAML pipeline for pulling data from Git repo and pushing to Azure Blob Container
 trigger:
-- main
+- json-to-blob
 
 pool:
   vmImage: 'ubuntu-latest'
