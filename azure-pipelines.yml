@@ -30,3 +30,4 @@ steps:
 
       # Push changes to Azure Blob Container
       az storage blob upload-batch --destination container --source . --pattern "repo.json"
+    scriptType: 'ps1'
