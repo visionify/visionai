@@ -2,7 +2,7 @@
 trigger:
   branches:
     include:
-    - json-to-bloba
+    - json-to-blob
 
 pool:
   vmImage: 'windows-latest'
