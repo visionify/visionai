@@ -15,7 +15,8 @@ steps:
     azureSubscription: 'AzureRM authentication'
     scriptType: 'batch'
     scriptLocation: 'inlineScript'
-    scriptPath: '/home/vsts/work/1/s' 
+    scriptPath: '/home/vsts/work/1/s'
+    inlineScript: '' 
 
 - task: AzureCLI@2
   displayName: 'Upload files to Azure Blob Container'
