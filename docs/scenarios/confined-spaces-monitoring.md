@@ -57,23 +57,28 @@ Total number of images used was 387,644
 ### Model
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset curated by our team.
 
-The model provides the following metrics:
+### Model card
 
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:94"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:96"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:94"></div>
-    </div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>10k</td>
+            <td>v2</td>
+            <td>94%</td>
+            <td>96%</td>
+            <td>94%</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
 
 The model is light-weight enough to be run on any edge devices.
 

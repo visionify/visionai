@@ -57,7 +57,31 @@ The dataset consists of images and videos collected from diverse sources and is 
 
 ### Model
 
-The model to detect unauthorized entry event is in progress and it will be released soon.
+The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.
+
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>10k</td>
+            <td>v2</td>
+            <td>98%</td>
+            <td>95%</td>
+            <td>95%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
 
 ### Scenario details
 

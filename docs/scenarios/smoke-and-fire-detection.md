@@ -65,17 +65,34 @@ The dataset is made up of images and videos gathered from varied sources. The da
 - Variations in camera orientations 
 - Classes considered for model building are smoke and fire
 
-Total number of images used was 63,055
-
 
 ### Model 
 
-The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team. We intend to develop a model that generalizes well in real world situations. 
+The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team. We intend to develop a model that generalizes well in real world situations.
 
-The model recorded the following performance metrics:
 
-<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:58"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:83"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:78"></div></div></div>
+### Model card
 
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>63,055</td>
+            <td>v7</td>
+            <td>98</td>
+            <td>95</td>
+            <td>95</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
 

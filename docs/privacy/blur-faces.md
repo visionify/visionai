@@ -34,29 +34,35 @@ The dataset contains faces with:
 - Different lighting conditions
 - Variations in scale, pose and occlusion
 
-Total number of mages used was 32,203
 
 
 ### Model 
 
 The model is based off of the YOLOv5-face algorithm. The model is trained on WIDER FACE dataset. We intend to develop a model that generalizes well in real world situations. Implemented a custom logic for face blurring with the help of face detections from yolo face.
 
-The model recorded the following performance metrics:
+### Model card
 
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:95"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:93"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:85"></div>
-    </div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>32,203</td>
+            <td>v1</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
+
 
 
 The model is adaptable enough to run on any edge computing device.

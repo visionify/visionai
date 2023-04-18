@@ -63,9 +63,30 @@ The Yolov5 pre-trained model for detecting person and book (an example of an ite
 
 This provides ergonomics data that may be utilised for a variety of tasks, such as alarm generation when the number of bends exceeds predetermined levels and productivity counting to determine how many objects were transported from one location to another. 
 
-The DenseNet Model for Landmark detection provides the following metrics: 
+### Model card
 
-<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:84"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:72"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:84"></div></div></div>
+The DenseNet Model for Landmark detection
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>10894</td>
+            <td>v2</td>
+            <td>84%</td>
+            <td>72%</td>
+            <td>84%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is lightweight enough to be run on any edge device. 
 

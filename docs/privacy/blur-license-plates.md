@@ -39,28 +39,35 @@ The dataset has licence plates with:
 - Various camera angles and resolutions
 - Using security camera feeds
 
-Total number of images used was 23,219.
 
 ### Model 
 
 The model is based on the YOLOv5 algorithm to detect licence plates. It is trained on the curated dataset. Licence plate blurring is performed using computer vision-based blurring operations. The model is developed in a way that it generalizes well for different environments and situations.
 
-The licence plate detection model based on Yolov5 recorded the following performance metrics:
+### Model card
 
-<div class="table">
-    <div class="f1-table">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:97"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:96"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:98"></div>
-    </div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>23,219</td>
+            <td>v1</td>
+            <td>97% </td>
+            <td>96% </td>
+            <td>98% </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
+
+
 
 The model is adaptable enough to run on any edge computing device.
 

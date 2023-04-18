@@ -60,28 +60,32 @@ The dataset is made up of images and videos gathered from various sources. The d
 - Variations in camera orientations
 - Using security camera feeds
 
-Total number of images used was 207,300
 
 ### Model
 
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.
 
-The model provides the following metrics:
+### Model card
 
-
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:88"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:86"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:91"></div>
-    </div>
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>1836</td>
+            <td>v8</td>
+            <td>88% </td>
+            <td>86% </td>
+            <td>91% </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 The model is adaptable enough to run on any edge computing device.
