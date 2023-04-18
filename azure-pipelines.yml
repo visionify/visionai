@@ -1,24 +1,5 @@
-trigger:
-- json-to-blob
-
-pool:
-  vmImage: 'ubuntu-latest'
-
 steps:
-- task: DownloadSecureFile@1
+- task: CmdLine@2
+  displayName: 'Print working directory'
   inputs:
-    secureFile: 'mySecureFile.myFile.txt'
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'AzureRM authentication'
-    scriptType: 'batch'
-    scriptLocation: 'scriptPath'
-    scriptPath: '/home/vsts/work/1/s'
- 
-- task: AzureCLI@2
-  displayName: 'Upload files to Azure Blob Container'
-  inputs:
-    scriptLocation: 'inlineScript'
-    scriptType: 'bash'
-    script: |
-      az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $(DownloadStorageAccountKey.secureFilePath) --pattern *.json
+    script: 'echo $(System.DefaultWorkingDirectory)'
