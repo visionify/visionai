@@ -1,8 +1,8 @@
-# json to blob
+# Define the pipeline
 trigger:
   branches:
     include:
-    - main
+    - json-to-blob
 
 pool:
   vmImage: 'windows-latest'
@@ -13,8 +13,7 @@ steps:
     targetType: 'inline'
     script: |
       # Clone the repository
-      git clone https://github.com/visionify/visionai/blob/main/scenarios.json "$(System.DefaultWorkingDirectory)/scenarios"
-
+      git clone https://github.com/kar122/jsontoblob.git "$(System.DefaultWorkingDirectory)/repo"
 
 - checkout: self
   persistCredentials: true
@@ -28,7 +27,8 @@ steps:
     scriptType: 'ps1'
     inlineScript: |
       # Navigate to the cloned repository
-      cd "$(System.DefaultWorkingDirectory)/scenarios"
+      cd "$(System.DefaultWorkingDirectory)/repo"
 
       # Push changes to Azure Blob Container
-      az storage blob upload-batch --destination container --source . --pattern "scenarios.json" --account-name aksummasa
+      az storage blob upload-batch --destination container --source . --pattern "repo.json" --account-name aksummasa
+    
