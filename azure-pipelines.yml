@@ -24,10 +24,11 @@ steps:
   inputs:
     azureSubscription: 'AzureRM authentication'
     scriptLocation: 'inlineScript'
+    scriptType: 'ps1'
     inlineScript: |
       # Navigate to the cloned repository
       cd "$(System.DefaultWorkingDirectory)/repo"
 
       # Push changes to Azure Blob Container
-      az storage blob upload-batch --destination container --source . --pattern "repo.json"
-    scriptType: 'ps1'
+      az storage blob upload-batch --destination container --source . --pattern "repo.json" --account-name aksummasa
+    
