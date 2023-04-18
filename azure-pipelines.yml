@@ -12,6 +12,7 @@ steps:
 - task: AzureCLI@2
   displayName: 'Azure Login'
   inputs:
+    scriptType: 'bash'
     azureSubscription: 'AzureRM authentication'
 
 - script: |
