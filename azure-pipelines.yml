@@ -1,5 +1,27 @@
+# YAML pipeline for pulling data from Git repo and pushing to Azure Blob Container
+trigger:
+- json-to-blob
+
+pool:
+  vmImage: 'ubuntu-latest'
+
 steps:
-- task: CmdLine@2
-  displayName: 'Print working directory'
+- task: DownloadSecureFile@1
   inputs:
-    script: 'echo $(System.DefaultWorkingDirectory)'
+    secureFile: 'mySecureFile.myFile.txt'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AzureRM authentication'
+    scriptType: 'batch'
+    scriptLocation: 'inlineScript'
+    scriptPath: '/home/vsts/work/1/s' 
+
+- task: AzureCLI@2
+  displayName: 'Upload files to Azure Blob Container'
+  inputs:
+    azureSubscription: 'AzureRM authentication'
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $(DownloadStorageAccountKey.secureFilePath) --pattern *.json
