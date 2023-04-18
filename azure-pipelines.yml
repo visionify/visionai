@@ -22,7 +22,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Microsoft Azure Sponsorship'
+    azureSubscription: 'AzureRM authentication'
     scriptLocation: 'inlineScript'
     inlineScript: |
       # Navigate to the cloned repository
