@@ -1,0 +1,22 @@
+# YAML pipeline for pulling data from Git repo and pushing to Azure Blob Container
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DownloadSecureFile@1
+  name: 'DownloadStorageAccountKey'
+  displayName: 'Download storage account key'
+  inputs:
+    secureFile: 'storage-account-key'
+
+- task: AzureCLI@2
+  displayName: 'Azure Login'
+  inputs:
+    azureSubscription: 'azure authentication'
+
+- script: |
+    az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $(DownloadStorageAccountKey.secureFilePath) --pattern *.json
+  displayName: 'Upload files to Azure Blob Container'
