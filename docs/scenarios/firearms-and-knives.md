@@ -68,6 +68,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Accuracy</th>
             <th>Recall</th>
             <th>F1 score</th>  
@@ -76,6 +77,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <tr>
             <td>4230</td>
             <td>v7</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>98.2</td>
             <td>95.2</td>
             <td>95</td>

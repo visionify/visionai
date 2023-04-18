@@ -72,6 +72,7 @@ The DenseNet Model for Landmark detection
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -80,6 +81,7 @@ The DenseNet Model for Landmark detection
         <tr>
             <td>10894</td>
             <td>v2</td>
+            <td>Straight</td>
             <td>84%</td>
             <td>72%</td>
             <td>84%</td>

@@ -47,6 +47,7 @@ The model is based off of the YOLOv5-face algorithm. The model is trained on WID
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -55,6 +56,7 @@ The model is based off of the YOLOv5-face algorithm. The model is trained on WID
         <tr>
             <td>32,203</td>
             <td>v1</td>
+            <td>Both(Ceiling or Straight cameras)</td>
             <td>95% </td>
             <td>93% </td>
             <td>85% </td>

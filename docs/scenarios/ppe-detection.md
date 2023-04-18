@@ -72,6 +72,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -80,6 +81,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <tr>
             <td>1836</td>
             <td>v8</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>88% </td>
             <td>86% </td>
             <td>91% </td>

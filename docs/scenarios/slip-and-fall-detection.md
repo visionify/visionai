@@ -101,6 +101,7 @@ The model is built using Yolov5 pre-trained model for detecting a person followe
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -109,6 +110,7 @@ The model is built using Yolov5 pre-trained model for detecting a person followe
         <tr>
             <td>2326</td>
             <td>v5</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>65% </td>
             <td>71% </td>
             <td>71% </td>

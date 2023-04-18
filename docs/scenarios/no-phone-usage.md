@@ -66,6 +66,7 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -74,6 +75,7 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
         <tr>
             <td>28421</td>
             <td>v1</td>
+            <td>Straight</td>
             <td>84%</td>
             <td>85%</td>
             <td>81%</td>
@@ -91,6 +93,7 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -99,6 +102,7 @@ The model is built using Yolov5 pre-trained model for person and mobile classes.
         <tr>
             <td>45181</td>
             <td>v1</td>
+            <td>Straight</td>
             <td>84%</td>    
             <td>72%</td>
             <td>84%</td>

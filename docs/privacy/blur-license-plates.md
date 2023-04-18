@@ -51,6 +51,7 @@ The model is based on the YOLOv5 algorithm to detect licence plates. It is train
         <thead>
         <tr><th>Dataset size</th>
             <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
@@ -59,6 +60,7 @@ The model is based on the YOLOv5 algorithm to detect licence plates. It is train
         <tr>
             <td>23,219</td>
             <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>97% </td>
             <td>96% </td>
             <td>98% </td>
