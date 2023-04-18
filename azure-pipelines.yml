@@ -10,6 +10,12 @@ steps:
   inputs:
     secureFile: 'mySecureFile.myFile.txt'
 
+- task: Base64Encode@2
+  displayName: 'Base64 encode file content'
+  inputs:
+    inputFile: '$(Agent.TempDirectory)/mySecureFile.myFile.txt'
+    outputFile: '$(Agent.TempDirectory)/myEncodedFile.txt'
+
 - task: AzureCLI@2
   inputs:
     azureSubscription: 'AzureRM authentication'
@@ -24,5 +30,7 @@ steps:
     azureSubscription: 'AzureRM authentication'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
+    # Use the variable in the command
     inlineScript: |
-      az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $(cat $(Agent.TempDirectory)/mySecureFile.myFile.txt) --pattern "*.json *.png"
+      mySecureFileContent=$(cat $(Agent.TempDirectory)/myEncodedFile.txt | tr -d '\n')
+      az storage blob upload-batch --destination container --source https://github.com/kar122/jsontoblob/raw/main/scenarios.json --account-name aksummasa --account-key $mySecureFileContent --pattern "*.json *.png"
