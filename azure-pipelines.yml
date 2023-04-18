@@ -30,4 +30,4 @@ steps:
     scriptLocation: 'inlineScript'
     # Use the variable in the command
     inlineScript: |
-      az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name repo.json --type block --source jsontoblob/repo.json --verbose
+     az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name repo.json --type block --source jsontoblob/repo.json --verbose
