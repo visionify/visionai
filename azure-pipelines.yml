@@ -23,11 +23,11 @@ steps:
   displayName: 'Clone Git repo'
 
 - task: AzureCLI@2
-  displayName: 'Upload repo.json to Azure Blob Container'
+  displayName: 'Upload scenarios.json to Azure Blob Container'
   inputs:
     azureSubscription: 'AzureRM authentication'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     # Use the variable in the command
     inlineScript: |
-      az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name repo.json --type block --source https://github.com/kar122/jsontoblob/raw/main/repo.json | jq '.'
+     az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name repo.json --type block --source-uri https://github.com/kar122/jsontoblob/raw/main/repo.json --verbose
