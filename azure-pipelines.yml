@@ -19,15 +19,15 @@ steps:
       echo "Script executed successfully."
 
 - script: |
-    git clone https://github.com/kar122/jsontoblob.git
+    git clone https://github.com/kar122/jsontoblob/blob/main/scenarios.json
   displayName: 'Clone Git repo'
 
 - task: AzureCLI@2
-  displayName: 'Upload files to Azure Blob Container'
+  displayName: 'Upload scenarios.json to Azure Blob Container'
   inputs:
     azureSubscription: 'AzureRM authentication'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     # Use the variable in the command
     inlineScript: |
-      az storage blob upload-batch --destination container --source jsontoblob --account-name aksummasa --account-key '$mySecureFileContent' --pattern "*.json *.png"
+      az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name scenarios.json --type block --source jsontoblob/scenarios.json
