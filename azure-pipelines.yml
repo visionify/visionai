@@ -25,6 +25,5 @@ steps:
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     # Use the variable in the command
-inlineScript: |
-  ls $(System.DefaultWorkingDirectory)/jsontoblob/raw/main # verify directory exists
+    inlineScript: |
   az storage blob upload-batch --destination container --source $(System.DefaultWorkingDirectory)/jsontoblob/raw/main --account-name aksummasa --account-key '$mySecureFileContent' --pattern "*.json *.png"
