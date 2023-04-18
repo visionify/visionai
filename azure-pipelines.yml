@@ -1,33 +1,32 @@
-# YAML pipeline for pulling data from Git repo and pushing to Azure Blob Container
+# Define the pipeline
 trigger:
-- json-to-blob
+  branches:
+    include:
+    - json-to-bloba
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
-- task: DownloadSecureFile@1
+- task: PowerShell@2
   inputs:
-    secureFile: 'mySecureFile.myFile.txt'
+    targetType: 'inline'
+    script: |
+      # Clone the repository
+      git clone https://github.com/kar122/jsontoblob.git "$(System.DefaultWorkingDirectory)/repo"
+
+- checkout: self
+  persistCredentials: true
+  clean: true
+  fetchDepth: 1
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'AzureRM authentication'
-    scriptType: 'bash'
+    azureSubscription: 'Microsoft Azure Sponsorship'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      echo "Script executed successfully."
+      # Navigate to the cloned repository
+      cd "$(System.DefaultWorkingDirectory)/repo"
 
-- script: |
-    git clone https://github.com/kar122/jsontoblob.git
-  displayName: 'Clone Git repo'
-
-- task: AzureCLI@2
-  displayName: 'Upload scenarios.json to Azure Blob Container'
-  inputs:
-    azureSubscription: 'AzureRM authentication'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    # Use the variable in the command
-    inlineScript: |
-     az storage blob upload --account-name aksummasa --account-key '$(mySecureFileContent)' --container-name container --name repo.json --type block --source-uri https://github.com/kar122/jsontoblob/raw/main/repo.json --verbose
+      # Push changes to Azure Blob Container
+      az storage blob upload-batch --destination container --source . --pattern "repo.json"
