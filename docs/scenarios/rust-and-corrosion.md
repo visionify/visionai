@@ -20,26 +20,7 @@ VisionAI model's generated events would be:
 
 - Rust or corrosion event detected
 
-## Camera Configuration
 
-### Camera Placement
-
-- Install cameras near areas where corrosion is most likely to occur, such as pipelines, storage tanks, and machinery.
-- Place cameras in areas with good lighting to capture surface details.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 10-12 feet above the floor level.
-
-- Place the camera 5-10 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the surface details.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
 
 
 
@@ -58,7 +39,34 @@ Total number of images used was 5572.
 
 ### Model
 
-The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.The model provides the following metrics:- 
+The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.
+
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2326</td>
+            <td>v5</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>79%</td>
+            <td>49%</td>
+            <td>56%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+The model provides the following metrics:- 
 
 <div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:79"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:49"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:56"></div></div></div>
 

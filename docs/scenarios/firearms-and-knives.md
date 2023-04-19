@@ -59,7 +59,34 @@ The dataset consists of images and videos collected from various sources includi
 
 ### Model
 
-The model to detect firearms and knives event is in progress and it will be released soon.
+The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset compiled by our team.
+
+### Model card
+
+<div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Accuracy</th>
+            <th>Recall</th>
+            <th>F1 score</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4230</td>
+            <td>v7</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>98.2</td>
+            <td>95.2</td>
+            <td>95</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+The model is adaptable enough to run on any edge computing device.
 
 ### Scenario details
 

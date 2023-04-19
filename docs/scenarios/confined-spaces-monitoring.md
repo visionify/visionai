@@ -15,29 +15,6 @@ Vision AI based monitors can be used to monitor confined spaces by providing rea
 
 It is important to note that these camera based monitoring provides should be supplanted by strong compliance processes to ensure their accuracy and reliability. In addition, workers entering confined spaces should always be trained on proper use of the monitoring equipment and be familiar with the hazards associated with confined spaces.
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras at the entry and exit points of confined spaces, such as tanks, silos, and vaults.
-- Place cameras in areas where employees can easily see and respond to emergencies.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the confined space and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 ## Model Details
 
 ### Dataset
@@ -57,23 +34,30 @@ Total number of images used was 387,644
 ### Model
 The model is based off of the YOLOv5 algorithm. The model is trained on a custom dataset of images and videos. The model is trained based on the above dataset curated by our team.
 
-The model provides the following metrics:
+### Model card
 
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:94"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:96"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:94"></div>
-    </div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2678</td>
+            <td>v2</td>
+            <td>Ceiling</td>
+            <td>94%</td>
+            <td>96%</td>
+            <td>94%</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
-
 
 The model is light-weight enough to be run on any edge devices.
 

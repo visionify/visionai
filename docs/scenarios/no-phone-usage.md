@@ -57,41 +57,58 @@ Basically, COCO is a  large-scale dataset and it provides real-world data repres
 
 
 ### Model
-The model is built using Yolov5 pre-trained model for person and mobile classes. The yolov5 model is used to identify the human body landmarks of the subject. 
+The model is built using Yolov5 pre-trained model for person and mobile classes. The yolov5 model is used to identify the human body landmarks of the subject.
 
-The Yolov5 model provides the following metrics:
+### Yolov5 model card
 
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:84"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:85"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:81"></div>
-    </div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>28421</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>84%</td>
+            <td>85%</td>
+            <td>81%</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 
-and landmark detection model gives the following metrics:
 
-<div class="main">
-    <div class="bar">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:84"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:72"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:84"></div>
-    </div>
+### Landmark detection model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>45181</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>84%</td>    
+            <td>72%</td>
+            <td>84%</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 
