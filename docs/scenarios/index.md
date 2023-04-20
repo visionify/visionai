@@ -154,15 +154,13 @@ Company policies include specific scenarios that are relevant to your company. T
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-
-
-| 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` |
+| 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` | [More details](no-food-or-drinks.md){:target="_blank"} |
 | ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](no-phone-usage.md){:target="_blank"} |
 | ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking.md){:target="_blank"} |
 | ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](authorized-personnel.md){:target="_blank"} |
-| 📅 | `waste-management`           | `Spill event detected` <br> `Waste bin full` <br> `Debris detected in Field of View` |
-| 📅 | `energy-conservation`        | `Occupancy pattern daily summary` <br> `Light usage daily summary` |
-| 📅 | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` |
+| 📅 | `waste-management`           | `Spill event detected` <br> `Waste bin full` <br> `Debris detected in Field of View` | [More details](environment-waste-management.md){:target="_blank"} |
+| 📅 | `energy-conservation`        | `Occupancy pattern daily summary` <br> `Light usage daily summary` | [More details](energy-conservation.md){:target="_blank"} |
+| 📅 | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](exclusion-zones.md){:target="_blank"} |
 
 
 
