@@ -34,28 +34,6 @@ An event data for this may include the following information:
 - Location: The location where the event was detected.
 
 - Device: The device where the event was detected.   
-
-## Camera Configuration
-
-To set up a camera system for energy usage monitoring,You will need a camera capable of capturing footage of your energy meter or other relevant devices that you want to monitor. 
-
-### Camera Placement
-
-- Install cameras near energy usage systems, such as HVAC, lighting, and electrical panels.
-- Place cameras in areas where people tend to interact with the energy systems, such as control rooms, equipment rooms, and switch rooms.
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 5-10 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the energy systems and controls.
-
-Find more details about camera placement [here](../overview/cameras.md).
-
   
 
 ## Model Details
@@ -64,9 +42,30 @@ Find more details about camera placement [here](../overview/cameras.md).
 The dataset for this scenario is based on real-world energy usage monitoring detection events.
 The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect energy usage monitoring is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>72,20</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

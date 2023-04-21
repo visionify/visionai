@@ -1,4 +1,4 @@
-# Authorized Personnel
+# **Authorized Personnel**
 
 
 > An intelligent way to enhance security and prevent unauthorized access to restricted areas.
@@ -38,26 +38,6 @@ An event data for this scenario has information such as:
 - Type of personnel identified
 
 
-## Camera Configuration
-
-Recommended to set up ceiling-mounted cameras to detect and identify children, visitors, person without uniform and badges.
-
-### Camera Placement
-
-- Install cameras near entry and exit points, such as doors, gates, and windows.
-- Place cameras in areas where unauthorized personnel might try to gain access, such as storage rooms, server rooms, and restricted areas.
-
-### Camera Height
-- Cameras should be installed at a height of 6-7 feet above the floor level.
-
-- Place the camera 5-8 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the employee's face and upper body.
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 ## Model Details
 
 ### Dataset
@@ -66,10 +46,30 @@ The dataset comprises relevant, high-quality, labeled videos and images from div
 The dataset is evenly distributed and balanced with an equal number of examples for each category to avoid bias toward one class.
 It contains variations with different real-world scenarios to render effective and efficient results.
 
+### Model card
 
-### Model
-
-The model to detect only authorized personnel event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>22,20</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 Our VisionAI solution for access control protects against unauthorized access and physical security incidents before they occur. Different scenarios of unauthorized access have been taken into account for real-time detection and alerts which include;

@@ -3,7 +3,7 @@
 > Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.
 
 <figure markdown>
-  ![Aggressive Behavior](https://github.com/visionify/visionai-images/raw/main/visionai-images/aggressive-behavior-detection.png "HAggressive behavior detection at work-place!"){ width="350" }
+  ![Aggressive Behavior](https://github.com/visionify/visionai-images/raw/main/visionai-images/aggressive-behavior-detection.png "Aggressive behavior detection at work-place!"){ width="350" }
   <figcaption>Detection of Aggressive Behavior</figcaption>
 </figure>
 
@@ -18,28 +18,6 @@ These models are an important tool for promoting a safe and respectful environme
 
 VisionAI's agressive behaviour detection model is designed to promote a safe, healthy, and productive workplace environment for all employees. The model is able to provide real-time alerts when it detects aggressive behavior. This will enable management to intervene and prevent escalation of the situation.
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras in areas where aggressive behavior is most likely to occur, such as entrances, exits, lobbies, waiting areas, and areas with a high volume of foot traffic.
-- Place cameras in areas where staff and customers can easily see them.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 8-10 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the aggressor's face and upper body.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 
 ## Model Details
 
@@ -49,7 +27,30 @@ The dataset for this scenario is based on real-world data from different workpla
 
 ### Model
 
-The model to detect agressive behaviour events is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>32,20</td>
+            <td>v1</td>
+            <td>Ceiling</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

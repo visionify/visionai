@@ -24,25 +24,6 @@ VisionAI model's generated events would be:
 
 - Blocked exit detected
 
-## Camera Configuration
-
-Recommended to set up ceiling-mounted cameras to monitor blocked exits in the workplace. The location of cameras to monitor blocked exits will depend on the specific policies being enforced and the nature of the work environment.
-
-### Camera Placement
-- Install cameras near exit doors, hallways, and stairwells to monitor any potential blockages.
-- Place cameras in areas where people tend to congregate, such as lobbies, cafeterias, and waiting areas.
-
-### Camera Height
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-- Place the camera at a level angle to capture footage of the exit doors and hallway.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 
 ## Model Details
 
@@ -65,8 +46,30 @@ Images of different types of blockages which includes:
 * Images of unobstructed exits: Providing images of exits that are not blocked would help the model to distinguish between blocked and unblocked exits.
    
 
-### Model
-The model to monitor blocked exits is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>22,20</td>
+            <td>v1</td>
+            <td>Both(ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 The business logic for this scenario is as follows:

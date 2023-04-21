@@ -31,27 +31,6 @@ An event data may include information such as:
 - Image of the event
 - Video of the event
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras in areas where forklifts are operated, such as loading docks and production areas.
-- Place cameras in areas where employees can easily see and respond to forklift accidents.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 8-9 feet above the floor level.
-
-- Place the camera 12-14 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at an angle to capture footage of the forklift and surrounding area.
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 
 ## Model Details
 
@@ -65,10 +44,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Different vehicle types*: Cars, trucks, buses, and motorcycles
 - *Different vehicle colors* etc.
 
-### Model
+### Model card
 
-
-The model to monitor enforcement of vehicle forklifting event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>22,20</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

@@ -59,8 +59,30 @@ Find more details about camera placement [here](../overview/cameras.md).
 
 The dataset consists of images and videos collected from various sources. 
 
-### Model
-The model to detect empty pallets is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>32,20</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 
