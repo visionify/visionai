@@ -31,11 +31,6 @@ An event data for desk occupancy scenario may include information such as:
 - Date and time of the event
 - Location of the event
 
-
-
-## Configuration
-
-It is recommended to set up camera in ceiling view to capture details about desk occupancy of the employees.
 ## Model Details
 
 ### Dataset
@@ -57,10 +52,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Images with different desk layouts*: The dataset includes images that show different types of desks, such as standing desks, shared desks, or cubicles.
 
 
-### Model
+### Model card
 
-The model to monitor desk occupancy is in progress and it will be released soon.
-
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>1280</td>
+            <td>v1</td>
+            <td>Ceiling</td>
+            <td>95.0% </td>
+            <td>91.6% </td>
+            <td>88.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 ### Scenario details
 Real-time detection and alerts for different scenarios includes but are not limited to:
 

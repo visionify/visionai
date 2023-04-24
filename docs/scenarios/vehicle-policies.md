@@ -37,14 +37,6 @@ An event data may include information such as:
 - Vehicle license plate number
 
 
-
-## Configuration
-
-Camera setups can be used to detect and enforce vehicle policies in the workplace. The location of cameras to monitor vehicle policies will depend on the specific policies being enforced and the nature of the work environment. For example, 
-
-- if the company has a policy that prohibits employees from using company vehicles for personal use, then cameras should be installed in areas where employees are likely to park their vehicles. 
-
-
 ## Model Details
 
 ### Dataset
@@ -57,9 +49,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Different vehicle types*: Cars, trucks, buses, and motorcycles
 - *Different vehicle colors* etc.
 
-### Model
+### Model card
 
-The model to detect enforcement of vehicle policies event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

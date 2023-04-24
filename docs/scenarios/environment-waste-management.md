@@ -1,4 +1,4 @@
-# Waste Management Detection
+# **Waste Management Detection**
 
 >Innovative Technologies for Efficient Waste Management Detection with Vision AI.
 
@@ -38,18 +38,36 @@ An event data for this may include the following information:
 
     By collecting and analyzing this event data, waste management organizations can develop effective waste management strategies, reduce waste generation, and promote recycling and sustainable waste management practices.
 
-## Configuration
-To set up a camera system for waste monitoring,You will need a camera capable of capturing footage of waste collection at the factory. The camera should be able to capture footage of the factory area and the waste collection process. 
-
 ## Model Details
 
 ### Dataset
 The dataset for this scenario is based on real-world waste management detection events.
 The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect waste management is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>65.0% </td>
+            <td>71.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

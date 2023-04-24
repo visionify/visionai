@@ -40,8 +40,30 @@ The Graffiti Image classifier can help law enforcement more effectively recognis
 
 The dataset consists of images and videos collected from various sources. 
 
-### Model
-The model to perform graffiti-detection is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>mAP</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4126</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95.0% </td>
+            <td>78.6% </td>
+            <td>91.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

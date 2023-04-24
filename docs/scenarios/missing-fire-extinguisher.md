@@ -1,4 +1,4 @@
-# Missing Fire Extinguisher
+# **Missing Fire Extinguisher**
 
 > Strengthen your smoke & fire detection compliance - through adding custom logic for checking for missing fire extinguisher from required places.
 
@@ -31,31 +31,6 @@ An event data for a missing fire extinguisher may include information such as:
 - Location of the missing fire extinguisher, including the building, floor, and room number
 - Type of fire extinguisher that is missing
 
-
-## Camera Configuration
-
-Recommended to set up camera in ceiling view to detect missing fire extinguisher event. Cameras can see an area, mark areas where a fire extinguisher should be present. Any time it is removed or used or not seen, we will generate this event.
-
-### Camera Placement
-
-- Install cameras near areas where fire extinguishers are supposed to be located, such as hallways, stairwells, and mechanical rooms.
-- Place cameras in areas with good lighting to capture surface details.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the fire extinguisher and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 ## Model Details
 
 ### Dataset
@@ -70,10 +45,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 
 - Different classes: The dataset is balanced between the two classes, present and missing fire extinguishers, to avoid bias in the model.  
 
+### Model card
 
-### Model
-
-The model to detect missing fire extinguisher event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4726</td>
+            <td>v1</td>
+            <td>Ceiling</td>
+            <td>91.0% </td>
+            <td>89.6% </td>
+            <td>84.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

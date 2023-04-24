@@ -35,11 +35,6 @@ An event data for a unauthozrized entry in exclusion zones may include informati
 - Image of the event
 
 
-## Configuration
-
-It is recommended to set up camera in ceiling view to detect unauthorized entry events. 
-
-
 ## Model Details
 
 ### Dataset
@@ -75,7 +70,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <tr>
             <td>10k</td>
             <td>v2</td>
-            <td>Both(Ceiling and Straight)</td>
+            <td>Ceiling</td>
             <td>98%</td>
             <td>95%</td>
             <td>95%</td>

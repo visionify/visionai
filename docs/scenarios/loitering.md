@@ -50,9 +50,30 @@ Find more details about camera placement [here](../overview/cameras.md).
 ### Dataset
 The dataset for this scenario is based on real-world loitering detection events. The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect loitering is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>8280</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>85.0% </td>
+            <td>81.7% </td>
+            <td>79.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

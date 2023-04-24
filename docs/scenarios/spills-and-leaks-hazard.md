@@ -1,4 +1,4 @@
-# Spills & Leaks detection through VisionAI
+# **Spills & Leaks detection**
 
 > Spills and Leaks detection through Vision AI.
 
@@ -28,30 +28,6 @@ Vision AI-based model is designed to detect spills and leaks including water pud
   - Spill event detected
   -  Slippery sign detected
 
-
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras near areas where spills and leaks are likely to occur, such as chemical storage areas, pipelines, and production lines.
-- Place cameras in areas where employees can easily see and respond to spills and leaks.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the spill or leak and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 ## Model Details
 
 ### Dataset
@@ -68,10 +44,30 @@ Some of the sources used to take images are:
 - The Spill Impact Mitigation Assessment (SIMA) dataset
 
 
+### Model card
 
-### Model
-
-The model to detect leak/spill event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4170</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>85.0% </td>
+            <td>91.6% </td>
+            <td>87.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

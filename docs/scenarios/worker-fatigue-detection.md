@@ -24,8 +24,30 @@ Overall, visionAI based monitoring is an effective and non-intrusive approach fo
 
 The dataset for this scenario is based on real-world posture, behavior, and movements and also to detect signs of fatigue, such as slouching, yawning, or slowing down in work events. The dataset consists of images and videos collected from various sources. 
 
-### Model
-The model to detect worker fatigue event is in progress and it will be released soon. 
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>1845</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

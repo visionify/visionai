@@ -21,35 +21,36 @@ VisionAI's shipping activity detection solutions can be used to for the detectio
 Suspicious Shipping Activity Detection model is an important tool for helping to prevent fraudulent or criminal activity in the shipping industry, and it works in real time to help ensure that potentially suspicious activity is identified and addressed as quickly as possible.
 
 
-## Camera Configuration
-
-### Camera Placement
-
-- Install cameras at all loading docks, entry and exit points of the shipping area.
-- Place cameras at regular intervals within the shipping area to ensure complete coverage.
-
-### Camera Height
-
-- Cameras should be installed at a height of 8-10 feet above the ground.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of people and vehicles in the shipping area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 ## Model Details
 
 ### Dataset
 The dataset of Suspicious shipping activity detected from non-designated area and during after-hours is a collection of data points that provide insights into potential illicit activities taking place in the shipping industry. 
 One key feature of this dataset is the inclusion of information on shipping activity outside of designated areas and during after-hours. These factors are often indicators of suspicious behavior, as they suggest that the vessel is attempting to avoid detection and operate outside of normal shipping patterns. By analyzing this data, security personnel can identify potential threats and take appropriate action to prevent harm.
 
-### Model
+### Model card
 
-The model to detect suspicious shipping activity events is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4126</td>
+            <td>v5</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>84.0%</td>
+            <td>87.5%</td>
+            <td>81.4%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

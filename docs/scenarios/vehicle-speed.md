@@ -34,13 +34,6 @@ An event data may include information such as:
 - Vehicle license plate number
 
 
-
-## Configuration
-
-Camera setups can be used to detect and enforce vehicle speeding in the workplace. The location of cameras to monitor vehicle speeding will depend on the specific policies being enforced and the nature of the work environment.      
-
-
-
 ## Model Details
 
 ### Dataset
@@ -53,9 +46,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Different vehicle types*: Cars, trucks, buses, and motorcycles
 - *Different vehicle colors* etc.
 
-### Model
+### Model card
 
-The model to monitor enforcement of vehicle speeding event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>6220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>65.0% </td>
+            <td>71.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

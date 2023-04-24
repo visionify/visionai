@@ -24,21 +24,6 @@ An event data may include information such as:
 - Image of the event
 - Video of the event
 
-## Configuration
-
-To set up a camera system to detect license plates, you need to consider several factors including:
-
-- Camera Placement: Cameras should be placed in locations where they can capture clear images of license plates, such as at entrances and exits to parking lots, toll booths, or intersections. Cameras should be mounted at an appropriate height and angle to capture the entire license plate.
-
-- Camera Type: High-resolution cameras with a minimum resolution of 1080p are recommended for license plate detection. Cameras with a wide field of view (FOV) are also recommended to capture license plates from a distance.
-
-- Lighting: Adequate lighting is essential for license plate detection. The lighting should be bright and evenly distributed to minimize shadows and glare.
-
-
-!!! Note
-
-    Overall, camera setup for license plate detection requires careful planning and optimization to ensure accurate and efficient identification of vehicles. With the right equipment and image processing algorithms, license plate detection can provide valuable insights for traffic management, parking management, law enforcement, and security applications. 
-
 
 ## Model Details
 
@@ -56,12 +41,34 @@ The dataset consists of images and videos collected from diverse sources and is 
 
 The model is based on the YOLOv5 algorithm to detect licence plates. It is trained on the curated dataset. Licence plate blurring is performed using computer vision-based blurring operations. The model is developed in a way that it generalizes well for different environments and situations.
 
-The licence plate detection model based on Yolov5 recorded the following performance metrics:
+### Model card
 
-
-<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:97"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:96"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:98"></div></div></div>
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>96%<td>
+            <td>97%</td>
+            <td>98%</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 The model is adaptable enough to run on any edge computing device.
+
+
 
 
 ### Scenario details

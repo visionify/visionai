@@ -23,18 +23,6 @@ VisionAI model's generated events would be:
 
 It is recommended that any instance of such event be reported to the appropriate authority.
 
-
-## Configuration
-
-To set up a camera system to detect vehicle usage, you need to consider several factors including:
-
-- **Camera type**: The type of camera you use will depend on the environment you are monitoring. For example, if you are monitoring a parking lot, you may want to use a camera with a wide field of view. If you are monitoring a road, you may want to use a camera with a narrow field of view. You may also want to consider the camera’s resolution, frame rate, and other specifications to ensure that it can capture license plates clearly and accurately.
-
-- **Camera placement**: The location of cameras to monitor license plates will depend on the specific policies being enforced and the nature of the work environment. For example, if you are monitoring a parking lot, you may want to place cameras at the entrance and exit of the lot. If you are monitoring a road, you may want to place cameras at intersections or other locations where vehicles are likely to stop. You may also want to consider the camera’s field of view and other specifications to ensure that it can capture license plates clearly and accurately.
-
-          
-
-
 ## Model Details
 
 ### Dataset
@@ -47,9 +35,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Different vehicle types*: Cars, trucks, buses, and motorcycles
 - *Different vehicle colors* etc.
 
-### Model
+### Model card
 
-The model to detect enforcement of vehicle policies event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

@@ -6,6 +6,7 @@
   ![Environment Radiation Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/radiation-monitoring.png "Radiation monitoring at work-place!"){ width="350" }
   <figcaption>Radiation monitoring event</figcaption>
 </figure>
+
 ## Overview
 
 Radiation monitoring refers to the process of measuring and analyzing levels of ionizing radiation in a particular area, in order to ensure safety and compliance with regulatory standards. Ionizing radiation is a type of energy that can cause damage to living cells and genetic material, and can potentially cause cancer and other health problems if exposure levels are too high.
@@ -35,9 +36,30 @@ Vision AI based monitors can be used for the detection of radiation monitoring e
 ### Dataset
 The dataset for this scenario is based on real-world radiation monitoring detection events. The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect radiation monitoring is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>65.0% </td>
+            <td>71.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

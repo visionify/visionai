@@ -16,9 +16,30 @@ For indoor CO detection, our models can learn to recognize patterns in the data 
 
 Similarly, for outdoor CO detection, our models are trained on data from air quality monitoring stations or even from satellite imagery. Our system can learn to identify patterns that are associated with specific sources of CO emissions, such as traffic or industrial facilities, and can then be used to trace the origins of these emissions.
 
-## Model
+### Model card
 
-We would be releasing the model for CO exceed limit detection in *Q2-2023*.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>8226</td>
+            <td>v1</td>
+            <td>Ceiling</td>
+            <td>65% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Contact Us
 
