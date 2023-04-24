@@ -1,4 +1,4 @@
-# Equipment temperature monitoring
+# **Equipment temperature monitoring**
 
 > Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.
 

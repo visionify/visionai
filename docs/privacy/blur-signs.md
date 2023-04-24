@@ -50,21 +50,29 @@ The dataset has documents with:
 
 The model is based on the YOLOv5 algorithm to detect documents. Document/signs blurring is performed using computer vision-based blurring algorithms. The model is developed in a way that it generalizes well for different environments and situations.
 
-Currently, we have document blurring model and it is based on Yolov5. The model recorded the following performance metrics:
+Currently, we have document blurring model and it is based on Yolov5.
 
-<div class="table">
-    <div class="f1-table">
-        <h4>Precision <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar" style="--value:97"></div>
-    </div>
-    <div class="bar">
-        <h4>Recall <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar1" style="--value:97"></div>
-    </div>
-    <div class="bar">
-        <h4>mAP <i class="fa fa-info-circle"></i></h4>
-        <div role="progressbar2" style="--value:99"></div>
-    </div>
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>10k</td>
+            <td>v2</td>
+            <td>97% </td>
+            <td>97% </td>
+            <td>99% </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 The model is adaptable enough to run on any edge computing device.

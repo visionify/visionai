@@ -76,6 +76,7 @@ The dataset consists of images and videos collected from diverse sources and is 
         </tbody>
     </table>
 </div>
+
 ### Scenario details
 Real-time detection and alerts for different scenarios includes but are not limited to:
 

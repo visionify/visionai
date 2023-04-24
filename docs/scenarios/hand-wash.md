@@ -21,28 +21,6 @@ Vision AI-based hand-wash system is designed to detect and ensure no one misses 
 
 Overall, the hand sanitizer/hand wash detection model is an important tool for promoting hygiene and preventing the spread of disease in a range of environments, from hospitals and schools to offices and public spaces. By detecting whether people have used hand sanitizer or hand wash, the system can help encourage good hygiene practices and reduce the risk of infection.
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras near handwashing stations, such as bathrooms, kitchens, and production areas.
-- Place cameras in areas where employees can easily see and respond to handwashing violations.
-
-### Camera Height
-
-- Cameras should be installed at a height of 5-6 feet above the floor level.
-
-- Place the camera 3-4 feet from the focal point.
-
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the handwashing station and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 ## Model Details
 
 ### Dataset

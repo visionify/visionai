@@ -57,7 +57,7 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         <tr>
             <td>2326</td>
             <td>v5</td>
-            <td>Both(Ceiling and Straight)</td>
+            <td>Straight</td>
             <td>79%</td>
             <td>49%</td>
             <td>56%</td>
@@ -65,10 +65,6 @@ The model is based off of the YOLOv5 algorithm. The model is trained on a custom
         </tbody>
     </table>
 </div>
-
-The model provides the following metrics:- 
-
-<div class="main"><div class="bar"><h4>Precision <i class="fa fa-info-circle"></i></h4><div role="progressbar" style="--value:79"></div></div><div class="bar"><h4>Recall <i class="fa fa-info-circle"></i></h4><div role="progressbar1" style="--value:49"></div></div><div class="bar"><h4>mAP <i class="fa fa-info-circle"></i></h4><div role="progressbar2" style="--value:56"></div></div></div>
 
 
 The model is adaptable enough to run on any edge computing device.
