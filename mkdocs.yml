@@ -187,6 +187,7 @@ nav:
   - Reference:
     - Overview: reference/reference.md
     - Changelog: reference/changelog.md
+    - Troubleshooting: reference/troubleshooting.md
     - Notes: reference/notes.md
   - Customization:
     - Overview: custom/overview.md
