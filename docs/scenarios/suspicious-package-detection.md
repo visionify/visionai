@@ -29,8 +29,30 @@ The dataset for this type of model typically consists of a large number of image
 
 To ensure that the model is able to generalize to new and unseen images or videos, the dataset should include a diverse range of packages, with different sizes, shapes, colors, and markings. The dataset should also include examples of packages that are not suspicious or abandoned, in order to provide a balanced training set.
 
-### Model
-The model to detect agressive behaviour events is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>7810</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95.0% </td>
+            <td>91.6% </td>
+            <td>88.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

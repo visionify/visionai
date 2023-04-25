@@ -34,30 +34,6 @@ An event data for a unauthozrized entry in exclusion zones may include informati
 - Location of the event
 - Image of the event
 
-## Camera Configuration
-
-Recommended to set up camera in ceiling view to detect unauthorized entry events. 
-
-### Camera Placement
-
-- Install cameras at all entry points to the restricted area.
-- Place cameras at regular intervals within the restricted area to ensure complete coverage.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 8-10 feet above the ground.
-
-- Place the camera 10-12 feet from the focal point.
-
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of people entering the restricted area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 
 ## Model Details
 
@@ -74,9 +50,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 
 - *Diversity of individuals*: The dataset includes images of individuals from different genders, ages, and ethnicities, to ensure that the AI model is able to accurately detect unauthorized access attempts regardless of the individual's appearance.
 
-### Model
+### Model card
 
-The model to detect unauthorized entry event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2326</td>
+            <td>v5</td>
+            <td>Ceiling</td>
+            <td>65% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

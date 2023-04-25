@@ -36,8 +36,6 @@ An event data for this may include the following information:
 
     By collecting and analyzing this event data, water management organizations can develop effective waste management strategies, reduce waste generation, and promote recycling and sustainable waste management practices.
 
-## Configuration
-To set up a camera system for energy usage monitoring,You will need a camera capable of capturing footage of your energy meter or other relevant devices that you want to monitor. 
 
 ## Model Details
 
@@ -45,9 +43,30 @@ To set up a camera system for energy usage monitoring,You will need a camera cap
 The dataset for this scenario is based on real-world water management detection events.
 The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect water management event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3326</td>
+            <td>v2</td>
+            <td>Ceiling</td>
+            <td>65% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

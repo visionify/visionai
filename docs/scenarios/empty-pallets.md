@@ -29,29 +29,6 @@ Vision AI-based system can be used to detect empty pallets in real-time. This ca
 
 Empty pallet detection is an important task in many warehouse and manufacturing settings. By identifying empty pallets, companies can optimize storage space and ensure efficient inventory management. There are various ways to detect empty pallets, including manual inspections by workers and automated methods that use sensors, cameras, and machine learning algorithms. Automation can greatly improve the efficiency and accuracy of empty pallet detection, leading to cost savings and improved productivity.
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras near areas where pallets are stored and moved, such as loading docks and storage areas.
-- Place cameras in areas where employees can easily see and respond to empty pallets.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 8-9 feet above the floor level.
-
-- Place the camera 12-14 feet from the focal point.
-
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at an angle to capture footage of the pallets and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 
 ## Model Details
 
@@ -59,8 +36,30 @@ Find more details about camera placement [here](../overview/cameras.md).
 
 The dataset consists of images and videos collected from various sources. 
 
-### Model
-The model to detect empty pallets is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>32,20</td>
+            <td>v1</td>
+            <td>Straight</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

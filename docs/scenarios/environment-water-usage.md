@@ -1,4 +1,4 @@
-# Water Usage Monitoring
+# **Water Usage Monitoring**
 
 >Advanced Technologies for Effective Water Management and Conservation with Vision AI.
 
@@ -39,9 +39,6 @@ An event data for this may include the following information:
 !!! Note
 
     By collecting and analyzing this event data, water management organizations can develop effective waste management strategies, reduce waste generation, and promote recycling and sustainable waste management practices.
-
-## Configuration
-To set up a camera system for water usage monitoring,You will need a camera capable of capturing footage of water bodies you want to monitor. 
 
 ## Model Details
 

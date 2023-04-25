@@ -19,21 +19,6 @@ VisionAI model's generated events would be:
 - Bend count event per individual
 
 
-## Configuration
-Camera placement for detecting ergonomics can help to identify workplace design issues that may be contributing to other ergonomic-related injuries. Here are some general guidelines for camera placement in this context:
-
-- Workstation cameras: Cameras can be placed at individual workstations to monitor employee movements and postures. This can help to identify ergonomic issues such as poor posture, repetitive motions.
-
-- Assembly line cameras: Cameras can also be placed along assembly lines to monitor employee movements and postures during repetitive tasks.
-
-- Multiple angles: Multiple cameras may be necessary to ensure complete coverage of the area being monitored. Cameras should be placed at different angles to ensure complete coverage, with overlapping views to ensure no blind spots.
-
-!!! Note
-
-    It's important to ensure that any data collected through camera monitoring is stored and used in compliance with relevant regulations and privacy considerations.
-
-
-
 ## Model Details 
 ### Dataset 
 

@@ -31,16 +31,7 @@ VisionAI model's generated events would be:
 It is recommended that any instance of water quality level's exceeding should be reported.  
 
 Event data for water quality management refers to information collected during specific events or incidents that can impact the water quality of a particular area. This data can help to identify potential sources of pollution and develop strategies to mitigate their effects.
-    
 
-## Configuration
-When setting up a camera system for water quality monitoring using VisionAI solution, there are several factors to consider to ensure that the system is effective and provides accurate data. Here are some important considerations:
-
-- Camera placement: Choose locations that are representative of the water body being monitored, such as areas with known sources of pollution or areas where water quality is known to vary. 
-
-- Camera type: Select a camera that is suitable for the monitoring objectives, such as a *color camera* for visual inspection or an *infrared camera* for monitoring temperature. 
-
-By considering these factors, one can set up an effective camera system for monitoring water quality and identifying potential sources of pollution. 
 
 ## Model Details
 
@@ -48,9 +39,30 @@ By considering these factors, one can set up an effective camera system for moni
 The dataset for this scenario is based on real-world water quality management detection events.
 The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect water quality management event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2326</td>
+            <td>v5</td>
+            <td>Ceiling</td>
+            <td>95% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

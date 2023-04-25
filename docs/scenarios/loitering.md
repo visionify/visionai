@@ -23,36 +23,35 @@ Overall, the use of loitering detection technologies is a complex issue that req
 
 Vision AI based monitors can be used to for the detection of loitering events by providing real-time video feeds of the factory area. The cameras scan every frame and raise an event when a person enters from an usually closed location, person detected during off-hours, person detected for extended duration of time.
 
-
-## Camera Configuration
-
-### Camera Placement
-
-- Install cameras in areas where loitering is likely to occur, such as parking lots, entry points, and walkways.
-- Place cameras in areas where employees can easily see and respond to loitering.
-
-### Camera Height
-
-- Cameras should be installed at a height of 10-12 feet above the floor level.
-
-- Place the camera 12-15 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at an angle to capture footage of the loitering individuals and surrounding areas.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 ## Model Details
 
 ### Dataset
 The dataset for this scenario is based on real-world loitering detection events. The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model to detect loitering is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>8280</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>85.0% </td>
+            <td>81.7% </td>
+            <td>79.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

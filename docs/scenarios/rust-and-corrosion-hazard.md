@@ -20,29 +20,6 @@ VisionAI model's generated events would be:
 
 - Rust or corrosion event detected
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras near areas where corrosion is most likely to occur, such as pipelines, storage tanks, and machinery.
-- Place cameras in areas with good lighting to capture surface details.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 10-12 feet above the floor level.
-
-- Place the camera 5-10 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the surface details.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 
 ## Model Details 
 ### Dataset

@@ -30,15 +30,6 @@ An event data may include information such as:
 - Image of the event
 - Video of the event
 
-## Configuration
-
-To set up a camera system to detect cargo usage in vehicles, you will need to consider the following:
-
-- Camera Placement: Cameras should be placed in locations where they can capture clear images of license plates, such as at entrances and exits to parking lots, toll booths, or intersections. Cameras should be mounted at an appropriate height and angle to capture the entire license plate.
-
-- Camera Type: High-resolution cameras with a minimum resolution of 1080p are recommended for license plate detection. Cameras with a wide field of view (FOV) are also recommended to capture license plates from a distance.
-
-- Lighting: Adequate lighting is essential for license plate detection. The lighting should be bright and evenly distributed to minimize shadows and glare.
 
 ## Model Details
 
@@ -52,10 +43,30 @@ The dataset consists of images and videos collected from diverse sources and is 
 - *Different vehicle types*: Cars, trucks, buses, and motorcycles
 - *Different vehicle colors* etc.
 
-### Model
+### Model card
 
-
-The model to monitor enforcement of vehicle speeding event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>mAP</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2350</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95.0% </td>
+            <td>78.6% </td>
+            <td>91.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

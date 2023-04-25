@@ -34,9 +34,30 @@ The dataset consists of images and videos collected from diverse sources and is 
  
 - Different versions: The images in the dataset have variations in the appearance of people, food, and drinks, so the model can learn to recognize them in different contexts.
 
-### Model
+### Model card
 
-The model for detecting food items and drinks is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>75.0% </td>
+            <td>81.6% </td>
+            <td>84.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

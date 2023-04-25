@@ -45,20 +45,25 @@ COCO dataset has an even distribution of:
 
 ### Model 
 
-The model is built using Yolov5 pre-trained model for detecting a person followed by a media pipe library used to estimate the pose of the person. The following performance metrics are recorded: 
+The model is built using Yolov5 pre-trained model for detecting a person followed by a media pipe library used to estimate the pose of the person.
 
+### Model card
 
-<div class="table">
+ <div class="table">
     <table class="fl-table">
         <thead>
-        <tr><th>Model Name</th>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
             <th>Precision</th>
             <th>Recall</th>
             <th> mAP  </th>  
         </thead>
         <tbody>
         <tr>
-            <td>SLIP AND FALL DETECTION</td>
+            <td>3220</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>65.0% </td>
             <td>71.6% </td>
             <td>71.0% </td>

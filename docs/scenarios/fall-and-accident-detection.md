@@ -26,37 +26,36 @@ Finally, to detect wet/slippery signs, the system may analyze the shape and colo
 
 Overall, the system is designed to help improve safety in a range of environments, from factories and warehouses to retail stores and public spaces. By detecting potential hazards in real-time, the system can alert workers or visitors to potential dangers and help prevent accidents and injuries.
 
-## Camera Configuration
-
-
-### Camera Placement
-
-- Install cameras in areas where falls and accidents are likely to occur, such as stairwells, walkways, and production areas.
-- Place cameras in areas where employees can easily see and respond to falls and accidents.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 7-8 feet above the floor level.
-
-- Place the camera 10-12 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the fall or accident and surrounding area.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
-
-
 ## Model Details
 
 ### Dataset
 
 The dataset for this scenario is based on real-world data from different workplaces. The dataset consists of images and videos collected from various sources. 
 
-### Model
-The model to detect fall and accident events is in progress and it will be released soon. 
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>72,20</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95% </td>
+            <td>93% </td>
+            <td>85% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

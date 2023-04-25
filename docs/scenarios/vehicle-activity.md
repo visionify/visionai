@@ -1,4 +1,4 @@
-# Vehicle Activity Suite
+# **Vehicle Activity Suite**
 
 Vehicle activity in and around the factory refers to the movement of vehicles within the factory premises and its surrounding areas. This activity can be monitored and analyzed using various techniques, including the use of sensors, cameras, and other tracking technologies.
 

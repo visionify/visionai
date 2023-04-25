@@ -22,30 +22,6 @@ Vision AI based monitors can be used to monitor PPE compliance by providing real
 To ensure accuracy and reliability, these camera-based monitoring services should be supplemented by strong compliance processes. Furthermore, workers working in different factory units should always be made aware of PPE compliance practices.
 
 
-## Camera Configuration
-
-Ceiling-mounted cameras are ideal for wide-area surveillance and can cover larger areas with fewer cameras, making them a cost-effective and efficient option. If your workplace has a large area where PPE is required, such as a manufacturing facility or a construction site, ceiling-mounted cameras may be the best option for PPE detection.
-
-On the other hand, straight-mounted cameras are useful for capturing facial features and other details, making them a good option for PPE detection in smaller, more focused areas. If your workplace has specific locations where PPE is required, such as in a laboratory or a clean room, straight-mounted cameras may be a better option for PPE detection.
-
-### Camera Placement
-
-- Install cameras at entry points, employee locker rooms, and common areas where PPE is required, such as manufacturing floors, construction sites, and warehouses.
-- Place cameras at exits to ensure that employees do not leave the facility without wearing proper PPE.
-
-
-### Camera Height
-
-- Cameras should be installed at a height of 6-7 feet above the floor level.
-
-- Place the camera 5-8 feet from the focal point.
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a level angle to capture footage of the employee's face and upper body.
-
-Find more details about camera placement [here](../overview/cameras.md).
-
 ### Dataset
 
 The dataset for this scenario is based on PPE detection algorithms that are currently in practice.

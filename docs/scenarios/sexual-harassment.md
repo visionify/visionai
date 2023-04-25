@@ -24,9 +24,30 @@ To detect sexual harassment our model is trained on a dataset of video footage o
 
 Our trained model now, can be used to analyze live video footage or images in real-time which can further help in enabling alert to authorities or trigger an alarm when it detects suspicious behavior, allowing them to intervene and prevent further harassment.
 
-## Model
+### Model card
 
-We would be releasing the model for Sexual Harassment detection in *Q2-2023*.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4126</td>
+            <td>v5</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>84% </td>
+            <td>77% </td>
+            <td>74% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Contact Us
 

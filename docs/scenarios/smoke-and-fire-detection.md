@@ -1,10 +1,6 @@
 # **Early Fire Signs Detection**
 
-
-
 > An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities
-
-
 
 <figure markdown>
   ![smoke](https://github.com/visionify/visionai-images/raw/main/visionai-images/smokeandfire_collage.jpg "Detection of smoke and Fire at a work-place!"){ width="400" }
@@ -25,27 +21,6 @@ Vision AI-based Model for Early Fire Signs Detection is designed to spot early s
 
 To ensure accuracy and reliability, these camera-based monitoring services should be supplemented by effective practices to ensure and prevent fire hazards. Furthermore, workers working in different factory units should always be made aware of fire signs to look for. 
 
-
-## Camera Configuration
-
-
-### Camera Placement
-- Install cameras near areas where fires are most likely to occur, such as kitchens, electrical rooms, and mechanical rooms.
-- Place cameras in areas with high ceilings to capture smoke and heat rising towards the ceiling.
-
-### Camera Height
-
-- Cameras should be installed at a height of 10-12 feet above the floor level.
-
-- Place the camera 20-25 feet from the focal point.
-
-
-### Camera Angle Mounting Ranges
-
-- Place the camera at a downward angle of 45-60 degrees to capture footage of the floor surface and up towards the ceiling to capture smoke and heat rising.
-
-
-Find more details about camera placement [here](../overview/cameras.md).
 
 ## Model Details 
 

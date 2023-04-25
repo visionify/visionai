@@ -42,17 +42,35 @@ An event data for maximum occupancy scenario may include information such as:
 - type of event (Max occupancy exceeded, etc.)
 - Image of the event
 
-## Configuration
-
-It is recommended to set up camera setups to monitor maximum occupancy in the workplace. The location of cameras to monitor maximum occupancy will depend on the specific policies being enforced and the nature of the work environment.
-
 ## Model Details
 
 ### Dataset
 The dataset consists of images and videos of people in different scenarios.    
 
-### Model
-The model to monitor maximum occupancy is in progress and it will be released soon.
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2470</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>85.0% </td>
+            <td>78.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
   

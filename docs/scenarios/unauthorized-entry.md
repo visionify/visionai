@@ -58,9 +58,30 @@ All these datasets that are mainly focused on:
 - Attendance based evaluation
 - Person re-identification
 
-### Model
+### Model card
 
-The model to perform tailgating detection is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>mAP</th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2350</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>95.0% </td>
+            <td>78.6% </td>
+            <td>91.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

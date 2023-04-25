@@ -24,10 +24,6 @@ Vision AI based monitors can be used to push out events for different people obs
 VisionAI model's generated events would be:
 - Person distance events detected
 
-## Camera Configuration
-
-Recommended to set up cameras in ceiling view for monitoring social distancing guidelines.
-
 ### Camera Placement
 
 - Install cameras in high traffic areas, such as entrances, exits, and common areas.
@@ -51,9 +47,30 @@ Find more details about camera placement [here](../overview/cameras.md).
 The dataset for this scenario is based on real-world social distancing events.
 The dataset consists of images and videos collected from various sources. 
 
-### Model
+### Model card
 
-The model for social distancing event is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>6580</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>89.0% </td>
+            <td>91.6% </td>
+            <td>84.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 
 ### Scenario details

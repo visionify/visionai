@@ -13,9 +13,30 @@ In order to evaluate workplace safety, monitoring data is compared with Workplac
 Our VisionAI based model is a useful tool for detecting and measuring dust levels, as it can analyze large amounts of data and identify patterns that may be difficult for humans to detect. To detect and measure dust levels, we have used a training dataset of images or sensor data with known dust levels. The images were captured with a camera or a microscope, and the sensor data was collected using a dust monitoring device. Our algorithm is then trained on this dataset to learn to recognize patterns in the images or sensor data that are associated with specific dust levels. 
 Our model can be used for air quality monitoring applicationl; The algorithm is used to identify areas with high levels of dust and alert authorities or residents to take corrective actions. In an industrial hygiene application, the algorithm can be used to monitor workers' exposure to dust and ensure compliance with occupational health and safety regulations.
 
-## Model
+### Model card
 
-We would be releasing the model for Dust Detection or Dust Monitoring in workplaces in *Q2-2023*.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>3426</td>
+            <td>v1</td>
+            <td>Ceiling</td>
+            <td>65% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ## Contact Us
 

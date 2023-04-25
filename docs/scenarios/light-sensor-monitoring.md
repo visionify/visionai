@@ -32,7 +32,30 @@ Visionify’s light monitoring solution can monitor the ambient light of your el
 
 - Distance from light source: The dataset contains images of ambient light sources captured from different distances. 
 
-### Model
+### Model card
+
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>2326</td>
+            <td>v5</td>
+            <td>Ceiling</td>
+            <td>65% </td>
+            <td>71% </td>
+            <td>71% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

@@ -40,9 +40,30 @@ When the surrounding environment’s pressure exceeds or falls a threshold value
 - Using security camera feeds: The dataset includes images and videos collected from your existing security camera installations to make monitoring more accurate.
 
 
-### Model
+### Model card
 
-The model to monitor pressure in the surrounding environment is in progress and it will be released soon.
+ <div class="table">
+    <table class="fl-table">
+        <thead>
+        <tr><th>Dataset size</th>
+            <th>Version</th>
+            <th>Camera support</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th> mAP  </th>  
+        </thead>
+        <tbody>
+        <tr>
+            <td>4120</td>
+            <td>v1</td>
+            <td>Both(Ceiling and Straight)</td>
+            <td>65.0% </td>
+            <td>71.6% </td>
+            <td>71.0% </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Scenario details
 

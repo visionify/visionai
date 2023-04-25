@@ -56,7 +56,7 @@ The model is based off of the YOLOv5-face algorithm. The model is trained on WID
         <tr>
             <td>32,203</td>
             <td>v1</td>
-            <td>Both(Ceiling or Straight cameras)</td>
+            <td>Both(Ceiling and Straight)</td>
             <td>95% </td>
             <td>93% </td>
             <td>85% </td>
