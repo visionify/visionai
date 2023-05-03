@@ -74,14 +74,14 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/PPE_detection.png",
             "models": {
                 "latest": {
-                    "version": "0.0.8",
+                    "version": "0.1.2",
                     "name": "ppe-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.0.8.zip",
-                    "model_hash": "257e4f2a85defb28d5e839e7c1989c2e"
+                    "accuracy": 66.9,
+                    "recall": 67.5,
+                    "f1": 67.2,
+                    "datasetSize": 33543,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.1.2.zip",
+                    "model_hash": "cb12d7ac975d72176696d912641f3651"
                 },
                 "other": [
                 ]
