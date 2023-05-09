@@ -281,7 +281,7 @@ extra:
 extra_css:
   - css/termynal.css
   - css/custom.css
-  - css/hint.min.css
+
 extra_javascript:
   - js/termynal.js
   - js/custom.js
