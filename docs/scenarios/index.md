@@ -3,7 +3,7 @@
 Scenarios form the building blocks of VisionAI platform. These scenarios are organized into `Suites`. Below we talk about different suites and the scenarios that are part of them.
 
 - All scenarios are available as pick-n-choose scenarios. You can pick the scenarios you want based on your business needs. Each scenario is independently tested.
-- Events provided by these scenarios are given below. Events are sent to Redis & Azure EventHub pubsub systems for [further integration](custom/events-integration.md).
+- Events provided by these scenarios are given below. Events are sent to Redis & Azure EventHub pubsub systems for further integration.
 - There are a few common events supported by all scenarios (daily summary, weekly summary etc.)
 - Currently supported scenarios are highlighted by a ✅. Roadmap scenarios are highlighted by a 📅.
 - Each of the scenarios can be quickly tested through `visionai run <scenario-name>` command. For example:
@@ -33,7 +33,7 @@ Before any other scenarios are run, or before we store or process the images - t
 | ✅ | `text-blurring` | Blue any text detected (paper, computer screens etc) | [More details](../privacy/blur-signs.md){:target="_blank"} |
 | ✅ | `license-plate-blurring` | Blur any license plates detected | [More details](../privacy/blur-license-plates.md){:target="_blank"} |
 | 📅 | `signs-blurring` | Blur any signs detected | [More details](../privacy/blur-signs.md){:target="_blank"} |
-| 📅 | `obstructed-camera` | If camera feed is obstructed, send an alert | [More details](../scenarios/obstructed-camera-view.md){:target="_blank"} |
+| 📅 | `obstructed-camera` | If camera feed is obstructed, send an alert | [More details](../privacy/obstructed-camera-view.md){:target="_blank"} |
 
 ---
 
@@ -191,22 +191,21 @@ Monitoring the environment like current temperature, humidity, or air quality is
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](temperature-moniotring.md){:target="_blank"} |
+| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](temperature-monitoring.md){:target="_blank"} |
 | 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](environment-humidity.md){:target="_blank"} |
 | 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](air-quality.md){:target="_blank"} |
-| 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](environment-noise.md){:target="_blank"} |
+| 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](noise-level-monitoring.md){:target="_blank"} |
 | 📅 | `pressure-monitoring` | `Pressure excceds limit` <br> `Pressure subsceeds limit` | [More details](environment-pressure.md){:target="_blank"} |
-| 📅 | `water leak-monitoring` | `water leakage exceeds limit` | [More details](environment-water-leak.md){:target="_blank"} |
 | 📅 | `environment-voc-monitoring` | `VOC execeds limit` | [More details](environment-voc.md){:target="_blank"} |
 | 📅 | `environment-co-monitoring` | `CO exceds limit` | [More details](environment-co.md){:target="_blank"} |
 | 📅 | `light-sensor-monitoring` | `Light intensity exceeds limit` <br> `Light intensity subsceeds limit` | [More details](light-sensor-monitoring.md){:target="_blank"} |
 | 📅 | `dust-monitoring` | `dust exceeds limit` | [More details](environment-dust.md){:target="_blank"} |
 | 📅 | `water quality -monitoring` | `Water quality level exceeds limit` | [More details](environment-water-quality.md){:target="_blank"} |
-| 📅 | `energy-usage-monitoring` | `Energy usage hourly smmary` | [More details](energy-usage-monitoring.md){:target="_blank"} |
+| 📅 | `energy-usage-monitoring` | `Energy usage hourly smmary` | [More details](environment-energy-usage.md){:target="_blank"} |
 | 📅 | `waste-management` | `TODO` | [More details](environment-waste-management.md){:target="_blank"} |
 | 📅 | `water-usage-monitoring` | `Water usage monitoring` | [More details](environment-water-usage.md){:target="_blank"} |
 | 📅 | `water-level-monitoring` | `Water level monitoring` | [More details](environment-water-level.md){:target="_blank"} |
-| 📅 | `radiation-monitoring` | `Radiation level exceeds limit` <br> `Radiation level subsceeds limit` | [More details](radiation-monitoring.md){:target="_blank"} |
+| 📅 | `radiation-monitoring` | `Radiation level exceeds limit` <br> `Radiation level subsceeds limit` | [More details](environment-radiation.md){:target="_blank"} |
 
 ---
 
@@ -223,7 +222,7 @@ Suspicious activity detection suite relies on a combination of activity detectio
 | 📅 | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](vandalism.md){:target="_blank"} |
 | ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](firearms-and-knives.md){:target="_blank"} |
 | 📅 | `sexual-harassment-detection` | `Potential  event detected` | [More details](sexual-harassment.md){:target="_blank"} |
-| 📅 | `solictation-detection` | `Potential solicitation event detected` | [More details](solictation.md){:target="_blank"} |
+| 📅 | `solicitation-detection` | `Potential solicitation event detected` | [More details](solicitation.md){:target="_blank"} |
 | 📅 | `theft-and-or-shoplifting` | `Potential theft detected` <br> `Potential shoplifting activity detected` | [More details](theft.md){:target="_blank"} |
 | 📅 | `shipping-activity-detection` | `Shipping activity detected during after-hours` <br> `Shipping activity detected from non-designated areas` | [More details](shipping-activity.md){:target="_blank"} |
 | 📅 | `intrusion-detection` | `Intrusion event detected` | [More details](intrusion-detection.md){:target="_blank"} |
@@ -247,4 +246,4 @@ The below scenarios are designed to detect vehicle activity in and around the fa
 
 ## Next Steps
 
-Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](contact.md)
+Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](https://visionify.ai/contact-us/).

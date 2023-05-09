@@ -48,7 +48,7 @@
     
     ![Web-app main screen](../img/main-screen.PNG)
     
-    Find more details about these sections [here](webapp.md).
+    
 
 -  ## Access the Azure Managed-app
 

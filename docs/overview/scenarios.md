@@ -3,7 +3,7 @@
 Scenarios form the building blocks of VisionAI platform. These scenarios are organized into `Suites`. Below we talk about different suites and the scenarios that are part of them.
 
 - All scenarios are available as pick-n-choose scenarios. You can pick the scenarios you want based on your business needs. Each scenario is independently tested.
-- Events provided by these scenarios are given below. Events are sent to Redis & Azure EventHub pubsub systems for [further integration](custom/events-integration.md).
+- Events provided by these scenarios are given below. Events are sent to Redis & Azure EventHub pubsub systems for further integration.
 - There are a few common events supported by all scenarios (daily summary, weekly summary etc.)
 - Currently supported scenarios are highlighted by a ✅. Roadmap scenarios are highlighted by a 📅.
 - Each of the scenarios can be quickly tested through `visionai run <scenario-name>` command. For example:
@@ -33,7 +33,7 @@ Before any other scenarios are run, or before we store or process the images - t
 | ✅ | `text-blurring` | Blue any text detected (paper, computer screens etc) | [More details](../privacy/blur-signs.md){:target="_blank"} |
 | ✅ | `license-plate-blurring` | Blur any license plates detected | [More details](../privacy/blur-license-plates.md){:target="_blank"} |
 | 📅 | `signs-blurring` | Blur any signs detected | [More details](../privacy/blur-signs.md){:target="_blank"} |
-| 📅 | `obstructed-camera` | If camera feed is obstructed, send an alert | [More details](../scenarios/obstructed-camera-view.md){:target="_blank"} |
+| 📅 | `obstructed-camera` | If camera feed is obstructed, send an alert | [More details](../privacy/obstructed-camera-view.md){:target="_blank"} |
 
 ---
 
@@ -53,7 +53,7 @@ visionai run smoke-and-fire-detection
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
 | ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](smoke-and-fire-detection.md){:target="_blank"} |
-| ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking-hazard.md){:target="_blank"} |
+| ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](../scenarios/no-smoking-hazard.md){:target="_blank"} |
 | 📅 | `spills-and-leak-detection`      | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `gas-leak-detection`             | `Gas leak event detected` | IR Camera Required |
 | 📅 | `missing-fire-extinguisher`      | `Fire extinguisher missing` |
@@ -80,17 +80,17 @@ You can see real-time events generated as soon as person is detected without PPE
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](ppe-detection.md){:target="_blank"}
-| ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](working-at-heights.md){:target="_blank"}
+| ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](../scenarios/ppe-detection.md){:target="_blank"}
+| ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](../scenarios/working-at-heights.md){:target="_blank"}
 | 📅 | `environment-monitoring` | `CO out of range` <br> `CO2 out of range` <br> `CH4 out of range` <br> `VOCs out of range` <br> `Temperature out of range` <br> `Pressure out of range` <br> `Humidity out of range` |
 | ✅ | `fall-and-accident-detection` | `Person slip & fall detected` <br> `Potential collision/accident detected` <br> `Wet floor detected` <br> `Debris detected on floor` <br> `Wet/slippery sign detected` |
 | ✅ | `worker-fatigue-detection` | `Drowsy worker detected` | Straight camera angle |
-| ✅ | `posture-and-ergonomics` | `Bend count per individual ` | Straight camera angle <br> [More details](ergonomics.md){:target="_blank"} |
+| ✅ | `posture-and-ergonomics` | `Bend count per individual ` | Straight camera angle <br> [More details](../scenarios/ergonomics.md){:target="_blank"} |
 | 📅 | `empty-pallets-detection` | `Empty pallets detected` <br> `Partially empty pallets detected` |
 | 📅 | `spills-and-leaks-detection` | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Wet floor detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `hand-wash-compliance` | `Missed hand wash` |
 | 📅 | `person-temperature-monitoring` | `Person temperature exceeds threshold` | IR Camera required |
-| ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](../scenarios/confined-spaces-monitoring.md){:target="_blank"} |
 
 
 
@@ -131,15 +131,15 @@ Also need to specify that the camera needs to be configured to have a good view 
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](max-occupancy-count.md) |
-| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](exclusion-zones.md){:target="_blank"} |
-| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](../scenarios/max-occupancy-count.md) |
+| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](../scenarios/exclusion-zones.md){:target="_blank"} |
+| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](../scenarios/confined-spaces-monitoring.md){:target="_blank"} |
 | 📅 | `social-distancing`          | `Person detected` <br> `Person left` <br> `Person distance event` |
-| ✅ | `station-occupancy`          | `Daily summary event` | [More details](station-occupancy.md){:target="_blank"} |
+| ✅ | `station-occupancy`          | `Daily summary event` | [More details](../scenarios/station-occupancy.md){:target="_blank"} |
 | 📅 | `occupancy-metrics`          | `Daily summary event` |
 | 📅 | `authorized-personnel-only`  | `Unauthorized person detected` |
-| ✅ | `badge-tailgating`         | `Multi-entry (tailgating) event detected` <br> `Unauthorized entry event detected` | [More details](unauthorized-entry.md){:target="_blank"} |
-| ✅ | `perimeter-control`          | `Person detected near fence/perimeter` <br> `Movement detected near fence/perimeter` | IR camera required<br>[More details](perimeter-control.md){:target="_blank"} |
+| ✅ | `badge-tailgating`         | `Multi-entry (tailgating) event detected` <br> `Unauthorized entry event detected` | [More details](../scenarios/unauthorized-entry.md){:target="_blank"} |
+| ✅ | `perimeter-control`          | `Person detected near fence/perimeter` <br> `Movement detected near fence/perimeter` | IR camera required<br>[More details](../scenarios/perimeter-control.md){:target="_blank"} |
 
 
 
@@ -157,9 +157,9 @@ Company policies include specific scenarios that are relevant to your company. T
 
 
 | 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` |
-| ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](no-phone-usage.md){:target="_blank"} |
-| ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking.md){:target="_blank"} |
-| ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](authorized-personnel.md){:target="_blank"} |
+| ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](../scenarios/no-phone-usage.md){:target="_blank"} |
+| ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](../scenarios/no-smoking.md){:target="_blank"} |
+| ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](../scenarios/authorized-personnel.md){:target="_blank"} |
 | 📅 | `waste-management`           | `Spill event detected` <br> `Waste bin full` <br> `Debris detected in Field of View` |
 | 📅 | `energy-conservation`        | `Occupancy pattern daily summary` <br> `Light usage daily summary` |
 | 📅 | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` |
@@ -175,7 +175,7 @@ Equipment policies include specific scenarios that are relevant monitoring heavy
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
 | 📅 | `equipment-temperature`        | `Equipment temperature exceeds limit` <br> `Equipment temperature subsceeds limit` |
-| ✅ | `rust-and-corrosion-detection` | `Rust or corrosion event detected` | [More details](rust-and-corrosion.md){:target="_blank"} |
+| ✅ | `rust-and-corrosion-detection` | `Rust or corrosion event detected` | [More details](../scenarios/rust-and-corrosion.md){:target="_blank"} |
 | 📅 | `equipment-vibration`          | `Equipment vibration exceeds limit` | [^2] |
 | 📅 | `equipment-noise`              | `Equipment noise exceeds limit` |  [^3]|
 | 📅 | `reading-analog-dials`         | `Analog meter reading event`    |
@@ -193,22 +193,21 @@ Monitoring the environment like current temperature, humidity, or air quality is
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](temperature-moniotring.md){:target="_blank"} |
-| 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](environment-humidity.md){:target="_blank"} |
-| 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](air-quality.md){:target="_blank"} |
-| 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](environment-noise.md){:target="_blank"} |
-| 📅 | `pressure-monitoring` | `Pressure excceds limit` <br> `Pressure subsceeds limit` | [More details](environment-pressure.md){:target="_blank"} |
-| 📅 | `water leak-monitoring` | `water leakage exceeds limit` | [More details](environment-water-leak.md){:target="_blank"} |
-| 📅 | `environment-voc-monitoring` | `VOC execeds limit` | [More details](environment-voc.md){:target="_blank"} |
-| 📅 | `environment-co-monitoring` | `CO exceds limit` | [More details](environment-co.md){:target="_blank"} |
-| 📅 | `light-sensor-monitoring` | `Light intensity exceeds limit` <br> `Light intensity subsceeds limit` | [More details](light-sensor-monitoring.md){:target="_blank"} |
-| 📅 | `dust-monitoring` | `dust exceeds limit` | [More details](environment-dust.md){:target="_blank"} |
-| 📅 | `water quality -monitoring` | `Water quality level exceeds limit` | [More details](environment-water-quality.md){:target="_blank"} |
-| 📅 | `energy-usage-monitoring` | `Energy usage hourly smmary` | [More details](energy-usage-monitoring.md){:target="_blank"} |
-| 📅 | `waste-management` | `TODO` | [More details](environment-waste-management.md){:target="_blank"} |
-| 📅 | `water-usage-monitoring` | `Water usage monitoring` | [More details](environment-water-usage.md){:target="_blank"} |
-| 📅 | `water-level-monitoring` | `Water level monitoring` | [More details](environment-water-level.md){:target="_blank"} |
-| 📅 | `radiation-monitoring` | `Radiation level exceeds limit` <br> `Radiation level subsceeds limit` | [More details](radiation-monitoring.md){:target="_blank"} |
+| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](../scenarios/temperature-monitoring.md){:target="_blank"} |
+| 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](../scenarios/environment-humidity.md){:target="_blank"} |
+| 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](../scenarios/air-quality.md){:target="_blank"} |
+| 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](../scenarios/noise-level-monitoring.md){:target="_blank"} |
+| 📅 | `pressure-monitoring` | `Pressure excceds limit` <br> `Pressure subsceeds limit` | [More details](../scenarios/environment-pressure.md){:target="_blank"} |
+| 📅 | `environment-voc-monitoring` | `VOC execeds limit` | [More details](../scenarios/environment-voc.md){:target="_blank"} |
+| 📅 | `environment-co-monitoring` | `CO exceds limit` | [More details](../scenarios/environment-co.md){:target="_blank"} |
+| 📅 | `light-sensor-monitoring` | `Light intensity exceeds limit` <br> `Light intensity subsceeds limit` | [More details](../scenarios/light-sensor-monitoring.md){:target="_blank"} |
+| 📅 | `dust-monitoring` | `dust exceeds limit` | [More details](../scenarios/environment-dust.md){:target="_blank"} |
+| 📅 | `water quality -monitoring` | `Water quality level exceeds limit` | [More details](../scenarios/environment-water-quality.md){:target="_blank"} |
+| 📅 | `energy-usage-monitoring` | `Energy usage hourly smmary` | [More details](../scenarios/environment-energy-usage.md){:target="_blank"} |
+| 📅 | `waste-management` | `TODO` | [More details](../scenarios/environment-waste-management.md){:target="_blank"} |
+| 📅 | `water-usage-monitoring` | `Water usage monitoring` | [More details](../scenarios/environment-water-usage.md){:target="_blank"} |
+| 📅 | `water-level-monitoring` | `Water level monitoring` | [More details](../scenarios/environment-water-level.md){:target="_blank"} |
+| 📅 | `radiation-monitoring` | `Radiation level exceeds limit` <br> `Radiation level subsceeds limit` | [More details](../scenarios/environment-radiation.md){:target="_blank"} |
 
 ---
 
@@ -219,16 +218,16 @@ Suspicious activity detection suite relies on a combination of activity detectio
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `loitering-detection` | `Person detected in closed space` <br> `Person detected during off hours` <br> `Person dwell time exceeds limit` | [More details](loitering.md){:target="_blank"} |
-| 📅 | `suspicious-package-detection` | `Suspicious package detected` <br> `Package abandoned` | [More details](suspicious-package-detection.md){:target="_blank"} |
-| 📅 | `bullying-fighting-aggressive-behavior` | `Bullying/fighting/aggressive event detected` | [More details](aggressive-behavior.md){:target="_blank"} |
-| 📅 | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](vandalism.md){:target="_blank"} |
-| ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](firearms-and-knives.md){:target="_blank"} |
-| 📅 | `sexual-harassment-detection` | `Potential  event detected` | [More details](sexual-harassment.md){:target="_blank"} |
-| 📅 | `solictation-detection` | `Potential solicitation event detected` | [More details](solictation.md){:target="_blank"} |
-| 📅 | `theft-and-or-shoplifting` | `Potential theft detected` <br> `Potential shoplifting activity detected` | [More details](theft.md){:target="_blank"} |
-| 📅 | `shipping-activity-detection` | `Shipping activity detected during after-hours` <br> `Shipping activity detected from non-designated areas` | [More details](shipping-activity.md){:target="_blank"} |
-| 📅 | `intrusion-detection` | `Intrusion event detected` | [More details](intrusion-detection.md){:target="_blank"} |
+| 📅 | `loitering-detection` | `Person detected in closed space` <br> `Person detected during off hours` <br> `Person dwell time exceeds limit` | [More details](../scenarios/loitering.md){:target="_blank"} |
+| 📅 | `suspicious-package-detection` | `Suspicious package detected` <br> `Package abandoned` | [More details](../scenarios/suspicious-package-detection.md){:target="_blank"} |
+| 📅 | `bullying-fighting-aggressive-behavior` | `Bullying/fighting/aggressive event detected` | [More details](../scenarios/aggressive-behavior.md){:target="_blank"} |
+| 📅 | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](../scenarios/vandalism.md){:target="_blank"} |
+| ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](../scenarios/firearms-and-knives.md){:target="_blank"} |
+| 📅 | `sexual-harassment-detection` | `Potential  event detected` | [More details](../scenarios/sexual-harassment.md){:target="_blank"} |
+| 📅 | `solicitation-detection` | `Potential solicitation event detected` | [More details](../scenarios/solicitation.md){:target="_blank"} |
+| 📅 | `theft-and-or-shoplifting` | `Potential theft detected` <br> `Potential shoplifting activity detected` | [More details](../scenarios/theft.md){:target="_blank"} |
+| 📅 | `shipping-activity-detection` | `Shipping activity detected during after-hours` <br> `Shipping activity detected from non-designated areas` | [More details](../scenarios/shipping-activity.md){:target="_blank"} |
+| 📅 | `intrusion-detection` | `Intrusion event detected` | [More details](../scenarios/intrusion-detection.md){:target="_blank"} |
 
 ---
 
@@ -238,15 +237,15 @@ The below scenarios are designed to detect vehicle activity in and around the fa
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `vehicle-policies` | `Vehicle activity detected in non-designtated areas` <br> `Vehicle activity detected during after-hours` <br> `Collision event detected` <br> `Near collision event detected` | [More details](vehicle-policies.md){:target="_blank"} |
-| 📅 | `vehicle-usage`  | `Daily summary event of vehicle usage` <br> `Path-map of vehicle usage` | [More details](vehicle-usage.md){:target="_blank"} |
-| 📅 | `forklift-zone-breach` | `Forklift observed outside of configured zone` <br> `Pedestrian observed in forklift zone` | [More details](forklift-zone-breach.md){:target="_blank"} |
-| 📅 | `vehicle-license-plate-detection` | `Vehicle detected with license plate number` | [More details](vehicle-license-plate.md){:target="_blank"} |
-| 📅 | `vehicle-speed-monitoring` | `Vehicle speed exceeds limit` | [More details](vehicle-speed.md){:target="_blank"} |
-| 📅 | `vehicle-cargo-volume-limit` | `Vehicle cargo volume exceeds limit` | [More details](vehicle-cargo.md){:target="_blank"} |
+| 📅 | `vehicle-policies` | `Vehicle activity detected in non-designtated areas` <br> `Vehicle activity detected during after-hours` <br> `Collision event detected` <br> `Near collision event detected` | [More details](../scenarios/vehicle-policies.md){:target="_blank"} |
+| 📅 | `vehicle-usage`  | `Daily summary event of vehicle usage` <br> `Path-map of vehicle usage` | [More details](../scenarios/vehicle-usage.md){:target="_blank"} |
+| 📅 | `forklift-zone-breach` | `Forklift observed outside of configured zone` <br> `Pedestrian observed in forklift zone` | [More details](../scenarios/forklift-zone-breach.md){:target="_blank"} |
+| 📅 | `vehicle-license-plate-detection` | `Vehicle detected with license plate number` | [More details](../scenarios/vehicle-license-plate.md){:target="_blank"} |
+| 📅 | `vehicle-speed-monitoring` | `Vehicle speed exceeds limit` | [More details](../scenarios/vehicle-speed.md){:target="_blank"} |
+| 📅 | `vehicle-cargo-volume-limit` | `Vehicle cargo volume exceeds limit` | [More details](../scenarios/vehicle-cargo.md){:target="_blank"} |
 
 ---
 
 ## Next Steps
 
-Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](contact.md)
+Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](../company/contact.md)
