@@ -11,8 +11,7 @@ VisionAI library is focused on common workplace and employee health & safety sce
 No! You do not need any new camera or hardware to run this system. VisionAl works with your existing security camera infrastructure. We support RTSP, RTMP, HLS and other common video platforms. Current safety surveillance systems are just record and playback – we can bring a lot of operational and safety insights from the current camera systems.
 
 ## Is it Free to use? How does the licensing work?
-Licency details can be found at here.
-[here](licensing.md).
+Licency details can be found at [here](../custom/licensing.md).
 
 ## How can I try it out quickly?
 We recommend testing this on a beefy machine with a NVIDIA graphics card. To quickly test out a scenario you can follow these commands.
