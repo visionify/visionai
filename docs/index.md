@@ -64,7 +64,28 @@ Our primary focus is on workplace health and safety models, but we are expanding
 
 === "Windows"
     - Install **Docker Desktop** for Windows<br>
-    Download the latest version of Docker Desktop from the official website and install it on your Windows machine. This will automatically install Docker Engine and Docker Container for WSL Ubuntu.
+    Download the latest version of Docker Desktop from the official website [here](https://www.docker.com/products/docker-desktop/) and install it on your Windows machine. This will automatically install Docker Engine. Restart your machine to get all changes done. Start Docker Desktop from the Windows Start menu. From the Docker menu, select Settings and then General. Select the Use WSL 2 based engine check box.
+    - Install WSL(Windows subsystem for Linux) and selecting Ubuntu<br>
+    You can now install everything you need to run WSL with a single command. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", enter the wsl --install command, then restart your machine.
+    ```console
+    wsl --install
+    ```
+    This command will enable the features necessary to run WSL and install the Ubuntu distribution of Linux.
+     
+    - Install pip3 in WSL<br>
+        Update the package list by running the following command:
+        ```console
+        sudo apt update
+        ```
+        Install pip using the following command:
+        ```console
+        sudo apt install python3-pip
+        ```
+        Once the installation process is complete, verify that pip has been installed by running the following command:
+
+        ```console
+        pip3 --version
+        ```
 
 
 === "Ubuntu"
@@ -75,12 +96,15 @@ Our primary focus is on workplace health and safety models, but we are expanding
         sudo apt-get update
         sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
         ```
+
+
     - Grant permissions to Docker<br>
         Run the following command to grant permissions to Docker:
         ```console
         sudo chmod 666 /var/run/docker.sock
         ```
         This will avoid the error that may occur during fetching the server API version.
+  
         
 === "MacOS"
     - Get Docker installer for Mac Desktop from [here](https://docs.docker.com/desktop/install/mac-install/)
@@ -89,6 +113,10 @@ Our primary focus is on workplace health and safety models, but we are expanding
 #### Disc Space
 
 VisionAI application uses Docker containers to run the apps. The Docker images are large in size and require a minimum of 50GB of free space on the host machine.
+
+#### RAM requirement
+
+VisionAI application requires minimum 12GB RAM to run the apps.
 
 #### GPU
 
@@ -106,8 +134,11 @@ During initial download and setup portion of VisionAI application, we would need
 
 ---
 
-### Installtion
-
+### Installation
+* Upgrade pip to the latest version
+``` bash
+$ pip install --upgrade pip
+```
 * Install **VisionAI** through `PyPI`:
 
 <div class="termy">
