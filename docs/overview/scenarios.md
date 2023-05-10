@@ -52,14 +52,14 @@ visionai run smoke-and-fire-detection
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](smoke-and-fire-detection.md){:target="_blank"} |
+| ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](../scenarios/smoke-and-fire-detection.md){:target="_blank"} |
 | ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](../scenarios/no-smoking-hazard.md){:target="_blank"} |
 | 📅 | `spills-and-leak-detection`      | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `gas-leak-detection`             | `Gas leak event detected` | IR Camera Required |
 | 📅 | `missing-fire-extinguisher`      | `Fire extinguisher missing` |
 | 📅 | `blocked-exit-monitoring`        | `Blocked exit detected` |
 | 📅 | `equipment-temperature-monitoring`| `Temperature exceeds limit` <br> `Temperature subceeds limit` | IR Camera Required |
-| ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](rust-and-corrosion-hazard.md){:target="_blank"} |
+| ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](../scenarios/rust-and-corrosion-hazard.md){:target="_blank"} |
 
 
 ---
@@ -193,7 +193,7 @@ Monitoring the environment like current temperature, humidity, or air quality is
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](../scenarios/temperature-monitoring.md){:target="_blank"} |
+| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](../scenarios/environment-temperature.md){:target="_blank"} |
 | 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](../scenarios/environment-humidity.md){:target="_blank"} |
 | 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](../scenarios/air-quality.md){:target="_blank"} |
 | 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](../scenarios/noise-level-monitoring.md){:target="_blank"} |
