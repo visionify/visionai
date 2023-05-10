@@ -191,7 +191,7 @@ Monitoring the environment like current temperature, humidity, or air quality is
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](temperature-monitoring.md){:target="_blank"} |
+| 📅 | `temperature-monitoring` | `Temperature excceds limit` <br> `Temperature subsceeds limit` | [More details](environment-temperature.md){:target="_blank"} |
 | 📅 | `humidity-monitoring` | `Humidity excceds limit` <br> `Humidity subsceeds limit` | [More details](environment-humidity.md){:target="_blank"} |
 | 📅 | `air-quality` | `CO exceeds limit` <br> `CO2 exceeds limit` <br> `NO2 Exceeds limit` <br> `SO2 exceeds limit` <br> `VOCs exceeds limit` <br> `Excessive dust detected` <br> `Excessive dust detected` | [More details](air-quality.md){:target="_blank"} |
 | 📅 | `noise-level-monitoring` | `Noise level exceeds limit` | [More details](noise-level-monitoring.md){:target="_blank"} |
