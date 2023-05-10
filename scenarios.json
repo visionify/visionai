@@ -13,14 +13,14 @@
             "thumbnail": "https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/smoke-and-fire.png",
             "models": {
                 "latest": {
-                    "version": "0.0.7",
+                    "version": "0.0.8",
                     "name": "smoke-and-fire-detection",
-                    "accuracy": 98.2,
-                    "recall": 95.2,
-                    "f1": 95,
-                    "datasetSize": 240032,
-                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoke-and-fire-detection/smoke-and-fire-detection-0.0.7.zip",
-                    "model_hash": "1e0585f776e1dd2a7f391107458fdd6a"
+                    "accuracy": 88.0,
+                    "recall": 82.3,
+                    "f1": 85.0,
+                    "datasetSize": 81619,
+                    "model_url": "https://workplaceos.blob.core.windows.net/models/smoke-and-fire-detection/smoke-and-fire-detection-0.0.8.zip",
+                    "model_hash": "d332f80eec87033da6af80da8cb00222"
                 },
                 "other": [
                 ]
