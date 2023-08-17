@@ -4,7 +4,7 @@
 > Monitor tools check-in/out and generate periodic events.
 
 <figure markdown>
-  ![Tools check detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/Tools_check_in_check_out-06.jpg "Tools check in/out monitoring!"){ width="350" }<figcaption>Tools check-in/out detection event</figcaption>
+  ![Tools check detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg "Tools check in/out monitoring!"){ width="350" }<figcaption>Tools check-in/out detection event</figcaption>
 </figure>
 
 

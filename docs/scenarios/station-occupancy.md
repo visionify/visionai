@@ -15,7 +15,7 @@ Our robust occupancy monitoring systems offer higher accuracy compared to curren
 
 
 <figure markdown>
-  ![](https://github.com/visionify/visionai-images/raw/main/visionai-images/desk-occupancy.png "Desk occupancy monitoring at a work-place!"){ width="350" }
+  ![](https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/desk-occupancy.png "Desk occupancy monitoring at a work-place!"){ width="350" }
   <figcaption>monitoring desk occupancy</figcaption>
 </figure>
 

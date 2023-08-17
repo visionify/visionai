@@ -3,7 +3,7 @@
 > Stay vigilant even after hours with our advanced suspicious shipping activity solution.
 
 <figure markdown>
-  ![Shipping activity detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/suspicious-shipping.png "Suspicious shipping activity detection at workplace!"){ width="350" }<figcaption>Detection of suspicious shipping activity event</figcaption>
+  ![Shipping activity detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png "Suspicious shipping activity detection at workplace!"){ width="350" }<figcaption>Detection of suspicious shipping activity event</figcaption>
 </figure>
 
 ## Overview

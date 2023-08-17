@@ -3,7 +3,7 @@
 > Ensure that your organziation is safe & compliant for any emergency evacuations. If any of your exits are blocked - get an event notifications so it can be quickly resolved.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/blocked-exit-monitoring.png "Detection of blocked exit at workplace!"){ width="350" }<figcaption>Detection of blocked exit</figcaption>
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/blocked-exit-monitoring.png "Detection of blocked exit at workplace!"){ width="350" }<figcaption>Detection of blocked exit</figcaption>
 </figure>
 
 ## Overview

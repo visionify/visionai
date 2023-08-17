@@ -4,7 +4,7 @@
 
 > Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion. 
 
-![Rust and corrosion detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/rustcorrosion_collage.jpg"Detection of Rust/Corrosion!"){width="400"}
+![Rust and corrosion detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/rustcorrosion_collage.jpg "Detection of Rust/Corrosion!"){width="400"}
 
 ## Overview 
 

@@ -3,7 +3,7 @@
 > Monitor ambient light in real-time with our light-sensing solution
 
 <figure markdown>
-  ![Light Sensor Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/light%20monitoring.webp"Detection of ambient lights!"){ width="350" }
+  ![Light Sensor Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp "Detection of ambient lights!"){ width="350" }
   <figcaption>Detection of ambient lights event</figcaption>
 </figure>
 

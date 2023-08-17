@@ -3,7 +3,7 @@
 > Monitor analog dials and generate periodic events.
 
 <figure markdown>
-  ![Analog Dials Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/analog-dials-monitoring.png "Analog dials monitoring at work-place!"){ width="350" }
+  ![Analog Dials Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png "Analog dials monitoring at work-place!"){ width="350" }
   <figcaption>Analog dials monitoring</figcaption>
 </figure>
 

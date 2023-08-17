@@ -3,7 +3,7 @@
 > An intelligent alarm system that could be used to monitor vehicle speed
 
 <figure markdown>
-  ![Vehicle Speed Monitoring](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-speed-limit.png "Detection of vehicle collision!"){ width="350" }
+  ![Vehicle Speed Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vehicle-speed-limit.png "Detection of vehicle collision!"){ width="350" }
   <figcaption>Detection of vehicle speed monitoring event</figcaption>
 </figure>
 

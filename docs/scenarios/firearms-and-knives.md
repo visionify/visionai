@@ -3,7 +3,7 @@
 > New Technology aims to improve Firearm Detection and Save Lives with VisionAI.
 
 <figure markdown>
-  ![Firearms And Knives Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/firearms-detection.png "Detection of firearms and knives at a work-place!"){ width="350" }
+  ![Firearms And Knives Detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/firearms-detection.png "Detection of firearms and knives at a work-place!"){ width="350" }
   <figcaption>Detection of firearms and knives event</figcaption>
 </figure>
 

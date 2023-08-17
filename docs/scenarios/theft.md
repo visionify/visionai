@@ -3,7 +3,7 @@
 > Ensure prevention of Shoplifting, employee theft, minimize insurance loss and other related damages across the retail sector.
 
 <figure markdown>
-  ![Shoplifting detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/theft-detection.png "Theft detection!"){ width="350" }
+  ![Shoplifting detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png "Theft detection!"){ width="350" }
   <figcaption>Detection of shoplifting or theft event</figcaption>
 </figure>
 

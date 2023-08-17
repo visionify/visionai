@@ -2,6 +2,11 @@
 
 > Strengthen your smoke & fire detection compliance - through adding custom logic for checking for missing fire extinguisher from required places.
 
+<figure markdown>
+  ![Fire extinguisher](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/missing-fire-exting.jpg "Detection of missing fire extinguisher!"){ width="300" }
+  <figcaption>MMissing Fire extinguisher</figcaption>
+</figure>
+
 # Overview
 Fire Extinguishers prove to be a crucial preventive measure against unexpected fires. These are essential components of safety features that can help contain early fires before they escalate into large ones. Adequately installed fire extinguishers in the building offer round-the-clock protection against unexpected fires, and a majority of fires can be put out using handy fire extinguishers.
 
@@ -14,9 +19,6 @@ Make your workplace safer with our VisionAI monitoring, a computer vision and de
 
 Our fully automated system guards your facility 24/7. It sends instant alerts whenever a missing fire extinguisher is detected, allowing businesses to achieve improved fire safety, compliance with regulations, cost savings, and peace of mind. 
 
-Missing Fire extinguisher at office            |  Missing Fire extinguisher at factory  
-    :-------------------------:|:-------------------------:
-    ![Fire extinguisher](https://github.com/visionify/visionai-images/raw/main/visionai-images/missing-fire-exting.jpg "Detection of missing fire extinguisher!"){ width="300" }  |  ![Fire extinguisher](https://github.com/visionify/visionai-images/raw/main/visionai-images/missing-fire-exting2.jpg "Detection of missing fire extinguisher!"){ width="300" }
 
 ## Events
 

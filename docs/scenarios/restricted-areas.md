@@ -14,7 +14,7 @@ Another major problem with existing systems cannot detect intrusion after an una
 With our Vision AI monitoring you can authorize access as well as continuous monitor live feeds inside a restricted area for real-time detection of unauthorized personnel. Our fully automated detection models are not only more powerful and accurate than existing systems but also more affordable and easy to integrate into existing infrastructure allowing users to scale the power of i-based real-time detection with a few simple clicks.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/exclusion.png "unauthorized entry!"){ width="350" }
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/restricted-areas.png "Unauthorized entry!"){ width="350" }
   <figcaption>Detection of unauthorized entry event</figcaption>
 </figure>
 

@@ -3,7 +3,7 @@
 > Maximize warehouse productivity and safety with our reliable empty pallet detection model.
 
 <figure markdown>
-  ![Empty Pallet Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/empty-pallets.png "Empty Pallet Detection at work-place!"){ width="350" }
+  ![Empty Pallet Detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/empty-pallets.png "Empty Pallet Detection at work-place!"){ width="350" }
   <figcaption>Empty Pallet Detection</figcaption>
 </figure>
 

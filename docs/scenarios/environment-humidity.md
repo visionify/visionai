@@ -4,7 +4,7 @@
 > Ideal tool to monitor humidity in the surrounding environment.
 
 <figure markdown>
-  ![Humidity Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/humidity%20monitoring%20.jpeg"Detection of Humidity!"){ width="350" }
+  ![Humidity Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg "Detection of Humidity!"){ width="350" }
   <figcaption>Detection of Humidity event</figcaption>
 </figure>
 

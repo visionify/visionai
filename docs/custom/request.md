@@ -10,7 +10,7 @@ VisionAI Toolkit provides end-to-end data customization and analytics services. 
 
 We can assist you in optimising business use-cases so that you can focus on activities that generate true business value. 
 
-![custom integration features](https://github.com/visionify/visionai-images/raw/main/visionai-images/custom-features.PNG) 
+![custom integration features](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/custom-features.PNG) 
 
 This includes:
 
@@ -40,10 +40,4 @@ For example,
 Current, real-time web applications pose unique horizontal scalability challenges. 
 Therefore, our current architecture uses pub/sub messaging mechanism to push events notifications to Redis/ Graffana. These can be integrated through Azure Event Grid to Azure IoT hub. An architecture to support this would be:
 
-![Architecture](https://github.com/visionify/visionai-images/raw/main/visionai-images/architecture-custom.png) 
-
-
-
-
-
-
+![Architecture](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/architecture-custom.png)

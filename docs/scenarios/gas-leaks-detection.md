@@ -2,6 +2,11 @@
 
 > Gas leaks detection through VisionAI.
 
+<figure markdown>
+  ![Gas leak](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/gas-leak.jpg "Hand-wash detection at work-place!"){ width="350" }
+  <figcaption>Gas leak Detection</figcaption>
+</figure>
+
 ## Overview
 Gas leak detection is important in industries to ensure the safety of workers, prevent damage to equipment, and minimize the risk of fires and explosions. There are several methods for gas leak detection in industries.
 
@@ -12,13 +17,6 @@ VisionAI Infrared Camera (IR) based solution can be used to detect gas leaks in 
 Manual inspections based on installation of fixed gas detectors and portable gas detectors can be time-consuming and labor-intensive, which can make them impractical for large or complex industrial facilities.
 
 VisionAI's Infrared cameras detect the infrared radiation emitted by objects and can be used to visualize gas leaks that are invisible to the naked eye. The cameras can be used for leak detection in large areas, such as pipelines and storage tanks.
-    
-
-
-
-Gas leak Example            |  Gas leak Example
-    :-------------------------:|:-------------------------:
-    ![Gas leak](https://github.com/visionify/visionai-images/raw/main/visionai-images/gas-leak1.jpg "Detection of gas!"){ width="200" }  |  ![Gas leak](https://github.com/visionify/visionai-images/raw/main/visionai-images/gas-leak2.jpg "Detection of gas!"){ width="200" }
 
 ### Gas leak Detection using IR cameras 
 

@@ -3,7 +3,7 @@
 > Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.
 
 <figure markdown>
-  ![Aggressive Behavior](https://github.com/visionify/visionai-images/raw/main/visionai-images/aggressive-behavior-detection.png "Aggressive behavior detection at work-place!"){ width="350" }
+  ![Aggressive Behavior](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png "Aggressive behavior detection at work-place!"){ width="350" }
   <figcaption>Detection of Aggressive Behavior</figcaption>
 </figure>
 

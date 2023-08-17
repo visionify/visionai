@@ -2,7 +2,7 @@
 > Measure pressure in real-time, ensuring safe equipment and work conditions.
 
 <figure markdown>
-  ![Pressure Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/pressure%20sensor%20monitoring.png"Detection of Pressure!"){ width="350" }
+  ![Pressure Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png "Detection of Pressure!"){ width="350" }
   <figcaption>Detection of Pressure event</figcaption>
 </figure>
 

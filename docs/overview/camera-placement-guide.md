@@ -28,7 +28,7 @@ When setting up cameras there are three key factors to consider:
 
 It's crucial to identify the direction in which the majority of people are walking in relation to the camera's field of view. This direction is important for optimal system performance.
 
-![](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/person-walking-direction.png)
+![](https://visionai.azureedge.net/docs-images/Camera-Guide/person-walking-direction.png)
 
 ### Camera height
 
@@ -37,22 +37,22 @@ Camera height is an important consideration when determining the field of view f
 ### Camera-to-focal-point distance
 The camera-to-focal-point distance is the distance between the camera lens and the focal point of the area being monitored. This distance is important because it determines the level of detail captured by the camera. If the camera is too far away from the focal point, the resulting image may lack the necessary detail to accurately capture safety hazards or other important information.
 
-![](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-focal-point.png)
+![](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-focal-point.png)
 
 This distance is measured on the floor plane.
 
-![](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-focal-point-floor-plane.png)
+![](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-focal-point-floor-plane.png)
 
 From above, it looks like this:
 
-![](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-focal-point-floor-plane-above.png)
+![](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-focal-point-floor-plane-above.png)
 
 
 The following illustration simulates camera views from the closest and farthest camera-to-focal-point distances.
 
 Closest             | Farthest
     :-------------------------:|:-------------------------:
-    ![Focal point closest](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/focal-point-closest.png)  |  ![Focal point farthest](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/focal-point-farthest.png)
+    ![Focal point closest](https://docsvisionify.blob.core.windows.net/docs-images/Camera-Guide/focal-point-closest.png)  |  ![Focal point farthest](https://visionai.azureedge.net/docs-images/Camera-Guide/focal-point-farthest.png)
 
 
 
@@ -63,12 +63,12 @@ The following illustration simulates camera views using the leftmost (-) and rig
 
 Leftmost view             | Rightmost view
     :-------------------------:|:-------------------------:
-    ![Camera angle leftmost](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-angle-left.png) |  ![Camera angle rightmost](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-angle-right.png)
+    ![Camera angle leftmost](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-angle-left.png) |  ![Camera angle rightmost](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-angle-right.png)
 
 
 The following illustration shows camera placement and mounting angles from a birds-eye view.
 
-![](https://github.com/visionify/visionai-images/raw/main/visionai-images/camera-guide/camera-angle-top.png)
+![](https://visionai.azureedge.net/docs-images/Camera-Guide/camera-angle-top.png)
 
 It's important to carefully consider camera height, camera-to-focal-point distance, and camera angle relative to the floor plane. Taking these factors into account can help ensure that cameras are positioned to capture accurate footage of workplace hazards and other important safety information.
 
@@ -93,7 +93,7 @@ There are two primary modes of camera placement that are considered for VisionAI
     
     Example 1             |  Example 2
     :-------------------------:|:-------------------------:
-    ![Camera Ceiling](https://github.com/visionify/visionai-images/raw/main/visionai-images/ceiling-camera.png)  |  ![Camera Ceiling](https://github.com/visionify/visionai-images/raw/main/visionai-images/3d-ceiling.png)
+    ![Camera Ceiling](https://visionai.azureedge.net/docs-images/Camera-Guide/ceiling-camera.png)  |  ![Camera Ceiling](https://visionai.azureedge.net/docs-images/Camera-Guide/3d-ceiling.png)
 
 
 ### Straight-mounted cameras
@@ -107,6 +107,6 @@ There are two primary modes of camera placement that are considered for VisionAI
 
     Example 1             |  Example 2
     :-------------------------:|:-------------------------:
-    ![Straight-mounted camera view](https://github.com/visionify/visionai-images/raw/main/visionai-images/front-camera1.png)  |  ![Straight-mounted camera view](https://github.com/visionify/visionai-images/raw/main/visionai-images/front-camera2.png)
+    ![Straight-mounted camera view](https://visionai.azureedge.net/docs-images/Camera-Guide/front-camera1.png)  |  ![Straight-mounted camera view](hhttps://visionai.azureedge.net/docs-images/Camera-Guide/front-camera2.png)
 
 When determining which mode of camera placement to use, it's important to consider the specific needs of required use case. Factors such as the size of the area to be monitored, the level of detail required, and the presence of obstructions should all be taken into account to ensure that the cameras are installed in the most effective and efficient manner possible.

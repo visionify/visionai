@@ -3,7 +3,7 @@
 > An intelligent alarm system that could be used to detect cargo in vehicles
 
 <figure markdown>
-  ![Vehicle Cargo Monitoring](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-cargo-limit.png "Vehicle cargo monitoring at workplace!"){ width="350" }
+  ![Vehicle Cargo Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png "Vehicle cargo monitoring at workplace!"){ width="350" }
   <figcaption>Vehicle cargo monitoring event</figcaption>
 </figure>
 

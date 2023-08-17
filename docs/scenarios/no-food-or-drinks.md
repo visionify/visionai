@@ -3,7 +3,7 @@
 > An easier, smarter way to enforce policies with VisionAI
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/no-food-or-drinks.jpg "Detection of food and drinks at work-place!"){ width="350" }
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/no-food-or-drinks.jpg "Detection of food and drinks at work-place!"){ width="350" }
   <figcaption>Event: No food, No drinks</figcaption>
 </figure>
 

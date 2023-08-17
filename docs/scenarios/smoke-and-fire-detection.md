@@ -3,7 +3,7 @@
 > An intelligent Early Fire Signs Detection system aimed at safeguarding people and facilities
 
 <figure markdown>
-  ![smoke](https://github.com/visionify/visionai-images/raw/main/visionai-images/smokeandfire_collage.jpg "Detection of smoke and Fire at a work-place!"){ width="400" }
+  ![smoke](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/smokeandfire_collage.jpg "Detection of smoke and Fire at a work-place!"){ width="400" }
   <figcaption>Detection of Smoke and Fire event</figcaption>
 </figure>
 

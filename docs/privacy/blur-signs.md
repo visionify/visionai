@@ -3,7 +3,7 @@
 > Ensure the privacy of individuals by obscuring documents and other signs in camera feeds
 
 <figure markdown>
-  ![text blur](https://github.com/visionify/visionai-images/raw/main/visionai-images/docblur_collage.png!"){width="400"}
+  ![text blur](https://docsvisionify.blob.core.windows.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png){width="400"}
   <figcaption>Text blur as part of preprocessing</figcaption>
 </figure>
 
