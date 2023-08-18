@@ -2,6 +2,10 @@
 
 > Secure restricted areas with our powerful AI-based monitoring system that detects and prevents unauthorized access in real-time
 
+<figure markdown>
+  ![Restricted zone](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/restricted-zone.png "unauthorized entry!"){ width="350" }
+  <figcaption>Detection of unauthorized entry event</figcaption>
+</figure>
 # Overview
 Unauthorized access to restricted zones at the workplace can lead to theft, accidents, and other security breaches. Be it valuable assets, sensitive information or providing employee safety, maintaining high-security and controlled access for restricted zones at the workplace is essential for all organizations. However, monitoring and controlling access to these areas is often an expensive and error-prone process, requiring continuous manual surveillance by security personnel.
 
@@ -12,11 +16,6 @@ Another major problem with existing systems cannot detect intrusion after an una
 ## Vision AI based monitoring
 
 With our Vision AI monitoring you can authorize access as well as continuous monitor live feeds inside a restricted area for real-time detection of unauthorized personnel. Our fully automated detection models are not only more powerful and accurate than existing systems but also more affordable and easy to integrate into existing infrastructure allowing users to scale the power of i-based real-time detection with a few simple clicks.
-
-<figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/exclusion.png "unauthorized entry!"){ width="350" }
-  <figcaption>Detection of unauthorized entry event</figcaption>
-</figure>
 
 ## Events
 

@@ -3,7 +3,7 @@
 > Keeping Public Spaces Safe: Innovations in Loitering Detection and Prevention with Vision AI.
 
 <figure markdown>
-  ![Loitering Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/loitering-detection.png "Loitering Detection at work-place!"){ width="350" }
+  ![Loitering Detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png "Loitering Detection at work-place!"){ width="350" }
   <figcaption>Loitering detection event</figcaption>
 </figure>
 

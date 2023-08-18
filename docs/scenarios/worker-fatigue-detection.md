@@ -4,7 +4,7 @@
 > Stay alert, stay safe with our advanced worker fatigue detection model.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/worker-fatigue-detectoin.jpg "Fatigue detection at workplace!"){ width="350" }<figcaption>Worker fatigue detection event</figcaption>
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/worker-fatigue-detectoin.jpg "Fatigue detection at workplace!"){ width="350" }<figcaption>Worker fatigue detection event</figcaption>
 </figure>
 
 ## Overview

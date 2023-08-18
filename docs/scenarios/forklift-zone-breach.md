@@ -3,7 +3,7 @@
 > An intelligent alarm system that could be used to detect forklifts entering restricted zones
 
 <figure markdown>
-  ![Forklift Zone Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/forklift-breach-zone.png "Forklift Zone Monitoring at a work-place!"){ width="350" }
+  ![Forklift Zone Monitoring](hhttps://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/forklift-breach-zone.png "Forklift Zone Monitoring at a work-place!"){ width="350" }
   <figcaption>Forklift Zone Monitoring event</figcaption>
 </figure>
 

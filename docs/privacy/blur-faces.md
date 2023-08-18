@@ -2,7 +2,7 @@
 
 > Ensure the privacy of individuals in public spaces
 <figure markdown>
-  ![Face blur](https://github.com/visionify/visionai-images/raw/main/visionai-images/faceblur_collage.png"Face blur!"){width="400"}
+  ![Face blur](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/face-blurring.jpg "Face blur!"){width="400"}
   <figcaption>Face blur as part of preprocessing</figcaption>
 </figure>
 

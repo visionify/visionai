@@ -3,7 +3,7 @@
 > Safeguard your assets with our advanced vandalism detection model.
 
 <figure markdown>
-  ![Vandalism detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/VANDALISM_GRAFFITI-04.jpg "Vandalism at workplace!"){ width="350" }<figcaption>Vandalism/Graffiti detection event</figcaption>
+  ![Vandalism detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/VANDALISM_GRAFFITI-04.jpg "Vandalism at workplace!"){ width="350" }<figcaption>Vandalism/Graffiti detection event</figcaption>
 </figure>
 
 ## Overview

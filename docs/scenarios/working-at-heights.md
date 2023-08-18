@@ -4,7 +4,7 @@
 > Ensure the safety of employees at workplace.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/working-at-heights.png "Working at heights!"){ width="350" }
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/working-at-heights.png "Working at heights!"){ width="350" }
   <figcaption>Events: Working at heights</figcaption>
 </figure>
 

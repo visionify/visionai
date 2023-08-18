@@ -3,7 +3,7 @@
 > Ensure the privacy of vehicle owners in images and videos by blurring licence plates
 
 <figure markdown>
-  ![Licence plate blur](https://github.com/visionify/visionai-images/raw/main/visionai-images/licenceblur_collage.png"Licence blur!"){width="400"}
+  ![Licence plate blur](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png "Licence blur!"){width="400"}
   <figcaption>Licence-plate blur as part of preprocessing</figcaption>
 </figure>
 

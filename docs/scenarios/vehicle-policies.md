@@ -3,7 +3,7 @@
 > An intelligent alarm system that could be used to detect fraudulent vehicle activity
 
 <figure markdown>
-  ![Vehicle Policies](https://github.com/visionify/visionai-images/raw/main/visionai-images/vehicle-collision-detected.png "Detection of vehicle collision!"){ width="350" }
+  ![Vehicle Policies](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vehicle-collision-detected.png "Detection of vehicle collision!"){ width="350" }
   <figcaption>Detection of vehicle collision event</figcaption>
 </figure>
 

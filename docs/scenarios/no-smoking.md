@@ -2,7 +2,7 @@
 
 > No smoking & No vaping zone enforcements with Vision AI.
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/no-smoking.png "Detection of smoke at a work-place!"){ width="350" }
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/no-smoking.png "Detection of smoke at a work-place!"){ width="350" }
   <figcaption>Detection of Smoking event</figcaption>
 </figure>
 

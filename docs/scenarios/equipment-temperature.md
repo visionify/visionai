@@ -2,8 +2,12 @@
 
 > Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.
 
+<figure markdown>
+  ![Equipment temperature Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg "Detection of equipment temperature!"){ width="350" }
+  <figcaption>Detection of Equipment temperature crossing limits event</figcaption>
+</figure>
 
-# Overview
+## Overview
 Industry equipment works best under a fixed temperature range. However, these are susceptible to malfunction or failure if equipment temperature exceeds or falls a threshold value. It could halt service for more extended periods and cause fatal accidents.
 
 Organizations need a sensor-based temperature monitoring device to ensure smooth equipment functioning, safe exits, and quick preventive maintenance. VisionAI-powered solutions monitor equipment temperature in real-time and alert signals if temperature surpasses threshold values.
@@ -17,11 +21,6 @@ By installing this in your facility, you can ensure the following:
 - Long-term equipment health
 - Quick equipment maintenance 
 - Safe evacuation in case of an emergency
-
-<figure markdown>
-  ![Equipment temperature Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/equipment%20temperature%20monitoring.jpeg"Detection of equipment temperature!"){ width="350" }
-  <figcaption>Detection of Equipment temperature crossing limits event</figcaption>
-</figure>
 
     
 ## Events

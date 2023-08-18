@@ -3,7 +3,7 @@
 > Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/hand-wash-detection.png "Hand-wash detection at work-place!"){ width="350" }
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png "Hand-wash detection at work-place!"){ width="350" }
   <figcaption>Detection of hand-wash</figcaption>
 </figure>
 

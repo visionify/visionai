@@ -3,7 +3,7 @@
 > Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution.
 
 <figure markdown>
-  ![Maximum Occupancy](https://github.com/visionify/visionai-images/raw/main/visionai-images/max-occupancy.jpg "Maximum occupancy monitoring at work-place!"){ width="350" }
+  ![Maximum Occupancy](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/max-occupancy.jpg "Maximum occupancy monitoring at work-place!"){ width="350" }
   <figcaption>Maximum Occupancy monitoring event</figcaption>
 </figure>
 

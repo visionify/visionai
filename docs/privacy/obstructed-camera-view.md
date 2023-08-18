@@ -3,7 +3,7 @@
 > Keep your camera view clear with our obstructed camera detection model.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/obstructed-camera-detection.png "Detection of obstructed camera at workplace!"){ width="350" }<figcaption>Detection of obstructed camera event</figcaption>
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png "Detection of obstructed camera at workplace!"){ width="350" }<figcaption>Detection of obstructed camera event</figcaption>
 </figure>
 
 ## Overview

@@ -3,7 +3,7 @@
 > Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.
 
 <figure markdown>
-  ![Environment Radiation Monitoring](https://github.com/visionify/visionai-images/raw/main/visionai-images/radiation-monitoring.png "Radiation monitoring at work-place!"){ width="350" }
+  ![Environment Radiation Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png "Radiation monitoring at work-place!"){ width="350" }
   <figcaption>Radiation monitoring event</figcaption>
 </figure>
 

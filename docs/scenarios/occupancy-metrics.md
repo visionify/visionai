@@ -3,7 +3,7 @@
 > Track workplace Occupancy Metrics effortlessly.
 
 <figure markdown>
-  ![Image title](https://github.com/visionify/visionai-images/raw/main/visionai-images/Occupancy-Metrics.jpeg "Real-time occupancy metrics!"){ width="350" }<figcaption>Occupancy metrics</figcaption>
+  ![Image title](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Occupancy-Metrics.jpeg "Real-time occupancy metrics!"){ width="350" }<figcaption>Occupancy metrics</figcaption>
 </figure>
 
 ## Overview

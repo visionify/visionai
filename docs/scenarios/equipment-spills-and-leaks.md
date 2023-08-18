@@ -17,8 +17,8 @@ Vision AI-based model is designed to detect spills and leaks including water pud
 
   Oil leak            |  Water leak in pipes
     :-------------------------:|:-------------------------:
-    ![oil leak](https://github.com/visionify/visionai-images/raw/main/visionai-images/oil-leakage.png)  |  ![water leak](https://github.com/visionify/visionai-images/raw/main/visionai-images/water-leakage.png)
-
+    ![oil leak](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/oil-leakage.png)  |  ![water leak](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Water-Leak.png)
+    
 ## Events
   
   VisionAI model's generated events would be:

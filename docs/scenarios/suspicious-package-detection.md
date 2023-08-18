@@ -2,7 +2,7 @@
 
 > Reliable and accurate Suspicious package detection for a safe and secure workplace environment
 <figure markdown>
-  ![Suspicious Package Detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/Suspicious%20package%20detection-01.jpg"Detection of suspicious packages!"){ width="350" }
+  ![Suspicious Package Detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg "Detection of suspicious packages!"){ width="350" }
   <figcaption>Detection of Suspicious Package event</figcaption>
 </figure>
 

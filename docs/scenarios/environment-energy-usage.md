@@ -3,7 +3,7 @@
 > Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.
 
 <figure markdown>
-  ![Energy Usage Monitoring]( https://github.com/visionify/visionai-images/raw/main/visionai-images/Energy%20usage%20monitoring.jpg"Energy Usage!"){ width="350" }
+  ![Energy Usage Monitoring](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg "Energy Usage!"){ width="350" }
   <figcaption>Detection of Energy Usage event</figcaption>
 </figure>
 

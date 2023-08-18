@@ -3,7 +3,7 @@
 > Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.
 
 <figure markdown>
-  ![Energy Conservation](https://github.com/visionify/visionai-images/raw/main/visionai-images/energy-conservation.png "Energy Conservation at work-place!"){ width="350" }
+  ![Energy Conservation](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png "Energy Conservation at work-place!"){ width="350" }
   <figcaption>Energy conservation event</figcaption>
 </figure>
 

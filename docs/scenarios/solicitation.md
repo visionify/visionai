@@ -3,7 +3,7 @@
 > A smarter way to unveil solicitation
 
 <figure markdown>
-  ![Solicitation detection](https://github.com/visionify/visionai-images/raw/main/visionai-images/solicitation-detection.png "Solicitation detection at a work-place!"){ width="350" }
+  ![Solicitation detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png "Solicitation detection at a work-place!"){ width="350" }
   <figcaption>Detection of Solicitation detection event</figcaption>
 </figure>
 

@@ -3,7 +3,7 @@
 > Real-time alerts for any unauthorized entry, anywhere.
 
 <figure markdown>
-  ![Unauthorized Entry/Tailgating](https://github.com/visionify/visionai-images/raw/main/visionai-images/unauthorized-entry.png "Unauthorized entry at workplace!"){ width="350" }
+  ![Unauthorized Entry/Tailgating](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png "Unauthorized entry at workplace!"){ width="350" }
   <figcaption>Detection of unauthorized entry event</figcaption>
 </figure>
 

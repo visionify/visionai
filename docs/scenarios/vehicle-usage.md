@@ -3,7 +3,7 @@
 > An intelligent alarm system that could be used to detect vehicle usage
 
 <figure markdown>
-  ![Vehicle Usage Detection](https://github.com/visionify/visionai-images/blob/main/visionai-images/vehicle-usage.png "Detection of vehicle collision!"){ width="350" }
+  ![Vehicle Usage Detection](https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vehicle-usage.png "Detection of vehicle collision!"){ width="350" }
   <figcaption>Detection of vehicle usage event</figcaption>
 </figure>
 
