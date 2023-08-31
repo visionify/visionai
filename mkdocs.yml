@@ -70,7 +70,6 @@ nav:
     - Scenarios: overview/scenarios.md
     - Cameras: overview/cameras.md
     - Camera Placement Guide: overview/camera-placement-guide.md
-    - Web-app: overview/web-app.md
     - Azure Managed App: overview/azure-managed-app.md
     - Next steps: overview/next-steps.md
     - FAQs: overview/faqs.md
@@ -83,37 +82,29 @@ nav:
       - Smoke and Fire Detection: scenarios/smoke-and-fire-detection.md
       - No smoking/no vaping: scenarios/no-smoking-hazard.md
       - Spills & leaks detection: scenarios/spills-and-leaks-hazard.md
-      - Gask leak detection: scenarios/gas-leaks-detection.md
       - Missing fire extinguisher: scenarios/missing-fire-extinguisher.md
       - Blocked exit monitoring: scenarios/blocked-exit.md
-      - Equipment temperature monitoring: scenarios/equipment-temperature-hazard.md
       - Equipment rust and corrosion: scenarios/rust-and-corrosion-hazard.md
 
     - Worker health & safety:
       - Overview: scenarios/worker-health-and-safety.md
       - PPE Detection: scenarios/ppe-detection.md
       - Working at heights: scenarios/working-at-heights.md
-      - Environment monitoring: scenarios/environment-monitoring.md
       - Slip, trip and fall detection: scenarios/slip-and-fall-detection.md
       - Posture & Ergonomics: scenarios/ergonomics.md
-      - Empty pallets: scenarios/empty-pallets.md
       - Spills & Leaks detection (Liquids): scenarios/spills-and-leaks.md
-      - Hand sanitizer/hand-wash: scenarios/hand-wash.md
-      - Worker fatigue detection: scenarios/worker-fatigue-detection.md
-      - Worker skin tempreature monitoring: scenarios/skin-temperature.md
+      - Hand-wash: scenarios/hand-wash.md
       - Confined spaces monitoring: scenarios/confined-spaces-monitoring.md
 
     - Occupancy Policies:
       - Overview: scenarios/occupancy-policies.md
-      - Max occupancy: scenarios/max-occupancy-count.md
-      - Restricted areas/times: scenarios/exclusion-zones.md
-      - Dwell time: scenarios/confined-spaces-monitoring.md
-      - Social distancing: scenarios/social-distance.md
-      - Station occupancy: scenarios/station-occupancy.md
+      # - Max occupancy: scenarios/max-occupancy-count.md
+      # - Restricted areas/times: scenarios/exclusion-zones.md
+      # - Dwell time: scenarios/confined-spaces-monitoring.md
+      # - Social distancing: scenarios/social-distance.md
+      # - Station occupancy: scenarios/station-occupancy.md
       - Occupancy metrics: scenarios/occupancy-metrics.md
-      - Authorized personnel: scenarios/authorized-personnel-occupancy.md
-      - Tailgating: scenarios/unauthorized-entry.md
-      - Perimeter control: scenarios/perimeter-control.md
+      # - Authorized personnel: scenarios/authorized-personnel-occupancy.md
 
     - Company Policies:
       - Overview: scenarios/compliance-policies.md
@@ -121,60 +112,13 @@ nav:
       - No phone, text, pictures: scenarios/no-phone-usage.md
       - No Smoking zones: scenarios/no-smoking.md
       - No children/visitors: scenarios/authorized-personnel.md
-      - Waste Management: scenarios/environment-waste-management.md
-      - Energy Conservation: scenarios/energy-conservation.md
-      - Restricted Areas: scenarios/restricted-areas.md
-
-    - Equipment monitoring:
-      - Overview: scenarios/equipment-monitoring.md
-      - Equipment temperature monitoring: scenarios/equipment-temperature.md
-      - Equipment rust and corrosion: scenarios/rust-and-corrosion.md
-      - Equipment vibration monitoring: scenarios/equipment-vibration.md
-      - Equipment noise monitoring: scenarios/equipment-noise.md
-      - Read analog dials: scenarios/analog-dials.md
-      - Tools check-in/out: scenarios/tools-check-in-out.md
-      - Spill & leak: scenarios/spills-and-leaks.md
-
-
-    - Environment monitoring:
-      - Temperature monitoring: scenarios/environment-temperature.md
-      - Humidity monitoring: scenarios/environment-humidity.md
-      - Air quality monitoring: scenarios/air-quality.md
-      - Noise monitoring: scenarios/noise-level-monitoring.md
-      - Pressure monitoring: scenarios/environment-pressure.md
-      - Volatile organic compounds (VOCs): scenarios/environment-voc.md
-      - Carbon monoxide (CO): scenarios/environment-co.md
-      - Ambient light: scenarios/light-sensor-monitoring.md
-      - Dust monitoring: scenarios/environment-dust.md
-      - Water quality monitoring: scenarios/environment-water-quality.md
-      - Energy usage monitoring: scenarios/environment-energy-usage.md
-      - Waste management: scenarios/environment-waste-management.md
-      - Water usage monitoring: scenarios/environment-water-usage.md
-      - Water level monitoring: scenarios/environment-water-level.md
-      - Radiation monitoring: scenarios/environment-radiation.md
 
 
     - Suspicious Activity:
       - Overview: scenarios/suspicious-activity.md
-      - Loitering: scenarios/loitering.md
-      - Suspicious package detection: scenarios/suspicious-package-detection.md
-      - Aggressive behavior: scenarios/aggressive-behavior.md
       - Vandalism & property destruction: scenarios/vandalism.md
       - Firearms & knives: scenarios/firearms-and-knives.md
-      - Sexual harassments: scenarios/sexual-harassment.md
-      - Solicitation: scenarios/solicitation.md
-      - Theft: scenarios/theft.md
-      - Shipping activity: scenarios/shipping-activity.md
-      - Intrusion detection: scenarios/intrusion-detection.md
 
-    - Vehicle Activity:
-      - Overview: scenarios/vehicle-activity.md
-      - Vehicle usage: scenarios/vehicle-usage.md
-      - Vehicle policies: scenarios/vehicle-policies.md
-      - Forklift zone breach: scenarios/forklift-zone-breach.md
-      - Vehicle license plate: scenarios/vehicle-license-plate.md
-      - Vehicle speed: scenarios/vehicle-speed.md
-      - Vehicle cargo: scenarios/vehicle-cargo.md
   
   - Privacy:
       - Overview: privacy/employee-privacy.md

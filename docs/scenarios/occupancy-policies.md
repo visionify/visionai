@@ -10,10 +10,7 @@ Enhance the safety and intelligence of your workplace with our cutting-edge Visi
 
 What’s included in this suite:
 
-- No food or drinks
-- No phone, text, pictures
-- No Smoking zones
-- No children/visitors
-- Waste Management
-- Energy Conservation
-- Restricted Areas
+- Max occupancy
+- Restricted areas/times
+- Dwell time
+- Authorized personnel

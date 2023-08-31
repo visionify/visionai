@@ -1,4 +1,4 @@
-# Hand Wash/Hand Sanitizer
+# Hand Wash
 
 > Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.
 
@@ -17,9 +17,9 @@ A hand wash detection model can help address this challenge by automatically det
 ## Vision AI based monitoring
 
 
-Vision AI-based hand-wash system is designed to detect and ensure no one misses hand wash and/or using hand sanitizer. The system uses image processing and machine learning algorithms to analyze the hand region in images or videos and identify the presence of hand sanitizer or hand wash based on specific features.
+Vision AI-based hand-wash system is designed to detect and ensure no one misses hand wash. The system uses image processing and machine learning algorithms to analyze the hand region in images or videos and detect hand wash based on specific features.
 
-Overall, the hand sanitizer/hand wash detection model is an important tool for promoting hygiene and preventing the spread of disease in a range of environments, from hospitals and schools to offices and public spaces. By detecting whether people have used hand sanitizer or hand wash, the system can help encourage good hygiene practices and reduce the risk of infection.
+Overall, the hand wash detection model is an important tool for promoting hygiene and preventing the spread of disease in a range of environments, from hospitals and schools to offices and public spaces. By detecting whether people have used hand wash, the system can help encourage good hygiene practices and reduce the risk of infection.
 
 ## Model Details
 
@@ -57,7 +57,7 @@ The dataset consists of images and videos collected from various sources.
 
 The business logic for this scenario is as follows: 
 
-- We use existing camera feeds from the premises to monitor whether people are using hand sanitizers or not. We detect the instances of missing hand wash.
+- We use existing camera feeds from the premises to monitor and detect the instances of missing hand wash.
 
 - VisionAI system is able to run on edge devices. It uses camera feeds for processing. 
 
@@ -87,7 +87,7 @@ The business logic for this scenario is as follows:
 
         ```
 
-    - You should be able to see the information generated on your console window with the detections of missing hand-wash/hand-sanitizer event within the camera field of view.
+    - You should be able to see the information generated on your console window with the detections of missing hand-wash event within the camera field of view.
 
 === "With RTSP Camera - Pipelines"
      [TODO]
@@ -103,7 +103,7 @@ The business logic for this scenario is as follows:
 
 - Hand region detection: The system should be able to accurately detect the hand region in an image or video, which can be done using skin color segmentation or hand detection algorithms.
 
-- Real-time performance: The system should be able to operate in real-time, analyzing images or videos quickly and accurately to detect whether a person has used hand sanitizer or hand wash.
+- Real-time performance: The system should be able to operate in real-time, analyzing images or videos quickly and accurately to detect whether a person has missed hand wash or not.
 
 - Robustness: The system should be able to perform well under varying conditions, such as different lighting conditions, hand positions, or hand appearances due to age, skin color, or skin conditions.
 

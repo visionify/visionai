@@ -11,8 +11,6 @@ Overall, a hazard warning suite can be an important tool for ensuring the safety
 - Smoke and Fire Detection
 - No smoking/no vaping
 - Spills & leaks detection
-- Gas leak detection
 - Missing fire extinguisher
 - Blocked exit monitoring
-- Equipment temperature monitoring
 - Equipment rust and corrosion

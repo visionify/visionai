@@ -20,8 +20,6 @@ What’s included in this suite:
 - Slip, trip and fall detection
 - Posture & Ergonomics
 - Empty pallets
-- Spills & Leaks detection (Liquids)
-- Hand sanitizer/hand-wash
-- Worker fatigue detection
-- Worker skin tempreature monitoring
+- Spills & Leaks detection
+- Hand-wash
 - Confined spaces monitoring
