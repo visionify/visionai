@@ -9,6 +9,3 @@ There are many events that could trigger an alert for non-adherence to a complia
 - No phone, text, pictures
 - No Smoking zones
 - No children/visitors
-- Waste Management
-- Energy Conservation
-- Restricted Areas

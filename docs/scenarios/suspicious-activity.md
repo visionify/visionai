@@ -8,13 +8,5 @@ In security, suspicious activity detection can help identify potential threats o
 
 What’s included in this suite:
 
-- Loitering
-- Unattended packages
-- Aggressive behavior
 - Vandalism & property destruction
 - Firearms & knives
-- Sexual harassments
-- Solicitation
-- Theft
-- Shipping activity
-- Intrusion detection
