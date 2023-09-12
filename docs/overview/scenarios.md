@@ -45,12 +45,12 @@ Following scenarios provide hazard warning examples supported by VisionAI suite.
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](smoke-and-fire-detection.md){:target="_blank"} |
-| ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking-hazard.md){:target="_blank"} |
+| ✅ | `smoke-and-fire-detection`       | `Smoke event detected` <br> `Fire event detected` <br> `Sparks detected` <br> `Open flames detection` | [More details](../scenarios/smoke-and-fire-detection.md){:target="_blank"} |
+| ✅ | `no-smoking-zone`                | `Smoking event detected` <br> `Vaping event detected` | [More details](../scenarios/no-smoking-hazard.md){:target="_blank"} |
 | 📅 | `spills-and-leak-detection`      | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `missing-fire-extinguisher`      | `Fire extinguisher missing` |
 | 📅 | `blocked-exit-monitoring`        | `Blocked exit detected` |
-| ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](rust-and-corrosion-hazard.md){:target="_blank"} |
+| ✅ | `rust-and-corrosion-detection`   | `Rust or corrosion event detected` | [More details](../scenarios/rust-and-corrosion-hazard.md){:target="_blank"} |
 
 
 ---
@@ -67,14 +67,14 @@ You can see real-time events generated as soon as person is detected without PPE
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](ppe-detection.md){:target="_blank"}
-| ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](working-at-heights.md){:target="_blank"}
+| ✅ | `ppe-detection` | `Person detected without helmet` <br> `Person detected without gloves` <br> `Person detected without safety boots` <br> `Person detected without safety goggles` <br> `Person detected without face mask` <br> `Person detected without vest` <br> `Person detected without full-body suit` <br> `Person detected without PFAS` <br> `Person detected without ear protection` | [More details](../scenarios/ppe-detection.md){:target="_blank"}
+| ✅ | `working-at-heights` | `Person detected without PFAS` <br> `Steps detected without railings` <br> `Person detected at height without parapets` <br> `Ladder detected not in compliance` | [More details](../scenarios/working-at-heights.md){:target="_blank"}
 | ✅ | `fall-and-accident-detection` | `Person slip & fall detected` <br> `Potential collision/accident detected` <br> `Wet floor detected` <br> `Debris detected on floor` <br> `Wet/slippery sign detected` |
-| ✅ | `posture-and-ergonomics` | `Bend count per individual ` | Straight camera angle <br> [More details](ergonomics.md){:target="_blank"} |
+| ✅ | `posture-and-ergonomics` | `Bend count per individual ` | Straight camera angle <br> [More details](../scenarios/ergonomics.md){:target="_blank"} |
 | 📅 | `empty-pallets-detection` | `Empty pallets detected` <br> `Partially empty pallets detected` |
 | 📅 | `spills-and-leaks-detection` | `Water puddle detected` <br> `Water leak from equipment detected` <br> `Wet floor detected` <br> `Spill event detected` <br> `Slippery sign detected` |
 | 📅 | `hand-wash-compliance` | `Missed hand wash` |
-| ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
+| ✅ | `confined-spaces-monitoring` | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](../scenarios/confined-spaces-monitoring.md){:target="_blank"} |
 
 
 
@@ -111,10 +111,10 @@ Also need to specify that the camera needs to be configured to have a good view 
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](max-occupancy-count.md) |
-| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](exclusion-zones.md){:target="_blank"} |
-| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](confined-spaces-monitoring.md){:target="_blank"} |
-| ✅ | `station-occupancy`          | `Daily summary event` | [More details](station-occupancy.md){:target="_blank"} |
+| ✅ | `max-occupancy`              | `Person count exceeds max limit` | [More details](../scenarios/max-occupancy-count.md) |
+| ✅ | `restricted-areas`           | `Person detected in restricted area` <br> `Movement detected in restricted area` <br> `Person detected after hours` <br> `Movement detected after hours` | [More details](../scenarios/exclusion-zones.md){:target="_blank"} |
+| ✅ | `dwell-time`                 | `Person detected` <br> `Person left` <br> `Person dwell time exceeds limit` <br> `Person detected without motion` <br> `Person fall detected` | [More details](../scenarios/confined-spaces-monitoring.md){:target="_blank"} |
+| ✅ | `station-occupancy`          | `Daily summary event` | [More details](../scenarios/station-occupancy.md){:target="_blank"} |
 | 📅 | `occupancy-metrics`          | `Daily summary event` |
 | 📅 | `authorized-personnel-only`  | `Unauthorized person detected` |
 
@@ -130,10 +130,10 @@ Company policies include specific scenarios that are relevant to your company. T
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` | [More details](no-food-or-drinks.md){:target="_blank"} |
-| ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](no-phone-usage.md){:target="_blank"} |
-| ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](no-smoking.md){:target="_blank"} |
-| ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](authorized-personnel.md){:target="_blank"} |
+| 📅 | `no-food-or-drinks-allowed`  | `Person with food detected` <br> `Person with drinks detected` <br> `Spill event detected` | [More details](../scenarios/no-food-or-drinks.md){:target="_blank"} |
+| ✅ | `no-phone-text-pictures`     | `Cellphone usage detected` <br> `Person detected taking pictures` | [More details](../scenarios/no-phone-usage.md){:target="_blank"} |
+| ✅ | `no-smoking-or-vaping`       | `Smoking event detected` <br> `Vaping event detected` | [More details](../scenarios/no-smoking.md){:target="_blank"} |
+| ✅ | `no-children-pets-visitors`  | `Children detected` <br> `Pets detected` <br> `Visitors detected` | [More details](../scenarios/authorized-personnel.md){:target="_blank"} |
 
 ---
 ## Suspicious Activity detection
@@ -143,8 +143,8 @@ Suspicious activity detection suite relies on a combination of activity detectio
 
 | Status | Scenario name | Supported Events | Additional considerations |
 | :----: | :------------ | :--------------- | :------------------------ |
-| ✅  | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](vandalism.md){:target="_blank"} |
-| ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](firearms-and-knives.md){:target="_blank"} |
+| ✅  | `vandalism-graffiti-company-property-destruction` | `Motion detected in area (gross event)` <br> `People detected in area (more granular event)` <br> `Non-uniformed personnel detected in area` <br> `Non badged personnel detected in area` <br> `Vandalism detected in area (before & after)` <br> `Paint/graffiti detected in area (before & after changes)` <br> `Behavior analysis event showing company property destruction.` | [More details](../scenarios/vandalism.md){:target="_blank"} |
+| ✅ | `firearms-knives-detection` | `Person brandishing firearm` <br> `Person brandishing knives` | [More details](../scenarios/firearms-and-knives.md){:target="_blank"} |
 
 
 ---
