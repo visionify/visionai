@@ -67,6 +67,7 @@ nav:
   - VisionAI:
     - Overview: index.md
     - How it works: overview/how-it-works.md
+    - User Guide: overview/web-app-userguide.md
     - Scenarios: overview/scenarios.md
     - Cameras: overview/cameras.md
     - Camera Placement Guide: overview/camera-placement-guide.md
