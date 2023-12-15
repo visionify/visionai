@@ -133,4 +133,4 @@ The scenario is provided as part of our GPL-v3 package for VisionAI. If you wish
 ## Contact Us
 
 - For technical issues, you can open a Github issue [here](https://github.com/visionify/visionai).
-- For business inquiries, you can contact us through [our website](https://visionify.ai/contact).
+- For business inquiries, you can contact us through [our website](https://visionify.ai/contact-us/).
