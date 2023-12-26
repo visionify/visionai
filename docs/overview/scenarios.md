@@ -151,4 +151,4 @@ Suspicious activity detection suite relies on a combination of activity detectio
 
 ## Next Steps
 
-Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](https://visionify.ai/contact-us/).
+Now that you have a better understanding of the scenarios that are available, you can start to think about how you can organize these scenarios into a solution that meets your needs. You can also go to the individual scenario page to learn more about it. We can customize each of these models for your use-cases and provide you with a solution that is tailored to your needs. You can contact us through [this page](https://visionify.ai/contact-us/-us/).
