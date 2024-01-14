@@ -42,7 +42,7 @@
 
 -  ## Access the visionAI Web-app
     
-    VisionAI web-app, a software application that runs in a web browser and designed to provide a user-friendly interface and functionality that can be accessed from any device with an intpernet connection, without the need for installation on the device. It can be accessed by [here](https://webapp-msejccxdwi33c.azurewebsites.net/).
+    VisionAI web-app, a software application that runs in a web browser and designed to provide a user-friendly interface and functionality that can be accessed from any device with an internet connection, without the need for installation on the device. It can be accessed by [here](https://webapp-msejccxdwi33c.azurewebsites.net/).
 
     The app has built-in functionality to accomodate different scenarios and wide range of camera instances.
     
