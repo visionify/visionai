@@ -1,0 +1,33 @@
+{
+  "id": "64bb1547-9cd4-44e2-9f78-40b5fb405700",
+  "title": "Pedestrian Pathway",
+  "name": "clear-pedestrian-pathway",
+  "version": "0.0.1",
+  "tagline": "Ensures worker safety in areas with machinery and vehicle traffic. Use Vision AI, to monitor and enforce use of designated walkways and safe movement zones in warehouses and manufacturing sites. The event is instantly flagged and alerts are sent when pedestrians violate.",
+  "overview": "Clear-Pedestrian-Pathway revolutionizes workplace safety by leveraging AI algorithms to ensure the well-being of workers navigating areas with machinery and vehicular traffic. This innovative solution introduces a proactive approach, employing real-time monitoring to enforce the use of designated walkways and secure movement zones within warehouses and manufacturing sites. By instantly flagging and generating alerts when pedestrians deviate from established paths, the system mitigates potential hazards, enhancing overall safety protocols.\n\n Our solution not only responds swiftly to violations but also provides a crucial layer of protection through its ability to detect deviations in real-time. With a focus on preemptive safety, this system contributes to a safer work environment by minimizing the risk of accidents and collisions, thereby promoting a culture of workplace safety and well-being. \n\n Clear-Pedestrian-Pathway is designed to cater to the unique challenges of industrial settings, delivering a comprehensive solution that goes beyond mere compliance. Its intelligent monitoring capabilities, coupled with instant alert mechanisms, create a reliable safety net that empowers organizations to prioritize and uphold the highest standards of worker safety.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/clear-pedestrian-pathway.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "clear-pedestrian-pathway",
+      "precision": 92.2,
+      "recall": 85.1,
+      "f1": 88.4,
+      "datasetSize": 84300,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}

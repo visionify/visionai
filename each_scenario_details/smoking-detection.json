@@ -1,0 +1,39 @@
+{
+  "id": "f70ce2c6-fba5-4dd0-9518-6f146c90f08c",
+  "title": "No smoking",
+  "name": "smoking-detection",
+  "version": "0.1.0",
+  "tagline": "Establish a no-smoking zone for cigarettes and vaping. Receive instant alerts when smoking is detected in these zones.",
+  "overview": "Instances of non-compliance with no-smoking policies continue to persist within restricted zones. To address this challenge, our innovative Vision AI App serves as a powerful tool to establish and maintain a strict no-smoking environment, encompassing both cigarette and vaping activities. \n\n Our solution provides instantaneous alerts upon the detection of smoking activities in these designated zones, ensuring swift intervention and reinforcement of no-smoking policies.This advanced system acts as a vigilant guardian, promptly identifying any smoking-related activities and delivering real-time alerts to designated authorities or security personnel. With its precision and speed, our solution acts as a deterrent, contributing to a smoke-free environment in restricted zones, ultimately fostering compliance and a healthier, safer space for all. \n\n Emphasizing a commitment to creating smoke-free environments, our Vision AI App not only detects smoking incidents but also plays a pivotal role in preventive measures. Through continuous monitoring, it identifies patterns and trends, allowing for data-driven insights to further refine and optimize no-smoking policies. Our solution is designed to empower organizations to proactively address smoking-related challenges, ultimately promoting a culture of compliance, well-being, and safety within no-smoking zones.",
+  "video_clips": [
+    ""
+  ],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-smoking.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.1.0",
+      "name": "smoking-detection",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 95,
+      "datasetSize": 240032,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/smoking-detection/smoking-detection-0.1.0.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "f1a77567bddd6c5f565a6c83ce756953"
+    },
+    "other": []
+  },
+  "events": {
+    "smoking": {
+      "description": "People detected smoking",
+      "schedule": "Immediate"
+    },
+    "vaping": {
+      "description": "People detected vaping",
+      "schedule": "Immediate"
+    }
+  }
+}

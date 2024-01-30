@@ -1,0 +1,40 @@
+{
+  "id": "6702c8d2-39d4-49d8-afe2-1795e1f0222f",
+  "title": "Smoke and Fire",
+  "name": "smoke-and-fire-detection",
+  "version": "2.0.0",
+  "tagline": "Early Fire Signature Detection system aimed at safeguarding people and facilities, both indoors and outdoors.",
+  "overview": "In the ever-evolving landscape of safety technology, our Smoke and Fire Detection scenario stands at the forefront, offering a cutting-edge solution to safeguard against potential threats. Receive immediate alerts for smoke and fire incidents, empowering you with swift response capabilities. Elevate your fire-alarm system with our Vision AI app, designed to identify smoke and fire faster than conventional detectors or sprinklers. \n\n Smoke and fire Vision AI app is meticulously crafted to provide early warnings, enabling your fire-alarm system to react proactively. By identifying signs of smoke and fire at an accelerated pace, we aim to mitigate potential damages and save lives. This proactive stance towards safety aligns with our commitment to creating secure workplaces.\n\n At the core of our Smoke and Fire Detection scenario is a vision for safety that is not only reliable but also flexible and scalable. We understand the diverse needs of industries and businesses, and our solution adapts seamlessly to offer a comprehensive safety net. By combining cutting-edge technology with a commitment to creating safe environments, we strive to set a new standard in hazard warning systems, ensuring that workplaces are not just protected but thrive in an atmosphere of security and confidence.",
+  "video_clips": [
+    "https://visionaieventsrecordings.blob.core.windows.net/demo-videos/fire-event.mp4",
+    "https://visionaieventsrecordings.blob.core.windows.net/demo-videos/smoke_and_fire-1.mp4"
+  ],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/early-fire-sign.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "2.0.0",
+      "name": "smoke-and-fire-detection",
+      "precision": 77.6,
+      "recall": 88.7,
+      "f1": 82.7,
+      "datasetSize": 15333,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/smoke-and-fire-detection/smoke-and-fire-detection-2.0.0.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "d332f80eec87033da6af80da8cb00222"
+    },
+    "other": []
+  },
+  "events": {
+    "fire": {
+      "description": "Fire detected",
+      "schedule": "Immediate"
+    },
+    "smoke": {
+      "description": "Smoke detected",
+      "schedule": "Immediate"
+    }
+  }
+}

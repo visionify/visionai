@@ -1,0 +1,37 @@
+{
+  "id": "96f19da7-e4e5-47db-acde-d06b8b0c857e",
+  "title": "Slip and Fall",
+  "name": "slip-and-fall-detection",
+  "version": "0.6.5",
+  "tagline": "Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace.",
+  "overview": "Slip and fall detection is a critical scenario designed to swiftly identify instances where an individual has slipped, fallen, or is non-responsive. The primary objective is to ensure an immediate and timely response to such person-down events, ultimately contributing to the preservation of lives. In the event of a slip or fall, the system is equipped to detect these occurrences promptly, enabling quick and precise intervention. This rapid response mechanism is especially crucial in situations where individuals may be incapacitated or unable to seek help on their own.\n\n We leverage advanced AI algorithms to accurately identify subtle movements indicative of a slip or fall incident. By prioritizing early recognition, the system aims to reduce response times, which is paramount in emergency situations. Additionally, the capability to detect non-responsiveness enhances the system's scope, allowing for immediate attention to individuals who may be in distress but unable to communicate their needs. In essence, slip and fall detection serves as a proactive safety measure, utilizing cutting-edge technology to address emergencies swiftly and enhance overall well-being. \n\n Implementing slip and fall detection contributes significantly to creating safer environments, whether in residential spaces, public areas, or workplaces. By integrating this scenario into safety protocols, there's a tangible improvement in emergency response times, enabling timely assistance for individuals in distress. This comprehensive approach aligns with the broader goal of leveraging technology to enhance safety measures, thereby providing a secure and responsive environment that prioritizes the well-being of individuals.",
+  "video_clips": [
+    "https://visionaieventsrecordings.blob.core.windows.net/demo-videos/smoke_and_fire-1.mp4"
+  ],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/slip-and-fall.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.6.5",
+      "name": "slip-and-fall-detection",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 95,
+      "datasetSize": 240032,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.6.5.zip",
+      "supported_models": [
+        "https://workplaceos.blob.core.windows.net/models/slip-and-fall-detection/slip-and-fall-detection-0.6.5.zip"
+      ],
+      "beta_model_url": "",
+      "model_hash": "12f72472662beb9906d94841fcb01d3a"
+    },
+    "other": []
+  },
+  "events": {
+    "fall": {
+      "description": "Person fall event detected",
+      "schedule": "Immediate"
+    }
+  }
+}

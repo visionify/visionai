@@ -1,0 +1,37 @@
+{
+  "id": "531cb4c4-ed65-41f5-8a96-f970bd3237cb",
+  "title": "Near Misses",
+  "name": "vehicle-near-miss",
+  "version": "0.0.1",
+  "tagline": "Prevent collisions between vehicles and pedestrians with Real-Time Vehicle Zone Monitoring. Actively flag proximity breaches and detect potential collisions between vehicles and workers to enhance safety in industrial spaces like warehousing, construction, ports and manufacturing.",
+  "overview": "Real-Time Vehicle Zone Monitoring revolutionizes industrial safety by actively preventing collisions between vehicles and pedestrians. This innovative system employs advanced technology to detect and flag proximity breaches in real-time, ensuring swift response to potential hazards. Specifically designed for industrial environments such as warehousing, construction sites, ports, and manufacturing facilities, this solution prioritizes safety by mitigating the risks associated with vehicle-people interactions. \n\n By leveraging cutting-edge monitoring capabilities, Real-Time Vehicle Zone Monitoring offers a proactive approach to industrial safety. This solution is particularly crucial in high-risk settings where the coexistence of vehicles and workers demands heightened vigilance. With its ability to prevent near-misses and enhance overall safety, Real-Time Vehicle Zone Monitoring establishes itself as a vital component in creating secure and efficient industrial spaces. \n\n In summary, this system not only acts as a preventive barrier against collisions but also contributes to a safer and more productive working environment. Its adaptability and applicability across diverse industrial sectors make it a versatile and indispensable tool for safeguarding lives and minimizing risks associated with vehicle and pedestrian interactions in dynamic workspaces.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-forklifts.png",
+  "coming_soon": true,
+  "completed": false,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "near-misses-people-forklifts",
+      "precision": 92.4,
+      "recall": 94.7,
+      "f1": 93.5,
+      "datasetSize": 328000,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "FORKLIFT": {
+      "description": "Forklift observed outside of configured zone",
+      "schedule": "Immediate"
+    },
+    "PEDESTRIAN": {
+      "description": "Pedestrian observed in forklift zone",
+      "schedule": "Immediate"
+    }
+  }
+}

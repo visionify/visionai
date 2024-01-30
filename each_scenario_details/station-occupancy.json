@@ -1,0 +1,33 @@
+{
+  "id": "e3dba6a3-36db-4238-91de-e7a4ea9f89df",
+  "title": "Station Occupancy",
+  "name": "station-occupancy",
+  "version": "0.0.1",
+  "tagline": "Revolutionize your workspace with our Smart Desk Occupancy Tracker.",
+  "overview": "Efficiently manage and enhance workplace safety with our Station Occupancy scenario, a cutting-edge solution designed for 24/7 real-time monitoring of worker presence. Tailored to various industries, from warehousing and construction to manufacturing, our system revolutionizes the way you track zones, monitor build sites, and oversee equipment areas. With a focus on boosting efficiency and safety, our technology provides invaluable insights into workforce distribution across vital areas. \n\n Experience the power of continuous real-time monitoring that allows you to keep a close eye on station occupancy. Whether it's optimizing workflow in warehousing, ensuring safety protocols at construction sites, or maintaining quality control in manufacturing, our solution provides unparalleled visibility. By harnessing advanced monitoring capabilities, you can make informed decisions, respond promptly to changing conditions, and streamline operations for peak performance. By ensuring that critical areas are adequately manned, our solution minimizes downtime, prevents potential hazards, and encourages a work culture prioritizing both productivity and well-being. ",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/desk-occupancy.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "no-visitors",
+      "precision": 93.2,
+      "recall": 88.7,
+      "f1": 90.8,
+      "datasetSize": 24700,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "OCCUPANCY_METRICS_SUMMARY": {
+      "description": "Daily summary of occupancy metrics on a per desk/station basis",
+      "schedule": "Daily"
+    }
+  }
+}

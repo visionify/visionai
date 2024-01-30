@@ -1,0 +1,33 @@
+{
+  "id": "aa979c8f-a073-4890-b86e-3fd221eb39f8",
+  "title": "Min Workers",
+  "name": "min-workers",
+  "version": "0.0.1",
+  "tagline": "Ensures safe staffing levels in high-risk zones, alerts for shortages.",
+  "overview": "In high-risk or controlled environments, maintaining an optimal workforce is paramount to safety. The Minimum Workers App stands as a vigilant guardian, consistently ensuring that these zones, fraught with potential dangers like moving machinery, are staffed with a minimum number of personnel. The application plays a pivotal role in risk mitigation, providing real-time alerts to supervisors the moment personnel levels dip below the established safety thresholds. With a focus on proactive safety measures, the Minimum Workers App contributes to creating a secure working environment, where the presence of an adequate workforce is non-negotiable for incident prevention. \n\n Designed for seamless integration into various industrial settings, the Minimum Workers App acts as a virtual safety supervisor, minimizing the likelihood of accidents by maintaining a vigilant eye on staffing levels. Its continuous monitoring system not only enhances workplace safety but also encourages a culture of awareness and responsibility. By offering instant alerts to supervisors, the app facilitates swift corrective actions, ensuring that high-risk zones are never understaffed, and potential hazards are addressed promptly. In essence, the Minimum Workers App is a technological ally in the pursuit of workplace safety, revolutionizing how industries approach personnel management in critical areas.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/min-workers.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "min-workers",
+      "precision": 92.4,
+      "recall": 94.7,
+      "f1": 93.5,
+      "datasetSize": 3900,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}

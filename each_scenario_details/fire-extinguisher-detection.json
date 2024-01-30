@@ -1,0 +1,33 @@
+{
+  "id": "d099f277-3422-4f87-ab23-a0aad39a56bc",
+  "title": "Missing Fire Extinguisher",
+  "name": "fire-extinguisher-detection",
+  "version": "0.0.5",
+  "tagline": "Strengthen Fire Safety compliance through adding checks for missing fire extinguishers from their required places.",
+  "overview": "The goal is to enhance fire safety compliance by implementing checks to ensure that fire extinguishers are present in their designated locations. This proactive approach aims to mitigate the risks associated with fire incidents and strengthen overall workplace safety. \n\n This scenario introduces a critical need for strengthening fire safety measures by focusing on the absence of fire extinguishers from their required positions. By addressing this gap, the initiative seeks to fortify the preparedness of establishments in the event of a fire emergency. The absence of a fire extinguisher in a designated location can pose significant risks, and this scenario aims to proactively rectify such situations to enhance overall safety protocols. \n\n Through the implementation of systematic checks and monitoring mechanisms, the scenario envisions a more robust fire safety compliance framework. Detecting and addressing missing fire extinguishers promptly is crucial in preventing potential hazards. By adopting this approach, organizations can foster a safer environment for occupants, reduce the impact of fire incidents, and ensure a higher level of preparedness in the face of unexpected emergencies.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dszijwz8d/image/upload/v1705191243/visionai-scenario-images/missing-fire-extinguisher-removebg-preview_m5lhek.png",
+  "coming_soon": true,
+  "completed": false,
+  "models": {
+    "latest": {
+      "version": "0.0.5",
+      "name": "fire-extinguisher-detection",
+      "precision": 92.2,
+      "recall": 85.1,
+      "f1": 88.4,
+      "datasetSize": 84300,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "NO_FIRE_EXTINGUISHER": {
+      "description": "Missing fire-extinguisher detection",
+      "schedule": "Immediate"
+    }
+  }
+}

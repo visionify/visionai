@@ -1,0 +1,33 @@
+{
+  "id": "77c3695f-f402-425d-80f9-15025ae1a4ec",
+  "title": "Max Workers",
+  "name": "max-workers",
+  "version": "0.0.1",
+  "tagline": "Enhance safety by regulating capacity in high-risk operational zones.",
+  "overview": "Ensure workplace safety and efficiency with our Maximum Workers solution. Tailored for operational scenarios such as shipping areas, high-risk mining, and manufacturing, this innovative system helps eliminate risks associated with overcrowding. With 24/7 real-time monitoring, it provides proactive management by instantly detecting incidents where workforce numbers exceed preset limits. \n\n  By regulating workforce capacity, our solution contributes to creating a safer work environment and mitigating potential hazards, ensuring a seamless workflow in various operational settings. We enable businesses to prioritize safety and respond promptly to critical situations. The Maximum Workers system is a reliable ally in safeguarding your workforce, providing peace of mind and fostering a secure operational environment. \n\n Experience the future of workplace safety with our scalable and adaptable solution. From preventing incidents in real-time to optimizing operational efficiency, our Maximum Workers solution is your key to creating a secure and regulated workspace. Invest in a safer tomorrow by integrating our comprehensive system, tailored to meet the dynamic challenges of modern operational scenarios.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/max-workers.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "max-workers",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 96.6,
+      "datasetSize": 328000,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}

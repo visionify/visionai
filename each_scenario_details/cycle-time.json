@@ -1,0 +1,33 @@
+{
+  "id": "09599001-20af-470b-b0c6-e97f4d7fe65e",
+  "title": "Cycle Time",
+  "name": "cycle-time",
+  "version": "0.0.1",
+  "tagline": "Monitor time individuals spend in critical areas in work environments like warehouses, manufacturing, and retail. It analyzes activity duration for productivity insight, helping you identify and rectify workflow bottlenecks to boost overall operational effectiveness.",
+  "overview": "Cycle Time Monitoring scenario is designed to meticulously track the time individuals spend in crucial work areas such as warehouses, manufacturing facilities, and retail spaces. This innovative system goes beyond traditional timekeeping, offering a detailed analysis of activity duration to provide valuable insights into productivity. \n\n By dissecting and understanding each step of a process, Cycle Time Monitoring empowers businesses to identify and rectify potential workflow bottlenecks, ultimately leading to a significant enhancement in overall operational efficiency. Cycle Time Monitoring delves into the intricacies of individual activities, offering a comprehensive breakdown of time spent in critical work areas. This level of granularity allows businesses to gain a nuanced understanding of their operations and improve overall productivity. \n\n Cycle Time Monitoring is at the forefront of redefining how businesses approach time management in critical workspaces, offering a holistic solution for increased productivity and operational excellence.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/cycle-time.png",
+  "coming_soon": false,
+  "completed": true,
+  "models": {
+    "latest": {
+      "version": "0.0.2",
+      "name": "restricted-zone",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 96.6,
+      "datasetSize": 21000,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}
