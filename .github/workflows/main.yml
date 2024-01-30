@@ -1,0 +1,29 @@
+name: Update Azure Blob Storage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_blob:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Azure CLI
+      uses: azure/cli@v1
+      with:
+        azcliversion: 2.20.0
+
+    - name: Login to Azure
+      run: az login --service-principal -u ${{ secrets.AZURE_SERVICE_PRINCIPAL_ID }} -p ${{ secrets.AZURE_SERVICE_PRINCIPAL_SECRET }} --tenant ${{ secrets.AZURE_TENANT_ID }}
+
+    - name: Update Blob Storage
+      run: |
+        az storage blob upload --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --container-name <your-container-name> --type block --name scenarios.json --type block --content-type application/json --file scenarios.json
+        
+        # Upload the entire directory (each_scenario_details/)
+        az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} --destination-container <your-container-name> --source each_scenario_details/
