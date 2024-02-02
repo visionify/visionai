@@ -26,16 +26,16 @@ jobs:
         run: |
           python -m unittest discover -s test
 
-  # upload-to-azure:
-  #   needs: test  # This job will run only if the 'test' job succeeds
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
+  upload-to-azure:
+    needs: test  # This job will run only if the 'test' job succeeds
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
 
-  #     - name: Upload files to Azure Blob Storage
-  #       uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-  #       with:
-  #         source_dir: 'path/to/your/files'  # Replace with your directory path
-  #         container_name: 'your-azure-container-name'  # Replace with your Azure container name
-  #         connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-  #         sync: false
+      - name: Upload files to Azure Blob Storage
+        uses: bacongobbler/azure-blob-storage-upload@v1.1.1
+        with:
+          source_dir: 'path/to/your/files'  # Replace with your directory path
+          container_name: 'docs-images'  # Replace with your Azure container name
+          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          sync: false
