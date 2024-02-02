@@ -25,36 +25,34 @@ jobs:
       - name: Run tests
         run: |
           python -m unittest discover -s test
-  
 
-  
   upload-changed-files:
-    needs: test
     runs-on: ubuntu-latest
-  
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+         
+      - name: Set up Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
   
-    - name: Check for file changes
-      id: file_changes
-      run: |
-        # Replace 'your_folder' with the path of your folder
-        CHANGED_FILES=$(git diff --name-only HEAD^ HEAD each_scenario_details)
-        if [ -z "$CHANGED_FILES" ]; then
-          echo "No changes in each_scenario_details"
-          echo "changed_files=none" >> $GITHUB_ENV
-        else
-          echo "Files changed: $CHANGED_FILES"
-          echo "changed_files=$CHANGED_FILES" >> $GITHUB_ENV
-        fi
-  
-    - name: Upload changed files to Azure Blob storage
-      if: env.changed_files != 'none'
-      uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-      with:
-        source_dir: 'each_scenario_details/'  # Your folder path
-        container_name: 'docs-images'  # Your Blob Container name
-        connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-        extra_args: ${{ env.changed_files }}
-        sync: false  
+      - name: Check for file changes
+        id: file_changes
+        run: |
+          CHANGED_FILES=$(git diff --name-only HEAD^ HEAD each_scenario_details)
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No changes in 'each_scenario_details'"
+            echo "changed_files=none" >> $GITHUB_ENV
+          else
+            echo "Files changed: $CHANGED_FILES"
+            echo "changed_files=$CHANGED_FILES" >> $GITHUB_ENV
+          fi
+         
+      - name: Upload changed files to Azure Blob storage
+        if: env.changed_files != 'none'
+        run: |
+          for file in ${{ env.changed_files }}
+          do
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file $file --name $file --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          done
 
