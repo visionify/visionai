@@ -24,7 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m unittest discover -s tests
+          python -m unittest discover -s /tests
 
   # upload-to-azure:
   #   needs: test  # This job will run only if the 'test' job succeeds
