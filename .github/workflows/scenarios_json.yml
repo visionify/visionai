@@ -35,7 +35,7 @@ jobs:
       - name: Upload files to Azure Blob Storage
         uses: bacongobbler/azure-blob-storage-upload@v1.1.1
         with:
-          source_dir: 'path/to/your/files'  # Replace with your directory path
-          container_name: 'docs-images'  # Replace with your Azure container name
+          source_dir: 'each_scenario_details/'  # Replace with your directory path
+          container_name: 'docs-images/'  # Replace with your Azure container name
           connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           sync: false
