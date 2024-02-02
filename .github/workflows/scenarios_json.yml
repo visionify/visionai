@@ -24,9 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pwd
-          ls
-          python -m unittest discover -s ../../tests
+          python -m unittest discover -s test
 
   # upload-to-azure:
   #   needs: test  # This job will run only if the 'test' job succeeds
