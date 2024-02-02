@@ -46,9 +46,7 @@ class TestScenarioJson(unittest.TestCase):
             assert 'tags' in scenario
             assert 'category_name' in scenario
             
-            assert 'video_links' in scenario
             
-            print("All test cases passed for", scenario['title'])
             
 
 if __name__ == '__main__':

@@ -2,24 +2,35 @@ import unittest
 import json, requests
 import os
 from pathlib import Path
+from parameterized import parameterized
 
 SCENARIO_DETAILS_FOLDER = "each_scenario_details/"
 
 
 
 
+
 class TestScenarioJson(unittest.TestCase):
-    
-    def test_scenario_json_file_exist(self):
+    @parameterized.expand([(file,) for file in os.listdir(SCENARIO_DETAILS_FOLDER) if file.endswith('.json')])
+    def test_scenario_json_file_exist(self, scenario_file):
+        SCENARIOS_FILE = os.path.join(SCENARIO_DETAILS_FOLDER, scenario_file)
+        my_file = Path(SCENARIOS_FILE)
+
+    @parameterized.expand([(file,) for file in os.listdir(SCENARIO_DETAILS_FOLDER) if file.endswith('.json')])
+    def test_scenario_json_file_exist(self, scenario_file):
+        SCENARIOS_FILE = os.path.join(SCENARIO_DETAILS_FOLDER, scenario_file)
         my_file = Path(SCENARIOS_FILE)
         assert my_file.is_file()
 
-    def test_scenario_json_file_not_empty(self):
+    @parameterized.expand([(file,) for file in os.listdir(SCENARIO_DETAILS_FOLDER) if file.endswith('.json')])
+    def test_scenario_json_file_not_empty(self,scenario_file):
+        SCENARIOS_FILE = os.path.join(SCENARIO_DETAILS_FOLDER, scenario_file)
         my_file = Path(SCENARIOS_FILE)
         assert my_file.stat().st_size != 0
 
-
-    def test_scenario_json_file_has_correct_format(self):
+    @parameterized.expand([(file,) for file in os.listdir(SCENARIO_DETAILS_FOLDER) if file.endswith('.json')])
+    def test_scenario_json_file_has_correct_format(self, scenario_file):
+        SCENARIOS_FILE = os.path.join(SCENARIO_DETAILS_FOLDER, scenario_file)
         with open(SCENARIOS_FILE,'r') as f:
             scenario = json.load(f)
         assert isinstance(scenario, dict)
@@ -72,15 +83,7 @@ class TestScenarioJson(unittest.TestCase):
         assert isinstance(scenario['events'], dict)
         assert len(scenario['events']) > 0
         
-        print("All test cases are passed for", scenario['title'])
 
 
 if __name__ == '__main__':
-    # Get the list of scenario files in the folder
-    scenario_files = [file for file in os.listdir(SCENARIO_DETAILS_FOLDER) if file.endswith('.json')]
-
-    for scenario_file in scenario_files:
-        SCENARIOS_FILE = os.path.join(SCENARIO_DETAILS_FOLDER, scenario_file)
-
-        # Run the tests for each scenario file
-        unittest.main(argv=[''], exit=False)
+    unittest.main()

@@ -6,6 +6,7 @@
       "name": "smoke-and-fire-detection",
       "version": "2.0.0",
       "tagline": "Early Fire Signature Detection system aimed at safeguarding people and facilities, both indoors and outdoors.",
+      "overview": "In the ever-evolving landscape of safety technology, our Smoke and Fire Detection scenario stands at the forefront, offering a cutting-edge solution to safeguard against potential threats. Receive immediate alerts for smoke and fire incidents, empowering you with swift response capabilities. Elevate your fire-alarm system with our Vision AI app, designed to identify smoke and fire faster than conventional detectors or sprinklers. \n\n Smoke and fire Vision AI app is meticulously crafted to provide early warnings, enabling your fire-alarm system to react proactively. By identifying signs of smoke and fire at an accelerated pace, we aim to mitigate potential damages and save lives. This proactive stance towards safety aligns with our commitment to creating secure workplaces.\n\n At the core of our Smoke and Fire Detection scenario is a vision for safety that is not only reliable but also flexible and scalable. We understand the diverse needs of industries and businesses, and our solution adapts seamlessly to offer a comprehensive safety net. By combining cutting-edge technology with a commitment to creating safe environments, we strive to set a new standard in hazard warning systems, ensuring that workplaces are not just protected but thrive in an atmosphere of security and confidence.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/early-fire-sign.png",
       "coming_soon": false,
       "completed": true,
@@ -14,7 +15,17 @@
         "Hazard Warning",
         "Early Fire Signature"
       ],
-      "category_name": "Emergency Events"
+      "category_name": "Emergency Events",
+      "events": {
+        "fire": {
+          "description": "Fire detected",
+          "schedule": "Immediate"
+        },
+        "smoke": {
+          "description": "Smoke detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "279b0f67-f393-44cd-9204-5ee0915f066d",
@@ -22,6 +33,7 @@
       "name": "ppe-detection",
       "version": "0.1.5",
       "tagline": "Prevent Workplace Injuries by ensuring proper PPE Compliance.",
+      "overview": "Introducing the PPE Detection scenario, where safety meets innovation. Personal Protective Equipment (PPE) serves as a crucial safeguard against serious injuries, a fact well-acknowledged by both EHS teams and workers. Despite this awareness, a significant number of workplace injuries stem from PPE negligence. Enter the PPE Detection App, a groundbreaking solution designed to enforce and enhance PPE compliance on the jobsite. By providing real-time alerts and summarized event reports, this app empowers safety protocols, ensuring a proactive approach to preventing accidents and prioritizing the well-being of every worker. \n\n The PPE Detection App not only recognizes the importance of PPE but actively enforces compliance through cutting-edge technology. Real-time notifications keep safety at the forefront, alerting teams instantly to any deviations from prescribed PPE standards. Simultaneously, the app generates concise summary reports, offering valuable insights for continuous improvement and reinforcing a culture of safety within the workforce.\n\n In essence, the PPE Detection scenario is a transformative step towards creating safer work environments. By leveraging innovative technology to tackle PPE negligence head-on, it brings about a paradigm shift in workplace safety. The app's ability to seamlessly integrate real-time alerts and comprehensive event summaries ensures that compliance is not just encouraged but actively monitored, fostering a proactive safety culture that significantly reduces the risk of serious injuries.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/ppe-compliance-2.png",
       "coming_soon": false,
       "completed": true,
@@ -30,7 +42,45 @@
         "Safety Vests",
         "Personnel Protective Equipment"
       ],
-      "category_name": "Worker Health & Safety"
+      "category_name": "Worker Health & Safety",
+      "events": {
+        "helmet": {
+          "description": "People detected without a helmet",
+          "schedule": "Immediate"
+        },
+        "boots": {
+          "description": "People detected without boots",
+          "schedule": "Immediate"
+        },
+        "vest": {
+          "description": "People detected without a vest",
+          "schedule": "Immediate"
+        },
+        "safety-goggles": {
+          "description": "People detected without goggles",
+          "schedule": "Immediate"
+        },
+        "gloves": {
+          "description": "People detected without gloves",
+          "schedule": "Immediate"
+        },
+        "mask": {
+          "description": "People detected without mask",
+          "schedule": "Immediate"
+        },
+        "cap": {
+          "description": "People detected without cap",
+          "schedule": "Immediate"
+        },
+        "gown": {
+          "description": "People detected without gown",
+          "schedule": "Immediate"
+        },
+        "hair-net": {
+          "description": "People detected without hair-net",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "f70ce2c6-fba5-4dd0-9518-6f146c90f08c",
@@ -38,6 +88,7 @@
       "name": "smoking-detection",
       "version": "0.1.0",
       "tagline": "Establish a no-smoking zone for cigarettes and vaping. Receive instant alerts when smoking is detected in these zones.",
+      "overview": "Instances of non-compliance with no-smoking policies continue to persist within restricted zones. To address this challenge, our innovative Vision AI App serves as a powerful tool to establish and maintain a strict no-smoking environment, encompassing both cigarette and vaping activities. \n\n Our solution provides instantaneous alerts upon the detection of smoking activities in these designated zones, ensuring swift intervention and reinforcement of no-smoking policies.This advanced system acts as a vigilant guardian, promptly identifying any smoking-related activities and delivering real-time alerts to designated authorities or security personnel. With its precision and speed, our solution acts as a deterrent, contributing to a smoke-free environment in restricted zones, ultimately fostering compliance and a healthier, safer space for all. \n\n Emphasizing a commitment to creating smoke-free environments, our Vision AI App not only detects smoking incidents but also plays a pivotal role in preventive measures. Through continuous monitoring, it identifies patterns and trends, allowing for data-driven insights to further refine and optimize no-smoking policies. Our solution is designed to empower organizations to proactively address smoking-related challenges, ultimately promoting a culture of compliance, well-being, and safety within no-smoking zones.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-smoking.png",
       "coming_soon": false,
       "completed": true,
@@ -46,7 +97,17 @@
         "No Smoking",
         "Policy Violation"
       ],
-      "category_name": "Hazard Warnings"
+      "category_name": "Hazard Warnings",
+      "events": {
+        "smoking": {
+          "description": "People detected smoking",
+          "schedule": "Immediate"
+        },
+        "vaping": {
+          "description": "People detected vaping",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "79202dcc-a2d4-41d1-b8fb-52828c52c872",
@@ -54,6 +115,7 @@
       "name": "rust-and-corrosion-detection",
       "version": "0.0.2",
       "tagline": "Ensure the safety of employees by inspecting machine equipment for the presence of rust/corrosion.",
+      "overview": "Preventative maintenance for equipments. Rust/Corrosion detection model is designed to detect regions of rust/corrosion if any in machine parts, manufacturing equipments etc.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/rust-and-corrosion-detection.png",
       "coming_soon": false,
       "completed": false,
@@ -62,7 +124,17 @@
         "Preventative service",
         "Machinery maintenance"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "RUST": {
+          "description": "Equipment detected with rust",
+          "schedule": "Immediate"
+        },
+        "CORROSION": {
+          "description": "Equipment detected with corrosion",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "96f19da7-e4e5-47db-acde-d06b8b0c857e",
@@ -70,6 +142,7 @@
       "name": "slip-and-fall-detection",
       "version": "0.6.5",
       "tagline": "Ensure the safety of employees by inspecting slip and fall instances. Get real-time alerts when such kind of accidents occur at the workplace.",
+      "overview": "Slip and fall detection is a critical scenario designed to swiftly identify instances where an individual has slipped, fallen, or is non-responsive. The primary objective is to ensure an immediate and timely response to such person-down events, ultimately contributing to the preservation of lives. In the event of a slip or fall, the system is equipped to detect these occurrences promptly, enabling quick and precise intervention. This rapid response mechanism is especially crucial in situations where individuals may be incapacitated or unable to seek help on their own.\n\n We leverage advanced AI algorithms to accurately identify subtle movements indicative of a slip or fall incident. By prioritizing early recognition, the system aims to reduce response times, which is paramount in emergency situations. Additionally, the capability to detect non-responsiveness enhances the system's scope, allowing for immediate attention to individuals who may be in distress but unable to communicate their needs. In essence, slip and fall detection serves as a proactive safety measure, utilizing cutting-edge technology to address emergencies swiftly and enhance overall well-being. \n\n Implementing slip and fall detection contributes significantly to creating safer environments, whether in residential spaces, public areas, or workplaces. By integrating this scenario into safety protocols, there's a tangible improvement in emergency response times, enabling timely assistance for individuals in distress. This comprehensive approach aligns with the broader goal of leveraging technology to enhance safety measures, thereby providing a secure and responsive environment that prioritizes the well-being of individuals.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/slip-and-fall.png",
       "coming_soon": false,
       "completed": true,
@@ -78,7 +151,13 @@
         "Preventative service",
         "Worker Health & Safety"
       ],
-      "category_name": "Emergency Events"
+      "category_name": "Emergency Events",
+      "events": {
+        "fall": {
+          "description": "Person fall event detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "8a0b131d-338c-4ee1-b880-0a8e7e4117b3",
@@ -86,6 +165,7 @@
       "name": "yolov5s-face",
       "version": "0.0.1",
       "tagline": "Ensure the privacy of individuals in public spaces.",
+      "overview": "Face blurring privacy model can be used to protect the identity of individuals in images. Face Blurring is designed to ensure that the privacy of individuals is respected while still allowing the public to have access to the video feed.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/face-blur.png",
       "coming_soon": false,
       "completed": false,
@@ -94,7 +174,13 @@
         "Face detection",
         "Face anonymization"
       ],
-      "category_name": "Privacy"
+      "category_name": "Privacy",
+      "events": {
+        "face": {
+          "description": "Blurred all the faces detected in the system",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "9c9a1994-aec8-419d-922f-3657a748dc1f",
@@ -102,6 +188,7 @@
       "name": "people-taking-picture-detection",
       "version": "0.0.2",
       "tagline": "Get real-time alerts when workers are taking pictures at the workplace, a monitoring system that can detect camera usage on company-owned devices or company networks.",
+      "overview": "Mobile phone usage has become an integral part of modern life, impacting various aspects of daily routines and communication. The Phone usage detection model introduces a groundbreaking solution for enhancing safety and security by monitoring and identifying mobile phone usage in various settings. By leveraging real-time video feeds, the model effectively detects instances of individuals taking pictures, recording or streaming videos/audios, and sending texts in restricted areas \n\n With the ability to seamlessly integrate into existing surveillance systems, the detection model acts as a vigilant guardian against unauthorized mobile phone activities. Its advanced capabilities go beyond traditional surveillance methods, providing a comprehensive solution for maintaining compliance in areas where such behaviors pose risks or are explicitly prohibited. \n\n The People Taking Picture Detection Model stands out with its real-time responsiveness, empowering security personnel to take immediate action upon detection of prohibited mobile phone usage.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-phone-usage.png",
       "coming_soon": false,
       "completed": true,
@@ -110,7 +197,13 @@
         "Phone usage",
         "Company Policies"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "cell phone": {
+          "description": "Person detected while taking pictures",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "df0690ba-8ec8-43f1-9b4d-7a1d0a1fd5c9",
@@ -118,6 +211,7 @@
       "name": "ergonomics-detection",
       "version": "0.0.1",
       "tagline": "Ensure safety and comfort of employees by monitoring ergonomics.",
+      "overview": "Ergonomics detection model can be used to monitor productivity and workers health by providing real-time video feeds of different areas.The primary focus of ergonomics is to create environments that optimize human performance and well-being.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/ergonomics-detection.png",
       "coming_soon": true,
       "completed": false,
@@ -126,7 +220,13 @@
         "Bent count",
         "Ergonomics detection"
       ],
-      "category_name": "Worker Health & Safety"
+      "category_name": "Worker Health & Safety",
+      "events": {
+        "bend_count": {
+          "description": "Bend count event per individual",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "121e85ba-8722-42de-a81b-ef50e007fc6f",
@@ -134,6 +234,7 @@
       "name": "occupancy-monitoring",
       "version": "0.0.2",
       "tagline": "Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution",
+      "overview": "Occupancy metrics, plays a vital role in providing valuable insights essential for informed decision-making. The accurate measurement and analysis of occupancy metrics empower businesses with data-driven capabilities, enabling them to optimize various aspects of their operations. These insights extend beyond mere headcounts, encompassing the utilization of physical space and effective resource management. \n\n In the dynamic landscape of business, understanding and harnessing occupancy metrics are key to unlocking efficiencies. By delving into the nuances of occupancy data, businesses gain a deeper understanding of customer behavior, foot traffic patterns, and peak operational periods. This knowledge allows for strategic adjustments to physical layouts, enhancing the overall customer experience while ensuring optimal utilization of space and resources. \n\n Moreover, the significance of measuring occupancy metrics extends beyond immediate operational improvements. Businesses leveraging this data not only enhance their day-to-day functioning but also position themselves to respond proactively to evolving trends and demands.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/crowding-grouping.png",
       "coming_soon": false,
       "completed": true,
@@ -142,7 +243,13 @@
         "Dwell Duration",
         "Person Tracking"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "person": {
+          "description": "Person is present in the room more than the restricted time",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "aa9d57d4-7390-4bb6-bf49-0552b7783171",
@@ -150,6 +257,7 @@
       "name": "firearms-detection",
       "version": "0.0.1",
       "tagline": "New Technology aims to improve Firearm Detection and Save Lives with VisionAI.",
+      "overview": "The goal of firearms detection is to prevent violence and ensure public safety by detecting and responding to the presence of firearms including knives, guns and other weapons.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/firearms.png",
       "coming_soon": true,
       "completed": false,
@@ -158,7 +266,17 @@
         "Knife Detection",
         "Suspicious Activity"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "Gun": {
+          "description": "Gun Detected",
+          "schedule": "Immediate"
+        },
+        "Knife": {
+          "description": "Knife Detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "e82bc306-aa43-4fa7-8edf-b4a0d5dc0f44",
@@ -166,6 +284,7 @@
       "name": "spills-and-leaks-detection",
       "version": "0.0.1",
       "tagline": "Detect water puddles, water leaks around equipment, wet floor signs, or debris on walkways.",
+      "overview": "Spills and leaks pose significant risks in various environments, from industrial facilities to commercial spaces. Our advanced detection system for water puddles, leaks around equipment, and wet floor conditions ensures a proactive approach to maintaining a safe workplace. Swift identification of potential hazards is crucial in preventing accidents and injuries caused by slips and falls. \n\n We provide real-time alerts for water puddles, leaks, and slippery surfaces. This proactive system not only minimizes the risk of accidents but also enhances overall safety measures within the premises. \n\n In addition to mitigating immediate safety concerns, our spill and leak detection system contributes to long-term damage prevention. By addressing issues promptly, it helps in safeguarding equipment, infrastructure, and maintaining a clean and organized workspace. Our commitment lies in creating environments where employees can confidently navigate without the fear of accidents, fostering a culture of safety and well-being.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/spills-and-leaks.png",
       "coming_soon": false,
       "completed": false,
@@ -174,7 +293,13 @@
         "Leak detection",
         "Equipment maintenance"
       ],
-      "category_name": "Worker Health & Safety"
+      "category_name": "Worker Health & Safety",
+      "events": {
+        "SPILLS/LEAKS": {
+          "description": "Machinery/equipment detected with spills and/or leaks",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "b146f921-f0a1-45a2-9c04-568fdea57f10",
@@ -182,6 +307,7 @@
       "name": "equipment-temperature-detection",
       "version": "0.0.2",
       "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
+      "overview": "Our solution detects equipment temperature and performance by processing real-time images and videos from different sources. In addition, it can trigger an alarm (as soon as the temperature reaches the threshold margins or faulty equipment is detected) and identify areas where exits are present.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
       "coming_soon": false,
       "completed": false,
@@ -190,7 +316,13 @@
         "Preventative service",
         "Temperature monitoring"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "EQUIPMENT_TEMPERATURE": {
+          "description": "Equipment temperature exceeded the threshold",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "5532b361-b08c-4812-bf91-d12f8ed6aa7f",
@@ -198,6 +330,7 @@
       "name": "text-blur",
       "version": "0.0.1",
       "tagline": "Ensure the privacy of individuals by obscuring documents and other signs in camera feeds.",
+      "overview": "The model works in a way that it ensures that documents and signs are fully and effectively obscured so that it cannot be read or easily recovered by others. The model uses a detection algorithm followed by computer vision techniques to obscure texts in images and videos.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/document-blur.png",
       "coming_soon": false,
       "completed": false,
@@ -210,7 +343,8 @@
         "Convolutional Neural Network",
         "Text blurring"
       ],
-      "category_name": "Privacy"
+      "category_name": "Privacy",
+      "events": {}
     },
     {
       "id": "ac2e2be4-7063-4d87-a783-2ab07e1ce5ad",
@@ -218,6 +352,7 @@
       "name": "license-plate-blur",
       "version": "0.0.1",
       "tagline": "Ensure the privacy of vehicle owners in images and videos by blurring licence plates.",
+      "overview": "License plate blurring can be a useful and intended application in certain contexts, such as when capturing images or video in public places or in situations where license plates may contain sensitive or identifying information. This technology can help protect the privacy and security of individuals by blurring or obscuring license plate numbers.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
       "coming_soon": false,
       "completed": false,
@@ -230,7 +365,8 @@
         "Convolutional Neural Network",
         "License plate blurring"
       ],
-      "category_name": "Privacy"
+      "category_name": "Privacy",
+      "events": {}
     },
     {
       "id": "2676a63e-0ebd-47fc-afd7-cfb9b1b1820b",
@@ -238,6 +374,7 @@
       "name": "sign-blur",
       "version": "0.0.1",
       "tagline": "Ensure the privacy of individuals by obscuring signs in camera feeds.",
+      "overview": "The model works in a way that it ensures that signs are fully and effectively obscured so that it cannot be read or easily recovered by others. The model uses a detection algorithm followed by computer vision techniques to obscure texts in images and videos.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/sign-blur.png",
       "coming_soon": false,
       "completed": false,
@@ -250,7 +387,8 @@
         "Convolutional Neural Network",
         "Sign blurring"
       ],
-      "category_name": "Privacy"
+      "category_name": "Privacy",
+      "events": {}
     },
     {
       "id": "23a014a2-129d-4348-b6b7-3232302ccf42",
@@ -258,6 +396,7 @@
       "name": "obstructed-camera-detection",
       "version": "0.0.5",
       "tagline": "Keep your camera view clear with our obstructed camera detection model.",
+      "overview": "The aim of an obstructed camera detection model is to detect whether a cameras field of view is obstructed or not. This model is designed to detect various types of obstructions such as fingers, tape, post-it notes, or other physical objects that might block the camera view.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/obstructed-camera-detection.png",
       "coming_soon": false,
       "completed": false,
@@ -265,7 +404,8 @@
         "Camera detection",
         "Obstructed camera"
       ],
-      "category_name": "Privacy"
+      "category_name": "Privacy",
+      "events": {}
     },
     {
       "id": "d099f277-3422-4f87-ab23-a0aad39a56bc",
@@ -273,6 +413,7 @@
       "name": "fire-extinguisher-detection",
       "version": "0.0.5",
       "tagline": "Strengthen Fire Safety compliance through adding checks for missing fire extinguishers from their required places.",
+      "overview": "The goal is to enhance fire safety compliance by implementing checks to ensure that fire extinguishers are present in their designated locations. This proactive approach aims to mitigate the risks associated with fire incidents and strengthen overall workplace safety. \n\n This scenario introduces a critical need for strengthening fire safety measures by focusing on the absence of fire extinguishers from their required positions. By addressing this gap, the initiative seeks to fortify the preparedness of establishments in the event of a fire emergency. The absence of a fire extinguisher in a designated location can pose significant risks, and this scenario aims to proactively rectify such situations to enhance overall safety protocols. \n\n Through the implementation of systematic checks and monitoring mechanisms, the scenario envisions a more robust fire safety compliance framework. Detecting and addressing missing fire extinguishers promptly is crucial in preventing potential hazards. By adopting this approach, organizations can foster a safer environment for occupants, reduce the impact of fire incidents, and ensure a higher level of preparedness in the face of unexpected emergencies.",
       "icon": "https://res.cloudinary.com/dszijwz8d/image/upload/v1705191243/visionai-scenario-images/missing-fire-extinguisher-removebg-preview_m5lhek.png",
       "coming_soon": false,
       "completed": true,
@@ -280,7 +421,13 @@
         "Equipment maintenance",
         "Preventative service"
       ],
-      "category_name": "Hazard Warnings"
+      "category_name": "Hazard Warnings",
+      "events": {
+        "NO_FIRE_EXTINGUISHER": {
+          "description": "Missing fire-extinguisher detection",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "b855e046-080a-4954-a179-b661ccd13a49",
@@ -288,6 +435,7 @@
       "name": "blocked-exit-monitoring",
       "version": "0.0.5",
       "tagline": "Ensure that your organziation is safe & compliant for any emergency evacuations. If any of your exits are blocked - get an event notifications so it can be quickly resolved.",
+      "overview": "With our Blocked Exit Monitoring solution, you can rest assured that your premises are being monitored continuously, providing early warnings in case of any blockages in emergency exits. Our models can be deployed instantly and can augment your existing camera infrastructure with just a few clicks.",
       "icon": "https://res.cloudinary.com/dszijwz8d/image/upload/v1705191237/visionai-scenario-images/blocked-exit-removebg-preview_lfssbw.png",
       "coming_soon": true,
       "completed": false,
@@ -295,7 +443,13 @@
         "Blocked exit monitoring",
         "Preventative service"
       ],
-      "category_name": "Hazard Warnings"
+      "category_name": "Hazard Warnings",
+      "events": {
+        "BLOCKED_EXIT": {
+          "descriptioin": "Detected blocked exit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "77753838-3a00-498a-9ad0-3ad293368cc1",
@@ -303,6 +457,7 @@
       "name": "working-at-heights",
       "version": "0.0.1",
       "tagline": "Ensure the safety of employees at workplace.",
+      "overview": "Preventative maintenance. Person detection without PFAS, Steps detection without railings, Person detection at height without parapets and Ladder detected not in compliance",
       "icon": "https://res.cloudinary.com/dszijwz8d/image/upload/v1705191254/visionai-scenario-images/working-at-heights-removebg-preview_zdzbun.png",
       "coming_soon": false,
       "completed": false,
@@ -311,7 +466,25 @@
         "Preventative service",
         "Workplace health and safety"
       ],
-      "category_name": "Worker Health & Safety"
+      "category_name": "Worker Health & Safety",
+      "events": {
+        "NO_PFAS": {
+          "descriptioin": "Person detected without PFAS/Full-body harness",
+          "schedule": "Immediate"
+        },
+        "NO_RAILINGS": {
+          "descriptioin": "Steps detected without railings",
+          "schedule": "Immediate"
+        },
+        "NO_PARAPET": {
+          "descriptioin": "Person detected at height without parapets",
+          "schedule": "Immediate"
+        },
+        "LADDER_NOT_IN_COMPLIANCE": {
+          "descriptioin": "Ladder detected not in compliance",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "934f43d1-f5c6-4299-93a7-d5ddd8102184",
@@ -319,6 +492,7 @@
       "name": "hand-wash-detection",
       "version": "0.0.1",
       "tagline": "Enhance hygiene compliance with our cutting-edge hand wash detection model, designed to accurately monitor and promote effective hand washing practices.",
+      "overview": "Vision AI-based hand-wash system is designed to detect and ensure no one misses hand wash and/or using hand sanitizer. By detecting whether people have used hand sanitizer or hand wash, the system can help encourage good hygiene practices and reduce the risk of infection.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/hand-wash-detection.png",
       "coming_soon": false,
       "completed": false,
@@ -327,7 +501,17 @@
         "Hand sanitizer usage",
         "Hand wash"
       ],
-      "category_name": "Worker Health & Safety"
+      "category_name": "Worker Health & Safety",
+      "events": {
+        "NO_HAND_SANITIZER": {
+          "descriptioin": "Missed using hand-sanitizer",
+          "schedule": "Immediate"
+        },
+        "NO_HAND_WASH": {
+          "descriptioin": "Missed hand-wash",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "bf14068d-f8d3-414b-9f73-51bce4c5aa73",
@@ -335,6 +519,7 @@
       "name": "water-quality-monitoring",
       "version": "0.0.1",
       "tagline": "Advanced Technologies for Effective Water Management and Conservation with Vision AI.",
+      "overview": "Water quality monitoring by VisionAI's camera based approach involves using cameras to capture images or videos of water bodies and then analyzing them to determine the water quality. This approach can provide a cost-effective and efficient way to monitor water quality over a large area, as cameras can cover a wide range of locations and can operate continuously.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/water-quality-monitoring.png",
       "coming_soon": false,
       "completed": false,
@@ -343,7 +528,13 @@
         "Monitoring water storage",
         "Identifying potential environmental hazards"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "WATER_QUALITY": {
+          "descriptioin": "Water quality level exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "2832f10b-6f5b-4eba-aee3-8e32356dba6a",
@@ -351,6 +542,7 @@
       "name": "confined-space-monitoring",
       "version": "0.0.1",
       "tagline": "Ensure safety of employees in confined spaces. Get real-time alerts when workers are present in the space for too long.",
+      "overview": "In the dynamic landscape of chemical manufacturing, certain environments impose time restrictions on human presence, defining the concept of confined spaces. These restricted areas demand vigilant monitoring to ensure the safety of personnel. Our innovative Confined Spaces Monitoring scenario addresses this critical need, employing advanced technology to implement dwell time metrics for individuals within these confined areas. By meticulously tracking the time spent in such spaces, our application acts as a crucial safety net, alerting stakeholders when the allotted dwell time surpasses specified thresholds. \n\n Dwell time metrics serve as a proactive measure, enabling real-time monitoring and timely intervention. The system is equipped to generate instant alerts, ensuring that any extended presence in confined spaces triggers immediate attention. This not only enhances the safety of personnel but also aligns with industry regulations, promoting a secure working environment. Our Confined Spaces Monitoring scenario represents a pioneering solution that integrates seamlessly into chemical manufacturing operations, prioritizing safety and compliance while providing peace of mind to industry professionals. \n\n With a focus on precision, efficiency, and adherence to safety protocols, our Confined Spaces Monitoring scenario stands at the forefront of technological advancements. By leveraging data analytics and real-time alerts, this solution empowers organizations to mitigate risks associated with confined spaces, fostering a culture of safety and well-being within the industry.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/confined-spaces-monitoring.png",
       "coming_soon": false,
       "completed": true,
@@ -358,7 +550,13 @@
         "Restricted Area Monitoring",
         "Confined Space Safety"
       ],
-      "category_name": "Emergency Events"
+      "category_name": "Emergency Events",
+      "events": {
+        "DWELL_TIME": {
+          "description": "Person dwell time exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "3029dc4e-0df2-447d-b776-fb6c0b99824f",
@@ -366,13 +564,20 @@
       "name": "social-distance-detection",
       "version": "0.0.1",
       "tagline": "Ensure social distancing in your workplace with our AI-based social distancing monitoring solution.",
+      "overview": "Vision AI based social distancing solution can be used to push out events for different people observed in the frame and the distances between them by providing real-time video feeds of the factory area. The cameras scan every frame to ensure social distancing is well maintained.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Social-Distancing.png",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Social distancing"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "DISTANCE_BETWEEN_PEOPLE": {
+          "description": "Different people observed in the frame and the distances between them",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "e3dba6a3-36db-4238-91de-e7a4ea9f89df",
@@ -380,6 +585,7 @@
       "name": "station-occupancy",
       "version": "0.0.1",
       "tagline": "Revolutionize your workspace with our Smart Desk Occupancy Tracker.",
+      "overview": "Efficiently manage and enhance workplace safety with our Station Occupancy scenario, a cutting-edge solution designed for 24/7 real-time monitoring of worker presence. Tailored to various industries, from warehousing and construction to manufacturing, our system revolutionizes the way you track zones, monitor build sites, and oversee equipment areas. With a focus on boosting efficiency and safety, our technology provides invaluable insights into workforce distribution across vital areas. \n\n Experience the power of continuous real-time monitoring that allows you to keep a close eye on station occupancy. Whether it's optimizing workflow in warehousing, ensuring safety protocols at construction sites, or maintaining quality control in manufacturing, our solution provides unparalleled visibility. By harnessing advanced monitoring capabilities, you can make informed decisions, respond promptly to changing conditions, and streamline operations for peak performance. By ensuring that critical areas are adequately manned, our solution minimizes downtime, prevents potential hazards, and encourages a work culture prioritizing both productivity and well-being. ",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/desk-occupancy.png",
       "coming_soon": false,
       "completed": true,
@@ -387,7 +593,13 @@
         "Desk occupancy",
         "Station occupancy"
       ],
-      "category_name": "Productivity Suite"
+      "category_name": "Productivity Suite",
+      "events": {
+        "OCCUPANCY_METRICS_SUMMARY": {
+          "description": "Daily summary of occupancy metrics on a per desk/station basis",
+          "schedule": "Daily"
+        }
+      }
     },
     {
       "id": "578b7b6e-86eb-4cd9-94a2-827695bae939",
@@ -395,6 +607,7 @@
       "name": "no-visitors",
       "version": "0.0.1",
       "tagline": "An intelligent way to enhance security and prevent unauthorized access to restricted areas.",
+      "overview": "In the contemporary business landscape, safeguarding the workplace is paramount, necessitating robust security measures and controlled access. Organizations recognize the critical importance of ensuring a secure environment to protect assets, sensitive information, and, most importantly, the well-being of their employees. With the ever-evolving landscape of potential threats, establishing a comprehensive security framework has become an imperative aspect of organizational management. \n\n No Visitors scenario addresses this need by implementing a policy that restricts access to the workplace exclusively to authorized personnel. This approach mitigates potential security vulnerabilities associated with unauthorized individuals entering the premises. By enforcing a No Visitors policy, organizations can better regulate who enters their facilities, enhancing overall security protocols and reducing the risk of unauthorized access, ensuring a safer and more controlled working environment. This not only safeguards physical assets but also reinforces the organization's commitment to providing a secure and conducive environment for its workforce.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/visitors-and-children.png",
       "coming_soon": false,
       "completed": false,
@@ -404,7 +617,25 @@
         "No pets",
         "Authorized personnel only"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "NO_CHILDREN": {
+          "description": "Children detected in area",
+          "schedule": "Immediate"
+        },
+        "NO_VISITORS": {
+          "description": "Visitors detected in area",
+          "schedule": "Immediate"
+        },
+        "NO_UNIFORM": {
+          "description": "Person without uniform detected",
+          "schedule": "Immediate"
+        },
+        "NO_BADGE": {
+          "description": "Person without badge detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "b4ecacf9-95cf-49ac-bd27-c5ce1d6a600a",
@@ -412,6 +643,7 @@
       "name": "no-food-or-drinks",
       "version": "0.0.1",
       "tagline": "An easier, smarter way to enforce policies with VisionAI",
+      "overview": "Our solution instantly alerts the appropriate personnel to take action and proves to be an effective tool for enforcing a 'no food and drinks' policy in an organizational setting, improving hygiene and safety measures, and ensuring compliance with regulations.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/food-and-drinks.png",
       "coming_soon": true,
       "completed": false,
@@ -420,7 +652,17 @@
         "No drinks",
         "Food Policy Violation"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "food": {
+          "description": "Person with food detected",
+          "schedule": "Immediate"
+        },
+        "drinks": {
+          "description": "Person with drinks detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "9f7722af-003b-4fac-b08d-c81fa90d48fd",
@@ -428,6 +670,7 @@
       "name": "energy-conservation",
       "version": "0.0.1",
       "tagline": "Going Green: Innovative Solutions for Energy Conservation and Sustainable Living with Vision AI.",
+      "overview": "Our solution can analyze building occupancy patterns to optimize heating and cooling systems, identify lighting fixtures that consume excessive energy, or identify appliances and equipment that need to be replaced to improve energy efficiency.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/energy-conservation.png",
       "coming_soon": false,
       "completed": false,
@@ -436,7 +679,13 @@
         "Optimize heating and cooling systems",
         "Identify lighting fixtures that consume excessive energy"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "ENERGY_CONSERVATION_SUMMARY": {
+          "description": "Occupancy pattern summary & lighting pattern recommendations",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "aa233386-5014-4c1d-82af-c400576271a0",
@@ -444,6 +693,7 @@
       "name": "waste-management",
       "version": "0.0.1",
       "tagline": "Innovative Technologies for Efficient Waste Management Detection with Vision AI.",
+      "overview": "Monitor waste disposal practices, such as identifying and tracking waste streams, monitoring waste storage and handling procedures, and identifying potential environmental hazards. Our solution focused on the detection of waste management events by identifying opportunities for waste reduction, recycling, and cost savings.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/waste-monitoring.jpg",
       "coming_soon": false,
       "completed": false,
@@ -452,7 +702,21 @@
         "Monitoring waste storage and handling procedures",
         "Identifying potential environmental hazards"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "SPILL": {
+          "description": "Spill detected",
+          "schedule": "Immediate"
+        },
+        "WASTE_BIN_FULL": {
+          "description": "Warning! Waste bin full",
+          "schedule": "Immediate"
+        },
+        "ENVIRONMENTAL_HAZARD": {
+          "description": "Environmental hazard event detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "dd628fc7-2125-4ba6-86c7-3614b3915ab3",
@@ -460,6 +724,7 @@
       "name": "unauthorized-entry",
       "version": "0.0.1",
       "tagline": "Real-time alerts for any unauthorized entry, anywhere.",
+      "overview": "VisionAI based solution is focused on detecting unauthorized entry. The cameras scan every frame and raise an event when an unauthorized entry of a person is detected by considering tailgating, piggybacking and reverse entry.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/unauthorized-entry.png",
       "coming_soon": false,
       "completed": false,
@@ -467,7 +732,13 @@
         "Tailgating",
         "Unauthorized entry"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "UNAUTHORIZED_ENTRY": {
+          "description": "Unauthorized entry detected/Multi-entry detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "e3baffd8-4a37-4d03-87b1-65f39976e956",
@@ -475,6 +746,7 @@
       "name": "perimeter-control",
       "version": "0.0.1",
       "tagline": "An advanced perimeter control system powered with Computer Vision and AI.",
+      "overview": "Vision AI based perimeter control can be used to detect intruders in the premises. The model uses a detection algorithm followed by computer vision techniques to detect intruders in images and videos. The model works in a way that it ensures that intruders are fully and effectively detected so that neccesary action can be taken to prevent unauthorized access.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/perimeter-control.png",
       "coming_soon": false,
       "completed": false,
@@ -482,7 +754,17 @@
         "Perimeter control",
         "Fence control"
       ],
-      "category_name": "Compliance Policies"
+      "category_name": "Compliance Policies",
+      "events": {
+        "PERSON_PERIMETER": {
+          "description": "Person detected on fence/perimeter",
+          "schedule": "Immediate"
+        },
+        "MOVEMENT_PERIMETER": {
+          "description": "Movement detected on fence/perimeter",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "90a03aaa-6b79-4243-8233-24ae247240e2",
@@ -490,6 +772,7 @@
       "name": "equipment-vibration-monitoring",
       "version": "0.0.1",
       "tagline": "Monitor equipment vibrations. Get an alert when vibration exceeds a limit.",
+      "overview": "Model is aimed at monitoring equipment vibrations and detecting the vibration of equipment and alerting the user if the vibration exceeds a limit. This can be used to detect any potential failure in the equipment.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vibrating_monitor-07.jpg",
       "coming_soon": false,
       "completed": false,
@@ -497,7 +780,13 @@
         "Equipment monitoring",
         "Vibration monitoring of equipment"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "EQUIPMENT_VIBRATION": {
+          "descritpion": "Equipment vibration exceeded the limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "d7a9d546-295d-4b99-82b4-309aba2b2dd7",
@@ -505,6 +794,7 @@
       "name": "equipment-noise-monitoring",
       "version": "0.0.2",
       "tagline": "Monitor equipment noise levels. Get an alert when noise exceeds a limit.",
+      "overview": "Model is aimed at monitoring equipment noise levels and detecting the noise levels of equipment and alerting the user if the noise exceeds a limit. This can be used to detect any potential failure in the equipment.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/equipment-noise-monitoring.jpg",
       "coming_soon": false,
       "completed": false,
@@ -512,7 +802,13 @@
         "Equipment maintenance",
         "Noise monitoring"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "EQUIPMENT_NOISE": {
+          "description": "Equipment noise exceeded the threshold",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "ca96d27c-7559-4bb4-ba35-a86c2da3f1c0",
@@ -520,6 +816,7 @@
       "name": "reading-analog-dials",
       "version": "0.0.1",
       "tagline": "Monitor analog dials and generate periodic events.",
+      "overview": "Vision AI-based model for monitoring analog dials using camera would be detecting the analog dials and generating periodic events. This can be used to monitor analog dials.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/analog-dials-monitoring.png",
       "coming_soon": false,
       "completed": false,
@@ -527,7 +824,13 @@
         "Reading analog dials",
         "Analog readings"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "ANALOG_READING": {
+          "description": "Analog meter reading",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "a3eb8868-f659-40e4-b8fa-283a03d3f581",
@@ -535,6 +838,7 @@
       "name": "tools-checkout-monitoring",
       "version": "0.0.1",
       "tagline": "Monitor tools check-in/out and generate periodic events.",
+      "overview": "Vision AI-based tool checkout monitoring model is used to ensure that all tools that employees use - go through a common checkout process. Event is raised when employees don't check-out the tool and carry them out. Configuration is required to mark where the check-out counter is located. ",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Tools_check_in_check_out-06.jpg",
       "coming_soon": false,
       "completed": false,
@@ -543,7 +847,13 @@
         "Tool check-out",
         "Tool checkout monitoring"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "NO_CHECKOUT": {
+          "description": "Person left without checkout",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "03d685d9-37ed-4328-acfb-8c0b2824a1ab",
@@ -551,6 +861,7 @@
       "name": "equipment-temperature-monitoring",
       "version": "0.0.1",
       "tagline": "Monitor equipment temperature. Get an alert when temperature exceeds a limit or below a threshold.",
+      "overview": "Visionify's thermal monitoring solution integrated with an IR camera monitors equipment temperature and functioning under various conditions and surroundings. Our solution detects equipment temperature and performance by processing real-time images and videos from different sources.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/equipment temperature monitoring.jpeg",
       "coming_soon": false,
       "completed": false,
@@ -559,7 +870,17 @@
         "Workplace health and safety",
         "Temperature monitoring"
       ],
-      "category_name": "Equipment Monitoring"
+      "category_name": "Equipment Monitoring",
+      "events": {
+        "TEMPERATURE_EXCEED": {
+          "description": "Equipment temperature exceeds limit",
+          "schedule": "Immediate"
+        },
+        "TEMPERATURE_SUBCEED": {
+          "description": "Equipment temperature subceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "7345e4f7-4f1f-48c6-b2c3-5489b3fe9e6c",
@@ -567,6 +888,7 @@
       "name": "environment-humidity-monitoring",
       "version": "0.0.1",
       "tagline": "Ideal tool to monitor humidity in the surrounding environment.",
+      "overview": "VisionAI\u2019s humidity monitoring solution helps businesses control humidity in various environments. Our sensor-based solution can monitor the humidity level and triggers an alarm/signal when levels break a threshold value.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/humidity monitoring .jpeg",
       "coming_soon": false,
       "completed": false,
@@ -575,7 +897,17 @@
         "Workplace health and safety",
         "Humidity monitoring"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "HUMIDITY_EXCEED": {
+          "description": "Humidity exceeds limit",
+          "schedule": "Immediate"
+        },
+        "HUMIDITY_SUBCEED": {
+          "description": "Humidity subceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "aaaa017c-e590-442b-be86-cb8e6a8ffa24",
@@ -583,6 +915,7 @@
       "name": "environment-pressure-monitoring",
       "version": "0.0.1",
       "tagline": "Measure pressure in real-time, ensuring safe equipment and work conditions.",
+      "overview": "Visionify\u2019s pressure sensors empower industry players to maintain and monitor the pressure in real time. Our intelligent sensors can measure the air, gas, or liquid pressure and alert you for preventive care of your infrastructure.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/pressure sensor monitoring.png",
       "coming_soon": false,
       "completed": false,
@@ -591,7 +924,17 @@
         "Workplace health and safety",
         "Pressure monitoring"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "PRESSURE_EXCEED": {
+          "description": "Pressure exceeds limit",
+          "schedule": "Immediate"
+        },
+        "PRESSURE_SUBCEED": {
+          "description": "Pressure subceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "9f33c376-503e-4c9f-ac94-323ce3e6f7ad",
@@ -599,6 +942,7 @@
       "name": "air-quality-monitoring",
       "version": "0.0.1",
       "tagline": "Monitor CO, CO2, VOCs, NOx, SOx, O2, and Particulate matters in real-time.",
+      "overview": "VisionAI's sensor-powered gas detection solutions can identify CO, CO2, VOCs, NOx, SOx, O2, and particulate matter in real time. In addition, our models integrated with advanced sensors can sense gas and dust particles in the air as soon as their percentage level increases or falls below a threshold value",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/air-quality-monitoring.png",
       "coming_soon": false,
       "completed": false,
@@ -607,7 +951,33 @@
         "Workplace health and safety",
         "Gas level monitoring"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "CO": {
+          "description": "CO exceeds limit",
+          "schedule": "Immediate"
+        },
+        "CO2": {
+          "description": "CO2 exceeds limit",
+          "schedule": "Immediate"
+        },
+        "VOCs": {
+          "description": "VOCs exceeds limit",
+          "schedule": "Immediate"
+        },
+        "NOx": {
+          "description": "NOx exceeds limit",
+          "schedule": "Immediate"
+        },
+        "SOx": {
+          "description": "SOx exceeds limit",
+          "schedule": "Immediate"
+        },
+        "Particulate matters": {
+          "description": "Particulate matters exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "b74474ff-17f9-4bc0-9208-5a05b38c2f6e",
@@ -615,6 +985,7 @@
       "name": "light-sensor-monitoring",
       "version": "0.0.1",
       "tagline": "Monitor ambient light in real-time with our light-sensing solution.",
+      "overview": "Visionify\u2019s light monitoring solution can monitor the ambient light of your electronic devices in real-time. When the ambient light of your equipment/devices sub-seeds a specific limit, it can be increased to the desired level. ",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/light monitoring.webp",
       "coming_soon": false,
       "completed": false,
@@ -622,7 +993,13 @@
         "Light sensor monitoring",
         "Workplace health and safety"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "AMBIENT_LIGHT": {
+          "description": "Ambient light subceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "cb0b2742-8203-4652-b092-a779a9f7355b",
@@ -630,6 +1007,7 @@
       "name": "noise-level-monitoring",
       "version": "0.0.1",
       "tagline": "Measure the sound level in the environment and identify a noise source.",
+      "overview": "VisionAI's noise monitoring solution is integrated with sensors that can automatically validate sound sources from a distance. Our model can classify noise sources using a classification algorithm capable of learning a sophisticated noise source classifier for an arbitrary scenario just by using relevant annotated recordings as training material.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/environment noise monitoring (1).jpg",
       "coming_soon": false,
       "completed": false,
@@ -637,7 +1015,13 @@
         "Noise level monitoring",
         "Workplace health and safety"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "NOISE": {
+          "description": "Noise level exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "2a68947b-6338-495e-8770-817908c100d9",
@@ -645,6 +1029,7 @@
       "name": "radiation-monitoring",
       "version": "0.0.1",
       "tagline": "Keeping Radiation Under Control: Innovations in Radiation Monitoring and Safety Detection with Vision AI.",
+      "overview": "Our solution can be used for the detection of radiation monitoring events by providing real-time video feeds of the factory area. The cameras scan every frame and raise an event whenever radiation level is detected to be above configured limit.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/radiation-monitoring.png",
       "coming_soon": false,
       "completed": false,
@@ -652,7 +1037,13 @@
         "Radiation monitoring",
         "Workplace health and safety"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "RADIATION_LEVEL": {
+          "description": "Radiation level exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "a76176d0-fd14-4132-96ee-ddb42d450a8e",
@@ -660,13 +1051,28 @@
       "name": "loitering-detection",
       "version": "0.0.1",
       "tagline": "Keeping Public Spaces Safe: Innovations in Loitering Detection and Prevention with Vision AI.",
+      "overview": "Our solution can be used to for the detection of loitering events by providing real-time video feeds of the factory area. The cameras scan every frame and raise an event when a person enters from an usually closed location, person detected during off-hours, person detected for extended duration of time.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/loitering-detection.png",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Loitering detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "UNUSUAL_ENTRY": {
+          "description": "Person enters from an usually closed location",
+          "schedule": "Immediate"
+        },
+        "OFF_HOURS": {
+          "description": "Person detected during off-hours",
+          "schedule": "Immediate"
+        },
+        "EXTENDED_DURATION": {
+          "description": "Person detected for extended duration of time",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "1982ebab-5a69-4d31-9c4c-a1810a731b59",
@@ -674,13 +1080,20 @@
       "name": "suspicious-package-detection",
       "version": "0.0.1",
       "tagline": "Reliable and accurate Suspicious package detection for a safe and secure workplace environment.",
+      "overview": "VisionAI suspicious package detection model is trained on a large dataset of known suspicious packages, as well as non-suspicious packages, to learn to recognize the characteristics that are most indicative of a threat. VisionAI based suspicious package monitoring can be used to analyze new packages and determine whether they are suspicious or not. If a package is flagged as suspicious, security personnel can be alerted to investigate further and take appropriate action.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Suspicious package detection-01.jpg",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Suspicious package detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "SUSPICIOUS_PACKAGE": {
+          "description": "Suspicious package detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "d185d084-3ad1-4311-9f62-e09f6121b370",
@@ -688,6 +1101,7 @@
       "name": "fighting-detection",
       "version": "0.0.1",
       "tagline": "Create a safer and more productive work environment with our real-time Aggressive behaviour detection system.",
+      "overview": "VisionAI's agressive behaviour detection model is designed to promote a safe, healthy, and productive workplace environment for all employees. The model is able to provide real-time alerts when it detects aggressive behavior. This will enable management to intervene and prevent escalation of the situation.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/aggressive-behavior-detection.png",
       "coming_soon": false,
       "completed": false,
@@ -696,7 +1110,13 @@
         "Fighting behaviour detection",
         "Aggressive behaviour detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "AGRESSIVE_BEHAVIOUR": {
+          "description": "Event fired when bullying/fighting/aggressive behavior is detected.",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "ab968b97-b076-4d80-8034-066434665b04",
@@ -704,6 +1124,7 @@
       "name": "energy-usage-monitoring",
       "version": "0.0.1",
       "tagline": "Empowering Sustainability: Innovations in Energy Usage Monitoring and Management with Vision AI.",
+      "overview": "Vision AI based monitors can be used for the detection of energy usage monitoring events by providing real-time video feeds of the factory area. The cameras scan every frame and monitor the energy usage of machines and equipment in a factory and help identify inefficiencies, optimize processes, and reduce energy costs.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Energy usage monitoring.jpg",
       "coming_soon": false,
       "completed": false,
@@ -711,7 +1132,13 @@
         "Environment energy monitoring",
         "Energy usage monitoring"
       ],
-      "category_name": "Environment Monitoring"
+      "category_name": "Environment Monitoring",
+      "events": {
+        "ENERGY_USAGE": {
+          "description": "Energy usage exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "6b427e83-7932-468a-8198-d5610156f81c",
@@ -719,6 +1146,7 @@
       "name": "vandalism-detection",
       "version": "0.0.1",
       "tagline": "Safeguard your assets with our advanced vandalism detection model.",
+      "overview": "An effective approach to investigate if the site has temporally consistent and significant static changes, indicative of damage, when an object is detected departing such a place. It recognises several types of vandalism, including theft and graffiti, and it can deal with abrupt illumination changes, occlusions, and segmentation mistakes.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vandalism-detection.jpg",
       "coming_soon": false,
       "completed": false,
@@ -728,7 +1156,33 @@
         "Paint detection on walls",
         "Destruction detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "MOTION": {
+          "description": "Motion detected in area (gross event)",
+          "schedule": "Immediate"
+        },
+        "PEOPLE": {
+          "description": "People detected in area (more granular event)",
+          "schedule": "Immediate"
+        },
+        "UNAUTHORIZED_PERSONNEL": {
+          "description": "Unauthorized personnel detected in area (based on uniform/badge)",
+          "schedule": "Immediate"
+        },
+        "VANDALISM": {
+          "description": "Vandalism detected in area (before & after changes)",
+          "schedule": "Immediate"
+        },
+        "PAINT_GRAFFITI": {
+          "description": "Paint/graffiti detected in area (before & after changes)",
+          "schedule": "Immediate"
+        },
+        "BEHAVIOR_ANALYSIS": {
+          "description": "Behavior analysis showing company property destruction.",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "f910d2fe-3201-438f-92ad-d8586fab354e",
@@ -736,13 +1190,20 @@
       "name": "sexual-harrassment",
       "version": "0.0.1",
       "tagline": "Create a safer and more respectful workplace for all employees.",
+      "overview": "Sexual harassment detection using VisionAI based solution can help to prevent inappropriate behavior and create safer environments. Our models can analyze video footage or images and identify patterns or actions that are indicative of sexual harassment.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Sexual harrassment-03.jpg",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Sexual harrassment"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "SEXUAL_HARRASSMENT": {
+          "description": "Potential sexual harrassment event detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "ad6e5b0c-d406-4485-a88e-aa82c4cc1734",
@@ -750,13 +1211,20 @@
       "name": "solicitation-detection",
       "version": "0.0.1",
       "tagline": "A smarter way to unveil solicitation.",
+      "overview": "Implement VisionAI solution to address the problems associated with Solicitation by timely detection of any unethical behaviors in public spaces or companies. Our AI and deep learning-based solution can identify behavioral anomalies that may indicate solicitation.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/solicitation-detection.png",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Solicitation detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "POTENTIAL_SOLICITATION": {
+          "description": "Potential solicitation event detected (public spaces)",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "11555bca-dc00-467f-8eab-988485663733",
@@ -764,6 +1232,7 @@
       "name": "shoplifting-detection",
       "version": "0.0.1",
       "tagline": "Ensure prevention of Shoplifting, employee theft, minimize insurance loss and other related damages across the retail sector.",
+      "overview": "Our trained model can be used to analyze live video footage from surveillance cameras in real-time. The system can alert security personnel or trigger an alarm when it detects suspicious behavior, allowing them to intervene and prevent the theft or shoplifting from occurring.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/theft-detection.png",
       "coming_soon": false,
       "completed": false,
@@ -771,7 +1240,17 @@
         "Shoplifting detection",
         "Theft detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "POTENTIAL_SHOPLIFTING": {
+          "description": "Potential shoplifting event detected",
+          "schedule": "Immediate"
+        },
+        "POTENTIAL_THEFT": {
+          "description": "Potential theft event detected",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "551e4e5a-33cf-4850-a4cd-26174d88e0d7",
@@ -779,13 +1258,24 @@
       "name": "shipping-activity-detection",
       "version": "0.0.1",
       "tagline": "Stay vigilant even after hours with our advanced suspicious shipping activity solution.",
+      "overview": "Suspicious Shipping Activity Detection model is an important tool for helping to prevent fraudulent or criminal activity in the shipping industry, and it works in real time to help ensure that potentially suspicious activity is identified and addressed as quickly as possible.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/suspicious-shipping.png",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Shipping activity detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "SHIPPING_NON-DESIGNATED_AREA": {
+          "description": "Suspicious shipping activity detected from non-designated area",
+          "schedule": "Immediate"
+        },
+        "SHIPPING_AFTER_HOURS": {
+          "description": "Suspicious shipping activity detected during after-hours",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "5cb3fc79-dae1-4752-8f73-1f77ea4adfc3",
@@ -793,13 +1283,20 @@
       "name": "intrusion-detection",
       "version": "0.0.1",
       "tagline": "An advanced physical intrusion detection system powered with Computer Vision and AI.",
+      "overview": "Expand your security capabilities with VisionAI, a modern AI and ML solution to detect intrusions and protect your premises against all potential physical intrusion threats. Our model can accurately identify suspicious behaviors that may indicate a physical intrusion and instantly alerts the security personnel, allowing them to take appropriate and timely action against it to avoid associated dangers.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/Intrusion-Detected.png",
       "coming_soon": false,
       "completed": false,
       "tags": [
         "Intrusion detection"
       ],
-      "category_name": "Suspicious Activity"
+      "category_name": "Suspicious Activity",
+      "events": {
+        "POSSIBLE_INTRUSION": {
+          "description": "Possible intrusion detection near door",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "531cb4c4-ed65-41f5-8a96-f970bd3237cb",
@@ -807,6 +1304,7 @@
       "name": "vehicle-near-miss",
       "version": "0.0.1",
       "tagline": "Prevent collisions between vehicles and pedestrians with Real-Time Vehicle Zone Monitoring. Actively flag proximity breaches and detect potential collisions between vehicles and workers to enhance safety in industrial spaces like warehousing, construction, ports and manufacturing.",
+      "overview": "Real-Time Vehicle Zone Monitoring revolutionizes industrial safety by actively preventing collisions between vehicles and pedestrians. This innovative system employs advanced technology to detect and flag proximity breaches in real-time, ensuring swift response to potential hazards. Specifically designed for industrial environments such as warehousing, construction sites, ports, and manufacturing facilities, this solution prioritizes safety by mitigating the risks associated with vehicle-people interactions. \n\n By leveraging cutting-edge monitoring capabilities, Real-Time Vehicle Zone Monitoring offers a proactive approach to industrial safety. This solution is particularly crucial in high-risk settings where the coexistence of vehicles and workers demands heightened vigilance. With its ability to prevent near-misses and enhance overall safety, Real-Time Vehicle Zone Monitoring establishes itself as a vital component in creating secure and efficient industrial spaces. \n\n In summary, this system not only acts as a preventive barrier against collisions but also contributes to a safer and more productive working environment. Its adaptability and applicability across diverse industrial sectors make it a versatile and indispensable tool for safeguarding lives and minimizing risks associated with vehicle and pedestrian interactions in dynamic workspaces.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-forklifts.png",
       "coming_soon": false,
       "completed": true,
@@ -814,7 +1312,17 @@
         "Forklift Zone Breach",
         "Vehicle usage"
       ],
-      "category_name": "Vehicle Control"
+      "category_name": "Vehicle Control",
+      "events": {
+        "FORKLIFT": {
+          "description": "Forklift observed outside of configured zone",
+          "schedule": "Immediate"
+        },
+        "PEDESTRIAN": {
+          "description": "Pedestrian observed in forklift zone",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "734c12d0-ce4a-45bf-b52e-c0185cacaaf0",
@@ -822,6 +1330,7 @@
       "name": "vehicle-license-plate-detection",
       "version": "0.0.1",
       "tagline": "An intelligent alarm system that could be used to detect vehicle license plate numbers.",
+      "overview": "Vehicle license plate detection uses image processing algorithms to identify and extract the license plate information from images or video frames captured by a camera. License plate detection can be used for various purposes, including enforcing traffic laws, toll collection, parking management, and law enforcement.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/licence-plate-blurring.png",
       "coming_soon": false,
       "completed": false,
@@ -829,7 +1338,13 @@
         "Vehicle license plate detection",
         "Vehicle usage"
       ],
-      "category_name": "Vehicle Control"
+      "category_name": "Vehicle Control",
+      "events": {
+        "LICENSE_PLATE": {
+          "description": "Car detected with license plate",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "d354349b-2028-443f-b12a-983eb2897851",
@@ -837,6 +1352,7 @@
       "name": "vehicle-speed-monitoring",
       "version": "0.0.1",
       "tagline": "An intelligent alarm system that could be used to monitor vehicle speed.",
+      "overview": "Vehicle speed monitoring is a system that uses cameras to monitor the speed of vehicles on a road. It is used to enforce speed limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are travelling at an unsafe speed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/vehicle-speed-limit.png",
       "coming_soon": true,
       "completed": false,
@@ -844,7 +1360,13 @@
         "Vehicle speed monitoring",
         "Vehicle usage"
       ],
-      "category_name": "Vehicle Control"
+      "category_name": "Vehicle Control",
+      "events": {
+        "VEHICLE_SPEED": {
+          "description": "Vehicle speed exceeds limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "ddbfc73c-dd6b-430c-b461-fd78885424a0",
@@ -852,6 +1374,7 @@
       "name": "vehicle-cargo-volume-limit",
       "version": "0.0.1",
       "tagline": "An intelligent alarm system that could be used to detect cargo in vehicles.",
+      "overview": "Vehicle cargo monitoring is a system that uses cameras to monitor the cargo in vehicles. It is used to enforce cargo limits and calculate fine amounts, as well as to manage the flow of traffic. It is also used to detect vehicles that are carrying cargo that is not allowed for the conditions, such as when the road is wet or icy, or when there is heavy traffic.",
       "icon": "https://visionai.azureedge.net/docs-images/docs-visionify-version1.0-23March23/vehicle-cargo-limit.png",
       "coming_soon": false,
       "completed": false,
@@ -859,7 +1382,17 @@
         "Vehicle cargo volume limit",
         "Vehicle usage"
       ],
-      "category_name": "Vehicle Control"
+      "category_name": "Vehicle Control",
+      "events": {
+        "CARGO_EXCEED": {
+          "description": "Vehicle cargo exceeds volume limit",
+          "schedule": "Immediate"
+        },
+        "CARGO_SUBCEED": {
+          "description": "Vehicle cargo subceeds volume limit",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "5bfa450f-6f30-44fb-90e4-7ba93c30c5c1",
@@ -867,6 +1400,7 @@
       "name": "motion-detection",
       "version": "0.0.1",
       "tagline": "An intelligent motion Detection system aimed at safeguarding people and facilities.",
+      "overview": "Motion Detection is designed to detect person with movements. We aim to create safe workplaces by offering innovative, reliable, flexible, and scalable solutions.",
       "icon": "https://res.cloudinary.com/dszijwz8d/image/upload/v1705273969/visionai-scenario-images/motion-detection-removebg-preview_yv2ql8.png",
       "coming_soon": false,
       "completed": false,
@@ -874,7 +1408,17 @@
         "Motion",
         "Workplace safety"
       ],
-      "category_name": "Hazard Warnings"
+      "category_name": "Hazard Warnings",
+      "events": {
+        "MOTION_DETECTED": {
+          "description": "Motion detected",
+          "schedule": "Immediate"
+        },
+        "MOTION_DETECTED_WITH_PERSON": {
+          "description": "Motion detected with person",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "64bb1547-9cd4-44e2-9f78-40b5fb405700",
@@ -882,6 +1426,7 @@
       "name": "clear-pedestrian-pathway",
       "version": "0.0.1",
       "tagline": "Ensures worker safety in areas with machinery and vehicle traffic. Use Vision AI, to monitor and enforce use of designated walkways and safe movement zones in warehouses and manufacturing sites. The event is instantly flagged and alerts are sent when pedestrians violate.",
+      "overview": "Clear-Pedestrian-Pathway revolutionizes workplace safety by leveraging AI algorithms to ensure the well-being of workers navigating areas with machinery and vehicular traffic. This innovative solution introduces a proactive approach, employing real-time monitoring to enforce the use of designated walkways and secure movement zones within warehouses and manufacturing sites. By instantly flagging and generating alerts when pedestrians deviate from established paths, the system mitigates potential hazards, enhancing overall safety protocols.\n\n Our solution not only responds swiftly to violations but also provides a crucial layer of protection through its ability to detect deviations in real-time. With a focus on preemptive safety, this system contributes to a safer work environment by minimizing the risk of accidents and collisions, thereby promoting a culture of workplace safety and well-being. \n\n Clear-Pedestrian-Pathway is designed to cater to the unique challenges of industrial settings, delivering a comprehensive solution that goes beyond mere compliance. Its intelligent monitoring capabilities, coupled with instant alert mechanisms, create a reliable safety net that empowers organizations to prioritize and uphold the highest standards of worker safety.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/clear-pedestrian-pathway.png",
       "coming_soon": false,
       "completed": true,
@@ -890,7 +1435,13 @@
         "Pathway Monitoring",
         "Obstruction Detection"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "09599001-20af-470b-b0c6-e97f4d7fe65e",
@@ -898,6 +1449,7 @@
       "name": "cycle-time",
       "version": "0.0.1",
       "tagline": "Monitor time individuals spend in critical areas in work environments like warehouses, manufacturing, and retail. It analyzes activity duration for productivity insight, helping you identify and rectify workflow bottlenecks to boost overall operational effectiveness.",
+      "overview": "Cycle Time Monitoring scenario is designed to meticulously track the time individuals spend in crucial work areas such as warehouses, manufacturing facilities, and retail spaces. This innovative system goes beyond traditional timekeeping, offering a detailed analysis of activity duration to provide valuable insights into productivity. \n\n By dissecting and understanding each step of a process, Cycle Time Monitoring empowers businesses to identify and rectify potential workflow bottlenecks, ultimately leading to a significant enhancement in overall operational efficiency. Cycle Time Monitoring delves into the intricacies of individual activities, offering a comprehensive breakdown of time spent in critical work areas. This level of granularity allows businesses to gain a nuanced understanding of their operations and improve overall productivity. \n\n Cycle Time Monitoring is at the forefront of redefining how businesses approach time management in critical workspaces, offering a holistic solution for increased productivity and operational excellence.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/cycle-time.png",
       "coming_soon": false,
       "completed": true,
@@ -906,7 +1458,13 @@
         "Workflow Optimization",
         "Time Tracking"
       ],
-      "category_name": "Productivity Suite"
+      "category_name": "Productivity Suite",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "9136d8f9-71d1-4178-97f9-16028727319e",
@@ -914,6 +1472,7 @@
       "name": "electrical-discharge",
       "version": "0.0.1",
       "tagline": "Vision AI enforces PPE in high-voltage zones, alerts emergencies",
+      "overview": "Electrical discharge poses a significant risk within industrial settings, demanding vigilant safety measures. To address this concern, the implementation of an exclusion zone surrounding high-voltage electrical equipment is crucial. This precautionary measure ensures that only authorized personnel equipped with the necessary skills and knowledge enter the designated area. Additionally, strict enforcement of personalized protective equipment (PPE) requirements within this zone further mitigates the potential dangers associated with electrical discharge, prioritizing the safety of workers and preventing accidents. \n\n The establishment of a comprehensive safety protocol extends beyond physical barriers and PPE regulations. Integrating real-time monitoring systems enhances incident response capabilities. By deploying advanced technologies, such as sensors and detectors, any accident or worker down situation can be promptly identified. These systems provide instantaneous alerts, allowing for swift and targeted responses to potential emergencies. This proactive approach not only minimizes the risk of injury but also underscores a commitment to creating a secure and resilient workplace environment. \n\n In striving for optimal safety standards, the focus extends beyond mere compliance. Early detection and preventive measures are paramount in the realm of electrical discharge scenarios. By creating a synergy between physical precautions, stringent PPE adherence, and cutting-edge monitoring technologies, organizations can cultivate an environment where the well-being of individuals takes precedence, fostering a culture of safety and resilience in the face of electrical hazards.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/electrical-discharge.png",
       "coming_soon": false,
       "completed": false,
@@ -922,7 +1481,13 @@
         "Discharge Detection",
         "Hazard Monitoring"
       ],
-      "category_name": "Emergency Events"
+      "category_name": "Emergency Events",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "8426f16a-626b-4e40-a468-50b76a4b87c3",
@@ -930,6 +1495,7 @@
       "name": "heatmap-and-pathtracks",
       "version": "0.0.1",
       "tagline": "Vision AI monitors exit paths, ensuring obstruction-free emergency evacuation.",
+      "overview": "One cardinal rule for EHS is to keep exit pathways clear in case of an emergency evacuation. Our Vision AI app can monitor hallways, corridors and exit paths for any blocks, furniture, debris or other items.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/heatmap-and-pathtracks.png",
       "coming_soon": false,
       "completed": false,
@@ -938,7 +1504,13 @@
         "Movement Patterns",
         "Spatial Monitoring"
       ],
-      "category_name": "Productivity Suite"
+      "category_name": "Productivity Suite",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "77c3695f-f402-425d-80f9-15025ae1a4ec",
@@ -946,6 +1518,7 @@
       "name": "max-workers",
       "version": "0.0.1",
       "tagline": "Enhance safety by regulating capacity in high-risk operational zones.",
+      "overview": "Ensure workplace safety and efficiency with our Maximum Workers solution. Tailored for operational scenarios such as shipping areas, high-risk mining, and manufacturing, this innovative system helps eliminate risks associated with overcrowding. With 24/7 real-time monitoring, it provides proactive management by instantly detecting incidents where workforce numbers exceed preset limits. \n\n  By regulating workforce capacity, our solution contributes to creating a safer work environment and mitigating potential hazards, ensuring a seamless workflow in various operational settings. We enable businesses to prioritize safety and respond promptly to critical situations. The Maximum Workers system is a reliable ally in safeguarding your workforce, providing peace of mind and fostering a secure operational environment. \n\n Experience the future of workplace safety with our scalable and adaptable solution. From preventing incidents in real-time to optimizing operational efficiency, our Maximum Workers solution is your key to creating a secure and regulated workspace. Invest in a safer tomorrow by integrating our comprehensive system, tailored to meet the dynamic challenges of modern operational scenarios.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/max-workers.png",
       "coming_soon": false,
       "completed": true,
@@ -953,7 +1526,13 @@
         "Occupancy Limit",
         "Capacity Management"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "aa979c8f-a073-4890-b86e-3fd221eb39f8",
@@ -961,6 +1540,7 @@
       "name": "min-workers",
       "version": "0.0.1",
       "tagline": "Ensures safe staffing levels in high-risk zones, alerts for shortages.",
+      "overview": "In high-risk or controlled environments, maintaining an optimal workforce is paramount to safety. The Minimum Workers App stands as a vigilant guardian, consistently ensuring that these zones, fraught with potential dangers like moving machinery, are staffed with a minimum number of personnel. The application plays a pivotal role in risk mitigation, providing real-time alerts to supervisors the moment personnel levels dip below the established safety thresholds. With a focus on proactive safety measures, the Minimum Workers App contributes to creating a secure working environment, where the presence of an adequate workforce is non-negotiable for incident prevention. \n\n Designed for seamless integration into various industrial settings, the Minimum Workers App acts as a virtual safety supervisor, minimizing the likelihood of accidents by maintaining a vigilant eye on staffing levels. Its continuous monitoring system not only enhances workplace safety but also encourages a culture of awareness and responsibility. By offering instant alerts to supervisors, the app facilitates swift corrective actions, ensuring that high-risk zones are never understaffed, and potential hazards are addressed promptly. In essence, the Minimum Workers App is a technological ally in the pursuit of workplace safety, revolutionizing how industries approach personnel management in critical areas.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/min-workers.png",
       "coming_soon": false,
       "completed": true,
@@ -968,7 +1548,13 @@
         "Workforce Management",
         "Minimum Personnel"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "27982352-1f09-4910-bfae-f30e52911b8a",
@@ -976,6 +1562,7 @@
       "name": "restricted-area",
       "version": "0.0.1",
       "tagline": "Monitor and control access to areas with potential hazards, such as toxic environments and machinery.",
+      "overview": "Enhance workplace safety with our innovative Restricted Zones feature. This tool empowers you to monitor and address security or safety concerns efficiently. By enabling real-time surveillance of areas with potential hazards, such as toxic environments and machinery zones, our solution provides a proactive approach to risk management. The system not only allows continuous monitoring but also offers the capability to control access, ensuring that only authorized personnel enter these sensitive areas. \n\n Our application serves as a comprehensive emergency response mechanism, instantly alerting stakeholders upon any detected violation in Restricted Zones. This prompt notification system enhances situational awareness and facilitates swift actions in critical situations. With a focus on preemptive measures, our solution contributes to creating a safer workplace environment by mitigating risks associated with restricted or potentially dangerous areas. Trust in our scalable and reliable technology to fortify your safety protocols and uphold a secure workplace for all.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/restricted-area.png",
       "coming_soon": false,
       "completed": true,
@@ -983,7 +1570,13 @@
         "Zone Monitoring",
         "Security Measures"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "e36cf7dc-8596-4866-945d-3bcf19797033",
@@ -991,6 +1584,7 @@
       "name": "time-limited-area",
       "version": "0.0.1",
       "tagline": "Visionify's Time Limited Area app-Safeguarding Lives, Ensuring Compliance in High-Risk Zones.",
+      "overview": "Visionify's Time Limited Area app is a solution designed to actively monitor and regulate the duration of exposure in high-risk environments. With a focus on worker safety, the app provides real-time alerts when individuals surpass predefined time limits, revolutionizing safety measures in hazardous zones and areas with security concerns. \n\n By minimizing exposure in extreme conditions, Visionify's Time Limited Area app not only prioritizes the well-being of workers but also ensures strict compliance with operational safety standards. In the pursuit of creating safer workplaces, this innovative application stands at the forefront of safeguarding lives and mitigating risks in challenging industrial settings. \n\n This revolutionary approach not only minimizes exposure in extreme conditions but also underscores Visionify's commitment to creating safer workplaces. With a focus on innovation, reliability, and operational efficiency. Visionify's Time Limited Area app is the cornerstone of a safer work environment, effectively mitigating risks and prioritizing the well-being of workers.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/time-limited-area.png",
       "coming_soon": false,
       "completed": true,
@@ -999,7 +1593,13 @@
         "Temporal Control",
         "Area Monitoring"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "5342fe74-6c3b-43c4-9eab-5455dd15fbd0",
@@ -1007,6 +1607,7 @@
       "name": "unsafe-climbing",
       "version": "0.0.1",
       "tagline": "IR-enabled VisionAI monitors temperatures, alerts on deviations in set ranges.",
+      "overview": "With IR Cameras, VisionAI can detect temperatures of products and equipments Configure the acceptable temperature range for your scenario, and get alerts when the temperature exceeds or subceeds the range.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/unsafe-climbing.png",
       "coming_soon": false,
       "completed": false,
@@ -1015,7 +1616,13 @@
         "Climbing Safety",
         "Risk Detection"
       ],
-      "category_name": "Area Controls"
+      "category_name": "Area Controls",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     },
     {
       "id": "c3dfa9eb-d55a-4cc5-85a9-7505785b2441",
@@ -1023,6 +1630,7 @@
       "name": "vehicle-pathway",
       "version": "0.0.1",
       "tagline": "Dynamically manage vehicle pathways and operational areas in real-time, enhancing safety and efficiency. Designate zones as operational or non-operational based on live activities, adapting them to changing work scenarios to reduce the risk of vehicle-pedestrian collisions.",
+      "overview": "Vehicle Operation Zones enables dynamic management of vehicle pathways and operational areas in real-time, bolstering both safety and efficiency. This innovative system empowers users to designate zones as either operational or non-operational, responding to live activities and adapting to evolving work scenarios. By doing so, it effectively minimizes the risk of vehicle-pedestrian collisions, ensuring a secure environment for both human and vehicular traffic. With the ability to make adjustments on the fly, organizations can enhance their operational agility and contribute to a safer workplace. \n\n The system's real-time adaptability is a key feature, allowing for on-the-spot modifications to operational zones based on current activities. This capability not only enhances safety protocols but also optimizes the flow of vehicular movements, contributing to overall operational efficiency. By utilizing advanced technology to dynamically manage vehicle pathways, businesses can mitigate risks and create a responsive environment that aligns with the dynamic nature of modern workplaces. \n\n In summary, Vehicle Operation Zones represents a transformative approach to workspace safety and efficiency. By offering real-time management of operational areas, the system enables organizations to proactively address potential hazards, reduce the likelihood of accidents, and create a more adaptable and secure working environment.",
       "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/vehicle-pathway.png",
       "coming_soon": false,
       "completed": true,
@@ -1030,7 +1638,13 @@
         "Route Monitoring",
         "Vehicle Tracking"
       ],
-      "category_name": "Vehicle Control"
+      "category_name": "Vehicle Control",
+      "events": {
+        "person": {
+          "description": "Person detected in restricted area",
+          "schedule": "Immediate"
+        }
+      }
     }
   ]
 }
