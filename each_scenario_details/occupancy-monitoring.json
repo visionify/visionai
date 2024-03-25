@@ -1,0 +1,34 @@
+{
+  "id": "121e85ba-8722-42de-a81b-ef50e007fc6f",
+  "title": "Occupancy Metrics",
+  "name": "occupancy-monitoring",
+  "version": "0.0.2",
+  "tagline": "Transform the way you manage occupancy in real-time with our cutting-edge Computer Vision Occupancy Monitoring Solution",
+  "overview": "Occupancy metrics, plays a vital role in providing valuable insights essential for informed decision-making. The accurate measurement and analysis of occupancy metrics empower businesses with data-driven capabilities, enabling them to optimize various aspects of their operations. These insights extend beyond mere headcounts, encompassing the utilization of physical space and effective resource management. \n\n In the dynamic landscape of business, understanding and harnessing occupancy metrics are key to unlocking efficiencies. By delving into the nuances of occupancy data, businesses gain a deeper understanding of customer behavior, foot traffic patterns, and peak operational periods. This knowledge allows for strategic adjustments to physical layouts, enhancing the overall customer experience while ensuring optimal utilization of space and resources. \n\n Moreover, the significance of measuring occupancy metrics extends beyond immediate operational improvements. Businesses leveraging this data not only enhance their day-to-day functioning but also position themselves to respond proactively to evolving trends and demands.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/crowding-grouping.png",
+  "coming_soon": false,
+  "completed": true,
+  "zone_required": true,
+  "models": {
+    "latest": {
+      "version": "0.0.2",
+      "name": "occupancy-monitoring",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 96.6,
+      "datasetSize": 5300,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/occupancy-monitoring/occupancy-monitoring-0.0.2.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "2169880d951e98f54fd7772d31648db6"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person is present in the room more than the restricted time",
+      "schedule": "Immediate"
+    }
+  }
+}

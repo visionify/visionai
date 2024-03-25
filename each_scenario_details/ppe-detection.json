@@ -1,0 +1,68 @@
+{
+  "id": "279b0f67-f393-44cd-9204-5ee0915f066d",
+  "title": "PPE Compliance",
+  "name": "ppe-detection",
+  "version": "0.1.5",
+  "tagline": "Prevent Workplace Injuries by ensuring proper PPE Compliance.",
+  "overview": "Introducing the PPE Detection scenario, where safety meets innovation. Personal Protective Equipment (PPE) serves as a crucial safeguard against serious injuries, a fact well-acknowledged by both EHS teams and workers. Despite this awareness, a significant number of workplace injuries stem from PPE negligence. Enter the PPE Detection App, a groundbreaking solution designed to enforce and enhance PPE compliance on the jobsite. By providing real-time alerts and summarized event reports, this app empowers safety protocols, ensuring a proactive approach to preventing accidents and prioritizing the well-being of every worker. \n\n The PPE Detection App not only recognizes the importance of PPE but actively enforces compliance through cutting-edge technology. Real-time notifications keep safety at the forefront, alerting teams instantly to any deviations from prescribed PPE standards. Simultaneously, the app generates concise summary reports, offering valuable insights for continuous improvement and reinforcing a culture of safety within the workforce.\n\n In essence, the PPE Detection scenario is a transformative step towards creating safer work environments. By leveraging innovative technology to tackle PPE negligence head-on, it brings about a paradigm shift in workplace safety. The app's ability to seamlessly integrate real-time alerts and comprehensive event summaries ensures that compliance is not just encouraged but actively monitored, fostering a proactive safety culture that significantly reduces the risk of serious injuries.",
+  "video_clips": [
+    "https://visionaieventsrecordings.blob.core.windows.net/demo-videos/ppe_violation-1.mp4"
+  ],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/ppe-compliance-2.png",
+  "coming_soon": false,
+  "completed": true,
+  "zone_required": true,
+  "models": {
+    "latest": {
+      "version": "0.1.5",
+      "name": "ppe-detection",
+      "precision": 92.7,
+      "recall": 94.2,
+      "f1": 93.4,
+      "datasetSize": 69754,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/ppe-detection/ppe-detection-0.1.5.zip",
+      "supported_models": [],
+      "beta_model_url": "https://workplaceos.blob.core.windows.net/models/test-ppe-detection/test-ppe-detection-0.1.3.zip",
+      "model_hash": "257e4f2a85defb28d5e839e7c1989c2e"
+    },
+    "other": []
+  },
+  "events": {
+    "helmet": {
+      "description": "People detected without a helmet",
+      "schedule": "Immediate"
+    },
+    "boots": {
+      "description": "People detected without boots",
+      "schedule": "Immediate"
+    },
+    "vest": {
+      "description": "People detected without a vest",
+      "schedule": "Immediate"
+    },
+    "safety-goggles": {
+      "description": "People detected without goggles",
+      "schedule": "Immediate"
+    },
+    "gloves": {
+      "description": "People detected without gloves",
+      "schedule": "Immediate"
+    },
+    "mask": {
+      "description": "People detected without mask",
+      "schedule": "Immediate"
+    },
+    "cap": {
+      "description": "People detected without cap",
+      "schedule": "Immediate"
+    },
+    "gown": {
+      "description": "People detected without gown",
+      "schedule": "Immediate"
+    },
+    "hair-net": {
+      "description": "People detected without hair-net",
+      "schedule": "Immediate"
+    }
+  }
+}
