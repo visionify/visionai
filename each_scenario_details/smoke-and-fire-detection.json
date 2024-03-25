@@ -12,6 +12,7 @@
   "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/early-fire-sign.png",
   "coming_soon": false,
   "completed": true,
+  "zone_required": false,
   "models": {
     "latest": {
       "version": "2.0.0",
