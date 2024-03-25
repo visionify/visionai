@@ -1,0 +1,34 @@
+{
+  "id": "e36cf7dc-8596-4866-945d-3bcf19797033",
+  "title": "Time Limited Area",
+  "name": "time-limited-area",
+  "version": "0.0.1",
+  "tagline": "Visionify's Time Limited Area app-Safeguarding Lives, Ensuring Compliance in High-Risk Zones.",
+  "overview": "Visionify's Time Limited Area app is a solution designed to actively monitor and regulate the duration of exposure in high-risk environments. With a focus on worker safety, the app provides real-time alerts when individuals surpass predefined time limits, revolutionizing safety measures in hazardous zones and areas with security concerns. \n\n By minimizing exposure in extreme conditions, Visionify's Time Limited Area app not only prioritizes the well-being of workers but also ensures strict compliance with operational safety standards. In the pursuit of creating safer workplaces, this innovative application stands at the forefront of safeguarding lives and mitigating risks in challenging industrial settings. \n\n This revolutionary approach not only minimizes exposure in extreme conditions but also underscores Visionify's commitment to creating safer workplaces. With a focus on innovation, reliability, and operational efficiency. Visionify's Time Limited Area app is the cornerstone of a safer work environment, effectively mitigating risks and prioritizing the well-being of workers.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/time-limited-area.png",
+  "coming_soon": false,
+  "completed": true,
+  "zone_required": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "time-limited-area",
+      "precision": 89.2,
+      "recall": 92.8,
+      "f1": 90.9,
+      "datasetSize": 328000,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}

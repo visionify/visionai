@@ -1,0 +1,34 @@
+{
+  "id": "27982352-1f09-4910-bfae-f30e52911b8a",
+  "title": "Restricted Area",
+  "name": "restricted-area",
+  "version": "0.0.1",
+  "tagline": "Monitor and control access to areas with potential hazards, such as toxic environments and machinery.",
+  "overview": "Enhance workplace safety with our innovative Restricted Zones feature. This tool empowers you to monitor and address security or safety concerns efficiently. By enabling real-time surveillance of areas with potential hazards, such as toxic environments and machinery zones, our solution provides a proactive approach to risk management. The system not only allows continuous monitoring but also offers the capability to control access, ensuring that only authorized personnel enter these sensitive areas. \n\n Our application serves as a comprehensive emergency response mechanism, instantly alerting stakeholders upon any detected violation in Restricted Zones. This prompt notification system enhances situational awareness and facilitates swift actions in critical situations. With a focus on preemptive measures, our solution contributes to creating a safer workplace environment by mitigating risks associated with restricted or potentially dangerous areas. Trust in our scalable and reliable technology to fortify your safety protocols and uphold a secure workplace for all.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/restricted-area.png",
+  "coming_soon": false,
+  "completed": true,
+  "zone_required": true,
+  "models": {
+    "latest": {
+      "version": "0.0.1",
+      "name": "restricted-area",
+      "precision": 93.2,
+      "recall": 88.7,
+      "f1": 90.8,
+      "datasetSize": 9400,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/yolov5s-default/yolov5s-default-0.0.1.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "9ff10e373725d0b23233d3258dd8b1f1"
+    },
+    "other": []
+  },
+  "events": {
+    "person": {
+      "description": "Person detected in restricted area",
+      "schedule": "Immediate"
+    }
+  }
+}

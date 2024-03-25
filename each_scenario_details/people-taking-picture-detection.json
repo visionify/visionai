@@ -1,0 +1,34 @@
+{
+  "id": "9c9a1994-aec8-419d-922f-3657a748dc1f",
+  "title": "Mobile Phone Usage",
+  "name": "people-taking-picture-detection",
+  "version": "0.0.2",
+  "tagline": "Get real-time alerts when workers are taking pictures at the workplace, a monitoring system that can detect camera usage on company-owned devices or company networks.",
+  "overview": "Mobile phone usage has become an integral part of modern life, impacting various aspects of daily routines and communication. The Phone usage detection model introduces a groundbreaking solution for enhancing safety and security by monitoring and identifying mobile phone usage in various settings. By leveraging real-time video feeds, the model effectively detects instances of individuals taking pictures, recording or streaming videos/audios, and sending texts in restricted areas \n\n With the ability to seamlessly integrate into existing surveillance systems, the detection model acts as a vigilant guardian against unauthorized mobile phone activities. Its advanced capabilities go beyond traditional surveillance methods, providing a comprehensive solution for maintaining compliance in areas where such behaviors pose risks or are explicitly prohibited. \n\n The People Taking Picture Detection Model stands out with its real-time responsiveness, empowering security personnel to take immediate action upon detection of prohibited mobile phone usage.",
+  "video_clips": [],
+  "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-phone-usage.png",
+  "coming_soon": false,
+  "completed": true,
+  "zone_required": true,
+  "models": {
+    "latest": {
+      "version": "0.0.2",
+      "name": "people-taking-picture-detection",
+      "precision": 98.2,
+      "recall": 95.2,
+      "f1": 95,
+      "datasetSize": 240032,
+      "model_url": "https://workplaceos.blob.core.windows.net/models/people-taking-picture-detection/people-taking-picture-detection-0.0.2.zip",
+      "supported_models": [],
+      "beta_model_url": "",
+      "model_hash": "ef3c6b45fe4c9b80ca4dd99220919ffd"
+    },
+    "other": []
+  },
+  "events": {
+    "cell phone": {
+      "description": "Person detected while taking pictures",
+      "schedule": "Immediate"
+    }
+  }
+}
