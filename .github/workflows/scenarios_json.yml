@@ -1,5 +1,12 @@
 name: Python Testing and Azure Blob Upload
 
+on:
+  push:
+    branches:
+      - azure-storage-pipeline
+  pull_request:
+    types: [closed]
+
 jobs:
   test:
     runs-on: ubuntu-latest
