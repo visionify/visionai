@@ -56,23 +56,9 @@ jobs:
             echo "EOF" >> $GITHUB_ENV
           fi
 
-    - name: Upload
-      if: env.CHANGES_DETECTED == 'true'
-      run: |
-        for file in $CHANGED_FILES; do
-          az storage blob upload --account-name docsvisionify --container-name docs-images --file each_scenario_details/$file --name $file --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-        done
-
-  # upload-to-azure:
-  #   needs: test  # This job will run only if the 'test' job succeeds
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-
-  #     - name: Upload files to Azure Blob Storage
-  #       uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-  #       with:
-  #         source_dir: 'each_scenario_details/'  # Replace with your directory path
-  #         container_name: 'docs-images/'  # Replace with your Azure container name
-  #         connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-  #         sync: false
+      - name: Upload
+        if: env.CHANGES_DETECTED == 'true'
+        run: |
+          for file in $CHANGED_FILES; do
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file each_scenario_details/$file --name $file --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          done
