@@ -1,4 +1,3 @@
-
 name: Python Testing and Azure Blob Upload
 
 on:
@@ -10,12 +9,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10'  # Specify your Python version
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
@@ -28,48 +28,34 @@ jobs:
 
   check-and-upload:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Login to Azure CLI
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Login to Azure CLI
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Check for changes in a specific folder
-      id: check_changes
-      run: |
-        # Replace 'your_folder' with the path to the folder you want to check
-        CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} each_scenario_details)
-        if [ -z "$CHANGED_FILES" ]; then
-          echo "No changes detected in each_scenario_details."
-          echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
-        else
-          echo "Changes detected in each_scenario_details."
-          echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
-          echo "CHANGED_FILES<<EOF" >> $GITHUB_ENV
-          echo "$CHANGED_FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-        fi
+      - name: Check for changes in a specific folder
+        id: check_changes
+        run: |
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} each_scenario_details)
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No changes detected in each_scenario_details."
+            echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
+          else
+            echo "Changes detected in each_scenario_details."
+            echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+            echo "CHANGED_FILES<<EOF" >> $GITHUB_ENV
+            echo "$CHANGED_FILES" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+          fi
 
-    - name: Upload changed files to Azure Blob Storage
-      if: env.CHANGES_DETECTED == 'true'
-      run: |
-        for file in $CHANGED_FILES; do
-          az storage blob upload --account-name docsvisionify --container-name docs-images --file each_scenario_details/$file --name $file --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-        done
-
-  # upload-to-azure:
-  #   needs: test  # This job will run only if the 'test' job succeeds
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-
-  #     - name: Upload files to Azure Blob Storage
-  #       uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-  #       with:
-  #         source_dir: 'each_scenario_details/'  # Replace with your directory path
-  #         container_name: 'docs-images/'  # Replace with your Azure container name
-  #         connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
-  #         sync: false
+      - name: Upload changed files to Azure Blob Storage
+        if: env.CHANGES_DETECTED == 'true'
+        run: |
+          IFS=$'\n'
+          for file in $CHANGED_FILES; do
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+          done
