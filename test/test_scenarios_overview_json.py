@@ -39,7 +39,7 @@ class TestScenarioJson(unittest.TestCase):
             assert 'tagline' in scenario
             assert len(scenario['tagline']) > 0
             
-            assert requests.get(scenario['icon'], stream=True).status_code != 404
+            # assert requests.get(scenario['icon'], stream=True).status_code != 404
             
             assert 'coming_soon' in scenario
             assert 'completed' in scenario

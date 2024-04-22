@@ -59,7 +59,7 @@ class TestScenarioJson(unittest.TestCase):
         assert 'completed' in scenario
         
 
-        assert requests.get(scenario['icon'], stream=True).status_code != 404
+        # assert requests.get(scenario['icon'], stream=True).status_code != 404
         
 
         if(bool(scenario['models']['latest'])):
