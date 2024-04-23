@@ -40,7 +40,7 @@ jobs:
         run: |
           PREVIOUS_COMMIT=${{ github.event.before }}
           CURRENT_COMMIT=${{ github.sha }}
-          CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT..$CURRENT_COMMIT -- each_scenario_details/)
+          CHANGED_FILES=$(git diff --name-only $CURRENT_COMMIT..$PREVIOUS_COMMIT -- each_scenario_details/)
         
           
           if [ -z "$CHANGED_FILES" ]; then
