@@ -38,7 +38,7 @@ jobs:
       - name: Check for changes in a specific folder
         id: check_changes
         run: |
-          PREVIOUS_COMMIT=$(git rev-parse --short HEAD^@)
+          PREVIOUS_COMMIT=$(git rev-parse HEAD^@)
           CURRENT_COMMIT=$(git rebase origin/azure-storage-pipeline)
           CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
               
