@@ -31,16 +31,10 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            # Authenticate with Azure CLI (replace 'your-service-principal' and 'your-tenant-id' with actual values)
-            az login --service-principal -u your-service-principal -p your-service-principal-secret --tenant your-tenant-id
-
-            # Set Azure subscription (replace 'your-subscription-id' with actual value)
-            az account set --subscription your-subscription-id
-
             # Loop through changed files and upload each one to Azure Blob Storage
             for file in ${ALL_CHANGED_FILES}; do
               echo "Uploading $file to Azure Blob Storage..."
               # Replace 'your-container' and 'your-blob-name' with actual values
-              az storage blob upload --file $file --container-name your-container --name your-blob-name
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
               echo "$file uploaded successfully."
             done
