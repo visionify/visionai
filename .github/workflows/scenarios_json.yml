@@ -1,4 +1,4 @@
-name: Upload scenarios.json to Azure Blob Storage
+name: Upload scenarios.json and each_scenario_details to Azure Blob Storage
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 jobs:
   upload_to_azure_blob_storage:
     runs-on: ubuntu-latest
-    name: Upload scenarios.json if modified
+    name: Upload scenarios.json and each_scenario_details if modified
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -17,20 +17,59 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v44
 
-      - name: Check if scenarios.json is modified
-        id: scenarios-json-changed
+      - name: Check if scenarios.json or each_scenario_details are modified
+        id: check-modified
         run: |
           if grep -q "scenarios.json" <<< "${{ steps.changed-files.outputs.all_changed_files }}"; then
             echo "modified=true" >> $GITHUB_ENV
-          else
-            echo "modified=false" >> $GITHUB_ENV
+          fi
+
+          if grep -q "each_scenario_details" <<< "${{ steps.changed-files.outputs.all_changed_files }}"; then
+            echo "each_scenario_details_modified=true" >> $GITHUB_ENV
+          fi
+
+      - name: Compare local and remote scenarios.json
+        if: env.modified == 'true'
+        id: compare-files
+        run: |
+          LOCAL_HASH=$(md5sum scenarios.json | awk '{ print $1 }')
+          REMOTE_HASH=$(az storage blob show --account-name docsvisionify --container-name docs-images --name scenarios.json --query properties.contentSettings.contentMd5 --output tsv --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}")
+          if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+            echo "files-different=true" >> $GITHUB_ENV
+          fi
+
+      - name: Compare local and remote each_scenario_details
+        if: env.each_scenario_details_modified == 'true'
+        id: compare-folders
+        run: |
+          LOCAL_HASH=$(find each_scenario_details -type f -exec md5sum {} + | md5sum | awk '{ print $1 }')
+          REMOTE_HASH=$(az storage blob show --account-name docsvisionify --container-name docs-images --name each_scenario_details --query properties.contentSettings.contentMd5 --output tsv --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}")
+          if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+            echo "folders-different=true" >> $GITHUB_ENV
           fi
 
       - name: Upload scenarios.json to Azure Blob Storage
-        if: env.modified == 'true'
+        if: env.modified == 'true' && env.files-different == 'true'
         uses: azure/CLI@v1
         with:
           inlineScript: |
             echo "Uploading scenarios.json to Azure Blob Storage..."
-            az storage blob upload --account-name docsvisionify --container-name docs-images --file "scenarios.json" --name "scenarios.json" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --overwrite
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "scenarios.json" --name "scenarios.json" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
             echo "scenarios.json uploaded successfully."
+
+      - name: Echo no changes in JSON
+        if: env.modified != 'true'
+        run: echo "No changes in scenario.json file."
+
+      - name: Upload each_scenario_details to Azure Blob Storage
+        if: env.each_scenario_details_modified == 'true' && env.folders-different == 'true'
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            echo "Uploading each_scenario_details folder to Azure Blob Storage..."
+            az storage blob upload-batch --account-name docsvisionify --destination docs-images --source each_scenario_details --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+            echo "each_scenario_details folder uploaded successfully."
+
+      - name: Echo no changes in folder
+        if: env.each_scenario_details_modified != 'true'
+        run: echo "No changes in each_scenario_details folder."
