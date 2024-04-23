@@ -6,27 +6,17 @@ on:
       - azure-storage-pipeline
 
 jobs:
-  # -------------------------------------------------------------
-  # Using GitHub's API is not supported for push events
-  # -------------------------------------------------------------
-  # 
-  # ----------------------------------------------------------------------------------------------
-  # Using local .git history
-  # ----------------------------------------------------------------------------------------------
-  # Event `push`: Compare the preceding remote commit -> to the current commit of the main branch 
-  # ----------------------------------------------------------------------------------------------
   changed_files:
-    runs-on: ubuntu-latest  # windows-latest || macos-latest
-    name: Test changed-files
+    runs-on: ubuntu-latest
+    name: Checking changed files
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
+          fetch-depth: 0
 
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v44
-      # NOTE: `since_last_remote_commit: true` is implied by default and falls back to the previous local commit.
 
       - name: List all changed files
         env:
@@ -35,3 +25,22 @@ jobs:
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
           done
+
+      - name: Upload changed files to Azure Blob Storage
+        if: ${{ steps.changed-files.outputs.any_files_changed == 'true' }}
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            # Authenticate with Azure CLI (replace 'your-service-principal' and 'your-tenant-id' with actual values)
+            az login --service-principal -u your-service-principal -p your-service-principal-secret --tenant your-tenant-id
+
+            # Set Azure subscription (replace 'your-subscription-id' with actual value)
+            az account set --subscription your-subscription-id
+
+            # Loop through changed files and upload each one to Azure Blob Storage
+            for file in ${ALL_CHANGED_FILES}; do
+              echo "Uploading $file to Azure Blob Storage..."
+              # Replace 'your-container' and 'your-blob-name' with actual values
+              az storage blob upload --file $file --container-name your-container --name your-blob-name
+              echo "$file uploaded successfully."
+            done
