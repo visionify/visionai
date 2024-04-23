@@ -1563,7 +1563,7 @@
       },
       {
         "id": "aa979c8f-a073-4890-b86e-3fd221eb39f8",
-        "title": "Min Worker",
+        "title": "Min Workers",
         "name": "min-workers",
         "version": "0.0.1",
         "tagline": "Ensures safe staffing levels in high-risk zones, alerts for shortages.",
