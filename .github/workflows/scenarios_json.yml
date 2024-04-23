@@ -29,18 +29,25 @@ jobs:
       - name: Check if scenarios.json is modified
         id: scenarios-json-changed
         run: |
-          if grep -q "each_scenario_details/scenarios.json" <<< "$ALL_CHANGED_FILES"; then
-            echo "::set-output name=modified::true"
+          if grep -q "scenarios.json" <<< "$ALL_CHANGED_FILES"; then
+            echo "modified=true" >> $GITHUB_ENV
+            uses: azure/CLI@v1
+            with:
+              inlineScript: |
+                  echo "Uploading $file to Azure Blob Storage..."
+                  # Replace 'your-container' and 'your-blob-name' with actual values
+                  az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+                  echo "$file uploaded successfully."            
+            
           else
-            echo "::set-output name=modified::false"
-          fi
-
-      - name: Upload changed files to Azure Blob Storage
-        if: ${{ steps.changed-files.outputs.any_files_changed == 'true' }}
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-              echo "Uploading $file to Azure Blob Storage..."
-              # Replace 'your-container' and 'your-blob-name' with actual values
-              az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
-              echo "$file uploaded successfully."
+            echo "modified=false" >> $GITHUB_ENV
+          fi  
+      # - name: Upload changed files to Azure Blob Storage
+      #   if: ${{ steps.changed-files.outputs.any_files_changed == 'true' }}
+      #   uses: azure/CLI@v1
+      #   with:
+      #     inlineScript: |
+      #         echo "Uploading $file to Azure Blob Storage..."
+      #         # Replace 'your-container' and 'your-blob-name' with actual values
+      #         az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+      #         echo "$file uploaded successfully."
