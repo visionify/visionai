@@ -35,10 +35,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
   
-      - name: Login to Azure CLI
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}  # Ensure this contains JSON with clientId, clientSecret, subscriptionId, and tenantId.
+      # - name: Login to Azure CLI
+      #   uses: azure/login@v1
+      #   with:
+      #     creds: ${{ secrets.AZURE_CREDENTIALS }}  # Ensure this contains JSON with clientId, clientSecret, subscriptionId, and tenantId.
   
       - name: Check for changes in a specific folder
         id: check_changes
