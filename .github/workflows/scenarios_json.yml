@@ -39,8 +39,8 @@ jobs:
         id: check_changes
         run: |
           PREVIOUS_COMMIT=$(git rev-parse --short HEAD~1)
-          CURRENT_BRANCH=$(git branch)
-          CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_BRANCH -- each_scenario_details/)
+          CURRENT_COMMIT=$(git rebase origin/azure-storage-pipeline)
+          CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
               
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changes detected in the specific folder."
