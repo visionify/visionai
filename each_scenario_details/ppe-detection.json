@@ -63,6 +63,10 @@
     "hair-net": {
       "description": "People detected without hair-net",
       "schedule": "Immediate"
+    },
+    "face-shield": {
+      "description": "People detected without face-shield",
+      "schedule": "Immediate"
     }
   }
 }
