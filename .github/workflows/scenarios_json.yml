@@ -39,7 +39,7 @@ jobs:
         id: check_changes
         run: |
           PREVIOUS_COMMIT=$(git rev-parse --short HEAD~1)
-          CURRENT_COMMIT=$(git rev-parse --short HEAD)
+          CURRENT_COMMIT=$(git rev-parse --short HEAD~1)
           CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
               
           if [ -z "$CHANGED_FILES" ]; then
