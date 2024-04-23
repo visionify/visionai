@@ -1577,7 +1577,7 @@
         ],
         "category_name": "Area Controls",
         "events": {
-          "person": {
+          "min_worker_violation": {
             "description": "Person detected in restricted area",
             "schedule": "Immediate"
           }
