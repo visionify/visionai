@@ -1,4 +1,4 @@
-name: CI
+name: Upload scenarios.json to Azure Blob Storage
 
 on:
   push:
@@ -6,13 +6,12 @@ on:
       - azure-storage-pipeline
 
 jobs:
-  changed_files:
+  upload_to_azure_blob_storage:
     runs-on: ubuntu-latest
-    name: Checking changed files
+    name: Upload scenarios.json if modified
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - name: Get changed files
         id: changed-files
@@ -21,7 +20,7 @@ jobs:
       - name: Check if scenarios.json is modified
         id: scenarios-json-changed
         run: |
-          if grep -q "scenarios.json" <<< "$ALL_CHANGED_FILES"; then
+          if grep -q "scenarios.json" <<< "${{ steps.changed-files.outputs.all_changed_files }}"; then
             echo "modified=true" >> $GITHUB_ENV
           else
             echo "modified=false" >> $GITHUB_ENV
@@ -32,10 +31,6 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-              if [ "$file" = "scenarios.json" ]; then
-                echo "Uploading $file to Azure Blob Storage..."
-                az storage blob upload --account-name docsvisionify --container-name docs-images --file "$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
-                echo "$file uploaded successfully."
-              fi
-            done
+            echo "Uploading scenarios.json to Azure Blob Storage..."
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "scenarios.json" --name "scenarios.json" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+            echo "scenarios.json uploaded successfully."
