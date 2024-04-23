@@ -32,5 +32,5 @@ jobs:
         with:
           inlineScript: |
             echo "Uploading scenarios.json to Azure Blob Storage..."
-            az storage blob upload --account-name docsvisionify --container-name docs-images --file "scenarios.json" --name "scenarios.json" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "scenarios.json" --name "scenarios.json" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}" --overwrite
             echo "scenarios.json uploaded successfully."
