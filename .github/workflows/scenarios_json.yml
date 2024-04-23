@@ -17,7 +17,8 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10'  
+          python-version: '3.10'  # Specify your Python version
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -39,7 +40,10 @@ jobs:
       - name: Check for changes in a specific folder
         id: check_changes
         run: |
-          CHANGED_FILES=$(git diff --name-only azure-storage-pipeline...HEAD each_scenario_details)
+          PREVIOUS_COMMIT=${{ github.event.before }}
+          CURRENT_COMMIT=$(git rev-parse HEAD)
+          CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT...$CURRENT_COMMIT -- each_scenario_details/)
+          
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changes detected in the specific folder."
             echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
