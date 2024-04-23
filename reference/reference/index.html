@@ -1,0 +1,4684 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="VisionAI Toolkit - Ready to use models & vision apps">
+      
+      
+      
+        <link rel="canonical" href="https://docs.visionify.ai/reference/reference/">
+      
+      
+        <link rel="prev" href="../../privacy/obstructed-camera-view/">
+      
+      
+        <link rel="next" href="../changelog/">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+    
+    
+      
+        <title>Overview - VisionAI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/termynal.css">
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3CWR3GL7BF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3CWR3GL7BF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3CWR3GL7BF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#visionai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="VisionAI" class="md-header__button md-logo" aria-label="VisionAI" data-md-component="logo">
+      
+  <img src="../../img/icon-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VisionAI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54 0 4.5-2.94 8.27-7 9.54.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-2.69L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/visionify/visionai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    visionify/visionai
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  VisionAI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scenarios/" class="md-tabs__link">
+          
+  
+  Scenarios
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../privacy/employee-privacy/" class="md-tabs__link">
+          
+  
+  Privacy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../custom/overview/" class="md-tabs__link">
+          
+  
+  Customization
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../company/about/" class="md-tabs__link">
+          
+  
+  About
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="VisionAI" class="md-nav__button md-logo" aria-label="VisionAI" data-md-component="logo">
+      
+  <img src="../../img/icon-white.svg" alt="logo">
+
+    </a>
+    VisionAI
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/visionify/visionai" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    visionify/visionai
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    VisionAI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            VisionAI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/how-it-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How it works
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/web-app-userguide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scenarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/cameras/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cameras
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/camera-placement-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Camera Placement Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/azure-managed-app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Azure Managed App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/next-steps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Next steps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Scenarios
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Scenarios
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hazard Warnings
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hazard Warnings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/hazard-warning-suite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/smoke-and-fire-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smoke and Fire Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/no-smoking-hazard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    No smoking/no vaping
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/spills-and-leaks-hazard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spills & leaks detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/missing-fire-extinguisher/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Missing fire extinguisher
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/blocked-exit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blocked exit monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/rust-and-corrosion-hazard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Equipment rust and corrosion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Worker health & safety
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Worker health & safety
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/worker-health-and-safety/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/ppe-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PPE Detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/working-at-heights/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working at heights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/slip-and-fall-detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Slip, trip and fall detection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/ergonomics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Posture & Ergonomics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/spills-and-leaks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Spills & Leaks detection (Liquids)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/hand-wash/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hand-wash
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/confined-spaces-monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Confined spaces monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Occupancy Policies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Occupancy Policies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/occupancy-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/occupancy-metrics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Occupancy metrics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Company Policies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Company Policies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/compliance-policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/no-food-or-drinks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    No food or drinks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/no-phone-usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    No phone, text, pictures
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/no-smoking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    No Smoking zones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/authorized-personnel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    No children/visitors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Suspicious Activity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Suspicious Activity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/suspicious-activity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/vandalism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vandalism & property destruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scenarios/firearms-and-knives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Firearms & knives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Privacy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Privacy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/employee-privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/blur-faces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blur faces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/blur-signs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blur signs/text
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/blur-screens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blur screens
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/blur-license-plates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blur license plates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../privacy/obstructed-camera-view/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Obstructed camera view
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth logout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-add-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera add-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list-scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-remove-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera remove-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera reset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-cameras" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai cameras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-add-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras add-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list-scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-remove-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras remove-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras reset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device stats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices stats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-pipeline-add-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai pipeline add-camera
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Customization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Customization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom/retraining/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Retrain models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom/licensing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom/faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../custom/request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/team/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Team
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/careers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Careers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/privacy-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Privacy Policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../company/terms-and-conditions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terms and Conditions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai auth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-logout" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth logout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-auth-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai auth status
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-add-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera add-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-list-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera list-scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-remove-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera remove-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-camera-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai camera reset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-cameras" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai cameras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-add-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras add-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-list-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras list-scenarios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras preview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-remove" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras remove
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-remove-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras remove-scenario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-cameras-reset" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai cameras reset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai device">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-device-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai device stats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices modules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-select" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices select
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-devices-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai devices stats
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-model-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai model stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models check
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models serve
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models start
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visionai-models-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai models stop
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visionai-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="visionai pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visionai-pipeline-add-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      visionai pipeline add-camera
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/visionify/visionai/edit/main/docs/reference/reference.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="visionai"><code>visionai</code><a class="headerlink" href="#visionai" title="Permanent link">&para;</a></h1>
+<p>VisionAI Toolkit</p>
+<p>VisionAI tookit provides a large number of ready-to-deploy scenarios
+built using latest computer vision frameworks. Supports many of the
+common workplace health and safety use-cases.</p>
+<p>Start by exploring scenarios through visionai scenario list command.
+After that, you can create a pipeline through the pipeline commands.
+Once a pipeline is configured, you can run the pipeline on the
+any number of cameras.</p>
+<p>Running the toolkit does assume a NVIDIA GPU powered machine for
+efficient performance. Please see the system requirements on the
+documentation.</p>
+<p>You can instead opt to install it through Azure Managed VM, with
+preconfigured machines &amp; recommended hardware support. You can
+find information about this on our documentation website.</p>
+<p>Visit <a href="https://docs.visionify.ai">https://docs.visionify.ai</a> for more details.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>visionai<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--verbose</code>: [default: False]</li>
+<li><code>--version</code>: [default: False]</li>
+<li><code>--install-completion</code>: Install completion for the current shell.</li>
+<li><code>--show-completion</code>: Show completion for the current shell, to copy it or customize the installation.</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>╭─<span class="w"> </span>Commands<span class="w"> </span>─────────────────────────────────────────────────────╮
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>│<span class="w"> </span>auth<span class="w">         </span>Authentication<span class="w"> </span>commands<span class="w">                           </span>│
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│<span class="w"> </span>camera<span class="w">       </span>Add/remove/manage<span class="w"> </span>cameras<span class="w">                         </span>│
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│<span class="w"> </span>device<span class="w">       </span>Device<span class="w"> </span>commands<span class="w">                                   </span>│
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│<span class="w"> </span>init<span class="w">         </span>Initialize<span class="w"> </span>VisionAI<span class="w"> </span>library<span class="w">                       </span>│
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│<span class="w"> </span>model<span class="w">        </span>Manage<span class="w"> </span>models<span class="w">                                     </span>│
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│<span class="w"> </span>pipeline<span class="w">     </span>Manage<span class="w"> </span>pipelines<span class="w">                                  </span>│
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│<span class="w"> </span>scenario<span class="w">     </span>Add/remove<span class="w"> </span>scenarios<span class="w"> </span>to<span class="w"> </span>camera<span class="w">                    </span>│
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>│<span class="w"> </span>status<span class="w">       </span>Print<span class="w"> </span>status<span class="w"> </span>of<span class="w"> </span>all<span class="w"> </span>running<span class="w"> </span>containers.<span class="w">           </span>│
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│<span class="w"> </span>stop<span class="w">         </span>Stop<span class="w"> </span>all<span class="w"> </span>running<span class="w"> </span>containers.<span class="w">                      </span>│
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│<span class="w"> </span>web<span class="w">          </span>Start/stop<span class="w"> </span>web<span class="w"> </span>server<span class="w">                             </span>│
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>╰────────────────────────────────────────────────────────────────╯
+</span></code></pre></div>
+<h2 id="visionai-auth"><code>visionai auth</code><a class="headerlink" href="#visionai-auth" title="Permanent link">&para;</a></h2>
+<p>Authorization (logging in/out)</p>
+<p>Login and get authorization token etc.</p>
+<p>You can login/logout check authorization token with this.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>auth<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>login</code>: Login with an application token.</li>
+<li><code>logout</code>: Logout from your session Get the auth token...</li>
+<li><code>status</code>: Check login status Check the current login...</li>
+</ul>
+<h3 id="visionai-auth-login"><code>visionai auth login</code><a class="headerlink" href="#visionai-auth-login" title="Permanent link">&para;</a></h3>
+<p>Login with an application token.</p>
+<p>Get the auth token from our website</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--token TEXT</code>: Authenticate the app through token  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-auth-logout"><code>visionai auth logout</code><a class="headerlink" href="#visionai-auth-logout" title="Permanent link">&para;</a></h3>
+<p>Logout from your session</p>
+<p>Get the auth token from our website</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>auth<span class="w"> </span><span class="nb">logout</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-auth-status"><code>visionai auth status</code><a class="headerlink" href="#visionai-auth-status" title="Permanent link">&para;</a></h3>
+<p>Check login status</p>
+<p>Check the current login system.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>auth<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-camera"><code>visionai camera</code><a class="headerlink" href="#visionai-camera" title="Permanent link">&para;</a></h2>
+<p>Manage cameras</p>
+<p>An organization can have multiple cameras that are installed
+at different places. They may be from different vendors and/or
+maybe using different security surveillance software. Most
+cameras however do support RTSP, RTMP or HLS streams as an
+output. Please refer to your camera vendor documentation to
+find this out. This module will help you onboard those cameras
+on visionai systems by using a simple named instance for each
+camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>add</code>: Add a named camera instance Add a camera as a...</li>
+<li><code>add-scenario</code>: Add a scenario for a camera Add an individual...</li>
+<li><code>list</code>: List available cameras Print cameras...</li>
+<li><code>list-scenario</code>: List scenarios configured for a camera</li>
+<li><code>list-scenarios</code>: List scenarios configured for a camera</li>
+<li><code>preview</code>: Preview the camera system View the camera...</li>
+<li><code>remove</code>: Remove a camera from the system Specify a...</li>
+<li><code>remove-scenario</code>: Remove a scenario from a camera Specify a...</li>
+<li><code>reset</code>: Reset all camera configuration.</li>
+</ul>
+<h3 id="visionai-camera-add"><code>visionai camera add</code><a class="headerlink" href="#visionai-camera-add" title="Permanent link">&para;</a></h3>
+<p>Add a named camera instance</p>
+<p>Add a camera as a named instance in the system. For adding
+a camera we support RTSP, HLS, HTTP(S) systems. To add a camera
+you need to provide a name for the camera, URI for the camera
+(including any username/password within the URI itself),
+description for camera (about its location, where its pointing,
+who is the vendor etc.).</p>
+<p>Before the camera is added - we need to test out if the
+camera instance is valid. We need to be able to read from
+the camera and calculate its FPS. Show this information
+on the screen.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: Camera Name  [required]</li>
+<li><code>--uri TEXT</code>: URI for camera  [required]</li>
+<li><code>--description TEXT</code>: Description  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-add-scenario"><code>visionai camera add-scenario</code><a class="headerlink" href="#visionai-camera-add-scenario" title="Permanent link">&para;</a></h3>
+<p>Add a scenario for a camera</p>
+<p>Add an individual scenario to be run for a camera. Specify the
+names for scenario and camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>add-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: camera name  [required]</li>
+<li><code>--scenario TEXT</code>: scenario name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-list"><code>visionai camera list</code><a class="headerlink" href="#visionai-camera-list" title="Permanent link">&para;</a></h3>
+<p>List available cameras</p>
+<p>Print cameras available in the system and the scenarios / routines
+that are set up for them.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-list-scenario"><code>visionai camera list-scenario</code><a class="headerlink" href="#visionai-camera-list-scenario" title="Permanent link">&para;</a></h3>
+<p>List scenarios configured for a camera</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>list-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name  [default: ]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-list-scenarios"><code>visionai camera list-scenarios</code><a class="headerlink" href="#visionai-camera-list-scenarios" title="Permanent link">&para;</a></h3>
+<p>List scenarios configured for a camera</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>list-scenarios<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name  [default: ]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-preview"><code>visionai camera preview</code><a class="headerlink" href="#visionai-camera-preview" title="Permanent link">&para;</a></h3>
+<p>Preview the camera system</p>
+<p>View the camera feed, review FPS etc available for camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>preview<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: camera name to preview  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-remove"><code>visionai camera remove</code><a class="headerlink" href="#visionai-camera-remove" title="Permanent link">&para;</a></h3>
+<p>Remove a camera from the system</p>
+<p>Specify a named camera that needs to be removed from
+the system. Once removed, all the scenarios and pre-process
+routines associated with the camera will be removed.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>remove<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: [default: Camera name]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-remove-scenario"><code>visionai camera remove-scenario</code><a class="headerlink" href="#visionai-camera-remove-scenario" title="Permanent link">&para;</a></h3>
+<p>Remove a scenario from a camera</p>
+<p>Specify a named scenario that needs to be removed from
+the system. Once removed, all the scenarios and pre-process
+routines associated with the scenario will be removed.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>remove-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: camera  [required]</li>
+<li><code>--scenario TEXT</code>: scenario name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-camera-reset"><code>visionai camera reset</code><a class="headerlink" href="#visionai-camera-reset" title="Permanent link">&para;</a></h3>
+<p>Reset all camera configuration.</p>
+<p>All cameras and their scenarios would be removed
+from the system. Any earlier configuration is backed up
+as a timed json backup file.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>camera<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--confirm / --no-confirm</code>: Confirm delete  [default: False]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-cameras"><code>visionai cameras</code><a class="headerlink" href="#visionai-cameras" title="Permanent link">&para;</a></h2>
+<p>... alias for camera</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>add</code>: Add a named camera instance Add a camera as a...</li>
+<li><code>add-scenario</code>: Add a scenario for a camera Add an individual...</li>
+<li><code>list</code>: List available cameras Print cameras...</li>
+<li><code>list-scenario</code>: List scenarios configured for a camera</li>
+<li><code>list-scenarios</code>: List scenarios configured for a camera</li>
+<li><code>preview</code>: Preview the camera system View the camera...</li>
+<li><code>remove</code>: Remove a camera from the system Specify a...</li>
+<li><code>remove-scenario</code>: Remove a scenario from a camera Specify a...</li>
+<li><code>reset</code>: Reset all camera configuration.</li>
+</ul>
+<h3 id="visionai-cameras-add"><code>visionai cameras add</code><a class="headerlink" href="#visionai-cameras-add" title="Permanent link">&para;</a></h3>
+<p>Add a named camera instance</p>
+<p>Add a camera as a named instance in the system. For adding
+a camera we support RTSP, HLS, HTTP(S) systems. To add a camera
+you need to provide a name for the camera, URI for the camera
+(including any username/password within the URI itself),
+description for camera (about its location, where its pointing,
+who is the vendor etc.).</p>
+<p>Before the camera is added - we need to test out if the
+camera instance is valid. We need to be able to read from
+the camera and calculate its FPS. Show this information
+on the screen.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>add<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: Camera Name  [required]</li>
+<li><code>--uri TEXT</code>: URI for camera  [required]</li>
+<li><code>--description TEXT</code>: Description  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-add-scenario"><code>visionai cameras add-scenario</code><a class="headerlink" href="#visionai-cameras-add-scenario" title="Permanent link">&para;</a></h3>
+<p>Add a scenario for a camera</p>
+<p>Add an individual scenario to be run for a camera. Specify the
+names for scenario and camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>add-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: camera name  [required]</li>
+<li><code>--scenario TEXT</code>: scenario name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-list"><code>visionai cameras list</code><a class="headerlink" href="#visionai-cameras-list" title="Permanent link">&para;</a></h3>
+<p>List available cameras</p>
+<p>Print cameras available in the system and the scenarios / routines
+that are set up for them.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-list-scenario"><code>visionai cameras list-scenario</code><a class="headerlink" href="#visionai-cameras-list-scenario" title="Permanent link">&para;</a></h3>
+<p>List scenarios configured for a camera</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>list-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name  [default: ]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-list-scenarios"><code>visionai cameras list-scenarios</code><a class="headerlink" href="#visionai-cameras-list-scenarios" title="Permanent link">&para;</a></h3>
+<p>List scenarios configured for a camera</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>list-scenarios<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name  [default: ]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-preview"><code>visionai cameras preview</code><a class="headerlink" href="#visionai-cameras-preview" title="Permanent link">&para;</a></h3>
+<p>Preview the camera system</p>
+<p>View the camera feed, review FPS etc available for camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>preview<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: camera name to preview  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-remove"><code>visionai cameras remove</code><a class="headerlink" href="#visionai-cameras-remove" title="Permanent link">&para;</a></h3>
+<p>Remove a camera from the system</p>
+<p>Specify a named camera that needs to be removed from
+the system. Once removed, all the scenarios and pre-process
+routines associated with the camera will be removed.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>remove<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: [default: Camera name]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-remove-scenario"><code>visionai cameras remove-scenario</code><a class="headerlink" href="#visionai-cameras-remove-scenario" title="Permanent link">&para;</a></h3>
+<p>Remove a scenario from a camera</p>
+<p>Specify a named scenario that needs to be removed from
+the system. Once removed, all the scenarios and pre-process
+routines associated with the scenario will be removed.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>remove-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: camera  [required]</li>
+<li><code>--scenario TEXT</code>: scenario name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-cameras-reset"><code>visionai cameras reset</code><a class="headerlink" href="#visionai-cameras-reset" title="Permanent link">&para;</a></h3>
+<p>Reset all camera configuration.</p>
+<p>All cameras and their scenarios would be removed
+from the system. Any earlier configuration is backed up
+as a timed json backup file.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>cameras<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--confirm / --no-confirm</code>: Confirm delete  [default: False]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-device"><code>visionai device</code><a class="headerlink" href="#visionai-device" title="Permanent link">&para;</a></h2>
+<p>Manage device features</p>
+<p>Since scenarios run on individual edge-devices, and we don't
+have enough control over the CPU, Memory, GPU statistics - it is
+imperative that we have strong methods for validating if a scenario
+can run on a chosen platform. This module provides many utilities
+to check CPU, Memory and GPU statistics for the edge device. We also
+provide an Azure Managed service where these scenarios can be
+configured and run on your premise on pre-validated VM machines.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>device<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>list</code>: List available devices Get a list of all...</li>
+<li><code>modules</code>: List running modules on the device Again this...</li>
+<li><code>select</code>: Select a device Not sure why is this needed...</li>
+<li><code>stats</code>: Machine health (GPU/Mem stats) Show machine...</li>
+</ul>
+<h3 id="visionai-device-list"><code>visionai device list</code><a class="headerlink" href="#visionai-device-list" title="Permanent link">&para;</a></h3>
+<p>List available devices</p>
+<p>Get a list of all available [processing] devices</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>device<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-device-modules"><code>visionai device modules</code><a class="headerlink" href="#visionai-device-modules" title="Permanent link">&para;</a></h3>
+<p>List running modules on the device</p>
+<p>Again this does not make much sense at this time. Let's revisit.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>device<span class="w"> </span>modules<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-device-select"><code>visionai device select</code><a class="headerlink" href="#visionai-device-select" title="Permanent link">&para;</a></h3>
+<p>Select a device</p>
+<p>Not sure why is this needed at this time.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>device<span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>DEVICE
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>DEVICE</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-device-stats"><code>visionai device stats</code><a class="headerlink" href="#visionai-device-stats" title="Permanent link">&para;</a></h3>
+<p>Machine health (GPU/Mem stats)</p>
+<p>Show machine health (GPU/memory stats). This can be used to
+determine if more scenarios can be run on the machine or not.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>device<span class="w"> </span>stats<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-devices"><code>visionai devices</code><a class="headerlink" href="#visionai-devices" title="Permanent link">&para;</a></h2>
+<p>... alias for device</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>devices<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>list</code>: List available devices Get a list of all...</li>
+<li><code>modules</code>: List running modules on the device Again this...</li>
+<li><code>select</code>: Select a device Not sure why is this needed...</li>
+<li><code>stats</code>: Machine health (GPU/Mem stats) Show machine...</li>
+</ul>
+<h3 id="visionai-devices-list"><code>visionai devices list</code><a class="headerlink" href="#visionai-devices-list" title="Permanent link">&para;</a></h3>
+<p>List available devices</p>
+<p>Get a list of all available [processing] devices</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>devices<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-devices-modules"><code>visionai devices modules</code><a class="headerlink" href="#visionai-devices-modules" title="Permanent link">&para;</a></h3>
+<p>List running modules on the device</p>
+<p>Again this does not make much sense at this time. Let's revisit.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>devices<span class="w"> </span>modules<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-devices-select"><code>visionai devices select</code><a class="headerlink" href="#visionai-devices-select" title="Permanent link">&para;</a></h3>
+<p>Select a device</p>
+<p>Not sure why is this needed at this time.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>devices<span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>DEVICE
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>DEVICE</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-devices-stats"><code>visionai devices stats</code><a class="headerlink" href="#visionai-devices-stats" title="Permanent link">&para;</a></h3>
+<p>Machine health (GPU/Mem stats)</p>
+<p>Show machine health (GPU/memory stats). This can be used to
+determine if more scenarios can be run on the machine or not.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>devices<span class="w"> </span>stats<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-model"><code>visionai model</code><a class="headerlink" href="#visionai-model" title="Permanent link">&para;</a></h2>
+<p>Serve models</p>
+<p>Before we can run any scenarios - the models necessary for them
+must be ready. We use Triton inference server to make the
+best use of GPU/CPU resources available on the machine in order
+to serve our models. Any models that are available in
+models-repo folder would be served after this (TODO - only
+serve models configured in scenarios).</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>check</code>: Check model-server status &amp; print helpful...</li>
+<li><code>serve</code>: Start serving all available models.</li>
+<li><code>start</code>: Start serving all available models.</li>
+<li><code>status</code>: Show the status of serving models Shows how...</li>
+<li><code>stop</code>: Stop serving all models.</li>
+</ul>
+<h3 id="visionai-model-check"><code>visionai model check</code><a class="headerlink" href="#visionai-model-check" title="Permanent link">&para;</a></h3>
+<p>Check model-server status &amp; print helpful debug info.</p>
+<p>TODO:
+Goal of the check command is to identify any configuration/dependency
+issues that we can inform to user that he can fix on his end. This could
+be like missing dependency, missing software package, missing driver details
+etc.</p>
+<ul>
+<li>Check if model-server is running or not.</li>
+<li>Check if triton-client can access model-server</li>
+<li>Check what are the models served</li>
+<li>Print all of this in a pretty manner [checkbox based]</li>
+<li>Check container logs &amp; show them here.</li>
+<li>grep container logs for common errors &amp; highlight that in output</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span>check<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-model-serve"><code>visionai model serve</code><a class="headerlink" href="#visionai-model-serve" title="Permanent link">&para;</a></h3>
+<p>Start serving all available models.</p>
+<p>All models present in the models-repo/ will be served. We use
+triton inference server to serve them. The triton server will be
+at <a href="http://localhost:8000">http://localhost:8000</a>, grpc://localhost:8001.</p>
+<p>Please make sure these two ports are not used by anyone else.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span>serve<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-model-start"><code>visionai model start</code><a class="headerlink" href="#visionai-model-start" title="Permanent link">&para;</a></h3>
+<p>Start serving all available models.</p>
+<p>All models present in the models-repo/ will be served. We use
+triton inference server to serve them. The triton server will be
+at <a href="http://localhost:8000">http://localhost:8000</a>, grpc://localhost:8001.</p>
+<p>Please make sure these two ports are not used by anyone else.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span>start<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-model-status"><code>visionai model status</code><a class="headerlink" href="#visionai-model-status" title="Permanent link">&para;</a></h3>
+<p>Show the status of serving models</p>
+<p>Shows how many models are being served, metrics for the models etc.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-model-stop"><code>visionai model stop</code><a class="headerlink" href="#visionai-model-stop" title="Permanent link">&para;</a></h3>
+<p>Stop serving all models.</p>
+<p>This method will stop serving all models. Any inference running
+will all be stopped as well.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>model<span class="w"> </span>stop<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-models"><code>visionai models</code><a class="headerlink" href="#visionai-models" title="Permanent link">&para;</a></h2>
+<p>... alias for model</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>check</code>: Check model-server status &amp; print helpful...</li>
+<li><code>serve</code>: Start serving all available models.</li>
+<li><code>start</code>: Start serving all available models.</li>
+<li><code>status</code>: Show the status of serving models Shows how...</li>
+<li><code>stop</code>: Stop serving all models.</li>
+</ul>
+<h3 id="visionai-models-check"><code>visionai models check</code><a class="headerlink" href="#visionai-models-check" title="Permanent link">&para;</a></h3>
+<p>Check model-server status &amp; print helpful debug info.</p>
+<p>TODO:
+Goal of the check command is to identify any configuration/dependency
+issues that we can inform to user that he can fix on his end. This could
+be like missing dependency, missing software package, missing driver details
+etc.</p>
+<ul>
+<li>Check if model-server is running or not.</li>
+<li>Check if triton-client can access model-server</li>
+<li>Check what are the models served</li>
+<li>Print all of this in a pretty manner [checkbox based]</li>
+<li>Check container logs &amp; show them here.</li>
+<li>grep container logs for common errors &amp; highlight that in output</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span>check<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-models-serve"><code>visionai models serve</code><a class="headerlink" href="#visionai-models-serve" title="Permanent link">&para;</a></h3>
+<p>Start serving all available models.</p>
+<p>All models present in the models-repo/ will be served. We use
+triton inference server to serve them. The triton server will be
+at <a href="http://localhost:8000">http://localhost:8000</a>, grpc://localhost:8001.</p>
+<p>Please make sure these two ports are not used by anyone else.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span>serve<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-models-start"><code>visionai models start</code><a class="headerlink" href="#visionai-models-start" title="Permanent link">&para;</a></h3>
+<p>Start serving all available models.</p>
+<p>All models present in the models-repo/ will be served. We use
+triton inference server to serve them. The triton server will be
+at <a href="http://localhost:8000">http://localhost:8000</a>, grpc://localhost:8001.</p>
+<p>Please make sure these two ports are not used by anyone else.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span>start<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-models-status"><code>visionai models status</code><a class="headerlink" href="#visionai-models-status" title="Permanent link">&para;</a></h3>
+<p>Show the status of serving models</p>
+<p>Shows how many models are being served, metrics for the models etc.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-models-stop"><code>visionai models stop</code><a class="headerlink" href="#visionai-models-stop" title="Permanent link">&para;</a></h3>
+<p>Stop serving all models.</p>
+<p>This method will stop serving all models. Any inference running
+will all be stopped as well.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>models<span class="w"> </span>stop<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-pipeline"><code>visionai pipeline</code><a class="headerlink" href="#visionai-pipeline" title="Permanent link">&para;</a></h2>
+<p>Manage pipelines</p>
+<p>Pipeline is a sequence of preprocess routines and scenarios
+to be run on a given set of cameras. Each pipeline can be
+configured to run specific scenarios - each scenario with their
+own customizations for event notifications. This module provides
+robust methods for managing pipelines, showing their details,
+adding/remove cameras from pipelines and running a pipeline.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>add-camera</code>: Add a camera to a pipeline Each pipeline...</li>
+<li><code>add-preprocess</code>: Add a preprocess routine to a pipeline...</li>
+<li><code>add-scenario</code>: Add a scenario to a pipeline The order of the...</li>
+<li><code>create</code>: Create a named pipeline Create a named...</li>
+<li><code>remove-camera</code>: Remove a camera from a pipeline This method...</li>
+<li><code>reset</code>: Reset the pipeline to original state.</li>
+<li><code>run</code>: Run a pipeline of scenarios on given cameras...</li>
+<li><code>show</code>: Show details of a pipeline Show what is...</li>
+</ul>
+<h3 id="visionai-pipeline-add-camera"><code>visionai pipeline add-camera</code><a class="headerlink" href="#visionai-pipeline-add-camera" title="Permanent link">&para;</a></h3>
+<p>Add a camera to a pipeline</p>
+<p>Each pipeline consists of a bunch of scenarios to run
+and which cameras they need to be run on. This method
+allows the user to add one or more named camera instance
+to a pipeline. Please note the camera instance has to be
+created prior to adding it here.</p>
+<h1 id="add-a-camera">add a camera<a class="headerlink" href="#add-a-camera" title="Permanent link">&para;</a></h1>
+<p>$ visionai camera add --name OFFICE-01 --uri <a href="https://youtube.com">https://youtube.com</a></p>
+<h1 id="add-camera-to-pipeline">add camera to pipeline<a class="headerlink" href="#add-camera-to-pipeline" title="Permanent link">&para;</a></h1>
+<p>$ visionai pipeline --name test_pipe add-camera --name OFFICE-01</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> camera - specify name of the camera to add</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>add-camera<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--camera TEXT</code>: camera to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-add-preprocess"><code>visionai pipeline add-preprocess</code><a class="headerlink" href="#visionai-pipeline-add-preprocess" title="Permanent link">&para;</a></h3>
+<p>Add a preprocess routine to a pipeline</p>
+<p>Preprocessing tasks are run prior to scenarios. The order in which
+multiple preprocess tasks are added does not matter. All added preprocess
+routines are executed in different threads.</p>
+<p>$ visionai pipeline --name test_pipe add-preprocess --name face-blur</p>
+<p>$ visionai pipeline --name test_pipe add-preprocess --name text-blur</p>
+<p>$ visionai pipeline --name test_pipe show</p>
+<p>$ visionai pipeline --name test_pipe run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> preprocess - specify name of the preprocess task to run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>add-preprocess<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--preprocess TEXT</code>: preprocess routine to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-add-scenario"><code>visionai pipeline add-scenario</code><a class="headerlink" href="#visionai-pipeline-add-scenario" title="Permanent link">&para;</a></h3>
+<p>Add a scenario to a pipeline</p>
+<p>The order of the scenarios does not matter. All added scenarios
+are run in different threads. All scenarios are run after
+pre-processing stage is done.</p>
+<p>$visionai pipeline --name test_pipe add-scenario --name smoke-and-fire</p>
+<p>$visionai pipeline --name test_pipe add-scenario --name ppe-detection</p>
+<p>$visionai pipeline --name test_pipe run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> scenario - specify name of the scenario to run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>add-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--scenario TEXT</code>: scenario to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-create"><code>visionai pipeline create</code><a class="headerlink" href="#visionai-pipeline-create" title="Permanent link">&para;</a></h3>
+<p>Create a named pipeline</p>
+<p>Create a named pipeline. Pipeline is a list of scenarios
+to be run for specific cameras. The flow is as follows. Create
+a pipeline using:</p>
+<p>visionai pipeline create --name test_pipe</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name smoke-and-fire</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name ppe-detection</p>
+<p>visionai pipeline add-preprocess --pipeline test_pipe  --name face-blur</p>
+<p>visionai pipeline add-preprocess --pipeline test_pipe  --name text-blur</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name max-occupancy</p>
+<p>visionai pipeline show --pipeline test_pipe</p>
+<p>visionai pipeline add-camera --pipeline test_pipe  --name CAMERA-01</p>
+<p>visionai pipeline add-camera --pipeline test_pipe  --name CAMERA-02</p>
+<p>visionai pipeline show --pipeline test_pipe</p>
+<p>visionai pipeline run --pipeline test_pipe</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-remove-camera"><code>visionai pipeline remove-camera</code><a class="headerlink" href="#visionai-pipeline-remove-camera" title="Permanent link">&para;</a></h3>
+<p>Remove a camera from a pipeline</p>
+<p>This method can be used to remove a camera from a pipeline.</p>
+<p>$ visionai pipeline --name test_pipe remove-camera --name OFFICE-01</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> camera - specify name of the camera to remove</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>remove-camera<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--camera TEXT</code>: camera to remove  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-reset"><code>visionai pipeline reset</code><a class="headerlink" href="#visionai-pipeline-reset" title="Permanent link">&para;</a></h3>
+<p>Reset the pipeline to original state.</p>
+<p>Deletes all cameras, scenarios and scenario configuration
+from the pipeline. Its as if the pipeline has been deleted
+and created from scratch again.</p>
+<p>$ visionai pipeline --name test_pipe reset</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - pipeline to reset</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-run"><code>visionai pipeline run</code><a class="headerlink" href="#visionai-pipeline-run" title="Permanent link">&para;</a></h3>
+<p>Run a pipeline of scenarios on given cameras</p>
+<p>Specify different scenarios to run on one or more
+cameras. This method can be directly used to specify scenarios
+and cameras directly. Else you can configure a named pipeline
+and then run it here.</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: Pipeline to run  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipeline-show"><code>visionai pipeline show</code><a class="headerlink" href="#visionai-pipeline-show" title="Permanent link">&para;</a></h3>
+<p>Show details of a pipeline</p>
+<p>Show what is configured in the current pipeline.</p>
+<p>$ visionai pipeline --name test_pipe show</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipeline<span class="w"> </span>show<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-pipelines"><code>visionai pipelines</code><a class="headerlink" href="#visionai-pipelines" title="Permanent link">&para;</a></h2>
+<p>... alias for pipeline</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>add-camera</code>: Add a camera to a pipeline Each pipeline...</li>
+<li><code>add-preprocess</code>: Add a preprocess routine to a pipeline...</li>
+<li><code>add-scenario</code>: Add a scenario to a pipeline The order of the...</li>
+<li><code>create</code>: Create a named pipeline Create a named...</li>
+<li><code>remove-camera</code>: Remove a camera from a pipeline This method...</li>
+<li><code>reset</code>: Reset the pipeline to original state.</li>
+<li><code>run</code>: Run a pipeline of scenarios on given cameras...</li>
+<li><code>show</code>: Show details of a pipeline Show what is...</li>
+</ul>
+<h3 id="visionai-pipelines-add-camera"><code>visionai pipelines add-camera</code><a class="headerlink" href="#visionai-pipelines-add-camera" title="Permanent link">&para;</a></h3>
+<p>Add a camera to a pipeline</p>
+<p>Each pipeline consists of a bunch of scenarios to run
+and which cameras they need to be run on. This method
+allows the user to add one or more named camera instance
+to a pipeline. Please note the camera instance has to be
+created prior to adding it here.</p>
+<h1 id="add-a-camera_1">add a camera<a class="headerlink" href="#add-a-camera_1" title="Permanent link">&para;</a></h1>
+<p>$ visionai camera add --name OFFICE-01 --uri <a href="https://youtube.com">https://youtube.com</a></p>
+<h1 id="add-camera-to-pipeline_1">add camera to pipeline<a class="headerlink" href="#add-camera-to-pipeline_1" title="Permanent link">&para;</a></h1>
+<p>$ visionai pipeline --name test_pipe add-camera --name OFFICE-01</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> camera - specify name of the camera to add</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>add-camera<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--camera TEXT</code>: camera to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-add-preprocess"><code>visionai pipelines add-preprocess</code><a class="headerlink" href="#visionai-pipelines-add-preprocess" title="Permanent link">&para;</a></h3>
+<p>Add a preprocess routine to a pipeline</p>
+<p>Preprocessing tasks are run prior to scenarios. The order in which
+multiple preprocess tasks are added does not matter. All added preprocess
+routines are executed in different threads.</p>
+<p>$ visionai pipeline --name test_pipe add-preprocess --name face-blur</p>
+<p>$ visionai pipeline --name test_pipe add-preprocess --name text-blur</p>
+<p>$ visionai pipeline --name test_pipe show</p>
+<p>$ visionai pipeline --name test_pipe run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> preprocess - specify name of the preprocess task to run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>add-preprocess<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--preprocess TEXT</code>: preprocess routine to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-add-scenario"><code>visionai pipelines add-scenario</code><a class="headerlink" href="#visionai-pipelines-add-scenario" title="Permanent link">&para;</a></h3>
+<p>Add a scenario to a pipeline</p>
+<p>The order of the scenarios does not matter. All added scenarios
+are run in different threads. All scenarios are run after
+pre-processing stage is done.</p>
+<p>$visionai pipeline --name test_pipe add-scenario --name smoke-and-fire</p>
+<p>$visionai pipeline --name test_pipe add-scenario --name ppe-detection</p>
+<p>$visionai pipeline --name test_pipe run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> scenario - specify name of the scenario to run</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>add-scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--scenario TEXT</code>: scenario to add  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-create"><code>visionai pipelines create</code><a class="headerlink" href="#visionai-pipelines-create" title="Permanent link">&para;</a></h3>
+<p>Create a named pipeline</p>
+<p>Create a named pipeline. Pipeline is a list of scenarios
+to be run for specific cameras. The flow is as follows. Create
+a pipeline using:</p>
+<p>visionai pipeline create --name test_pipe</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name smoke-and-fire</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name ppe-detection</p>
+<p>visionai pipeline add-preprocess --pipeline test_pipe  --name face-blur</p>
+<p>visionai pipeline add-preprocess --pipeline test_pipe  --name text-blur</p>
+<p>visionai pipeline add-scenario --pipeline test_pipe  --name max-occupancy</p>
+<p>visionai pipeline show --pipeline test_pipe</p>
+<p>visionai pipeline add-camera --pipeline test_pipe  --name CAMERA-01</p>
+<p>visionai pipeline add-camera --pipeline test_pipe  --name CAMERA-02</p>
+<p>visionai pipeline show --pipeline test_pipe</p>
+<p>visionai pipeline run --pipeline test_pipe</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>create<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--name TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-remove-camera"><code>visionai pipelines remove-camera</code><a class="headerlink" href="#visionai-pipelines-remove-camera" title="Permanent link">&para;</a></h3>
+<p>Remove a camera from a pipeline</p>
+<p>This method can be used to remove a camera from a pipeline.</p>
+<p>$ visionai pipeline --name test_pipe remove-camera --name OFFICE-01</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline
+<a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> camera - specify name of the camera to remove</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>remove-camera<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--camera TEXT</code>: camera to remove  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-reset"><code>visionai pipelines reset</code><a class="headerlink" href="#visionai-pipelines-reset" title="Permanent link">&para;</a></h3>
+<p>Reset the pipeline to original state.</p>
+<p>Deletes all cameras, scenarios and scenario configuration
+from the pipeline. Its as if the pipeline has been deleted
+and created from scratch again.</p>
+<p>$ visionai pipeline --name test_pipe reset</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - pipeline to reset</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-run"><code>visionai pipelines run</code><a class="headerlink" href="#visionai-pipelines-run" title="Permanent link">&para;</a></h3>
+<p>Run a pipeline of scenarios on given cameras</p>
+<p>Specify different scenarios to run on one or more
+cameras. This method can be directly used to specify scenarios
+and cameras directly. Else you can configure a named pipeline
+and then run it here.</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>run<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: Pipeline to run  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-pipelines-show"><code>visionai pipelines show</code><a class="headerlink" href="#visionai-pipelines-show" title="Permanent link">&para;</a></h3>
+<p>Show details of a pipeline</p>
+<p>Show what is configured in the current pipeline.</p>
+<p>$ visionai pipeline --name test_pipe show</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/arg" title="GitHub User: arg">@arg</a> pipeline - specify a named pipeline</p>
+<p><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/return" title="GitHub User: return">@return</a> None</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-65-1"><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>pipelines<span class="w"> </span>show<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--pipeline TEXT</code>: pipeline name  [required]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-scenario"><code>visionai scenario</code><a class="headerlink" href="#visionai-scenario" title="Permanent link">&para;</a></h2>
+<p>Manage scenarios</p>
+<p>An organization can have multiple scenarios that are installed
+at different places. They may be from different vendors and/or
+maybe using different security surveillance software. Most
+scenarios however do support RTSP, RTMP or HLS streams as an
+output. Please refer to your scenario vendor documentation to
+find this out. This module will help you onboard those scenarios
+on visionai systems by using a simple named instance for each
+scenario.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-66-1"><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenario<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>download</code>: Download models for scenarios Ex: visionai...</li>
+<li><code>list</code>: List all scenarios available List all...</li>
+<li><code>test</code>: Run the scenario locally to test it out.</li>
+</ul>
+<h3 id="visionai-scenario-download"><code>visionai scenario download</code><a class="headerlink" href="#visionai-scenario-download" title="Permanent link">&para;</a></h3>
+<p>Download models for scenarios</p>
+<p>Ex: visionai scenario download ppe-detection  # download ppe-detection scenario
+Ex: visionai scenario download all            # download all configured scenarios for the org
+Ex: visionai scenario download world          # download all available scenarios</p>
+<p>Download models for a given scenario, or download models for
+all scenarios that have been configured.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-67-1"><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenario<span class="w"> </span>download<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>NAME</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-scenario-list"><code>visionai scenario list</code><a class="headerlink" href="#visionai-scenario-list" title="Permanent link">&para;</a></h3>
+<p>List all scenarios available</p>
+<p>List all scenarios available in the system. This includes scenarios
+that may or maynot be applied to any specific camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-68-1"><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenario<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-scenario-test"><code>visionai scenario test</code><a class="headerlink" href="#visionai-scenario-test" title="Permanent link">&para;</a></h3>
+<p>Run the scenario locally to test it out.</p>
+<ul>
+<li>Download the model if not available.</li>
+<li>Pull the model server container image.</li>
+<li>Start the model server container with this model.</li>
+<li>Run inference with this model</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-69-1"><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenario<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>NAME</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name (default is webcam)  [default: 0]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-scenarios"><code>visionai scenarios</code><a class="headerlink" href="#visionai-scenarios" title="Permanent link">&para;</a></h2>
+<p>... alias for scenario</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-70-1"><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenarios<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>download</code>: Download models for scenarios Ex: visionai...</li>
+<li><code>list</code>: List all scenarios available List all...</li>
+<li><code>test</code>: Run the scenario locally to test it out.</li>
+</ul>
+<h3 id="visionai-scenarios-download"><code>visionai scenarios download</code><a class="headerlink" href="#visionai-scenarios-download" title="Permanent link">&para;</a></h3>
+<p>Download models for scenarios</p>
+<p>Ex: visionai scenario download ppe-detection  # download ppe-detection scenario
+Ex: visionai scenario download all            # download all configured scenarios for the org
+Ex: visionai scenario download world          # download all available scenarios</p>
+<p>Download models for a given scenario, or download models for
+all scenarios that have been configured.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-71-1"><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenarios<span class="w"> </span>download<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>NAME</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-scenarios-list"><code>visionai scenarios list</code><a class="headerlink" href="#visionai-scenarios-list" title="Permanent link">&para;</a></h3>
+<p>List all scenarios available</p>
+<p>List all scenarios available in the system. This includes scenarios
+that may or maynot be applied to any specific camera.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-72-1"><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenarios<span class="w"> </span>list<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-scenarios-test"><code>visionai scenarios test</code><a class="headerlink" href="#visionai-scenarios-test" title="Permanent link">&para;</a></h3>
+<p>Run the scenario locally to test it out.</p>
+<ul>
+<li>Download the model if not available.</li>
+<li>Pull the model server container image.</li>
+<li>Start the model server container with this model.</li>
+<li>Run inference with this model</li>
+</ul>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-73-1"><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>scenarios<span class="w"> </span><span class="nb">test</span><span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>NAME
+</span></code></pre></div>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>NAME</code>: [required]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--camera TEXT</code>: Camera name (default is webcam)  [default: 0]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-ui"><code>visionai ui</code><a class="headerlink" href="#visionai-ui" title="Permanent link">&para;</a></h2>
+<p>Start/stop web-app</p>
+<p>Start and stop the VisionAI web-app which can be a more
+intuitive way of managing cameras, pipelines and scenarios.
+Web-app also provides a live-stream view of the cameras.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-74-1"><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>ui<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>start</code>: Start web server Use this function to start...</li>
+<li><code>status</code>: Web service status Use this function to get...</li>
+<li><code>stop</code>: Stop web server Use this function to stop...</li>
+</ul>
+<h3 id="visionai-ui-start"><code>visionai ui start</code><a class="headerlink" href="#visionai-ui-start" title="Permanent link">&para;</a></h3>
+<p>Start web server</p>
+<p>Use this function to start the web-service. Web service
+can be used for more intuitive configuration for the
+cameras and scenarios. Web-app is also the place to view
+event details, camera live-stream etc.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-75-1"><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>ui<span class="w"> </span>start<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-ui-status"><code>visionai ui status</code><a class="headerlink" href="#visionai-ui-status" title="Permanent link">&para;</a></h3>
+<p>Web service status</p>
+<p>Use this function to get the status of the web-service. (if
+its running or not. This function also prints diagnostic
+information like last few log messages etc.)</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-76-1"><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>ui<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--tail INTEGER</code>: tail number of lines  [default: 20]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-ui-stop"><code>visionai ui stop</code><a class="headerlink" href="#visionai-ui-stop" title="Permanent link">&para;</a></h3>
+<p>Stop web server</p>
+<p>Use this function to stop already running web-service. There
+can be a single instance of the web-service supported currently.
+So there is no need for any arguments for this function.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-77-1"><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>ui<span class="w"> </span>stop<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--web TEXT</code></li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h2 id="visionai-web"><code>visionai web</code><a class="headerlink" href="#visionai-web" title="Permanent link">&para;</a></h2>
+<p>... alias for ui</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-78-1"><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>web<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>COMMAND<span class="w"> </span><span class="o">[</span>ARGS<span class="o">]</span>...
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<p><strong>Commands</strong>:</p>
+<ul>
+<li><code>start</code>: Start web server Use this function to start...</li>
+<li><code>status</code>: Web service status Use this function to get...</li>
+<li><code>stop</code>: Stop web server Use this function to stop...</li>
+</ul>
+<h3 id="visionai-web-start"><code>visionai web start</code><a class="headerlink" href="#visionai-web-start" title="Permanent link">&para;</a></h3>
+<p>Start web server</p>
+<p>Use this function to start the web-service. Web service
+can be used for more intuitive configuration for the
+cameras and scenarios. Web-app is also the place to view
+event details, camera live-stream etc.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>web<span class="w"> </span>start<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-web-status"><code>visionai web status</code><a class="headerlink" href="#visionai-web-status" title="Permanent link">&para;</a></h3>
+<p>Web service status</p>
+<p>Use this function to get the status of the web-service. (if
+its running or not. This function also prints diagnostic
+information like last few log messages etc.)</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>web<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--tail INTEGER</code>: tail number of lines  [default: 20]</li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+<h3 id="visionai-web-stop"><code>visionai web stop</code><a class="headerlink" href="#visionai-web-stop" title="Permanent link">&para;</a></h3>
+<p>Stop web server</p>
+<p>Use this function to stop already running web-service. There
+can be a single instance of the web-service supported currently.
+So there is no need for any arguments for this function.</p>
+<p><strong>Usage</strong>:</p>
+<div class="language-console highlight"><pre><span></span><code><span id="__span-81-1"><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="gp">$ </span>visionai<span class="w"> </span>web<span class="w"> </span>stop<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</span></code></pre></div>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--web TEXT</code></li>
+<li><code>--help</code>: Show this message and exit.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="https://docs.google.com/forms/d/e/1FAIpQLSfW7NsiBv1KCH8enZ7OJDHdQDhqY8NtUeQElm9gnRRR9pLPbw/viewform?usp=sf_link" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../privacy/obstructed-camera-view/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Obstructed camera view">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Obstructed camera view
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Changelog
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 Visionify.ai
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/visionify/visionai" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/visionify" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/hmurari" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://dev.to/hmurari" target="_blank" rel="noopener" title="dev.to" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@hmurari" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://visionify.ai" target="_blank" rel="noopener" title="visionify.ai" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/visionify-ai/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.footer", "navigation.tabs.sticky", "content.code.copy", "content.action.edit", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      
+        <script src="../../js/termynal.js"></script>
+      
+        <script src="../../js/custom.js"></script>
+      
+    
+<script src="https://cdn.jsdelivr.net/npm/qabot@0.4"></script>
+<script>
+  // This prevents the global search from interfering with qa-bot's internal text input.
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('qa-bot').forEach((x) => {
+      x.addEventListener('keydown', (event) => {
+        event.stopPropagation();
+      });
+    });
+  });
+</script>
+<!-- <qa-bot
+    server="https://tiangolo-typer.docsqa.jina.ai"
+    theme="infer"
+    title="Typer Bot"
+    description="Typer, build great CLIs. Easy to code. Based on Python type hints."
+    style="font-size: 0.8rem"
+>
+    <dl>
+        <dt>You can ask questions about Typer. Try:</dt>
+        <dd>How can I terminate a program?</dd>
+        <dd>How to launch applications?</dd>
+        <dd>How to add help to CLI argument?</dd>
+    </dl>
+</qa-bot> -->
+  </body>
+</html>
