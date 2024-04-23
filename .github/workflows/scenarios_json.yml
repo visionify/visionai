@@ -60,5 +60,4 @@ jobs:
         run: |
           for file in $CHANGED_FILES; do
             az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
-
           done
