@@ -38,9 +38,9 @@ jobs:
       - name: Check for changes in a specific folder
         id: check_changes
         run: |
-          PREVIOUS_COMMIT=${{ github.event.before }}
-          CURRENT_COMMIT=$(git rev-parse HEAD)
-          CHANGED_FILES=$(git diff --short --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
+          PREVIOUS_COMMIT=$(git rev-parse --short HEAD^)
+          CURRENT_COMMIT=$(git rev-parse --short HEAD)
+          CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
           
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changes detected in the specific folder."
