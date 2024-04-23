@@ -54,6 +54,7 @@ jobs:
             echo "$CHANGED_FILES" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
           fi
+          
       - name: Upload
         if: env.CHANGES_DETECTED == 'true'
         run: |
