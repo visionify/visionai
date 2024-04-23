@@ -44,7 +44,7 @@ jobs:
       - name: Check for changes in a specific folder
         id: check_changes
         run: |
-          CHANGED_FILES=$(git diff --name-only main...HEAD each_scenario_details)
+          CHANGED_FILES=$(git diff --name-only azure-storage-pipeline...HEAD each_scenario_details)
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changes detected in the specific folder."
             echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
