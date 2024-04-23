@@ -26,6 +26,15 @@ jobs:
             echo "$file was changed"
           done
 
+      - name: Check if scenarios.json is modified
+        id: scenarios-json-changed
+        run: |
+          if grep -q "each_scenario_details/scenarios.json" <<< "$ALL_CHANGED_FILES"; then
+            echo "::set-output name=modified::true"
+          else
+            echo "::set-output name=modified::false"
+          fi
+
       - name: Upload changed files to Azure Blob Storage
         if: ${{ steps.changed-files.outputs.any_files_changed == 'true' }}
         uses: azure/CLI@v1
