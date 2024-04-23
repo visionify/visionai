@@ -29,9 +29,7 @@ jobs:
           python -m unittest discover -s test
   
   check-and-upload:
-    if: |
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/azure-storage-pipeline'
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
