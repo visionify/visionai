@@ -30,7 +30,7 @@
     "other": []
   },
   "events": {
-    "heatmap generation": {
+    "heatmap_generation": {
     "description": "Automatically generate heatmap based on predefined data",
     "schedule": "Immediate"
     }
