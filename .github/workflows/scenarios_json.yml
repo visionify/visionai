@@ -33,7 +33,7 @@ jobs:
         with:
           inlineScript: |
             for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-              if [ "$file" = "each_scenario_details/scenarios.json" ]; then
+              if [ "$file" = "scenarios.json" ]; then
                 echo "Uploading $file to Azure Blob Storage..."
                 az storage blob upload --account-name docsvisionify --container-name docs-images --file "$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
                 echo "$file uploaded successfully."
