@@ -26,7 +26,7 @@
     "other": []
   },
   "events": {
-    "min_worker_violation": {
+    "min_workers_violation": {
       "description": "Person detected in restricted area",
       "schedule": "Immediate"
     }
