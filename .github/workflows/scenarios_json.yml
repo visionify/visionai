@@ -43,7 +43,7 @@ jobs:
       - name: Check for changes in a specific folder
         id: check_changes
         run: |
-          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} path/to/your/specific/folder)
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} each_scenario_details)
           if [ -z "$CHANGED_FILES" ]; then
             echo "No changes detected in the specific folder."
             echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
@@ -58,5 +58,6 @@ jobs:
         if: env.CHANGES_DETECTED == 'true'
         run: |
           for file in $CHANGED_FILES; do
-            az storage blob upload --account-name your_account_name --container-name your_container_name --file path/to/your/specific/folder/$file --name $file --connection-string ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+            az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+
           done
