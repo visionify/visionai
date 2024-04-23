@@ -18,36 +18,24 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v44
 
-      - name: List all changed files
-        env:
-          ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
-        run: |
-          for file in ${ALL_CHANGED_FILES}; do
-            echo "$file was changed"
-          done
-
       - name: Check if scenarios.json is modified
         id: scenarios-json-changed
         run: |
           if grep -q "scenarios.json" <<< "$ALL_CHANGED_FILES"; then
             echo "modified=true" >> $GITHUB_ENV
-            uses: azure/CLI@v1
-            with:
-              inlineScript: |
-                  echo "Uploading $file to Azure Blob Storage..."
-                  # Replace 'your-container' and 'your-blob-name' with actual values
-                  az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
-                  echo "$file uploaded successfully."            
-            
           else
             echo "modified=false" >> $GITHUB_ENV
-          fi  
-      # - name: Upload changed files to Azure Blob Storage
-      #   if: ${{ steps.changed-files.outputs.any_files_changed == 'true' }}
-      #   uses: azure/CLI@v1
-      #   with:
-      #     inlineScript: |
-      #         echo "Uploading $file to Azure Blob Storage..."
-      #         # Replace 'your-container' and 'your-blob-name' with actual values
-      #         az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
-      #         echo "$file uploaded successfully."
+          fi
+
+      - name: Upload scenarios.json to Azure Blob Storage
+        if: env.modified == 'true'
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+              if [ "$file" = "each_scenario_details/scenarios.json" ]; then
+                echo "Uploading $file to Azure Blob Storage..."
+                az storage blob upload --account-name docsvisionify --container-name docs-images --file "$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+                echo "$file uploaded successfully."
+              fi
+            done
