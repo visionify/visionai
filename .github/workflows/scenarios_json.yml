@@ -40,10 +40,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            # Loop through changed files and upload each one to Azure Blob Storage
-            for file in ${ALL_CHANGED_FILES}; do
               echo "Uploading $file to Azure Blob Storage..."
               # Replace 'your-container' and 'your-blob-name' with actual values
-            az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
+              az storage blob upload --account-name docsvisionify --container-name docs-images --file "each_scenario_details/$file" --name "$file" --connection-string "${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}"
               echo "$file uploaded successfully."
-            done
