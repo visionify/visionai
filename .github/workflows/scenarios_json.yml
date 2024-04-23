@@ -39,7 +39,7 @@ jobs:
         id: check_changes
         run: |
           PREVIOUS_COMMIT=$(git rev-parse HEAD^@)
-          CURRENT_COMMIT=$(git rebase origin/azure-storage-pipeline)
+          CURRENT_COMMIT=$(git rebase origin/HEAD)
           CHANGED_FILES=$(git diff --name-only $PREVIOUS_COMMIT $CURRENT_COMMIT -- each_scenario_details/)
               
           if [ -z "$CHANGED_FILES" ]; then
