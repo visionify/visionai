@@ -1341,7 +1341,7 @@
         ],
         "category_name": "Vehicle Control",
         "events": {
-          "near_miss_violation": {
+          "near_miss": {
             "description": "Pedestrian observed in forklift zone",
             "schedule": "Immediate"
           }
