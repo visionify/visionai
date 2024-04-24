@@ -26,7 +26,7 @@
     "other": []
   },
   "events": {
-    "OCCUPANCY_METRICS_SUMMARY": {
+    "occupancy_metrics_summary": {
       "description": "Daily summary of occupancy metrics on a per desk/station basis",
       "schedule": "Daily"
     }
