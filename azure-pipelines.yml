@@ -1,0 +1,34 @@
+# json to blob
+trigger:
+  branches:
+    include:
+    - json-to-blob
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Clone the repository
+      git clone https://github.com/kar122/jsontoblob.git "$(System.DefaultWorkingDirectory)/scenarios"
+
+
+- checkout: self
+  persistCredentials: true
+  clean: true
+  fetchDepth: 1
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AzureRM authentication'
+    scriptLocation: 'inlineScript'
+    scriptType: 'ps1'
+    inlineScript: |
+      # Navigate to the cloned repository
+      cd "$(System.DefaultWorkingDirectory)/scenarios"
+
+      # Push changes to Azure Blob Container
+      az storage blob upload-batch --destination container --source . --pattern "scenarios.json" --account-name aksummasa
