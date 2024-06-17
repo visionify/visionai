@@ -162,8 +162,7 @@ dist/
 *.onnx
 *.pt
 
-*.github
-.github
+.github/
 
 # models-repo directory
 visionai/models-repo/*
