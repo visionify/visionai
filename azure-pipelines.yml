@@ -14,7 +14,7 @@ pool:
 # Define jobs for different workflows
 jobs:
   # Job 1: Check Broken Links
-  - job: my-broken-link-checker
+  - job: my_broken_link_checker
     displayName: Check broken links
     pool:
       vmImage: 'ubuntu-latest'
