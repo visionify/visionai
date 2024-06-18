@@ -13,18 +13,18 @@ pool:
 
 # Define jobs for different workflows
 jobs:
-  # # Job 1: Check Broken Links
-  # - job: my_broken_link_checker
-  #   displayName: Check broken links
-  #   pool:
-  #     vmImage: 'ubuntu-latest'
-  #   steps:
-  #     - checkout: self
-  #     - script: |
-  #         curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/download/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
-  #         chmod +x my-broken-link-checker
-  #         ./my-broken-link-checker --url https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
-  #       displayName: 'Run broken link checker'
+  # Job 1: Check Broken Links
+  - job: my_broken_link_checker
+    displayName: Check broken links
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+      - script: |
+          curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/download/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
+          chmod +x my-broken-link-checker
+          ./my-broken-link-checker --url https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
+        displayName: 'Run broken link checker'
 
 
   # Job 2: Deploy Docs
@@ -46,7 +46,8 @@ jobs:
   # # Job 3: Deploy PR Previews
   # - job: deploy-pr-previews
   #   displayName: Deploy PR previews
-  #   runsOn: ubuntu-latest
+  #   pool:
+  #     vmImage: 'ubuntu-latest'
   #   concurrency:
   #     group: 'preview-${{ github.ref }}'
   #   steps:
