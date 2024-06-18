@@ -17,7 +17,7 @@ jobs:
     displayName: 'Install check-broken-links'
   
   - script: |
-      check-broken-links https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
+      blc https://docs.visionify.ai/ --ro --one-page-only --max-connections=3 --color=always
     displayName: 'Check for broken links'
 
 #   # Job 2: Deploy Docs
