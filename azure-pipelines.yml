@@ -13,34 +13,35 @@ pool:
 
 # Define jobs for different workflows
 jobs:
-  # Job 1: Check Broken Links
-  - job: my_broken_link_checker
-    displayName: Check broken links
+  # # Job 1: Check Broken Links
+  # - job: my_broken_link_checker
+  #   displayName: Check broken links
+  #   pool:
+  #     vmImage: 'ubuntu-latest'
+  #   steps:
+  #     - checkout: self
+  #     - script: |
+  #         curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/download/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
+  #         chmod +x my-broken-link-checker
+  #         ./my-broken-link-checker --url https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
+  #       displayName: 'Run broken link checker'
+
+
+  # Job 2: Deploy Docs
+  - job: deploy-docs
+    displayName: Deploy documentation
     pool:
       vmImage: 'ubuntu-latest'
     steps:
       - checkout: self
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.x'
+          addToPath: true
       - script: |
-          curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/download/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
-          chmod +x my-broken-link-checker
-          ./my-broken-link-checker --url https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
-        displayName: 'Run broken link checker'
-
-
-  # # Job 2: Deploy Docs
-  # - job: deploy-docs
-  #   displayName: Deploy documentation
-  #   runsOn: ubuntu-latest
-  #   steps:
-  #     - checkout: self
-  #     - task: UsePythonVersion@0
-  #       inputs:
-  #         versionSpec: '3.x'
-  #         addToPath: true
-  #     - script: |
-  #         pip install mkdocs-material
-  #         mkdocs gh-deploy --force
-  #       displayName: 'Deploy MkDocs'
+          pip install mkdocs-material
+          mkdocs gh-deploy --force
+        displayName: 'Deploy MkDocs'
 
   # # Job 3: Deploy PR Previews
   # - job: deploy-pr-previews
