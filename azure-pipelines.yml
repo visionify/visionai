@@ -11,7 +11,7 @@ jobs:
   displayName: 'Check broken links'
   steps:
   - script: |
-      curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+      curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
       sudo apt-get install -y nodejs
       sudo npm install -g my-broken-link-checker
     displayName: 'Install my-broken-link-checker'
