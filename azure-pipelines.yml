@@ -28,7 +28,7 @@ jobs:
 
 
   # Job 2: Deploy Docs
-  - job: deploy-docs
+  - job: deploy_docs
     displayName: Deploy documentation
     pool:
       vmImage: 'ubuntu-latest'
