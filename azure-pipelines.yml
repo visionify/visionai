@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout: self
       - script: |
-          curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/download/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
+          curl -sSfL https://github.com/ruzickap/action-my-broken-link-checker/releases/latest/my-broken-link-checker-linux-amd64 -o my-broken-link-checker
           chmod +x my-broken-link-checker
           ./my-broken-link-checker --url https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
         displayName: 'Run broken link checker'
