@@ -16,7 +16,7 @@ jobs:
     displayName: 'Install Node.js'
     
   - script: |
-      npm install broken-link-checker -g
+      npm install -g broken-link-checker
       echo "Node.js version:"
       node -v
       echo "npm version:"
@@ -33,7 +33,7 @@ jobs:
 
 # Job 2: Deploy Docs
 - job: deploydocs
-  displayName: Deploy documentation
+  displayName: 'Deploy documentation'
   pool:
     vmImage: 'ubuntu-latest'
   steps:
@@ -47,28 +47,32 @@ jobs:
       mkdocs gh-deploy --force
     displayName: 'Deploy MkDocs'
 
-  # # Job 3: Deploy PR Previews
-  # - job: deploy-pr-previews
-  #   displayName: Deploy PR previews
-  #   pool:
-  #     vmImage: 'ubuntu-latest'
-  #   concurrency:
-  #     group: 'preview-${{ github.ref }}'
-  #   steps:
-  #     - checkout: self
-  #     - task: UsePythonVersion@0
-  #       inputs:
-  #         versionSpec: '3.x'
-  #         addToPath: true
-  #     - script: |
-  #         pip install mkdocs-material
-  #         pip install mkdocs-page-pdf
-  #         mkdocs build --clean -d ./build/
-  #       displayName: 'Build MkDocs'
+# Job 3: Deploy PR Previews
+- job: deploy-pr-previews
+  displayName: 'Deploy PR previews'
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.x'
+      addToPath: true
+  - script: |
+      pip install mkdocs-material mkdocs-page-pdf
+      mkdocs build --clean -d ./build/
+    displayName: 'Build MkDocs'
+  - script: |
+      curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+      sudo apt-get install -y nodejs
+      npm install -g gh-pages
+    displayName: 'Install gh-pages'
+  - script: |
+      export PATH=$(npm bin -g):$PATH
+      gh-pages -d ./build
+    displayName: 'Deploy PR Preview'
 
-  #     - task: rossjrw/pr-preview-action@v1
-  #       inputs:
-  #         sourceDir: './build/'
+
 
   # # Job 4: Upload to Azure Blob Storage
   # - job: upload-to-azure-blob-storage
