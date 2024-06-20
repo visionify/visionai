@@ -16,7 +16,7 @@ jobs:
     displayName: 'Install Node.js'
     
   - script: |
-      npm install -g check-broken-links
+      npm install broken-link-checker -g
       echo "Node.js version:"
       node -v
       echo "npm version:"
