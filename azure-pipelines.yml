@@ -22,12 +22,14 @@ jobs:
       echo "npm version:"
       npm -v
       echo "check-broken-links version:"
-      blc --version
+      blc --version || echo "blc command not found"
     displayName: 'Install check-broken-links'
-  
+
   - script: |
+      export PATH=$(npm bin -g):$PATH
       blc https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
     displayName: 'Check for broken links'
+
 
 
 #   # Job 2: Deploy Docs
