@@ -31,22 +31,21 @@ jobs:
     displayName: 'Check for broken links'
 
 
-
-#   # Job 2: Deploy Docs
-# - job: deploydocs
-#   displayName: Deploy documentation
-#     pool:
-#       vmImage: 'ubuntu-latest'
-#     steps:
-#       - checkout: self
-#       - task: UsePythonVersion@0
-#         inputs:
-#           versionSpec: '3.x'
-#           addToPath: true
-#       - script: |
-#           pip install mkdocs-material
-#           mkdocs gh-deploy --force
-#         displayName: 'Deploy MkDocs'
+# Job 2: Deploy Docs
+- job: deploydocs
+  displayName: Deploy documentation
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - checkout: self
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.x'
+      addToPath: true
+  - script: |
+      pip install mkdocs-material
+      mkdocs gh-deploy --force
+    displayName: 'Deploy MkDocs'
 
   # # Job 3: Deploy PR Previews
   # - job: deploy-pr-previews
