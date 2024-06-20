@@ -13,12 +13,22 @@ jobs:
   - script: |
       curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
       sudo apt-get install -y nodejs
-      sudo npm install -g check-broken-links
+    displayName: 'Install Node.js'
+    
+  - script: |
+      npm install -g check-broken-links
+      echo "Node.js version:"
+      node -v
+      echo "npm version:"
+      npm -v
+      echo "check-broken-links version:"
+      blc --version
     displayName: 'Install check-broken-links'
   
   - script: |
-      blc https://docs.visionify.ai/ --ro --one-page-only --max-connections=3 --color=always
+      blc https://docs.visionify.ai/ --one-page-only --max-connections=3 --color=always
     displayName: 'Check for broken links'
+
 
 #   # Job 2: Deploy Docs
 # - job: deploydocs
