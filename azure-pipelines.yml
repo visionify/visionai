@@ -48,7 +48,7 @@ jobs:
     displayName: 'Deploy MkDocs'
 
 # Job 3: Deploy PR Previews
-- job: deploy-pr-previews
+- job: deploy_pr_previews
   displayName: 'Deploy PR previews'
   pool:
     vmImage: 'ubuntu-latest'
