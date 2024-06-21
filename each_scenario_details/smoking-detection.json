@@ -11,6 +11,7 @@
   "icon": "https://res.cloudinary.com/dznb3fphf/image/upload/v1704965395/scenario-images/no-smoking.png",
   "coming_soon": false,
   "completed": true,
+  "zone_required": true,
   "models": {
     "latest": {
       "version": "0.1.0",
@@ -27,12 +28,8 @@
     "other": []
   },
   "events": {
-    "smoking": {
+    "no_smoking_violation": {
       "description": "People detected smoking",
-      "schedule": "Immediate"
-    },
-    "vaping": {
-      "description": "People detected vaping",
       "schedule": "Immediate"
     }
   }
