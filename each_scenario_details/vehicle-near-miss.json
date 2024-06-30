@@ -26,11 +26,7 @@
     "other": []
   },
   "events": {
-    "FORKLIFT": {
-      "description": "Forklift observed outside of configured zone",
-      "schedule": "Immediate"
-    },
-    "PEDESTRIAN": {
+    "near_miss": {
       "description": "Pedestrian observed in forklift zone",
       "schedule": "Immediate"
     }

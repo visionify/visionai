@@ -26,7 +26,7 @@
     "other": []
   },
   "events": {
-    "No_fire_extinguisher": {
+    "no_fire_extinguisher": {
       "description": "Missing fire-extinguisher detection",
       "schedule": "Immediate"
     }

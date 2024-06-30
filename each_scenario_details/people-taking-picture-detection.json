@@ -26,7 +26,7 @@
     "other": []
   },
   "events": {
-    "cell phone": {
+    "mobile_phone": {
       "description": "Person detected while taking pictures",
       "schedule": "Immediate"
     }

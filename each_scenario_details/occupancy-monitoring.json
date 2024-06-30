@@ -26,7 +26,7 @@
     "other": []
   },
   "events": {
-    "person": {
+    "occupancy_metrics": {
       "description": "Person is present in the room more than the restricted time",
       "schedule": "Immediate"
     }
